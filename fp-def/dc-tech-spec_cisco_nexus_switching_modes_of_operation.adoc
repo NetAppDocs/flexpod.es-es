@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html 
+keywords: cisco, nexus, switching, modes, operation, datacenter, techincal, specifications 
+summary: Puede utilizarse una variedad de productos Cisco Nexus como componente de conmutación de una determinada puesta en marcha de FlexPod. La mayoría de estas opciones aprovechan el SO Cisco Nexus o el software NX-OS tradicional. La familia de switches Cisco Nexus ofrece distintas funcionalidades dentro de sus líneas de productos. Estas funcionalidades se detallan más adelante en este documento. 
+---
+= Modos de funcionamiento de switches de Cisco Nexus
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Puede utilizarse una variedad de productos Cisco Nexus como componente de conmutación de una determinada puesta en marcha de FlexPod. La mayoría de estas opciones aprovechan el SO Cisco Nexus o el software NX-OS tradicional. La familia de switches Cisco Nexus ofrece distintas funcionalidades dentro de sus líneas de productos. Estas funcionalidades se detallan más adelante en este documento.
+
+La oferta de Cisco en el espacio de red definido por software se llama Application Centric Infrastructure (ACI). La línea de productos Cisco Nexus que admite el modo ACI, también llamado modo de estructura, es la serie Cisco Nexus 9300. Estos switches también se pueden poner en marcha en NX-OS o en modo independiente.
+
+Cisco ACI se dirige a las puestas en marcha de centros de datos que se centran en los requisitos de una aplicación específica. Las aplicaciones se crean instancias mediante una serie de perfiles y contratos que permiten la conectividad desde el host o la máquina virtual (VM) hasta el almacenamiento a través de la red.
+
+FlexPod está validado con ambos modos de funcionamiento de los switches Cisco Nexus. Para obtener más información acerca de los modos ACI y NX-OS, consulte las siguientes páginas Cisco:
+
+* http://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/index.html["Infraestructura centrada en aplicaciones de Cisco"^]
+* http://www.cisco.com/c/en/us/products/ios-nx-os-software/nx-os-software/index.html["Software Cisco NX-OS"^]
+

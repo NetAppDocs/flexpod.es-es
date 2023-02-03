@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html 
+keywords: harware, software, components, solution, infrastructure, medical, imaging, flexpod 
+summary: En las tablas siguientes se enumeran los componentes de hardware y software, respectivamente, de la infraestructura de FlexPod para el sistema de imágenes médicas. 
+---
+= Infraestructura de la solución componentes de hardware y software
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En las tablas siguientes se enumeran los componentes de hardware y software, respectivamente, de la infraestructura de FlexPod para el sistema de imágenes médicas.
+
+|===
+| Capa | Familia de productos | Cantidad y modelo | Detalles 
+
+
+.4+| Informática | Chasis Cisco UCS 5108 | 1 o 2 | Según el número de palas necesario para admitir el número de estudios anuales 
+
+
+| Servidores blade Cisco UCS | B200 M5 | Número de blades basado en el número de estudios anuales cada uno con 2 x 20 o más núcleos, 2,7 GHz y 128-384 GB de RAM 
+
+
+| Tarjeta de interfaz virtual (VIC) de Cisco UCS | Cisco UCS 1440 | Consulte 
+
+
+| 2 interconexiones de estructura Cisco UCS | 6454 o posterior | – 
+
+
+| Red | Switches Cisco Nexus | 2 series Cisco Nexus 3000 o 9000 | – 
+
+
+.2+| Red de almacenamiento | Red IP para el acceso de almacenamiento mediante protocolos SMB/CIFS, NFS o iSCSI | Los mismos switches de red que se han descrito anteriormente | – 
+
+
+| Acceso a almacenamiento mediante FC | 2 Cisco MDS 9132T | – 
+
+
+.3+| Reducida | Sistema de almacenamiento all-flash AFF A400 de NetApp | 1 o más pares de alta disponibilidad | Clúster con dos o más nodos 
+
+
+| Bandeja de discos | 1 o más bandejas de discos DS224C o NS224 | Totalmente lleno con 24 unidades 
+
+
+| SSD | >24, 1,2 TB o mayor capacidad | – 
+|===
+|===
+| De NetApp | Familia de productos | Versión o versión | Detalles 
+
+
+.7+| Sistema de imágenes médicas empresariales |  |  |  
+
+
+| MS SQL u Oracle Database Server | Según lo sugerido por el proveedor del sistema de imágenes médicas |  
+
+
+| Sin bases de datos SQL como MongoDB Server | Según lo sugerido por el proveedor del sistema de imágenes médicas |  
+
+
+| Servidores de aplicaciones | Según lo sugerido por el proveedor del sistema de imágenes médicas |  
+
+
+| Servidor de integración (MS BizTalk, MuleSoft, Rhapsody, Tibco) | Según lo sugerido por el proveedor del sistema de imágenes médicas |  
+
+
+| Equipos virtuales | Linux (64 bits) |  
+
+
+| Equipos virtuales | Windows Server (64 bits) |  
+
+
+| Reducida | ONTAP | ONTAP 9.7 o posterior |  
+
+
+.3+| Red | Interconexión de estructura Cisco UCS | Cisco UCS Manager 4.1 o posterior |  
+
+
+| Switches Ethernet de Cisco | 9.2(3)I7(2) o posterior |  
+
+
+| Cisco FC: Cisco MDS 9132T | 8.4(2) o posterior |  
+
+
+| Hipervisor | Hipervisor | VMware vSphere ESXi 6.7 U2 o posterior |  
+
+
+.3+| Gestión | Sistema de gestión de hipervisores | VMware vCenter Server 6.7 U1 (vcsa) o posterior |  
+
+
+| Virtual Storage Console (VSC) de NetApp | VSC 9.7 o posterior |  
+
+
+| SnapCenter | SnapCenter 4.3 o posterior |  
+|===

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-design_where_to_find_additional_information.html 
+keywords:  
+summary:  
+---
+= Dónde encontrar información adicional
+:allow-uri-read: 
+
+
+Si quiere obtener más información sobre la información descrita en este documento, consulte los siguientes documentos y sitios web:
+
+* NVA- 1131-PUESTA en MARCHA: FlexPod Express con VMware vSphere 6.7UI y NetApp AFF A220 con puesta en marcha directa de almacenamiento basado en IP NVA
++
+https://www.netapp.com/us/media/nva-1131-deploy.pdf["https://www.netapp.com/us/media/nva-1131-deploy.pdf"^]
+
+* Centro de documentación para sistemas AFF y FAS
++
+http://docs.netapp.com/platstor/index.jsp["http://docs.netapp.com/platstor/index.jsp"^]
+
+* Centro de documentación de ONTAP 9
++
+http://docs.netapp.com/ontap-9/index.jsp["http://docs.netapp.com/ontap-9/index.jsp"^]
+
+* Documentación de productos de NetApp
++
+https://docs.netapp.com["https://docs.netapp.com"^]
+
+

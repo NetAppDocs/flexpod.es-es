@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_use_cases.html 
+keywords: target, cases, audience, cloud, insights, flexpod, ontap 
+summary: En esta sección se enumeran los destinatarios y los casos a los que se aplica esta solución. 
+---
+= Casos de uso
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Esta solución se aplica a los siguientes casos de uso:
+
+* Organizaciones que desean supervisar diversos recursos y utilización de su sistema de almacenamiento de ONTAP puesto en marcha como parte de una solución de FlexPod.
+* Organizaciones que quieren solucionar problemas y reducir el tiempo de resolución de los incidentes que se producen en su solución de FlexPod con sus sistemas AFF o FAS.
+* Organizaciones interesadas en proyecciones de optimización de costes, incluidos paneles personalizados para proporcionar información detallada sobre el desperdicio de recursos y en dónde se puede obtener un ahorro de costes en su entorno FlexPod, incluido ONTAP.
+
+
+
+
+== Público objetivo
+
+El público objetivo de la solución incluye los siguientes grupos:
+
+* Los ejecutivos DE TECNOLOGÍA y los que se preocupan por la optimización de costes y la continuidad del negocio.
+* Arquitectos de soluciones interesados en el diseño y la gestión de centros de datos o clouds híbridos.
+* Ingenieros de soporte técnico responsables de la solución de problemas y la resolución de incidentes.
+
+
+Puede configurar Cloud Insights para proporcionar varios tipos de datos útiles que puede utilizar para ayudar en la planificación, la solución de problemas, el mantenimiento y la continuidad del negocio. Supervisando la solución FlexPod Datacenter con Cloud Insights y presentando los datos agregados en paneles personalizados que se pueden digerir fácilmente. no solo es posible predecir cuándo es necesario escalar los recursos en una implementación para cumplir con las exigencias, sino también para identificar aplicaciones o volúmenes de almacenamiento específicos que producen problemas en el sistema. Esto ayuda a garantizar que la infraestructura que se supervisa sea predecible y funcione según las expectativas, lo que permite a una organización cumplir acuerdos de nivel de servicios definidos y escalar la infraestructura según sea necesario, eliminando así los residuos y los costes adicionales.

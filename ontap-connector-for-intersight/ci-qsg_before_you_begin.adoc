@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_before_you_begin.html 
+keywords: cisco, intersight, intersight assist, netapp, ontap, connector, begin, install, installation, upgrade, active iq unified manager, create, deploy, deployment, download, OVA, appliance 
+summary: Antes de empezar, instale o actualice AIQ UM, cree una cuenta de Cisco Intersight e instale Intersight Assist. 
+---
+= Antes de empezar
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Para supervisar y orquestar el almacenamiento de NetApp desde Cisco Intersight, necesita tener instalado Active IQ Unified Manager de NetApp y Cisco Intersight Virtual Appliance en el entorno vCenter.
+
+
+
+== Instale o actualice Active IQ Unified Manager de NetApp
+
+Instale o actualice a Active IQ Unified Manager (se necesita la última versión, actualmente 9.12 GA) si no lo ha hecho. Para obtener instrucciones, vaya a link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentación de Active IQ Unified Manager de NetApp"].
+
+
+
+== Instale el dispositivo virtual Cisco Intersight Assist
+
+Asegúrese de cumplir con la https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Getting_Started_Guide_chapter_0111.html?referring_site=RE&pos=1&page=https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide.html["Requisitos de la red, el sistema y las licencias de dispositivos virtuales Cisco Intersight"^].
+
+* Pasos*
+
+. Cree una cuenta de Cisco Intersight. Visite https://intersight.com/["https://intersight.com/"^] Para crear su cuenta de Intersight. Debe tener un ID de Cisco válido para crear una cuenta de Cisco Intersight.
+. Descargue el dispositivo virtual de Intersight en https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]. Para obtener más información, vaya a la https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["Guía de instalación y actualización de Intersight Appliance"^].
+. Implemente el OVA. Se requiere DNS y NTP para implementar el OVA.
++
+.. Configurar DNS con registros de alias A/PTR y CNAME antes de implementar el OVA. Vea el ejemplo siguiente.
++
+image::ci-qsg_image1.png[Nombre de host de ejemplo utilizado para registros A/PTR]
+
+.. Elija el tamaño de configuración adecuado (pequeño, pequeño o mediano) en función de los requisitos de puesta en marcha de OVA para Intersight Virtual Appliance.
++
+*SUGERENCIA:* para un clúster ONTAP de dos nodos con un gran número de objetos de almacenamiento, NetApp recomienda utilizar la opción pequeña (16 vCPU, 32 Gi RAM).
+
++
+image::ci-qsg_image2.png[Captura de pantalla de la configuración del paso 5 de la plantilla OVF de despliegue]
+
+.. En la página *Personalizar plantilla*, personalice las propiedades de implementación de la plantilla OVF. La contraseña de administrador se utiliza para los usuarios locales: Admin(`webUI/cli/ssh`).
++
+image::ci-qsg_image3.png[Error: Falta la imagen gráfica]
+
++
+image::ci-qsg_image4.png[Error: Falta la imagen gráfica]
+
+.. Haga clic en *Siguiente*.
+
+
+. Después de la implementación del dispositivo Intersight Assist.
++
+.. Vaya a. https://FQDN-of-your-appliance[] para completar la configuración posterior a la instalación del dispositivo.
++
+El proceso de instalación se inicia automáticamente. La instalación puede tardar hasta una hora dependiendo del ancho de banda hasta Intersight.com. También puede tardar varios segundos en que el sitio seguro esté operativo una vez que se encienda el equipo virtual.
+
+.. Durante el proceso posterior a la implementación, seleccione la siguiente opción:
++
+*** *Asistencia de Intersight.* esta implementación permite que el modelo SaaS se conecte a Cisco Intersight.
++
+
+NOTE: Al seleccionar Intersight Assist, anote el ID del dispositivo y el código de reclamación antes de continuar.
+
++
+image::ci-qsg_image5.png[Captura de pantalla de las opciones de implementación de Intersight]
+
+
+
+.. Haga clic en *proseguir*.
+.. Seleccione *asistencia a la vista* y complete los siguientes pasos:
++
+... Acceda a su cuenta de SaaS Intersight en https://intersight.com["https://intersight.com"^].
+... Haga clic en *Targets*, *Cisco Intersight Assist* y a continuación *Iniciar*.
+... Solicite el dispositivo *Cisco Intersight Assist* copiando y pegando el identificador de dispositivo y el código de reclamación desde el dispositivo virtual Intersight Assist recién implementado.
++
+image::ci-qsg_image6.png[Captura de pantalla de Seleccionar tipo de objetivo que resalte Cisco Intersight Assist]
+
+... Vuelva al dispositivo *Cisco Intersight Assist* y haga clic en *continuar.* puede que necesite actualizar el explorador.
++
+Se inicia el proceso de descarga e instalación. Los binarios se transfieren de Intersight Cloud a su dispositivo en las instalaciones. El tiempo de finalización varía en función del ancho de banda que tenga con Intersight Cloud.
+
+
+
+
+
+

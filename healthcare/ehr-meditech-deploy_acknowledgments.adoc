@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_acknowledgments.html 
+keywords: acknowledgements, contributors, authors 
+summary: Las siguientes personas contribuyeron a la creación de esta guía. 
+---
+= Reconocimientos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Las siguientes personas contribuyeron a la creación de esta guía.
+
+* Brandon Agee, Ingeniero de Marketing Técnico, NetApp
+* Atul Bhalodia, Ingeniero de Marketing Técnico, NetApp
+* Ketan Mota, Directora Sénior de producto de NetApp
+* John Duignan, Arquitecto de Soluciones — Sanidad, NetApp
+* Jon Ebmeier, Cisco
+* Mike Brennan, Cisco
+

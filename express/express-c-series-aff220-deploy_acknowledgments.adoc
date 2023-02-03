@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_acknowledgments.html 
+keywords: acknowledgements, authors, support, contribution 
+summary: Los autores desearían reconocer a ciertos individuos por su apoyo y contribución a este diseño. 
+---
+= Reconocimientos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Los autores desean reconocer a las siguientes personas por su apoyo y contribución a este diseño:
+
+* Paul Onofrietti Onotranacy
+* Arvind Ramakrishnan
+

@@ -1,0 +1,401 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_deploy_cisco_ucs_c-series_rack_server.html 
+keywords: deploy, cisco, ucs, c, series, rack, server, cimc, boot, disable, iscsi, vnics 
+summary: En esta sección, se proporciona un procedimiento detallado para configurar un servidor de rack independiente Cisco UCS C-Series para su uso en la configuración exprés de FlexPod. 
+---
+= Poner en marcha el servidor de montaje en rack Cisco UCS C-Series
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección, se proporciona un procedimiento detallado para configurar un servidor de rack independiente Cisco UCS C-Series para su uso en la configuración exprés de FlexPod.
+
+
+
+== Realice la configuración inicial del servidor independiente Cisco UCS C-Series para CIMC
+
+Complete estos pasos para la configuración inicial de la interfaz de CIMC para servidores independientes Cisco UCS C-Series.
+
+En la siguiente tabla se enumera la información necesaria para configurar CIMC para cada servidor independiente Cisco UCS C-Series.
+
+|===
+| Detalles | Valor de detalle 
+
+
+| Dirección IP de CIMC | \<<cimc_ip>> 
+
+
+| Máscara de subred CIMC | \<<cimc_netmask 
+
+
+| Puerta de enlace predeterminada CIMC | \<<cimc_gateway>> 
+|===
+
+NOTE: La versión de CIMC utilizada en esta validación es CIMC 4.0.(4).
+
+
+
+=== Todos los servidores
+
+. Conecte la mochila del teclado, vídeo y ratón (KVM) de Cisco (suministrada con el servidor) al puerto KVM de la parte frontal del servidor. Conecte un monitor VGA y un teclado USB a los puertos de mochila KVM adecuados.
++
+Encienda el servidor y pulse F8 cuando se le solicite que introduzca la configuración de CIMC.
+
++
+image:express-c-series-c190-deploy_image5.png["Error: Falta la imagen gráfica"]
+
+. En la utilidad de configuración de CIMC, defina las siguientes opciones:
++
+.. Modo de tarjeta de interfaz de red (NIC):
++
+Específico `[X]`
+
+.. IP (básico):
++
+IPV4: `[X]`
+
++
+DHCP habilitado: `[ ]`
+
++
+IP DE CIMC: `\<<cimc_ip>>`
+
++
+Prefijo/subred: `\<<cimc_netmask>>`
+
++
+Puerta de enlace: `\<<cimc_gateway>>`
+
+.. VLAN (Advanced): Deje borrado para deshabilitar el etiquetado VLAN.
++
+Redundancia NIC
+
++
+Ninguna: `[X]`
+
++
+image:express-c-series-c190-deploy_image6.png["Error: Falta la imagen gráfica"]
+
+
+
+. Pulse F1 para ver los ajustes adicionales:
++
+.. Propiedades comunes:
++
+Nombre de host: `\<<esxi_host_name>>`
+
++
+DNS dinámico: `[ ]`
+
++
+Valores predeterminados de fábrica: Dejar borrado.
+
+.. Usuario predeterminado (básico):
++
+Contraseña predeterminada: `\<<admin_password>>`
+
++
+Vuelva a introducir la contraseña: `\<<admin_password>>`
+
++
+Propiedades del puerto: Utilice los valores predeterminados.
+
++
+Perfiles de puerto: Dejar borrado.
+
+
+
+. Pulse F10 para guardar la configuración de la interfaz CIMC.
+. Una vez guardada la configuración, pulse Esc para salir.
+
+
+
+
+== Configurar arranque iSCSI de servidores Cisco UCS C-Series
+
+En esta configuración de FlexPod Express, la VIC1457 se utiliza para el arranque iSCSI.
+
+La tabla siguiente enumera la información necesaria para configurar el arranque iSCSI.
+
+
+NOTE: Un font en cursiva indica variables que son únicas para cada host ESXi.
+
+|===
+| Detalles | Valor de detalle 
+
+
+| Nombre Del iniciador del host ESXi | \<<var_ucs_initiator_name_A>> 
+
+
+| Host ESXi iSCSI-A IP | \<<var_esxi_host_iscsiA_ip>> 
+
+
+| Máscara de red iSCSI-A del host ESXi | \<<var_esxi_host_iscsiA_mask>> 
+
+
+| ISCSI del host ESXi: Puerta de enlace predeterminada | \<<var_esxi_host_iscsiA_gateway>> 
+
+
+| Nombre B del iniciador del host ESXi | \<<var_ucs_initiator_name_B>> 
+
+
+| Host ESXi iSCSI-B IP | \<<var_esxi_host_iscsiB_ip>> 
+
+
+| Máscara de red iSCSI-B del host ESXi | \<<var_esxi_host_iscsiB_mask>> 
+
+
+| Puerta de enlace iSCSI-B del host ESXi | \<<var_esxi_host_iscsiB_gateway>> 
+
+
+| Dirección IP iscsi_lif01a | \<<var_iscsi_lif01a>> 
+
+
+| Dirección IP iscsi_lif02a | \<<var_iscsi_lif02a>> 
+
+
+| Dirección IP iscsi_lif01b | \<<var_iscsi_lif01b>> 
+
+
+| Dirección IP iscsi_lif02b | \<<var_iscsi_lif02b>> 
+
+
+| IQN de infr_SVM | \<<var_SVM_IQN>> 
+|===
+
+
+=== Configuración del orden de arranque
+
+Para establecer la configuración del orden de arranque, lleve a cabo los siguientes pasos:
+
+. En la ventana del navegador de la interfaz CIMC, haga clic en la ficha Compute (computación) y seleccione BIOS.
+. Haga clic en Configurar orden de arranque y, a continuación, en Aceptar.
++
+image:express-c-series-c190-deploy_image7.png["Error: Falta la imagen gráfica"]
+
+. Configure los siguientes dispositivos haciendo clic en el dispositivo en Agregar dispositivo de arranque y yendo a la ficha Opciones avanzadas:
++
+.. Agregar medios virtuales:
++
+NOMBRE: KVM-CD-DVD
+
++
+SUBTIPO: DVD KVM ASIGNADO
+
++
+Estado: Habilitado
+
++
+Orden: 1
+
+.. Agregar arranque iSCSI:
++
+Nombre: ISCSI-a
+
++
+Estado: Habilitado
+
++
+Orden: 2
+
++
+Ranura: MLOM
+
++
+Puerto: 1
+
+.. Haga clic en Add iSCSI Boot:
++
+Nombre: ISCSI-B
+
++
+Estado: Habilitado
+
++
+Pedido: 3
+
++
+Ranura: MLOM
+
++
+Puerto: 3
+
+
+
+. Haga clic en Agregar dispositivo.
+. Haga clic en Save Changes y, a continuación, en Close.
++
+image:express-c-series-c190-deploy_image8.png["Error: Falta la imagen gráfica"]
+
+. Reinicie el servidor para arrancar con el nuevo orden de inicio.
+
+
+
+
+=== Desactivar la controladora RAID (si existe)
+
+Siga estos pasos si el servidor C-Series contiene una controladora RAID. No se necesita una controladora RAID en el arranque desde la configuración SAN. De manera opcional, también puede quitar físicamente la controladora RAID del servidor.
+
+. En la pestaña Compute, haga clic en BIOS en el panel de navegación izquierdo de CIMC.
+. Seleccione Configurar BIOS.
+. Desplácese hacia abajo hasta la ranura PCIe:ROM de opción HBA.
+. Si el valor no está desactivado, configúrelo en Desactivado.
++
+image:express-c-series-c190-deploy_image9.png["Error: Falta la imagen gráfica"]
+
+
+
+
+
+== Configurar Cisco VIC1457 para el arranque iSCSI
+
+Los pasos de configuración siguientes son para el VIC 1457 de Cisco para arranque iSCSI.
+
+
+NOTE: La canalización de puertos predeterminada entre los puertos 0, 1, 2 y 3 se debe desactivar antes de poder configurar los cuatro puertos individuales. Si la canalización del puerto no está desactivada, sólo aparecen dos puertos para el VIC 1457. Realice los siguientes pasos para activar el canal de puerto en el CIMC:
+
+. En la ficha redes, haga clic en la tarjeta adaptadora MLOM.
+. En la ficha General, desactive el canal de puerto.
+. Guarde los cambios y reinicie el CIMC.
++
+image:express-c-series-c190-deploy_image10.png["Error: Falta la imagen gráfica"]
+
+
+
+
+
+=== Cree NIC iSCSI
+
+Para crear VNIC iSCSI, lleve a cabo los siguientes pasos:
+
+. En la ficha redes, haga clic en adaptador de tarjeta MLOM.
+. Haga clic en Agregar VNIC para crear un VNIC.
+. En la sección Agregar VNIC, introduzca los siguientes ajustes:
++
+** Nombre: Eth1
+** Nombre de CDN: ISCSI-VNIC-A
+** MTU: 9000
+** VLAN predeterminada: `\<<var_iscsi_vlan_a>>`
+** Modo VLAN: TRONCO
+** Activar inicio PXE: Comprobación
+
+
+. Haga clic en Agregar VNIC y, a continuación, en Aceptar.
+. Repita el proceso para agregar un segundo VNIC:
++
+** Asigne un nombre al VNIC eth3.
+** Nombre de CDN: ISCSI-VNIC-B
+** Introduzca `\<<var_iscsi_vlan_b>>` Como VLAN.
+** Establezca el puerto de enlace ascendente en 3.
++
+image:express-c-series-c190-deploy_image11.png["Error: Falta la imagen gráfica"]
+
+
+
+. Seleccione el eth1 de VNIC a la izquierda.
++
+image:express-c-series-c190-deploy_image12.png["Error: Falta la imagen gráfica"]
+
+. En Propiedades de arranque iSCSI, introduzca los detalles del iniciador:
++
+** Nombre: `\<<var_ucsa_initiator_name_a>>`
+** Dirección IP: `\<<var_esxi_hostA_iscsiA_ip>>`
+** Máscara de subred: `\<<var_esxi_hostA_iscsiA_mask>>`
+** Puerta de enlace: `\<<var_esxi_hostA_iscsiA_gateway>>`
++
+image:express-c-series-c190-deploy_image13.png["Error: Falta la imagen gráfica"]
+
+
+
+. Introduzca los detalles del destino principal:
++
+** Nombre: Número IQN de infra-SVM
+** Dirección IP: Dirección IP de iscsi_lif01a
+** LUN de arranque: 0
+
+
+. Introduzca los detalles del destino secundario:
++
+** Nombre: Número IQN de infra-SVM
+** Dirección IP: Dirección IP de iscsi_lif02a
+** LUN de arranque:0
++
+
+NOTE: Puede obtener el número IQN de almacenamiento ejecutando el `vserver iscsi show` comando.
+
++
+
+NOTE: Asegúrese de registrar los nombres IQN de cada VNIC. Se necesitan para un paso más adelante. Además, los nombres IQN para los iniciadores deben ser únicos para cada servidor y para el VNIC de iSCSI.
+
+
+
+. Haga clic en Save Changes.
+. Seleccione VNIC eth3 y haga clic en el botón de inicio iSCSI que se encuentra en la parte superior de la sección interfaces de Ethernet del host.
+. Repita el proceso para configurar eth3.
+. Introduzca los detalles del iniciador:
++
+** Nombre: `\<<var_ucsa_initiator_name_b>>`
+** Dirección IP: `\<<var_esxi_hostb_iscsib_ip>>`
+** Máscara de subred: `\<<var_esxi_hostb_iscsib_mask>>`
+** Puerta de enlace: `\<<var_esxi_hostb_iscsib_gateway>>`
++
+image:express-c-series-c190-deploy_image14.png["Error: Falta la imagen gráfica"]
+
+
+
+. Introduzca los detalles del destino principal:
++
+** Nombre: Número IQN de infra-SVM
+** Dirección IP: Dirección IP de iscsi_lif01b
+** LUN de arranque: 0
+
+
+. Introduzca los detalles del destino secundario:
++
+** Nombre: Número IQN de infra-SVM
+** Dirección IP: Dirección IP de iscsi_lif02b
+** LUN de arranque: 0
++
+
+NOTE: Puede obtener el número de IQN de almacenamiento mediante el `vserver iscsi show` comando.
+
++
+
+NOTE: Asegúrese de registrar los nombres IQN de cada VNIC. Se necesitan para un paso más adelante.
+
+
+
+. Haga clic en Save Changes.
+. Repita este proceso para configurar el arranque iSCSI para el servidor Cisco UCS B.
+
+
+
+
+=== Configure las NIC virtuales para ESXi
+
+Para configurar VNIC para ESXi, realice los siguientes pasos:
+
+. En la ventana del navegador de la interfaz CIMC, haga clic en Inventario y, a continuación, en Adaptadores Cisco VIC en el panel derecho.
+. En redes > Tarjeta adaptadora MLOM, seleccione la ficha vNIC y, a continuación, seleccione las vNIC debajo.
+. Seleccione eth0 y haga clic en Propiedades.
+. Establezca la MTU en 9000. Haga clic en Save Changes.
+. Establezca la VLAN como VLAN nativa 2.
++
+image:express-c-series-c190-deploy_image15.png["Error: Falta la imagen gráfica"]
+
+. Repita los pasos 3 y 4 en eth1, verificando que el puerto de enlace ascendente se establece en 1 para eth1.
++
+image:express-c-series-c190-deploy_image16.png["Error: Falta la imagen gráfica"]
+
++
+
+NOTE: Este procedimiento debe repetirse para cada nodo de servidor Cisco UCS inicial y cada nodo de servidor Cisco UCS adicional agregado al entorno.
+
+
+
+link:express-c-series-c190-design_netapp_aff_storage_deployment_procedure_@part_2@.html["Siguiente: Procedimiento de puesta en marcha del almacenamiento AFF de NetApp (parte 2)"]

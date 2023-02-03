@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-conclusion.html 
+keywords: conclusion 
+summary: En esta solución, implementamos un plan de protección para aplicaciones en contenedores que se ejecutan en FlexPod y AWS mediante la cartera Astra de NetApp. NetApp Astra Control Center y Astra Trident, junto con Cloud Volumes ONTAP, Red Hat OpenShift y la infraestructura de FlexPod, formaron los componentes principales de esta solución. 
+---
+= Conclusión
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-application-recovery-with-remote-backups.html["Anterior: Recuperación de aplicaciones con backups remotos."]
+
+En esta solución, implementamos un plan de protección para aplicaciones en contenedores que se ejecutan en FlexPod y AWS mediante la cartera Astra de NetApp. NetApp Astra Control Center y Astra Trident, junto con Cloud Volumes ONTAP, Red Hat OpenShift y la infraestructura de FlexPod, formaron los componentes principales de esta solución.
+
+Demostramos la protección de las aplicaciones capturando copias Snapshot y ejecutamos backups de copias completas para restaurar aplicaciones de distintos clústeres K8s ejecutados en entornos de cloud y en las instalaciones.
+
+También demostramos el clonado de aplicaciones en clústeres K8s, permitiendo a los clientes migrar sus aplicaciones a los clústeres K8s de su elección en las ubicaciones deseadas.
+
+FlexPod ha evolucionado constantemente para que sus clientes puedan modernizar sus aplicaciones y procesos de entrega del negocio. Con esta solución, los clientes de FlexPod pueden crear con confianza su plan BCDR para sus aplicaciones nativas del cloud con el cloud público como ubicación para un plan de recuperación ante desastres puntual o de tiempo completo, sin por ello dejar de mantener el coste de la solución en niveles bajos.
+
+Astra Control le permite mover toda una aplicación junto con sus datos de un clúster de Kubernetes a otro, independientemente de dónde estén los clústeres. También puede ayudarle a acelerar la puesta en marcha, las operaciones y la protección de sus aplicaciones nativas del cloud.
+
+
+
+== Resolución de problemas
+
+Para obtener instrucciones sobre la solución de problemas, consulte https://docs.netapp.com/us-en/astra-control-center/support/troubleshooting-acc.html["documentación en línea"^].
+
+
+
+== Dónde encontrar información adicional
+
+Si quiere más información sobre el contenido de este documento, consulte los siguientes documentos o sitios web:
+
+* Página de inicio de FlexPod
++
+https://www.flexpod.com["https://www.flexpod.com"^]
+
+* Guías de puesta en marcha y diseño validado por Cisco para FlexPod
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* Puesta en marcha de FlexPod con infraestructura como código para VMware con Ansible
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2.html#AnsibleAutomationWorkflowandSolutionDeployment"^]
+
+* Puesta en marcha de FlexPod con infraestructura como código para configuración básica de Red Hat OpenShift con Ansible
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html"^]
+
+* Herramienta de interoperabilidad de hardware y software Cisco UCS
++
+https://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html"^]
+
+* Hoja de datos de Cisco Intersight
++
+https://intersight.com/help/saas/home["https://intersight.com/help/saas/home"^]
+
+* Documentación de NetApp Astra
++
+https://docs.netapp.com/us-en/astra-control-center/index.html["https://docs.netapp.com/us-en/astra-control-center/index.html"^]
+
+* Centro de control de Astra de NetApp
++
+https://docs.netapp.com/us-en/astra-control-center/index.html["https://docs.netapp.com/us-en/astra-control-center/index.html"^]
+
+* Astra Trident de NetApp
++
+https://docs.netapp.com/us-en/trident/index.html["https://docs.netapp.com/us-en/trident/index.html"^]
+
+* Cloud Manager de NetApp
++
+https://docs.netapp.com/us-en/occm/concept_overview.html["https://docs.netapp.com/us-en/occm/concept_overview.html"^]
+
+* Cloud Volumes ONTAP de NetApp
++
+https://docs.netapp.com/us-en/occm/task_getting_started_aws.html["https://docs.netapp.com/us-en/occm/task_getting_started_aws.html"^]
+
+* Red Hat OpenShift
++
+https://www.openshift.com/["https://www.openshift.com/"^]
+
+* Herramienta de matriz de interoperabilidad de NetApp
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+
+
+
+
+== Historial de versiones
+
+|===
+| Versión | Fecha | Historial de versiones del documento 
+
+
+| Versión 1.0 | Julio de 2022 | Liberar para ACC 22.04.0. 
+|===

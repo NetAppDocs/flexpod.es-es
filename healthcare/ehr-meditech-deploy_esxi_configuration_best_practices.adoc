@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html 
+keywords: esxi, configuration, practices, vsc, vmware, vaai, host, multipathing 
+summary: Para la configuración del lado del host ESXi, configure los hosts VMware como si ejecutaría cualquier carga de trabajo de base de datos empresarial. 
+---
+= Prácticas recomendadas de configuración de ESXi
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Para la configuración del lado del host ESXi, configure los hosts VMware como si ejecutaría cualquier carga de trabajo de base de datos empresarial:
+
+* VSC para VMware vSphere comprueba y configura la configuración de accesos múltiples del host ESXi y de tiempo de espera de HBA que funcionan mejor con los sistemas de almacenamiento de NetApp. Los valores que conjuntos de VSC se basan en rigurosas pruebas internas realizadas por NetApp.
+* Para obtener un rendimiento óptimo del almacenamiento, considere la posibilidad de usar hardware de almacenamiento que admita API de VMware vStorage: Integración de cabinas (VAAI). El plugin de NetApp para VAAI es una biblioteca de software que integra las bibliotecas de discos virtuales de VMware que están instaladas en el host ESXi. El paquete VAAI de VMware permite descargar determinadas tareas de los hosts físicos a la cabina de almacenamiento.
++
+Puede realizar tareas como thin provisioning y la aceleración de hardware en el nivel de cabina para reducir la carga de trabajo en los hosts ESXi. La función de copia de liberación de sobrecarga y reserva de espacio mejoran el rendimiento de las operaciones de VSC. Puede descargar el paquete de instalación del plugin y obtener las instrucciones de instalación del plugin en el sitio de soporte de NetApp.
+
++
+VSC establece los tiempos de espera de host ESXi, la configuración de multivía y la configuración de tiempo de espera de HBA y otros valores para obtener un rendimiento óptimo y conmutación por error correcta de las controladoras de almacenamiento de NetApp. Siga estos pasos:
+
++
+.. En la página de inicio de VMware vSphere Web Client, seleccione vCenter > hosts.
+.. Haga clic con el botón derecho en un host y seleccione Actions > NetApp VSC > Set Recommended Values.
+.. En el cuadro de diálogo NetApp Recommended Settings, seleccione los valores que mejor se adapten a su sistema.
++
+Los valores estándar recomendados se establecen de forma predeterminada.
+
++
+image:ehr-meditech-deploy_image7.png["Error: Falta la imagen gráfica"]
+
+.. Haga clic en Aceptar.
+
+
+
+
+link:ehr-meditech-deploy_netapp_configuration.html["Siguiente: Configuración de NetApp."]

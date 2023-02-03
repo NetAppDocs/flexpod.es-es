@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html 
+keywords: cloud, fabricpool, flexpod, requirements, platforms, intercluster, lif, connectivity, volume, licensing, object, store, profiler 
+summary: FabricPool requiere ONTAP 9.2 o posterior y el uso de agregados SSD en cualquiera de las plataformas indicadas en esta sección. 
+---
+= Requisitos de FabricPool
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FabricPool requiere ONTAP 9.2 o posterior y el uso de agregados SSD en cualquiera de las plataformas indicadas en esta sección. Los requisitos adicionales de FabricPool dependen del nivel de cloud que se adjunto. En el caso de plataformas AFF de gama básica con una capacidad fija relativamente pequeña como AFF C190 de NetApp, FabricPool puede ser muy eficaz para mover datos inactivos al nivel de cloud.
+
+
+
+== Plataformas
+
+FabricPool es compatible con las siguientes plataformas:
+
+* AFF de NetApp
++
+** A800
+** A700S, A700
+** A320, A300
+** A220 Y A200
+** C190
+** AFF8080, AFF8060 Y AFF8040
+
+
+* FAS de NetApp
++
+** FAS9000
+** FAS8200
+** FAS8080, FAS8060 Y FAS8040
+** FAS2750 Y FAS2720
+** FAS2650, FAS2620
+
+
+
+
+
+NOTE: Solo los agregados de SSD en las plataformas FAS pueden usar FabricPool.
+
+* Niveles de cloud
++
+** Servicio de almacenamiento de objetos en cloud de Alibaba (estándar, acceso poco frecuente)
+** Amazon S3 (Estándar, Estándar - IA, One Zone-IA, Intelligent-Tiering)
+** Servicios de cloud comercial de Amazon (C2S)
+** Almacenamiento en cloud de Google (Multi-Regional, Regional, Nearline, Coldline)
+** Almacenamiento de objetos en cloud de IBM (estándar, almacén, almacén frío, Flex)
+** Almacenamiento de Microsoft Azure Blob (Hot and Cool)
+
+
+
+
+
+
+== LIF de interconexión de clústeres
+
+Los pares de alta disponibilidad en clúster que usan FabricPool requieren dos interfaces lógicas de interconexión de clústeres (LIF) para comunicarse con el nivel de cloud. NetApp recomienda crear una LIF de interconexión de clústeres en pares de alta disponibilidad adicionales para conectar los niveles de cloud sin problemas a agregados de esos nodos.
+
+La LIF que ONTAP utiliza para conectarse con el almacén de objetos AWS S3 debe estar en un puerto de 10 Gbps.
+
+Si se utiliza más de una LIF Intercluser en un nodo con enrutamiento diferente, NetApp recomienda colocarlos en distintos espacios IP. Durante la configuración, FabricPool puede seleccionar entre varios espacios IP, pero no puede seleccionar LIF específicas de interconexión de clústeres dentro de un espacio IP.
+
+
+NOTE: Al deshabilitar o eliminar una LIF de interconexión de clústeres, se interrumpe la comunicación al nivel de cloud.
+
+
+
+== Conectividad
+
+La latencia de lectura de FabricPool es una función de conectividad con el nivel de cloud. Las LIF de interconexión de clústeres mediante puertos de 10 Gbps, que se muestran en la siguiente figura, ofrecen un rendimiento adecuado. NetApp recomienda validar la latencia y el rendimiento del entorno de red específico para determinar el efecto que tiene en el rendimiento de la FabricPool.
+
+
+NOTE: Al utilizar FabricPool en entornos de bajo rendimiento, es necesario seguir cumpliendo los requisitos mínimos de rendimiento para las aplicaciones del cliente y ajustar los objetivos de tiempo de recuperación según corresponda.
+
+image:cloud-fabricpool_image6.png["Error: Falta la imagen gráfica"]
+
+
+
+=== Perfilador de almacén de objetos
+
+El generador de perfiles de almacén de objetos, un ejemplo de lo cual se muestra a continuación y se encuentra disponible a través de la interfaz de línea de comandos de ONTAP, prueba la latencia y el rendimiento de los almacenes de objetos antes de adjuntarse a un agregado de FabricPool.
+
+
+NOTE: El nivel de cloud debe añadirse a ONTAP antes de que se pueda utilizar con el generador de perfiles de almacén de objetos.
+
+Inicie el generador de perfiles del almacén de objetos desde el modo de privilegios avanzado de ONTAP con el siguiente comando:
+
+....
+storage aggregate object-store profiler start -object-store-name <name> -node <name>
+....
+Para ver los resultados, ejecute el siguiente comando:
+
+....
+storage aggregate object-store profiler show
+....
+Los niveles de cloud no ofrecen un rendimiento similar al del nivel de rendimiento (normalmente GB por segundo). Aunque los agregados FabricPool pueden ofrecer un rendimiento similar al de SATA, también pueden tolerar latencias de hasta 10 segundos y un bajo rendimiento para soluciones de organización en niveles que no requieren un rendimiento similar al de SATA.
+
+image:cloud-fabricpool_image7.png["Error: Falta la imagen gráfica"]
+
+
+
+== Volúmenes
+
+Thin provisioning de almacenamiento es una práctica estándar para el administrador de infraestructura virtual de FlexPod. Virtual Storage Console (VSC) de NetApp aprovisiona volúmenes de almacenamiento para almacenes de datos VMware sin garantía de espacio (thin provisioning) y con configuración de eficiencia del almacenamiento optimizada de acuerdo con las prácticas recomendadas de NetApp. Si se utiliza VSC para crear almacenes de datos de VMware, no es necesario realizar ninguna acción adicional, ya que no se debe asignar ninguna garantía de espacio al volumen de almacenes de datos.
+
+
+NOTE: FabricPool no puede asociar un nivel de cloud a un agregado que contenga volúmenes que utilicen una garantía de espacio distinta de ninguna (por ejemplo, volumen).
+
+....
+volume modify -space-guarantee none
+....
+Ajuste de `space-guarantee none` el parámetro proporciona thin provisioning para el volumen. La cantidad de espacio consumido por volúmenes con este tipo de garantía crece a medida que se añaden los datos en lugar de determinarse por un tamaño de volumen inicial. Este enfoque es esencial para FabricPool, ya que el volumen debe admitir datos en el nivel de cloud que se activan y vuelven a estar relacionados con el nivel de rendimiento.
+
+
+
+== Licencia
+
+FabricPool requiere una licencia basada en capacidad cuando se unen proveedores de almacenamiento de objetos de terceros (como Amazon S3) como niveles de cloud para los sistemas flash híbridos AFF y FAS.
+
+Las licencias de FabricPool están disponibles en formato perpetuo o basado en períodos (de 1 año o 3 años).
+
+La organización en niveles en el nivel de cloud se detiene cuando la cantidad de datos (capacidad utilizada) almacenados en el nivel de cloud alcanza la capacidad con la licencia. Los datos adicionales, incluidas las copias SnapMirror en los volúmenes que utilizan la política de toda la organización en niveles, no se pueden organizar en niveles hasta que se aumente la capacidad de la licencia. Aunque la organización en niveles se detiene, aún se puede acceder a los datos desde el nivel de cloud. Los datos inactivos adicionales permanecen en las unidades SSD hasta que la capacidad con licencia aumenta.
+
+Una licencia de FabricPool basada en un término de 10 TB de capacidad gratuita viene con la compra de un clúster nuevo de ONTAP 9.5 o posterior, si bien puede aplicarse un coste de soporte adicional. Las licencias FabricPool (incluida la capacidad adicional de las licencias existentes) se pueden adquirir en incrementos de 1 TB.
+
+Una licencia de FabricPool solo se puede eliminar de un clúster que no contiene agregados de FabricPool.
+
+
+NOTE: Las licencias de FabricPool se aplican en todo el clúster. Debe tener el UUID disponible al comprar una licencia (`cluster identify show`). Si quiere información adicional sobre licencias, consulte https://kb.netapp.com/support/s/article/ka21A0000008qb3QAA/ONTAP-FabricPool-FP-Licensing-Overview["Base de conocimientos de NetApp"^].

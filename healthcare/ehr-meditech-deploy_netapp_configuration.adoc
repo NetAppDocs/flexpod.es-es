@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_netapp_configuration.html 
+keywords: configuration, storage, meditech, software, environments, controllers, hardware, takeover, licenses 
+summary: El almacenamiento de NetApp que se pone en marcha para entornos de software de MEDITECH utiliza controladoras de almacenamiento en una configuración de parejas de alta disponibilidad. El almacenamiento debe presentarse desde ambas controladoras a los servidores de base de datos de MEDITECH a través del protocolo FC. La configuración presenta almacenamiento de ambas controladoras para equilibrar de forma uniforme la carga de las aplicaciones durante un funcionamiento normal. 
+---
+= Configuración de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+El sistema de almacenamiento de NetApp que se pone en marcha para entornos de software de MEDITECH utiliza controladoras de almacenamiento en una configuración de parejas de alta disponibilidad. El almacenamiento debe presentarse desde ambas controladoras a los servidores de base de datos de MEDITECH a través del protocolo FC. La configuración presenta almacenamiento de ambas controladoras para equilibrar de forma uniforme la carga de las aplicaciones durante un funcionamiento normal.
+
+
+
+== Configuración de ONTAP
+
+En esta sección se describe un ejemplo de procedimientos de puesta en marcha y aprovisionamiento que utilizan los comandos de ONTAP relevantes. El énfasis se da en mostrar cómo se aprovisiona el almacenamiento para implementar el diseño del almacenamiento que recomienda NetApp, que utiliza un par de controladoras de alta disponibilidad. Una de las principales ventajas de ONTAP es la capacidad de escalar horizontalmente sin alterar los pares de alta disponibilidad existentes.
+
+
+
+=== Licencias ONTAP
+
+Una vez configuradas las controladoras de almacenamiento, aplique licencias para habilitar las funciones de ONTAP que recomienda NetApp. Las licencias para cargas de trabajo de MEDITECH son FC, CIFS, y Snapshot, SnapRestore, FlexClone, Y SnapMirror.
+
+Para configurar las licencias, abra ONTAP System Manager de NetApp, vaya a Configuration-Licenses y, a continuación, añada las licencias que correspondan.
+
+También puede ejecutar el siguiente comando para añadir licencias utilizando la CLI:
+
+....
+license add -license-code <code>
+....
+
+
+=== Configuración de AutoSupport
+
+La herramienta AutoSupport de NetApp envía información de soporte resumida a NetApp mediante la HTTPS. Para configurar AutoSupport, ejecute los siguientes comandos de la ONTAP:
+
+....
+autosupport modify -node * -state enable
+autosupport modify -node * -mail-hosts <mailhost.customer.com>
+autosupport modify -node prod1-01 -from prod1-01@customer.com
+autosupport modify -node prod1-02 -from prod1-02@customer.com
+autosupport modify -node * -to storageadmins@customer.com
+autosupport modify -node * -support enable
+autosupport modify -node * -transport https
+autosupport modify -node * -hostnamesubj true
+....
+
+
+=== Configuración de toma de control asistida por hardware
+
+En cada nodo, habilite la toma de control asistida por hardware para minimizar el tiempo que se tarda en iniciar una toma de control en el caso poco probable de que se produzca un fallo en una controladora. Para configurar la toma de control asistida por hardware, lleve a cabo los siguientes pasos:
+
+. Ejecute el siguiente comando de ONTAP a xxx.
++
+Establezca la opción de dirección de partner en la dirección IP del puerto de administración para `prod1-01`.
+
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist-partner-ip <prod1-02-mgmt-ip>
+....
+. Ejecute el siguiente comando de ONTAP en xxx:
++
+Establezca la opción de dirección de partner en la dirección IP del puerto de administración para `cluster1-02`.
+
++
+....
+MEDITECH::> storage failover modify -node prod1-02 -hwassist-partner-ip <prod1-01-mgmt-ip>
+....
+. Ejecute el siguiente comando ONTAP para permitir la toma de control asistida por hardware en ambos `prod1-01` y la `prod1-02` Par de controladoras DE ALTA DISPONIBILIDAD.
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist true
+MEDITECH::> storage failover modify -node prod1-02 -hwassist true
+....
+
+
+link:ehr-meditech-deploy_aggregate_configuration.html["Siguiente: Configuración de agregados."]

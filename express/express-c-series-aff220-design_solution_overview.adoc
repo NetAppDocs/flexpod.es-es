@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_solution_overview.html 
+keywords: NetApp ONTAP 9.4, NetApp AFF A220, VMware vSphere 6.7, Target audience, 
+summary: FlexPod Express está diseñado para ejecutar cargas de trabajo de virtualización mixtas. Está pensado para oficinas remotas, sucursales y para pequeñas y medianas empresas. También es perfecto para empresas grandes que deseen implementar una solución dedicada para un propósito. Esta nueva solución para FlexPod Express añade nuevas tecnologías como ONTAP 9.4, AFF A220 de NetApp y VMware vSphere 6.7. 
+---
+= Descripción general de la solución
+:allow-uri-read: 
+
+
+FlexPod Express está diseñado para ejecutar cargas de trabajo de virtualización mixtas. Está pensado para oficinas remotas, sucursales y para pequeñas y medianas empresas. También es perfecto para empresas grandes que deseen implementar una solución dedicada para un propósito. Esta nueva solución para FlexPod Express añade nuevas tecnologías como ONTAP 9.4, AFF A220 de NetApp y VMware vSphere 6.7.
+
+La siguiente figura muestra los componentes de hardware incluidos en la solución FlexPod Express.
+
+image:express-c-series-aff220-design_image3.png["Error: Falta la imagen gráfica"]
+
+
+
+== Público objetivo
+
+Este documento está dirigido a los clientes que desean aprovechar una infraestructura creada para proporcionar eficiencia TECNOLÓGICA y permitir la innovación EN TECNOLOGÍA. El público de este documento incluye, sin limitarse a ellos, ingenieros de ventas, consultores de campo, personal de servicios profesionales, gestores DE TECNOLOGÍA, ingenieros de partners y clientes.
+
+
+
+== Tecnología de soluciones
+
+Esta solución aprovecha las últimas tecnologías de NetApp, Cisco y VMware. Esta solución incluye el nuevo sistema AFF A220 de NetApp, que ejecuta el software ONTAP 9.4, switches Cisco Nexus 3172P duales y servidores de rack Cisco UCS C220 M5 que ejecutan VMware vSphere 6.7. Esta solución validada usa tecnología Ethernet de 10 GB (10GbE). En la siguiente figura se muestra una descripción general. También se ofrece orientación sobre cómo escalar agregando dos nodos de hipervisor a la vez para que la arquitectura FlexPod Express pueda adaptarse a las cambiantes necesidades empresariales de una organización.
+
+image:express-c-series-aff220-design_image4.png["Error: Falta la imagen gráfica"]
+
+
+NOTE: 40 GbE no está validado, pero es una infraestructura compatible.
+
+link:express-c-series-aff220-design_technology_requirements.html["Siguiente: Requisitos tecnológicos."]

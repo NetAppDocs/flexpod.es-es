@@ -1,0 +1,92 @@
+---
+section: healthcare
+title: Sector sanitario
+entries:
+- title: FlexPod para genomas
+  type: solutions
+  entries:
+  - title: Introducción
+    url: "/healthcare/flexpod-genomics-introduction.html"
+  - title: Ventajas de la puesta en marcha de cargas de trabajo genómicos en FlexPod
+    url: "/healthcare/flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html"
+  - title: Infraestructura de la solución componentes de hardware y software
+    url: "/healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html"
+  - title: Genómica - instalación y ejecución de GATK
+    url: "/healthcare/flexpod-genomics-genomics---gatk-setup-and-execution.html"
+  - title: Salida para la ejecución de GATK utilizando el archivo JAR
+    url: "/healthcare/flexpod-genomics-appendix-a.html"
+  - title: Salida para la ejecución de GATK usando el script ./gatk
+    url: "/healthcare/flexpod-genomics-appendix-b.html"
+  - title: Salida para la ejecución del GATK utilizando el motor Cromwell
+    url: "/healthcare/flexpod-genomics-appendix-c.html"
+  - title: Configuración de GPU
+    url: "/healthcare/flexpod-genomics-appendix-d-gpu-setup.html"
+  - title: Conclusión
+    url: "/healthcare/flexpod-genomics-conclusion.html"
+- title: Guía de tamaños direccionales de FlexPod para MEDITECH
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/healthcare/ehr-meditech-sizing_introduction.html"
+  - title: Descripción general de la carga de trabajo de MEDITECH
+    url: "/healthcare/ehr-meditech-sizing_meditech_workload_overview.html"
+  - title: Especificaciones técnicas para arquitecturas pequeñas, medianas y grandes
+    url: "/healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html"
+  - title: Información adicional
+    url: "/healthcare/ehr-meditech-sizing_additional_information.html"
+  - title: Reconocimientos
+    url: "/healthcare/ehr-meditech-sizing_acknowledgments.html"
+- title: Guía de puesta en marcha de FlexPod Datacenter para MEDITECH
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/healthcare/ehr-meditech-deploy_overview.html"
+  - title: Diseño
+    url: "/healthcare/ehr-meditech-deploy_design.html"
+  - title: Puesta en marcha y configuración
+    entries:
+    - title: Descripción general
+      url: "/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html"
+    - title: Configuración de la infraestructura base
+      url: "/healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html"
+    - title: Configuración de switch y servidor blade Cisco UCS
+      url: "/healthcare/ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html"
+    - title: Prácticas recomendadas de configuración de ESXi
+      url: "/healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html"
+    - title: Configuración de NetApp
+      url: "/healthcare/ehr-meditech-deploy_netapp_configuration.html"
+    - title: Configuración de agregados
+      url: "/healthcare/ehr-meditech-deploy_aggregate_configuration.html"
+    - title: Configuración de la máquina virtual de almacenamiento
+      url: "/healthcare/ehr-meditech-deploy_storage_virtual_machine_configuration.html"
+    - title: Configuración de volúmenes
+      url: "/healthcare/ehr-meditech-deploy_volume_configuration.html"
+    - title: Configuración de LUN
+      url: "/healthcare/ehr-meditech-deploy_lun_configuration.html"
+    - title: Configuración del iGroup
+      url: "/healthcare/ehr-meditech-deploy_initiator_group_configuration.html"
+    - title: Asignaciones de LUN
+      url: "/healthcare/ehr-meditech-deploy_lun_mappings.html"
+  - title: Módulos y componentes de MEDITECH
+    url: "/healthcare/ehr-meditech-deploy_meditech_modules_and_components.html"
+  - title: Reconocimientos
+    url: "/healthcare/ehr-meditech-deploy_acknowledgments.html"
+  - title: Dónde encontrar información adicional
+    url: "/healthcare/ehr-meditech-deploy_where_to_find_additional_information.html"
+- title: FlexPod para exploración médica
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/healthcare/medical-imaging_introduction.html"
+  - title: Arquitectura
+    url: "/healthcare/medical-imaging_architecture.html"
+  - title: Infraestructura de la solución componentes de hardware y software
+    url: "/healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html"
+  - title: Ajuste del tamaño de la solución
+    url: "/healthcare/medical-imaging_solution_sizing.html"
+  - title: Mejores prácticas
+    url: "/healthcare/medical-imaging_best_practices.html"
+  - title: Conclusión
+    url: "/healthcare/medical-imaging_conclusion.html"
+  - title: Información adicional
+    url: "/healthcare/medical-imaging_additional_information.html"

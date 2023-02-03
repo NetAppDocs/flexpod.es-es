@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html 
+keywords: flexpod, cloud, fabricpool, networking, cisco, mds, storage, ucs, vmware, vsphere 
+summary: FlexPod es un conjunto definido de elementos de hardware y software que forma una base integrada para soluciones virtualizadas y no virtualizadas. 
+---
+= Información general y arquitectura de FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Información general de FlexPod
+
+FlexPod es un conjunto definido de elementos de hardware y software que forma una base integrada para soluciones virtualizadas y no virtualizadas. FlexPod incluye el almacenamiento AFF de NetApp, la conexión a redes Cisco Nexus, la red de almacenamiento de Cisco MDS, Cisco Unified Computing System (Cisco UCS) y el software VMware vSphere en un único paquete. El diseño es lo suficientemente flexible como para que las redes, los recursos informáticos y el almacenamiento puedan encajar en un rack de centro de datos o bien se puede poner en marcha según el diseño de centro de datos del cliente. La densidad de puertos permite que los componentes de las redes acomoden varias configuraciones.
+
+Una de las ventajas de la arquitectura de FlexPod es la capacidad de personalizar o adaptar el entorno para adaptarlo a las necesidades de un cliente. Una unidad FlexPod se puede escalar fácilmente a medida que cambian los requisitos y la demanda. Una unidad se puede escalar tanto de forma vertical (agregando recursos a una unidad FlexPod) como de salida (agregando más unidades FlexPod). La arquitectura de referencia de FlexPod destaca la flexibilidad, los beneficios económicos y la facilidad de instalación de una solución de almacenamiento basada en IP y Fibre Channel. Un sistema de almacenamiento que es capaz de servir diversos protocolos en una única interfaz proporciona a los clientes una opción y protege su inversión, ya que se trata de una arquitectura de conexión única. La siguiente figura muestra muchos de los componentes de hardware de FlexPod.
+
+image:cloud-fabricpool_image2.png["Error: Falta la imagen gráfica"]
+
+
+
+== Arquitectura FlexPod
+
+La siguiente figura muestra los componentes de una solución VMware vSphere y FlexPod y las conexiones de red necesarias para las interconexiones de estructura Cisco UCS 6454. Este diseño consta de los siguientes componentes:
+
+* Conexiones Ethernet de 40 GB canalizadas por puerto entre el chasis blade Cisco UCS 5108 y las interconexiones de estructura Cisco UCS
+* Conexiones Ethernet de 40 GB entre la interconexión de estructura de Cisco UCS y Cisco Nexus 9000
+* Conexiones Ethernet de 40 GB entre Cisco Nesxus 9000 y la cabina de almacenamiento AFF A300 de NetApp
+
+
+Estas opciones de infraestructura se amplían con la introducción de switches MDS de Cisco que se sitúan entre Cisco UCS Fabric Interconnect y AFF A300 de NetApp. Esta configuración proporciona a los hosts arranque FC un acceso a nivel de bloques FC de 16 GB al almacenamiento compartido. La arquitectura de referencia refuerza la estrategia de conexión única porque, a medida que se añade almacenamiento adicional a la arquitectura, no es necesario realizar ninguna conmutación por los hosts a la interconexión de estructura Cisco UCS.
+
+image:cloud-fabricpool_image3.png["Error: Falta la imagen gráfica"]

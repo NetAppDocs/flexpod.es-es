@@ -1,0 +1,995 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_@part_1@.html 
+keywords: lif, vlans, snmp, nfsv3, lun, iscsi, configure, node, deployment, procedure 
+summary: Puede seguir los pasos que se indican a continuación para completar el procedimiento de puesta en marcha de almacenamiento AFF de NetApp. 
+---
+= Procedimiento de instalación de almacenamiento NetApp (parte 1)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección se describe el procedimiento de implementación del almacenamiento AFF de NetApp.
+
+
+
+== Instalación de la controladora de almacenamiento de NetApp serie AFF2xx
+
+
+
+=== Hardware Universe de NetApp
+
+La aplicación NetApp Hardware Universe (HWU) proporciona componentes de hardware y software compatibles con cualquier versión específica de ONTAP. Proporciona información de configuración para todos los dispositivos de almacenamiento de NetApp compatibles actualmente con el software ONTAP. También se proporciona una tabla de compatibilidades de componentes.
+
+Confirme que los componentes de hardware y software que desea utilizar son compatibles con la versión de ONTAP que tiene previsto instalar:
+
+. Acceda a http://hwu.netapp.com/Home/Index["HWU"^] aplicación para ver las guías de configuración del sistema. Haga clic en la pestaña controladoras para ver la compatibilidad entre distintas versiones del software ONTAP y los dispositivos de almacenamiento de NetApp con las especificaciones que desea.
+. Como alternativa, para comparar componentes por dispositivo de almacenamiento, haga clic en Comparar sistemas de almacenamiento.
+
+
+|===
+| Requisitos previos de la controladora de la serie AFF2XX 
+
+
+| Para planificar la ubicación física de los sistemas de almacenamiento, consulte Hardware Universe de NetApp. Consulte las siguientes secciones: Requisitos eléctricos, cables de alimentación admitidos y puertos y cables integrados. 
+|===
+
+
+=== Controladoras de almacenamiento
+
+Siga los procedimientos de instalación física de los controladores de la https://mysupport.netapp.com/documentation/docweb/index.html?productID=62557&language=en-US["Documentación de AFF A220"^].
+
+
+
+== ONTAP 9.4 de NetApp
+
+
+
+=== Hoja de datos de configuración
+
+Antes de ejecutar la secuencia de comandos de instalación, rellene la hoja de datos de configuración del manual del producto. La hoja de datos de configuración está disponible en la https://library.netapp.com/ecm/ecm_download_file/ECMLP2492611["Guía de configuración de software de ONTAP 9.4"^].
+
+
+NOTE: Este sistema se establece en una configuración de clúster de dos nodos sin switch.
+
+La siguiente tabla muestra información sobre la instalación y la configuración de ONTAP 9.4.
+
+|===
+| Detalles del clúster | Valor de detalles de clúster 
+
+
+| Nodo del clúster: Dirección IP | \<<var_nodeA_mgmt_ip>> 
+
+
+| Máscara de red Del nodo a del clúster | \<<var_nodeA_mgmt_mask>> 
+
+
+| Nodo del clúster: Puerta de enlace | \<<var_nodeA_mgmt_gateway>> 
+
+
+| Nombre del nodo a del clúster | \<<var_nodeA>> 
+
+
+| Dirección IP del nodo B del clúster | \<<var_nodeB_mgmt_ip>> 
+
+
+| Máscara de red del nodo B del clúster | \<<var_nodeB_mgmt_mask>> 
+
+
+| Puerta de enlace del nodo B del clúster | \<<var_nodeB_mgmt_gateway>> 
+
+
+| Nombre del nodo B del clúster | \<<var_nodeB>> 
+
+
+| Dirección URL de ONTAP 9.4 | \<<var_url_boot_software>> 
+
+
+| El nombre del clúster | \<<var_clustername>> 
+
+
+| Dirección IP de gestión del clúster | \<<var_clustermgmt_ip>> 
+
+
+| Puerta de enlace del clúster B. | \<<var_clustermgmt_gateway>> 
+
+
+| Máscara de red del clúster B. | \<<var_clustermgmt_mask>> 
+
+
+| Nombre de dominio | \<<var_domain_name>> 
+
+
+| IP del servidor DNS (puede introducir más de uno) | \<<var_dns_server_ip>> 
+
+
+| La IP del servidor NTP (es posible introducir más de uno) | \<<var_ntp_server_ip>> 
+|===
+
+
+=== Configure el nodo a
+
+Para configurar el nodo A, complete los siguientes pasos:
+
+. Conéctese al puerto de la consola del sistema de almacenamiento. Tiene que ver un cargador-a del símbolo del sistema. Sin embargo, si el sistema de almacenamiento está en un bucle de reinicio, pulse Ctrl-C para salir del bucle de autoarranque cuando vea este mensaje:
++
+....
+Starting AUTOBOOT press Ctrl-C to abort…
+....
+. Permita que el sistema arranque.
++
+....
+autoboot
+....
+. Pulse Ctrl-C para acceder al menú Inicio.
++
+Si ONTAP 9.4 no es la versión del software que se está arrancando, continúe con los pasos siguientes para instalar el software nuevo. Si ONTAP 9.4 es la versión que se va a arrancar, seleccione la opción 8 e y para reiniciar el nodo. A continuación, continúe con el paso 14.
+
+. Para instalar software nuevo, seleccione opción `7`.
+. Introduzca `y` para realizar una actualización.
+. Seleccione `e0M` para el puerto de red que desea usar para la descarga.
+. Introduzca `y` para reiniciar ahora.
+. Introduzca la dirección IP, la máscara de red y la puerta de enlace predeterminada para e0M en sus respectivos lugares.
++
+....
+<<var_nodeA_mgmt_ip>> <<var_nodeA_mgmt_mask>> <<var_nodeA_mgmt_gateway>>
+....
+. Especifique la dirección URL donde se puede encontrar el software.
++
+
+NOTE: Este servidor web debe ser pingable.
+
++
+....
+<<var_url_boot_software>>
+....
+. Pulse Intro para el nombre de usuario, indicando que no hay nombre de usuario.
+. Introduzca `y` para establecer el software recién instalado como el predeterminado que se utilizará para los siguientes reinicios.
+. Introduzca `y` para reiniciar el nodo.
++
+Al instalar el software nuevo, el sistema podría realizar actualizaciones de firmware en el BIOS y las tarjetas adaptadoras, lo que provoca reinicios y posibles interrupciones en el cargador. Si se producen estas acciones, el sistema podría desviarse de este procedimiento.
+
+. Pulse Ctrl-C para acceder al menú Inicio.
+. Seleccione opción `4` Para una configuración limpia y inicializar todos los discos.
+. Introduzca `y` para poner a cero discos, restablezca la configuración e instale un nuevo sistema de archivos.
+. Introduzca `y` para borrar todos los datos de los discos.
++
+La inicialización y creación del agregado raíz puede tardar 90 minutos o más en completarse, según el número y el tipo de discos conectados. Una vez finalizada la inicialización, el sistema de almacenamiento se reinicia. Tenga en cuenta que los SSD tardan mucho menos tiempo en inicializarse. Puede continuar con la configuración del nodo B mientras los discos del nodo A se están poniendo a cero.
+
+. Mientras el nodo A se está inicializando, empiece a configurar el nodo B.
+
+
+
+
+=== Configure el nodo B
+
+Para configurar el nodo B, complete los siguientes pasos:
+
+. Conéctese al puerto de la consola del sistema de almacenamiento. Tiene que ver un cargador-a del símbolo del sistema. Sin embargo, si el sistema de almacenamiento está en un bucle de reinicio, pulse Ctrl-C para salir del bucle de autoarranque cuando vea este mensaje:
++
+....
+Starting AUTOBOOT press Ctrl-C to abort…
+....
+. Pulse Ctrl-C para acceder al menú Inicio.
++
+....
+autoboot
+....
+. Pulse Ctrl-C cuando se le solicite.
++
+Si ONTAP 9.4 no es la versión del software que se está arrancando, continúe con los pasos siguientes para instalar el software nuevo. Si ONTAP 9.4 es la versión que se va a arrancar, seleccione la opción 8 e y para reiniciar el nodo. A continuación, continúe con el paso 14.
+
+. Para instalar software nuevo, seleccione la opción 7.
+. Introduzca `y` para realizar una actualización.
+. Seleccione `e0M` para el puerto de red que desea usar para la descarga.
+. Introduzca `y` para reiniciar ahora.
+. Introduzca la dirección IP, la máscara de red y la puerta de enlace predeterminada para e0M en sus respectivos lugares.
++
+....
+<<var_nodeB_mgmt_ip>> <<var_nodeB_mgmt_ip>><<var_nodeB_mgmt_gateway>>
+....
+. Especifique la dirección URL donde se puede encontrar el software.
++
+
+NOTE: Este servidor web debe ser pingable.
+
++
+....
+<<var_url_boot_software>>
+....
+. Pulse Intro para el nombre de usuario, indicando que no hay nombre de usuario.
+. Introduzca `y` para establecer el software recién instalado como el predeterminado que se utilizará para los siguientes reinicios.
+. Introduzca `y` para reiniciar el nodo.
++
+Al instalar el software nuevo, el sistema podría realizar actualizaciones de firmware en el BIOS y las tarjetas adaptadoras, lo que provoca reinicios y posibles interrupciones en el cargador. Si se producen estas acciones, el sistema podría desviarse de este procedimiento.
+
+. Pulse Ctrl-C para acceder al menú Inicio.
+. Seleccione la opción 4 para Configuración limpia y inicializar todos los discos.
+. Introduzca `y` para poner a cero discos, restablezca la configuración e instale un nuevo sistema de archivos.
+. Introduzca `y` para borrar todos los datos de los discos.
++
+La inicialización y creación del agregado raíz puede tardar 90 minutos o más en completarse, según el número y el tipo de discos conectados. Una vez finalizada la inicialización, el sistema de almacenamiento se reinicia. Tenga en cuenta que los SSD tardan mucho menos tiempo en inicializarse.
+
+
+
+
+
+== Continuación de la configuración del nodo A y de la configuración del clúster
+
+Desde un programa de puertos de consola conectado al puerto de la consola De la controladora De almacenamiento A (nodo A), ejecute el script de configuración del nodo. Este script se muestra cuando ONTAP 9.4 arranca en el nodo por primera vez.
+
+
+NOTE: El procedimiento de configuración del nodo y de los clústeres ha cambiado ligeramente en ONTAP 9.4. El asistente de configuración de clúster ahora se utiliza para configurar el primer nodo de un clúster, y System Manager se utiliza para configurar el clúster.
+
+. Siga las instrucciones para configurar el nodo A.
++
+....
+Welcome to the cluster setup wizard.
+You can enter the following commands at any time:
+  "help" or "?" - if you want to have a question clarified,
+  "back" - if you want to change previously answered questions, and
+  "exit" or "quit" - if you want to quit the cluster setup wizard.
+     Any changes you made before quitting will be saved.
+You can return to cluster setup at any time by typing "cluster setup".
+To accept a default or omit a question, do not enter a value.
+This system will send event messages and periodic reports to NetApp Technical
+Support. To disable this feature, enter
+autosupport modify -support disable
+within 24 hours.
+Enabling AutoSupport can significantly speed problem determination and
+resolution should a problem occur on your system.
+For further information on AutoSupport, see:
+http://support.netapp.com/autosupport/
+Type yes to confirm and continue {yes}: yes
+Enter the node management interface port [e0M]:
+Enter the node management interface IP address: <<var_nodeA_mgmt_ip>>
+Enter the node management interface netmask: <<var_nodeA_mgmt_mask>>
+Enter the node management interface default gateway: <<var_nodeA_mgmt_gateway>>
+A node management interface on port e0M with IP address <<var_nodeA_mgmt_ip>> has been created.
+Use your web browser to complete cluster setup by accessing
+https://<<var_nodeA_mgmt_ip>>
+Otherwise, press Enter to complete cluster setup using the command line
+interface:
+....
+. Vaya a la dirección IP de la interfaz de gestión del nodo.
++
+La configuración del clúster también se puede realizar mediante la CLI. Este documento describe la configuración del clúster mediante la configuración guiada de System Manager de NetApp.
+
+. Haga clic en Guided Setup para configurar el clúster.
+. Introduzca `\<<var_clustername>>` del nombre del clúster y. `\<<var_nodeA>>` y.. `\<<var_nodeB>>` para cada uno de los nodos que va a configurar. Introduzca la contraseña que desea usar para el sistema de almacenamiento. Seleccione Switchless Cluster para el tipo de clúster. Introduzca la licencia base del clúster.
++
+image:express-c-series-aff220-deploy_image6.png["Error: Falta la imagen gráfica"]
+
+. También es posible introducir licencias de funciones para Cluster, NFS e iSCSI.
+. Ve un mensaje de estado que indica que el clúster se está creando. Este mensaje de estado cambia por varios Estados. Este proceso tarda varios minutos.
+. Configure la red.
++
+.. Anule la selección de la opción intervalo de direcciones IP.
+.. Introduzca `\<<var_clustermgmt_ip>>` En el campo Cluster Management IP Address, `\<<var_clustermgmt_mask>>` En el campo máscara de red, y. `\<<var_clustermgmt_gateway>>` En el campo Puerta de enlace. Utilice el… Selector en el campo Port para seleccionar e0M del nodo A.
+.. La IP de gestión de nodos para el nodo A ya se ha rellenado. Introduzca `\<<var_nodeA_mgmt_ip>>` Para el nodo B.
+.. Introduzca `\<<var_domain_name>>` En el campo DNS Domain Name. Introduzca `\<<var_dns_server_ip>>` En el campo DNS Server IP Address.
++
+Puede introducir varias direcciones IP del servidor DNS.
+
+.. Introduzca `\<<var_ntp_server_ip>>` En el campo servidor NTP primario.
++
+También puede introducir un servidor NTP alternativo.
+
+
+
+. Configure la información de soporte.
++
+.. Si el entorno requiere un proxy para acceder a AutoSupport, introduzca la URL en Proxy URL.
+.. Introduzca el host de correo SMTP y la dirección de correo electrónico para las notificaciones de eventos.
++
+Debe, como mínimo, configurar el método de notificación de eventos antes de continuar. Puede seleccionar cualquiera de los métodos.
+
++
+image:express-c-series-aff220-deploy_image7.png["Error: Falta la imagen gráfica"]
+
+
+
+. Cuando indique que ha finalizado la configuración del clúster, haga clic en Manage your Cluster para configurar el almacenamiento.
+
+
+
+
+== Continuación de la configuración del clúster de almacenamiento
+
+Después de configurar los nodos de almacenamiento y el clúster base, puede continuar con la configuración del clúster de almacenamiento.
+
+
+
+=== Ponga a cero todos los discos de repuesto
+
+Para poner a cero todos los discos de repuesto del clúster, ejecute el siguiente comando:
+
+....
+disk zerospares
+....
+
+
+=== Configure la personalidad de los puertos UTA2 integrados
+
+. Verifique el modo actual y el tipo actual de puertos ejecutando el `ucadmin show` comando.
++
+....
+AFF A220::> ucadmin show
+                       Current  Current    Pending  Pending    Admin
+Node          Adapter  Mode     Type       Mode     Type       Status
+------------  -------  -------  ---------  -------  ---------  -----------
+AFF A220_A     0c       fc       target     -        -          online
+AFF A220_A     0d       fc       target     -        -          online
+AFF A220_A     0e       fc       target     -        -          online
+AFF A220_A     0f       fc       target     -        -          online
+AFF A220_B     0c       fc       target     -        -          online
+AFF A220_B     0d       fc       target     -        -          online
+AFF A220_B     0e       fc       target     -        -          online
+AFF A220_B     0f       fc       target     -        -          online
+8 entries were displayed.
+....
+. Compruebe que el modo actual de los puertos que se están utilizando es `cna` y que el tipo actual está establecido en `target`. De lo contrario, cambie la personalidad de puerto mediante el siguiente comando:
++
+....
+ucadmin modify -node <home node of the port> -adapter <port name> -mode cna -type target
+....
++
+Los puertos deben estar desconectados para que se ejecute el comando anterior. Para desconectar un puerto, ejecute el siguiente comando:
+
++
+....
+`network fcp adapter modify -node <home node of the port> -adapter <port name> -state down`
+....
++
+
+NOTE: Si ha cambiado la personalidad del puerto, debe reiniciar cada nodo para que el cambio se aplique.
+
+
+
+
+
+=== Cambiar el nombre de las interfaces lógicas de gestión (LIF)
+
+Para cambiar el nombre de las LIF de administración, realice los pasos siguientes:
+
+. Muestra los nombres de las LIF de gestión actuales.
++
+....
+network interface show –vserver <<clustername>>
+....
+. Cambie el nombre de la LIF de gestión del clúster.
++
+....
+network interface rename –vserver <<clustername>> –lif cluster_setup_cluster_mgmt_lif_1 –newname cluster_mgmt
+....
+. Cambie el nombre del LIF de gestión del nodo B.
++
+....
+network interface rename -vserver <<clustername>> -lif cluster_setup_node_mgmt_lif_AFF A220_B_1 -newname AFF A220-02_mgmt1
+....
+
+
+
+
+=== Configure la reversión automática en la gestión del clúster
+
+Ajuste la `auto-revert` parámetro en la interfaz de gestión del clúster.
+
+....
+network interface modify –vserver <<clustername>> -lif cluster_mgmt –auto-revert true
+....
+
+
+=== Configure la interfaz de red del procesador de servicio
+
+Para asignar una dirección IPv4 estática al procesador de servicios en cada nodo, ejecute los siguientes comandos:
+
+....
+system service-processor network modify –node <<var_nodeA>> -address-family IPv4 –enable true –dhcp none –ip-address <<var_nodeA_sp_ip>> -netmask <<var_nodeA_sp_mask>> -gateway <<var_nodeA_sp_gateway>>
+system service-processor network modify –node <<var_nodeB>> -address-family IPv4 –enable true –dhcp none –ip-address <<var_nodeB_sp_ip>> -netmask <<var_nodeB_sp_mask>> -gateway <<var_nodeB_sp_gateway>>
+....
+
+NOTE: Las direcciones IP de Service Processor deben estar en la misma subred que las direcciones IP de gestión de nodos.
+
+
+
+=== Activar la recuperación tras fallos de almacenamiento en ONTAP
+
+Para confirmar que la conmutación por error del almacenamiento está habilitada, ejecute los siguientes comandos de una pareja de conmutación por error:
+
+. Comprobar el estado de recuperación tras fallos del almacenamiento.
++
+....
+storage failover show
+....
++
+Ambas `\<<var_nodeA>>` y.. `\<<var_nodeB>>` debe poder realizar una toma de control. Vaya al paso 3 si los nodos pueden realizar una toma de control.
+
+. Habilite la conmutación al nodo de respaldo en uno de los dos nodos.
++
+....
+storage failover modify -node <<var_nodeA>> -enabled true
+....
++
+Habilitar la conmutación al nodo de respaldo en un solo nodo permite que se produzca en ambos nodos.
+
+. Compruebe el estado de alta disponibilidad del clúster de dos nodos.
++
+Este paso no es aplicable para clústeres con más de dos nodos.
+
++
+....
+cluster ha show
+....
+. Vaya al paso 6 si está configurada la alta disponibilidad. Si se ha configurado la alta disponibilidad, verá el siguiente mensaje al emitir el comando:
++
+....
+High Availability Configured: true
+....
+. Habilite el modo de alta disponibilidad solo para el clúster de dos nodos.
++
+
+NOTE: No ejecute este comando para clústeres con más de dos nodos debido a que provoca problemas con la conmutación al nodo de respaldo.
+
++
+....
+cluster ha modify -configured true
+Do you want to continue? {y|n}: y
+....
+. Compruebe que la asistencia de hardware está correctamente configurada y, si es necesario, modifique la dirección IP del partner.
++
+....
+storage failover hwassist show
+....
++
+El mensaje `Keep Alive Status : Error: did not receive hwassist keep alive alerts from partner` indica que la asistencia de hardware no está configurada. Ejecute los siguientes comandos para configurar hardware Assist.
+
++
+....
+storage failover modify –hwassist-partner-ip <<var_nodeB_mgmt_ip>> -node <<var_nodeA>>
+storage failover modify –hwassist-partner-ip <<var_nodeA_mgmt_ip>> -node <<var_nodeB>>
+....
+
+
+
+
+=== Cree un dominio de retransmisión MTU para tramas gigantes en ONTAP
+
+Para crear un dominio de retransmisión de datos con un valor MTU de 9000, ejecute los siguientes comandos:
+
+....
+broadcast-domain create -broadcast-domain Infra_NFS -mtu 9000
+broadcast-domain create -broadcast-domain Infra_iSCSI-A -mtu 9000
+broadcast-domain create -broadcast-domain Infra_iSCSI-B -mtu 9000
+....
+
+
+=== Quite los puertos de datos del dominio de retransmisión predeterminado
+
+Los puertos de datos de 10 GbE se utilizan para el tráfico iSCSI/NFS y estos puertos deben eliminarse del dominio predeterminado. Los puertos e0e y e0f no se utilizan y deben eliminarse del dominio predeterminado.
+
+Para quitar puertos del dominio de retransmisión, ejecute el siguiente comando:
+
+....
+broadcast-domain remove-ports -broadcast-domain Default -ports <<var_nodeA>>:e0c, <<var_nodeA>>:e0d, <<var_nodeA>>:e0e, <<var_nodeA>>:e0f, <<var_nodeB>>:e0c, <<var_nodeB>>:e0d, <<var_nodeA>>:e0e, <<var_nodeA>>:e0f
+....
+
+
+=== Deshabilite el control de flujo en los puertos UTA2
+
+Se recomienda utilizar las mejores prácticas de NetApp para deshabilitar el control de flujo en todos los puertos UTA2 conectados a dispositivos externos. Para desactivar el control de flujo, ejecute el siguiente comando:
+
+....
+net port modify -node <<var_nodeA>> -port e0c -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeA>> -port e0d -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeA>> -port e0e -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeA>> -port e0f -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeB>> -port e0c -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeB>> -port e0d -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeB>> -port e0e -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeB>> -port e0f -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+....
+
+
+=== Configure LACP con IFGRP en ONTAP
+
+Este tipo de grupo de interfaces requiere dos o más interfaces Ethernet y un switch compatible con LACP. Asegúrese de que el interruptor está configurado correctamente.
+
+Desde el símbolo del sistema del clúster, complete los siguientes pasos.
+
+....
+ifgrp create -node <<var_nodeA>> -ifgrp a0a -distr-func port -mode multimode_lacp
+network port ifgrp add-port -node <<var_nodeA>> -ifgrp a0a -port e0c
+network port ifgrp add-port -node <<var_nodeA>> -ifgrp a0a -port e0d
+ifgrp create -node << var_nodeB>> -ifgrp a0a -distr-func port -mode multimode_lacp
+network port ifgrp add-port -node <<var_nodeB>> -ifgrp a0a -port e0c
+network port ifgrp add-port -node <<var_nodeB>> -ifgrp a0a -port e0d
+....
+
+
+=== Configurar tramas gigantes en ONTAP de NetApp
+
+Para configurar un puerto de red ONTAP para que utilice tramas gigantes (que normalmente tienen una MTU de 9,000 bytes), ejecute los siguientes comandos desde el shell del clúster:
+
+....
+AFF A220::> network port modify -node node_A -port a0a -mtu 9000
+Warning: This command will cause a several second interruption of service on
+         this network port.
+Do you want to continue? {y|n}: y
+AFF A220::> network port modify -node node_B -port a0a -mtu 9000
+Warning: This command will cause a several second interruption of service on
+         this network port.
+Do you want to continue? {y|n}: y
+....
+
+
+=== Crear VLAN en ONTAP
+
+Para crear VLAN en ONTAP, complete los siguientes pasos:
+
+. Cree puertos VLAN NFS y añádalos al dominio de retransmisión de datos.
++
+....
+network port vlan create –node <<var_nodeA>> -vlan-name a0a-<<var_nfs_vlan_id>>
+network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<var_nfs_vlan_id>>
+broadcast-domain add-ports -broadcast-domain Infra_NFS -ports <<var_nodeA>>:a0a-<<var_nfs_vlan_id>>, <<var_nodeB>>:a0a-<<var_nfs_vlan_id>>
+....
+. Cree puertos VLAN iSCSI y añádalos al dominio de retransmisión de datos.
++
+....
+network port vlan create –node <<var_nodeA>> -vlan-name a0a-<<var_iscsi_vlan_A_id>>
+network port vlan create –node <<var_nodeA>> -vlan-name a0a-<<var_iscsi_vlan_B_id>>
+network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<var_iscsi_vlan_A_id>>
+network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<var_iscsi_vlan_B_id>>
+broadcast-domain add-ports -broadcast-domain Infra_iSCSI-A -ports <<var_nodeA>>:a0a-<<var_iscsi_vlan_A_id>>, <<var_nodeB>>:a0a-<<var_iscsi_vlan_A_id>>
+broadcast-domain add-ports -broadcast-domain Infra_iSCSI-B -ports <<var_nodeA>>:a0a-<<var_iscsi_vlan_B_id>>, <<var_nodeB>>:a0a-<<var_iscsi_vlan_B_id>>
+....
+. Cree puertos MGMT-VLAN.
++
+....
+network port vlan create –node <<var_nodeA>> -vlan-name a0a-<<mgmt_vlan_id>>
+network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<mgmt_vlan_id>>
+....
+
+
+
+
+=== Crear agregados en ONTAP
+
+Durante el proceso de configuración de ONTAP, se crea un agregado que contiene el volumen raíz. Para crear agregados adicionales, determine el nombre del agregado, el nodo en el que se creará y el número de discos que contiene.
+
+Para crear agregados, ejecute los siguientes comandos:
+
+....
+aggr create -aggregate aggr1_nodeA -node <<var_nodeA>> -diskcount <<var_num_disks>>
+aggr create -aggregate aggr1_nodeB -node <<var_nodeB>> -diskcount <<var_num_disks>>
+....
+Conserve al menos un disco (seleccione el disco más grande) en la configuración como un repuesto. Una práctica recomendada es tener al menos un repuesto para cada tipo y tamaño de disco.
+
+Empiece con cinco discos; puede añadir discos a un agregado cuando necesite almacenamiento adicional.
+
+No se puede crear el agregado hasta que se complete el establecimiento en cero del disco. Ejecute el `aggr show` comando para mostrar el estado de creación del agregado. No continúe hasta `aggr1`_`nodeA` está en línea.
+
+
+
+=== Configurar la zona horaria en ONTAP
+
+Para configurar la sincronización horaria y establecer la zona horaria en el clúster, ejecute el siguiente comando:
+
+....
+timezone <<var_timezone>>
+....
+
+NOTE: Por ejemplo, en el este de los Estados Unidos, la zona horaria es `America/New York`. Cuando haya comenzado a escribir el nombre de la zona horaria, pulse la tecla TAB para ver las opciones disponibles.
+
+
+
+=== Configurar SNMP en ONTAP
+
+Para configurar SNMP, realice los siguientes pasos:
+
+. Configure la información básica de SNMP, como la ubicación y el contacto. Cuando se sondean, esta información es visible como `sysLocation` y.. `sysContact` Variables en SNMP.
++
+....
+snmp contact <<var_snmp_contact>>
+snmp location “<<var_snmp_location>>”
+snmp init 1
+options snmp.enable on
+....
+. Configure las capturas SNMP para que se envíen a hosts remotos.
++
+....
+snmp traphost add <<var_snmp_server_fqdn>>
+....
+
+
+
+
+=== Configure SNMPv1 en ONTAP
+
+Para configurar SNMPv1, establezca la contraseña de texto sin formato secreta compartida denominada comunidad.
+
+....
+snmp community add ro <<var_snmp_community>>
+....
+
+NOTE: Utilice la `snmp community delete all` comando con precaución. Si se utilizan cadenas de comunidad para otros productos de supervisión, este comando las quita.
+
+
+
+=== Configure SNMPv3 en ONTAP
+
+SNMPv3 requiere que defina y configure un usuario para la autenticación. Para configurar SNMPv3, lleve a cabo los siguientes pasos:
+
+. Ejecute el `security snmpusers` Comando para ver el ID del motor.
+. Cree un usuario llamado `snmpv3user`.
++
+....
+security login create -username snmpv3user -authmethod usm -application snmp
+....
+. Introduzca el ID del motor de la entidad autoritativa y seleccione `md5` como protocolo de autenticación.
+. Escriba una contraseña de longitud mínima de ocho caracteres para el protocolo de autenticación cuando se le solicite.
+. Seleccione `des` como protocolo de privacidad.
+. Escriba una contraseña de longitud mínima de ocho caracteres para el protocolo de privacidad cuando se le solicite.
+
+
+
+
+=== Configure HTTPS de AutoSupport en ONTAP
+
+La herramienta AutoSupport de NetApp envía información de resumen de soporte a NetApp mediante HTTPS. Para configurar AutoSupport, ejecute el siguiente comando:
+
+....
+system node autosupport modify -node * -state enable –mail-hosts <<var_mailhost>> -transport https -support enable -noteto <<var_storage_admin_email>>
+....
+
+
+=== Cree una máquina virtual de almacenamiento
+
+Para crear una máquina virtual de almacenamiento (SVM) de infraestructura, complete los siguientes pasos:
+
+. Ejecute el `vserver create` comando.
++
+....
+vserver create –vserver Infra-SVM –rootvolume rootvol –aggregate aggr1_nodeA –rootvolume-security-style unix
+....
+. Añada el agregado de datos a la lista de agregados de infra-SVM para VSC de NetApp.
++
+....
+vserver modify -vserver Infra-SVM -aggr-list aggr1_nodeA,aggr1_nodeB
+....
+. Elimine los protocolos de almacenamiento que no se utilicen de la SVM, con lo que dejará NFS e iSCSI.
++
+....
+vserver remove-protocols –vserver Infra-SVM -protocols cifs,ndmp,fcp
+....
+. Habilite y ejecute el protocolo NFS en la SVM de infra-SVM.
++
+....
+`nfs create -vserver Infra-SVM -udp disabled`
+....
+. Encienda la `SVM vstorage` Parámetro para el plugin VAAI para NFS de NetApp. A continuación, compruebe que NFS se ha configurado.
++
+....
+`vserver nfs modify –vserver Infra-SVM –vstorage enabled`
+`vserver nfs show `
+....
++
+
+NOTE: Los comandos están precedidos por `vserver` en la línea de comandos porque las máquinas virtuales de almacenamiento se denominaban servidores anteriormente.
+
+
+
+
+
+=== Configure NFSv3 en ONTAP
+
+En la siguiente tabla, se enumera la información necesaria para completar esta configuración.
+
+|===
+| Detalles | Valor de detalle 
+
+
+| Host ESXi dirección IP de NFS | \<<var_esxi_hostA_nfs_ip>> 
+
+
+| Dirección IP de NFS del host ESXi B | \<<var_esxi_hostB_nfs_ip>> 
+|===
+Para configurar NFS en la SVM, ejecute los siguientes comandos:
+
+. Cree una regla para cada host ESXi en la política de exportación predeterminada.
+. Asigne una regla para cada host ESXi que se cree. Cada host tiene su propio índice de reglas. El primer host ESXi tiene el índice de regla 1, el segundo host ESXi tiene el índice de regla 2, etc.
++
+....
+vserver export-policy rule create –vserver Infra-SVM -policyname default –ruleindex 1 –protocol nfs -clientmatch <<var_esxi_hostA_nfs_ip>> -rorule sys –rwrule sys -superuser sys –allow-suid false
+vserver export-policy rule create –vserver Infra-SVM -policyname default –ruleindex 2 –protocol nfs -clientmatch <<var_esxi_hostB_nfs_ip>> -rorule sys –rwrule sys -superuser sys –allow-suid false
+vserver export-policy rule show
+....
+. Asigne la política de exportación al volumen raíz de la SVM de infraestructura.
++
+....
+volume modify –vserver Infra-SVM –volume rootvol –policy default
+....
++
+
+NOTE: VSC de NetApp gestiona automáticamente las políticas de exportación si decide instalarlas después de configurar vSphere. Si no lo instala, debe crear reglas de políticas de exportación cuando se añadan servidores C-Series de Cisco UCS adicionales.
+
+
+
+
+
+=== Cree el servicio iSCSI en ONTAP
+
+Para crear el servicio iSCSI, complete el paso siguiente:
+
+. Cree el servicio iSCSI en la SVM. Este comando también inicia el servicio iSCSI y establece el IQN de iSCSI para la SVM. Comprobar que iSCSI se ha configurado.
++
+....
+iscsi create -vserver Infra-SVM
+iscsi show
+....
+
+
+
+
+=== Crear reflejo de uso compartido de carga del volumen raíz de la SVM en ONTAP
+
+. Cree un volumen para que sea el reflejo de carga compartida del volumen raíz de la SVM de infraestructura en cada nodo.
++
+....
+volume create –vserver Infra_Vserver –volume rootvol_m01 –aggregate aggr1_nodeA –size 1GB –type DP
+volume create –vserver Infra_Vserver –volume rootvol_m02 –aggregate aggr1_nodeB –size 1GB –type DP
+....
+. Crear una programación de tareas para actualizar las relaciones de mirroring del volumen raíz cada 15 minutos.
++
+....
+job schedule interval create -name 15min -minutes 15
+....
+. Cree las relaciones de mirroring.
++
+....
+snapmirror create -source-path Infra-SVM:rootvol -destination-path Infra-SVM:rootvol_m01 -type LS -schedule 15min
+snapmirror create -source-path Infra-SVM:rootvol -destination-path Infra-SVM:rootvol_m02 -type LS -schedule 15min
+....
+. Inicialice la relación de mirroring y compruebe que se haya creado.
++
+....
+snapmirror initialize-ls-set -source-path Infra-SVM:rootvol
+snapmirror show
+....
+
+
+
+
+=== Configure el acceso HTTPS en ONTAP
+
+Para configurar el acceso seguro a la controladora de almacenamiento, lleve a cabo los siguientes pasos:
+
+. Aumente el nivel de privilegio para acceder a los comandos de certificado.
++
+....
+set -privilege diag
+Do you want to continue? {y|n}: y
+....
+. En general, ya se encuentra en funcionamiento un certificado autofirmado. Verifique el certificado ejecutando el siguiente comando:
++
+....
+security certificate show
+....
+. Para cada SVM que se muestra, el nombre común de certificado debe coincidir con el FQDN de DNS de la SVM. Los cuatro certificados predeterminados deben eliminarse y sustituirse por certificados autofirmados o certificados de una entidad de certificación.
++
+La práctica recomendada es eliminar certificados caducados antes de crear certificados. Ejecute el `security certificate delete` comando para eliminar certificados caducados. En el siguiente comando, use LA TABULACIÓN automática para seleccionar y eliminar cada certificado predeterminado.
+
++
+....
+security certificate delete [TAB] …
+Example: security certificate delete -vserver Infra-SVM -common-name Infra-SVM -ca Infra-SVM -type server -serial 552429A6
+....
+. Para generar e instalar certificados autofirmados, ejecute los siguientes comandos como comandos de una sola vez. Generar un certificado de servidor para la SVM de infraestructura y la SVM de clúster. De nuevo, utilice LA TABULACIÓN automática como ayuda para completar estos comandos.
++
+....
+security certificate create [TAB] …
+Example: security certificate create -common-name infra-svm. netapp.com -type  server -size 2048 -country US -state "North Carolina" -locality "RTP" -organization "NetApp" -unit "FlexPod" -email-addr "abc@netapp.com" -expire-days 365 -protocol SSL -hash-function SHA256 -vserver Infra-SVM
+....
+. Para obtener los valores de los parámetros necesarios en el paso siguiente, ejecute el `security certificate show` comando.
+. Habilite cada certificado que se acaba de crear mediante el `–server-enabled true` y.. `–client-enabled false` parámetros. De nuevo, utilice LA TABULACIÓN automática.
++
+....
+security ssl modify [TAB] …
+Example: security ssl modify -vserver Infra-SVM -server-enabled true -client-enabled false -ca infra-svm.netapp.com -serial 55243646 -common-name infra-svm.netapp.com
+....
+. Configure y habilite el acceso SSL y HTTPS y deshabilite el acceso HTTP.
++
+....
+system services web modify -external true -sslv3-enabled true
+Warning: Modifying the cluster configuration will cause pending web service requests to be
+         interrupted as the web servers are restarted.
+Do you want to continue {y|n}: y
+system services firewall policy delete -policy mgmt -service http –vserver <<var_clustername>>
+....
++
+
+NOTE: Es normal que algunos de estos comandos devuelvan un mensaje de error indicando que la entrada no existe.
+
+. Vuelva al nivel de privilegio de administrador y cree la configuración para permitir que la SVM esté disponible en la web.
++
+....
+set –privilege admin
+vserver services web modify –name spi|ontapi|compat –vserver * -enabled true
+....
+
+
+
+
+=== Cree un volumen de FlexVol de NetApp en ONTAP
+
+Para crear un volumen de FlexVol de NetApp, introduzca el nombre, el tamaño y el agregado del volumen en el que existe. Crear dos volúmenes de almacenes de datos de VMware y un volumen de arranque del servidor.
+
+....
+volume create -vserver Infra-SVM -volume infra_datastore_1 -aggregate aggr1_nodeA -size 500GB -state online -policy default -junction-path /infra_datastore_1 -space-guarantee none -percent-snapshot-space 0
+volume create -vserver Infra-SVM -volume infra_swap -aggregate aggr1_nodeA -size 100GB -state online -policy default -junction-path /infra_swap -space-guarantee none -percent-snapshot-space 0 -snapshot-policy none
+volume create -vserver Infra-SVM -volume esxi_boot -aggregate aggr1_nodeA -size 100GB -state online -policy default -space-guarantee none -percent-snapshot-space 0
+....
+
+
+=== Habilite la deduplicación en ONTAP
+
+Para activar la deduplicación en volúmenes adecuados, ejecute los siguientes comandos:
+
+....
+volume efficiency on –vserver Infra-SVM -volume infra_datastore_1
+volume efficiency on –vserver Infra-SVM -volume esxi_boot
+....
+
+
+=== Crear LUN en ONTAP
+
+Para crear dos LUN de arranque, ejecute los siguientes comandos:
+
+....
+lun create -vserver Infra-SVM -volume esxi_boot -lun VM-Host-Infra-A -size 15GB -ostype vmware -space-reserve disabled
+lun create -vserver Infra-SVM -volume esxi_boot -lun VM-Host-Infra-B -size 15GB -ostype vmware -space-reserve disabled
+....
+
+NOTE: Cuando se añade un servidor Cisco UCS C-Series adicional, se debe crear un LUN de arranque adicional.
+
+
+
+=== Creación de LIF iSCSI en ONTAP
+
+En la siguiente tabla, se enumera la información necesaria para completar esta configuración.
+
+|===
+| Detalles | Valor de detalle 
+
+
+| Nodo de almacenamiento a iSCSI LIF01A | \<<var_nodeA_iscsi_lif01a_ip>> 
+
+
+| Nodo de almacenamiento: Una máscara de red LIF01A de iSCSI | \<<var_nodeA_iscsi_lif01a_mask>> 
+
+
+| Nodo de almacenamiento a iSCSI LIF01B | \<<var_nodeA_iscsi_lif01b_ip>> 
+
+
+| Nodo de almacenamiento a máscara de red LIF01B de iSCSI | \<<var_nodeA_iscsi_lif01b_mask>> 
+
+
+| Nodo de almacenamiento B iSCSI LIF01A | \<<var_nodeB_iscsi_lif01a_ip>> 
+
+
+| Máscara de red del nodo de almacenamiento B iSCSI LIF01A | \<<var_nodeB_iscsi_lif01a_mask>> 
+
+
+| ISCSI LIF01B del nodo de almacenamiento | \<<var_nodeB_iscsi_lif01b_ip>> 
+
+
+| Máscara de red LIF01B de nodo de almacenamiento B. | \<<var_nodeB_iscsi_lif01b_mask>> 
+|===
+. Creación de cuatro LIF iSCSI, dos en cada nodo.
++
+....
+network interface create -vserver Infra-SVM -lif iscsi_lif01a -role data -data-protocol iscsi -home-node <<var_nodeA>> -home-port a0a-<<var_iscsi_vlan_A_id>> -address <<var_nodeA_iscsi_lif01a_ip>> -netmask <<var_nodeA_iscsi_lif01a_mask>> –status-admin up –failover-policy disabled –firewall-policy data –auto-revert false
+network interface create -vserver Infra-SVM -lif iscsi_lif01b -role data -data-protocol iscsi -home-node <<var_nodeA>> -home-port a0a-<<var_iscsi_vlan_B_id>> -address <<var_nodeA_iscsi_lif01b_ip>> -netmask <<var_nodeA_iscsi_lif01b_mask>> –status-admin up –failover-policy disabled –firewall-policy data –auto-revert false
+network interface create -vserver Infra-SVM -lif iscsi_lif02a -role data -data-protocol iscsi -home-node <<var_nodeB>> -home-port a0a-<<var_iscsi_vlan_A_id>> -address <<var_nodeB_iscsi_lif01a_ip>> -netmask <<var_nodeB_iscsi_lif01a_mask>> –status-admin up –failover-policy disabled –firewall-policy data –auto-revert false
+network interface create -vserver Infra-SVM -lif iscsi_lif02b -role data -data-protocol iscsi -home-node <<var_nodeB>> -home-port a0a-<<var_iscsi_vlan_B_id>> -address <<var_nodeB_iscsi_lif01b_ip>> -netmask <<var_nodeB_iscsi_lif01b_mask>> –status-admin up –failover-policy disabled –firewall-policy data –auto-revert false
+network interface show
+....
+
+
+
+
+=== Creación de LIF NFS en ONTAP
+
+En la siguiente tabla, se enumera la información necesaria para completar esta configuración.
+
+|===
+| Detalles | Valor de detalle 
+
+
+| Nodo de almacenamiento: LIF NFS 01 IP | \<<var_nodeA_nfs_lif_01_ip>> 
+
+
+| Nodo de almacenamiento máscara de red a LIF 01 de NFS | \<<var_nodeA_nfs_lif_01_mask>> 
+
+
+| Nodo de almacenamiento B LIF NFS 02 IP | \<<var_nodeB_nfs_lif_02_ip>> 
+
+
+| Máscara de red del nodo de almacenamiento B LIF NFS 02 | \<<var_nodeB_nfs_lif_02_mask>> 
+|===
+. Cree una LIF NFS.
++
+....
+network interface create -vserver Infra-SVM -lif nfs_lif01 -role data -data-protocol nfs -home-node <<var_nodeA>> -home-port a0a-<<var_nfs_vlan_id>> –address <<var_nodeA_nfs_lif_01_ip>> -netmask << var_nodeA_nfs_lif_01_mask>> -status-admin up –failover-policy broadcast-domain-wide –firewall-policy data –auto-revert true
+network interface create -vserver Infra-SVM -lif nfs_lif02 -role data -data-protocol nfs -home-node <<var_nodeA>> -home-port a0a-<<var_nfs_vlan_id>> –address <<var_nodeB_nfs_lif_02_ip>> -netmask << var_nodeB_nfs_lif_02_mask>> -status-admin up –failover-policy broadcast-domain-wide –firewall-policy data –auto-revert true
+network interface show
+....
+
+
+
+
+=== Añada el administrador de SVM de infraestructura
+
+En la siguiente tabla, se enumera la información necesaria para completar esta configuración.
+
+|===
+| Detalles | Valor de detalle 
+
+
+| IP de Vsmgmt | \<<var_svm_mgmt_ip>> 
+
+
+| Máscara de red Vsmgmt | \<<var_svm_mgmt_mask>> 
+
+
+| Puerta de enlace predeterminada de Vsmgmt | \<<var_svm_mgmt_gateway>> 
+|===
+Para añadir la interfaz lógica de administración de SVM y el administrador de SVM de la infraestructura a la red de gestión, realice los siguientes pasos:
+
+. Ejecute el siguiente comando:
++
+....
+network interface create –vserver Infra-SVM –lif vsmgmt –role data –data-protocol none –home-node <<var_nodeB>> -home-port  e0M –address <<var_svm_mgmt_ip>> -netmask <<var_svm_mgmt_mask>> -status-admin up –failover-policy broadcast-domain-wide –firewall-policy mgmt –auto-revert true
+....
++
+
+NOTE: La IP de administración de SVM aquí debe estar en la misma subred que la IP de administración del clúster de almacenamiento.
+
+. Cree una ruta predeterminada para permitir que la interfaz de gestión de SVM llegue al mundo exterior.
++
+....
+network route create –vserver Infra-SVM -destination 0.0.0.0/0 –gateway <<var_svm_mgmt_gateway>>
+network route show
+....
+. Establezca una contraseña para el usuario de SVM vsadmin y desbloquee el usuario.
++
+....
+security login password –username vsadmin –vserver Infra-SVM
+Enter a new password: <<var_password>>
+Enter it again: <<var_password>>
+security login unlock –username vsadmin –vserver Infra-SVM
+....
+
+
+link:express-c-series-aff220-deploy_cisco_ucs_c-series_rack_server_deployment_procedure.html["Siguiente: Procedimiento de puesta en marcha de servidores en rack Cisco UCS C-Series"]

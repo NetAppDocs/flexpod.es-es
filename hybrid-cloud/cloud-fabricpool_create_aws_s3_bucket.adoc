@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html 
+keywords: create, aws, s3, bucket, cloud, fabricpool, flexpod, tiers, create 
+summary: Los bloques son contenedores de almacenamiento de objetos que contienen datos. Debe proporcionar el nombre y la ubicación del bloque en el que se almacenan los datos antes de poder agregarse a un agregado como nivel de cloud. 
+---
+= Cree el bloque de AWS S3
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Los bloques son contenedores de almacenamiento de objetos que contienen datos. Debe proporcionar el nombre y la ubicación del bloque en el que se almacenan los datos antes de poder agregarse a un agregado como nivel de cloud.
+
+
+NOTE: Los bloques no se pueden crear usando System Manager de OnCommand, OnCommand Unified Manager ni ONTAP.
+
+FabricPool admite la conexión de un bloque por agregado, como se muestra en la siguiente figura. Un único bloque se puede conectar a un único agregado, y un único bloque se puede vincular a varios agregados. Sin embargo, un solo agregado no se puede asociar a varios bloques. Aunque un único bloque se puede conectar a varios agregados de un clúster, NetApp no recomienda conectar un único bloque a agregados en varios clústeres.
+
+Al planificar una arquitectura de almacenamiento, tenga en cuenta cómo la relación entre bloques y agregados puede afectar al rendimiento. Muchos proveedores de almacenes de objetos establecen un número máximo de IOPS admitidas a nivel de bloque o contenedor. Los entornos que requieren el máximo rendimiento deben utilizar varios bloques para reducir la posibilidad de que las limitaciones de IOPS del almacén de objetos puedan afectar al rendimiento en varios agregados de FabricPool. Añadir un único bloque o contenedor a todos los agregados de FabricPool de un clúster puede ser más beneficioso para los entornos que valoran la capacidad de gestión por el rendimiento en el nivel cloud.
+
+image:cloud-fabricpool_image10.png["Error: Falta la imagen gráfica"]
+
+
+
+== Cree un bloque de S3
+
+. En la consola de gestión de AWS desde la página de inicio, introduzca S3 en la barra de búsqueda.
+. Seleccione el almacenamiento escalable S3 en el cloud.
++
+image:cloud-fabricpool_image11.png["Error: Falta la imagen gráfica"]
+
+. En la página de inicio de S3, seleccione Create Bucket.
+. Introduzca un nombre compatible con DNS y elija la región para crear el bloque.
++
+image:cloud-fabricpool_image12.png["Error: Falta la imagen gráfica"]
+
+. Haga clic en Create para crear el bloque de almacenamiento de objetos.
+
+
+link:cloud-fabricpool_add_a_cloud_tier_to_ontap.html["Siguiente: Añada un nivel de cloud a ONTAP"]

@@ -1,0 +1,203 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html 
+keywords: cisco mds, mds 9000, cryptograhic, snmpv3, ssh, 
+summary: La plataforma Cisco MDS 9000 con software 8.4.x cumple con FIPS 140-2-2. Cisco MDS implementa módulos criptográficos y los siguientes servicios para SNMPv3 y SSH. 
+---
+= Redes Cisco de FlexPod y FIPS 140-2
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["Anterior: Computación Cisco UCS de FlexPod y FIPS 140-2."]
+
+
+
+== MDS de Cisco
+
+Plataforma Cisco MDS 9000 con software 8.4.x. https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=mds["Conforme a FIPS 140-2-2"^]. Cisco MDS implementa módulos criptográficos y los siguientes servicios para SNMPv3 y SSH.
+
+* Establecimiento de sesiones en apoyo de cada servicio
+* Todos los algoritmos criptográficos subyacentes admiten las funciones de derivación de cada clave de servicios
+* Hash para cada servicio
+* Cifrado simétrico para cada servicio
+
+
+Antes de activar el modo FIPS, complete las siguientes tareas en el conmutador MDS:
+
+. Convierta las contraseñas en un mínimo de ocho caracteres.
+. Desactivar Telnet. Los usuarios deben iniciar sesión solo con SSH.
+. Desactive la autenticación remota mediante RADIUS/TACACS+. Sólo se pueden autenticar los usuarios locales del conmutador.
+. Deshabilite SNMP v1 y v2. Cualquier cuenta de usuario existente en el conmutador que se haya configurado para SNMPv3 debe configurarse sólo con SHA para autenticación y AES/3DES para privacidad.
+. Desactive VRRP.
+. Elimine todas las directivas IKE que tengan MD5 para autenticación o DES para cifrado. Modifique las directivas para que utilicen SHA para la autenticación y 3DES/AES para el cifrado.
+. Elimine todos los teclados RSA1 del servidor SSH.
+
+
+Para activar el modo FIPS y mostrar el estado FIPS en el conmutador MDS, lleve a cabo los pasos siguientes:
+
+. Muestra el estado de FIPS.
++
+....
+MDSSwitch# show fips status
+FIPS mode is disabled
+MDSSwitch# conf
+Enter configuration commands, one per line.  End with CNTL/Z.
+....
+. Configure la clave SSH de 2048 bits.
++
+....
+MDSSwitch(config)# no feature ssh
+XML interface to system may become unavailable since ssh is disabled
+MDSSwitch(config)# no ssh key
+MDSSwitch(config)# show ssh key
+**************************************
+could not retrieve rsa key information
+bitcount: 0
+**************************************
+could not retrieve dsa key information
+bitcount: 0
+**************************************
+no ssh keys present. you will have to generate them
+**************************************
+MDSSwitch(config)# ssh key
+dsa   rsa
+MDSSwitch(config)# ssh key rsa 2048 force
+generating rsa key(2048 bits).....
+...
+generated rsa key
+....
+. Habilite el modo FIPS.
++
+....
+MDSSwitch(config)# fips mode enable
+FIPS mode is enabled
+System reboot is required after saving the configuration for the system to be in FIPS mode
+Warning: As per NIST requirements in 6.X, the minimum RSA Key Size has to be 2048
+....
+. Muestra el estado de FIPS.
++
+....
+MDSSwitch(config)# show fips status
+FIPS mode is enabled
+MDSSwitch(config)# feature ssh
+MDSSwitch(config)# show feature | grep ssh
+sshServer            1        enabled
+....
+. Guarde la configuración en la configuración en ejecución.
++
+....
+MDSSwitch(config)# copy ru st
+[########################################] 100%
+exitCopy complete.
+MDSSwitch(config)# exit
+....
+. Reinicie el conmutador MDS
++
+....
+MDSSwitch# reload
+This command will reboot the system. (y/n)?  [n] y
+....
+. Muestra el estado de FIPS.
++
+....
+Switch(config)# fips mode enable
+Switch(config)# show fips status
+....
+
+
+Para obtener más información, consulte https://www.cisco.com/c/en/us/td/docs/switches/datacenter/mds9000/sw/5_0/configuration/guides/sec/nxos/sec/fips.html["Habilitar el modo FIPS"^].
+
+
+
+== Cisco Nexus
+
+Los switches de la serie Cisco Nexus 9000 (versión 9.3) son https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=nexus["Conforme a FIPS 140-2-2"^]. Cisco Nexus implementa módulos criptográficos y los siguientes servicios para SNMPv3 y SSH.
+
+* Establecimiento de sesiones en apoyo de cada servicio
+* Todos los algoritmos criptográficos subyacentes admiten las funciones de derivación de cada clave de servicios
+* Hash para cada servicio
+* Cifrado simétrico para cada servicio
+
+
+Antes de habilitar el modo FIPS, complete las siguientes tareas en el switch Cisco Nexus:
+
+. Desactivar Telnet. Los usuarios deben iniciar sesión solo con Secure Shell (SSH).
+. Desactive SNMPv1 y v2. Cualquier cuenta de usuario existente en el dispositivo que se haya configurado para SNMPv3 debe configurarse sólo con SHA para autenticación y AES/3DES para privacidad.
+. Elimine todos los pares de claves RSA1 del servidor SSH.
+. Habilite la comprobación de integridad de mensajes (MIC) HMAC-SHA1 para que se utilice durante la negociación del protocolo de asociación de seguridad (SAP) de Cisco TrustSec. Para ello, introduzca el algoritmo hash de SAP `HMAC-SHA-1` desde el `cts-manual` o. `cts-dot1x` modo.
+
+
+Para activar el modo FIPS en el switch Nexus, realice los pasos siguientes:
+
+. Configure una clave SSH de 2048 bits.
++
+....
+NexusSwitch# show fips status
+FIPS mode is disabled
+NexusSwitch# conf
+Enter configuration commands, one per line.  End with CNTL/Z.
+....
+. Configure la clave SSH de 2048 bits.
++
+....
+NexusSwitch(config)# no feature ssh
+XML interface to system may become unavailable since ssh is disabled
+NexusSwitch(config)# no ssh key
+NexusSwitch(config)# show ssh key
+**************************************
+could not retrieve rsa key information
+bitcount: 0
+**************************************
+could not retrieve dsa key information
+bitcount: 0
+**************************************
+no ssh keys present. you will have to generate them
+**************************************
+NexusSwitch(config)# ssh key
+dsa   rsa
+NexusSwitch(config)# ssh key rsa 2048 force
+generating rsa key(2048 bits).....
+...
+generated rsa key
+....
+. Habilite el modo FIPS.
++
+....
+NexusSwitch(config)# fips mode enable
+FIPS mode is enabled
+System reboot is required after saving the configuration for the system to be in FIPS mode
+Warning: As per NIST requirements in 6.X, the minimum RSA Key Size has to be 2048
+Show fips status
+NexusSwitch(config)# show fips status
+FIPS mode is enabled
+NexusSwitch(config)# feature ssh
+NexusSwitch(config)# show feature | grep ssh
+sshServer            1        enabled
+Save configuration to the running configuration
+NexusSwitch(config)# copy ru st
+[########################################] 100%
+exitCopy complete.
+NexusSwitch(config)# exit
+....
+. Reinicie el switch Nexus.
++
+....
+NexusSwitch# reload
+This command will reboot the system. (y/n)?  [n] y
+....
+. Muestra el estado de FIPS.
++
+....
+NexusSwitch(config)# fips mode enable
+NexusSwitch(config)# show fips status
+....
+
+
+Además, el software Cisco NX OS admite la función NetFlow que permite una detección mejorada de anomalías y seguridad de la red. NetFlow captura los metadatos de cada conversación de la red, las partes implicadas en la comunicación, el protocolo utilizado y la duración de la transacción. Una vez agregada y analizado la información, puede proporcionar una visión del comportamiento normal. Los datos recopilados también permiten la identificación de patrones de actividad cuestionables, como el malware que se propaga a través de la red, lo que de otra manera puede pasar desapercibida. NetFlow utiliza flujos para proporcionar estadísticas para la supervisión de la red. Un flujo es un flujo unidireccional de paquetes que llega a una interfaz de origen (o VLAN) y tiene los mismos valores para las claves. Una clave es un valor identificado para un campo dentro del paquete. Puede crear un flujo utilizando un registro de flujo para definir las claves únicas para su flujo. Puede exportar los datos que NetFlow recopila para sus flujos utilizando un exportador de flujo a un colector NetFlow remoto, como Cisco StealtWatch. StealtWatch utiliza esta información para la supervisión continua de la red y proporciona información forense de respuesta a incidentes y detección de amenazas en tiempo real si se produce un brote de ransomware.
+
+link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["Siguiente: Almacenamiento ONTAP de FlexPod y FIPS 140-2."]

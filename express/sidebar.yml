@@ -1,0 +1,156 @@
+---
+section: express
+title: FlexPod Express
+entries:
+- title: Guía de diseño de FlexPod Express con Cisco UCS C-Series y la serie AFF C190
+    de NetApp
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/express/express-c-series-c190-design_executive_summary.html"
+  - title: Resumen del programa
+    url: "/express/express-c-series-c190-design_program_summary.html"
+  - title: Requisitos tecnológicos
+    url: "/express/express-c-series-c190-design_technology_requirements.html"
+  - title: Opciones de diseño
+    url: "/express/express-c-series-c190-design_design_choices.html"
+  - title: Conclusión
+    url: "/express/express-c-series-c190-design_conclusion.html"
+  - title: Dónde encontrar información adicional
+    url: "/express/express-c-series-c190-design_where_to_find_additional_information.html"
+- title: Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y la serie
+    AFF C190 de NetApp
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/express/express-c-series-c190-deploy_program_summary_overview.html"
+  - title: Descripción general de la solución
+    url: "/express/express-c-series-c190-deploy_solution_overview.html"
+  - title: Requisitos tecnológicos
+    url: "/express/express-c-series-c190-deploy_technology_requirements.html"
+  - title: Información sobre el cableado exprés de FlexPod
+    url: "/express/express-c-series-c190-deploy_flexpod_express_cabling_information.html"
+  - title: Procedimientos de implantación
+    entries:
+    - title: Descripción general
+      url: "/express/express-c-series-c190-deploy_deployment_procedures_overview.html"
+    - title: Ponga en marcha Cisco Nexus 31108PC-V
+      url: "/express/express-c-series-c190-deploy_deploy_cisco_nexus_31108pc-v.html"
+    - title: Procedimiento de instalación de almacenamiento NetApp (parte 1)
+      url: "/express/express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html"
+    - title: Poner en marcha el servidor de montaje en rack Cisco UCS C-Series
+      url: "/express/express-c-series-c190-deploy_deploy_cisco_ucs_c-series_rack_server.html"
+    - title: Procedimiento de puesta en marcha del almacenamiento AFF de NetApp (parte
+        2)
+      url: "/express/express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html"
+    - title: Procedimiento de puesta en marcha de VMware vSphere 6.7U2
+      url: "/express/express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html"
+    - title: Procedimiento de instalación de VMware vCenter Server 6.7U2
+      url: "/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html"
+    - title: Configuración de clustering de VMware vCenter Server 6.7U2 y vSphere
+      url: "/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html"
+    - title: Procedimientos de puesta en marcha de Virtual Storage Console 9.6 de
+        NetApp
+      url: "/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html"
+  - title: Conclusión
+    url: "/express/express-c-series-c190-deploy_conclusion.html"
+  - title: Reconocimientos
+    url: "/express/express-c-series-c190-deploy_acknowledgments.html"
+  - title: Dónde encontrar información adicional
+    url: "/express/express-c-series-c190-deploy_where_to_find_additional_information.html"
+  - title: Historial de versiones
+    url: "/express/express-c-series-c190-deploy_version_history.html"
+- title: Guía de diseño de FlexPod Express con Cisco UCS C-Series y AFF A220 Series
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/express/express-c-series-aff220-design_executive_summary.html"
+  - title: Resumen del programa
+    url: "/express/express-c-series-aff220-design_program_summary.html"
+  - title: Descripción general de la solución
+    url: "/express/express-c-series-aff220-design_solution_overview.html"
+  - title: Requisitos tecnológicos
+    url: "/express/express-c-series-aff220-design_technology_requirements.html"
+  - title: Opciones de diseño
+    url: "/express/express-c-series-aff220-design_design_choices.html"
+  - title: Verificación de la solución
+    url: "/express/express-c-series-aff220-design_solution_verification.html"
+  - title: Conclusión
+    url: "/express/express-c-series-aff220-design_conclusion.html"
+  - title: Dónde encontrar información adicional
+    url: "/express/express-c-series-aff220-design_where_to_find_additional_information.html"
+- title: Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y AFF
+    A220 Series
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/express/express-c-series-aff220-deploy_program_summary.html"
+  - title: Descripción general de la solución
+    url: "/express/express-c-series-aff220-deploy_solution_overview.html"
+  - title: Requisitos tecnológicos
+    url: "/express/express-c-series-aff220-deploy_technology_requirements.html"
+  - title: Información sobre el cableado exprés de FlexPod
+    url: "/express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html"
+  - title: Procedimientos de implantación
+    url: "/express/express-c-series-aff220-deploy_deployment_procedures_overview.html"
+    entries:
+    - title: Procedimiento de puesta en marcha de Cisco Nexus 3172P
+      url: "/express/express-c-series-aff220-deploy_cisco_nexus_3172p_deployment_procedure.html"
+    - title: Procedimiento de instalación de almacenamiento NetApp (parte 1)
+      url: "/express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_@part_1@.html"
+    - title: Procedimiento para la puesta en marcha de servidores en rack Cisco UCS
+        C-Series
+      url: "/express/express-c-series-aff220-deploy_cisco_ucs_c-series_rack_server_deployment_procedure.html"
+    - title: Procedimiento de instalación de almacenamiento AFF de NetApp (parte 2)
+      url: "/express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html"
+    - title: Procedimiento de puesta en marcha de VMware vSphere 6.7
+      url: "/express/express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html"
+    - title: Instale VMware vCenter Server 6.7
+      url: "/express/express-c-series-aff220-deploy_install_vmware_vcenter_server_6.7.html"
+    - title: Configure VMware vCenter Server 6.7 y el clustering de vSphere
+      url: "/express/express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html"
+  - title: Conclusión
+    url: "/express/express-c-series-aff220-deploy_conclusion.html"
+  - title: Dónde encontrar información adicional
+    url: "/express/express-c-series-aff220-deploy_where_to_find_additional_information.html"
+- title: FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con guía de diseño
+    de almacenamiento basado en IP directamente incluido
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/express/express-direct-attach-design_overview.html"
+  - title: Resumen del programa
+    url: "/express/express-direct-attach-design_program_summary.html"
+  - title: Descripción general de la solución
+    url: "/express/express-direct-attach-design_solution_overview.html"
+  - title: Requisitos tecnológicos
+    url: "/express/express-direct-attach-design_technology_requirements.html"
+  - title: Opciones de diseño
+    url: "/express/express-direct-attach-design_design_choices.html"
+  - title: Verificación de la solución
+    url: "/express/express-direct-attach-design_solution_verification.html"
+  - title: Conclusión
+    url: "/express/express-direct-attach-design_conclusion.html"
+  - title: Dónde encontrar información adicional
+    url: "/express/express-direct-attach-design_where_to_find_additional_information.html"
+- title: FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento
+    basado en IP directamente incluido
+  type: solutions
+  entries:
+  - title: Descripción general
+    url: "/express/express-direct-attach-aff220-deploy_program_summary.html"
+  - title: Descripción general de la solución
+    url: "/express/express-direct-attach-aff220-deploy_solution_overview.html"
+  - title: Requisitos tecnológicos
+    url: "/express/express-direct-attach-aff220-deploy_technology_requirements.html"
+  - title: Información de cableado exprés de FlexPod
+    url: "/express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html"
+  - title: Procedimientos de implantación
+    url: "/express/express-direct-attach-aff220-deploy_deployment_procedures.html"
+  - title: Conclusión
+    url: "/express/express-direct-attach-aff220-deploy_conclusion.html"
+  - title: Información adicional
+    url: "/express/express-direct-attach-aff220-deploy_additional_information.html"
+- title: FlexPod Express para VMware vSphere 7.0 con Cisco UCS Mini y AFF / FAS de
+    NetApp (NVA)
+  url: https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf

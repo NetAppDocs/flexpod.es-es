@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_new.html 
+keywords: 'netapp, cisco, ontap, intersight, flexpod, what"s new, features, release notes, enhancements' 
+summary: Cisco Intersight introduce nuevas versiones para traerle nuevas funciones, mejoras y correcciones de errores. 
+---
+= Lo nuevo
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección se enumeran las nuevas funciones y funcionalidades disponibles para Cisco Intersight con el almacenamiento ONTAP de NetApp.
+
+
+
+== Enero de 2023
+
+
+NOTE: Se requiere una actualización a Active IQ Unified Manager 9.12 GA de NetApp para garantizar la compatibilidad y todas las funciones con la última versión. Para obtener una lista de problemas conocidos relacionados con esta versión, consulte <<Problemas conocidos>>.
+
+* Las comprobaciones de interoperabilidad de Intersight pueden distinguir entre los modos de firmware de UCSM e IMM cuando se realizan comprobaciones de compatibilidad.
+* Las relaciones de protección no se mostrarán en Intersight para ONTAP 9.7. Este problema se solucionó en ONTAP 9.8RC1.
+
+
+
+
+== Agosto de 2022
+
+
+NOTE: Se requiere una actualización a Active IQ Unified Manager 9.11 GA de NetApp para garantizar la compatibilidad y todas las funciones con la última versión. Para obtener una lista de problemas conocidos relacionados con esta versión, consulte <<Problemas conocidos>>.
+
+* Se ha actualizado el cálculo de la capacidad disponible del clúster para que coincida con System Manager
+* Se ha actualizado la página General del clúster para ocultar el resumen de las métricas de rendimiento hasta que se rellenan los datos de rendimiento
+* Se ha solucionado el problema de la interfaz de usuario de la página General del clúster que ocasionalmente provocó la bloqueo de la página
+* Se han agregado recursos compartidos de CIFS, servicios CIFS, qtrees y políticas de SnapMirror de SVM para realizar un inventario de back-end.
+* Se han añadido los recursos compartidos y Qtrees al menú de navegación de la interfaz de usuario en la sección Logical Inventory
+* Se añadieron recursos compartidos como pestaña de una máquina virtual de almacenamiento seleccionada
+* Se ha agregado información del servicio CIFS en la pestaña Storage VM General si la máquina virtual de almacenamiento está habilitada para CIFS
+* Se ha añadido una página de comprobaciones del clúster que permite a los usuarios validar la configuración de los sistemas de almacenamiento de NetApp que cumple las prácticas recomendadas
+
+
+
+
+== Julio de 2022
+
+* Imágenes mejoradas para la proporción de reducción de datos en clúster que ahora está disponible en el widget Capacity
+* Se ha añadido la pestaña FC interfaces a la página Network interfaces
+* La creación de un nuevo volumen con la tarea genérica “Nuevo volumen de almacenamiento” ahora establece la garantía de espacio de volumen en ninguno y el porcentaje de reserva de instantáneas en 0%
+* El campo de comentario de la tarea Editar política de snapshot ahora es opcional y ya no es obligatorio
+* Se ha mejorado la coherencia de la orquestación y el inventario de IU
+* La información sobre capacidad de Intersight bajo capacidad del clúster ahora es coherente con System Manager
+* Se ha agregado la casilla de verificación en la tarea New Storage Virtual Machine para mostrar todos los parámetros al crear una nueva interfaz de administración con el fin de mejorar la facilidad de uso
+* Los protocolos movidos por debajo de Client Match, ahora son coherentes con System Manager
+* La página general de la política de exportación ahora muestra los protocolos de acceso
+* ahora se ha registrado de forma condicional el eliminación del igroup
+* Se han añadido los parámetros “Failover Policy” y "autorevert" para NAS en New Storage NAS Data Interface y New Storage iSCSI Data Interface
+* La tarea revertir para nuevo volumen inteligente NAS de almacenamiento ahora elimina la política de exportación si no hay otros volúmenes asociados
+* Se han realizado mejoras para las tareas de Smart Volume y Smart LUN
+
+
+
+
+== Abril de 2022
+
+
+NOTE: Para garantizar la compatibilidad y completar la funcionalidad con futuras versiones, se recomienda actualizar el Active IQ Unified Manager de NetApp a la versión 9.10P1.
+
+* Se ha agregado el dominio de difusión a la página Detalles del puerto Ethernet
+* Se cambió el término “agregado” a “nivel” para el agregado y SVM dentro de la interfaz de usuario
+* Se ha cambiado el término "Estado del clúster" a "Estado de la cabina".
+* El filtro MTU funciona ahora con <,>,=,<=,>= caracteres
+* Se ha agregado la página de interfaz de red al inventario del clúster
+* Se ha agregado AutoSupport al inventario de clústeres
+* Añadido `cdpd.enable` opción a nodo
+* Se ha agregado un objeto para el vecino de CDP
+* Se han agregado tareas de almacenamiento de flujos de trabajo de NetApp en Cisco Intersight. Consulte link:ci-qsg_use_cases.html["Caso de uso 3 flujos de trabajo personalizados utilizando un formulario sin diseñador"] Para obtener una lista completa de tareas de almacenamiento de NetApp.
+
+
+
+
+== Enero de 2022
+
+* Se han añadido alarmas de intervisión basadas en eventos para Active IQ Unified Manager 9.10 de NetApp o posterior.
+
+
+
+NOTE: Para garantizar la compatibilidad y todas las funcionalidades con futuras versiones, se recomienda actualizar el sistema Active IQ Unified Manager de NetApp a la versión 9.10.
+
+* Establezca explícitamente cada protocolo habilitado (true o false) para el equipo virtual de almacenamiento
+* El estado clusterHealthStatus correlacionado está bien-con-suprimido a OK
+* La columna Estado cambiado su nombre a la columna Estado del clúster en la página de lista Cluster
+* Muestra “no accesible” la cabina de almacenamiento si el clúster está inactivo o no se puede acceder a él de otro modo
+* Cambie el nombre de la columna Estado a la columna Estado de la cabina en la página Cluster General
+* SVM ahora tiene una pestaña "Volumes" que muestra todos los volúmenes para la SVM
+* El volumen tiene una sección de capacidad Snapshot
+* Ahora las licencias se muestran correctamente
+
+
+
+
+== Octubre de 2021
+
+* Lista actualizada de tareas de almacenamiento de NetApp disponibles en Cisco Intersight. Consulte link:ci-qsg_use_cases.html["Caso de uso 3 flujos de trabajo personalizados utilizando un formulario sin diseñador"] Para obtener una lista completa de tareas de almacenamiento de NetApp.
+* Se ha agregado la columna Estado en la página de lista Cluster.
+* Ahora hay detalles ampliados disponibles en la página General de un clúster seleccionado.
+* Ahora se puede acceder a la tabla NTP Server a través del panel de navegación.
+* Se ha agregado una nueva ficha Sensores que contiene la página General de la máquina virtual de almacenamiento.
+* El resumen de grupos de agregación de vínculos y VLAN ya está disponible en la página General de puertos.
+* Columna total Data Capacity añadida en la tabla Volume total Capacity.
+* Las columnas de latencia, IOPS y rendimiento se añaden en las tablas Average Volume Statistics, Average LUN Statistics, Average Aggregate Statistics, Average Storage VM Statistics y Average Node Statistics
++
+
+NOTE: Las métricas de rendimiento anteriores solo están disponibles para cabinas de almacenamiento supervisadas con Active IQ Unified Manager 9.9 de NetApp o versiones posteriores.
+
+
+
+
+
+== Problemas conocidos
+
+* Si utiliza una versión de AIUM 9.11 o anterior, se producirá una discrepancia entre los valores mostrados en la página Lista de almacenamiento y el gráfico de barras de capacidad de la página General de almacenamiento. Para resolver este problema, actualice a AIQUM 9.12 o superior para garantizar la precisión de los valores de capacidad mostrados.
+* Si utiliza AIUM 9.11 o anterior, las comprobaciones realizadas por la pestaña "Interoperability" de la página "Integrated Systems" no podrán distinguir con precisión los componentes de Cisco de IMM y UCSM. Para resolver este problema, actualice a AIQUM 9.12 para asegurarse de que todos los componentes están correctamente identificados.
+* Para garantizar que los datos de inventario de almacenamiento Intersight no se vean afectados durante el proceso de recopilación de datos, deben eliminarse de Active IQ Unified Manager todos los clústeres de ONTAP no admitidos (es decir, versiones inferiores a ONTAP 9.7P1).
+* Todos los destinos reclamados requieren una versión mínima de AIUM de 9.11 para que las consultas de interoperabilidad del sistema integrado de FlexPod se completen correctamente.
+* La página Storage Inventory checks no se completa si el clúster de ONTAP se añade a AIQ mediante un FQDN. Los usuarios deben añadir clústeres de ONTAP a AIQ mediante una dirección IP.
+

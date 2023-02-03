@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html 
+keywords: san, map, boot, storage, setup, aff, deployment, procedure, igroups 
+summary: Para crear iGroups, se necesitan los IQN de iniciadores iSCSI y se deben completar los pasos siguientes. 
+---
+= Procedimiento de instalación de almacenamiento AFF de NetApp (parte 2)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Configuración del almacenamiento DE arranque SAN de ONTAP
+
+
+
+=== Cree iGroups iSCSI
+
+Para crear iGroups, complete el paso siguiente:
+
+Para este paso, se necesitan los IQN de iniciadores iSCSI desde la configuración del servidor.
+
+. Desde la conexión SSH del nodo de gestión del clúster, ejecute los siguientes comandos. Para ver los tres iGroups creados en este paso, ejecute el comando igroup show.
++
+....
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-A –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_a_iSCSI-A_vNIC_IQN>>, <<var_vm_host_infra_a_iSCSI-B_vNIC_IQN>>
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-B –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_b_iSCSI-A_vNIC_IQN>>, <<var_vm_host_infra_b_iSCSI-B_vNIC_IQN>>
+....
++
+
+NOTE: Este paso se debe completar cuando se añaden servidores Cisco UCS C- Series adicionales.
+
+
+
+
+
+== Asigne LUN de arranque a iGroups
+
+Para asignar LUN de arranque a iGroups, ejecute los siguientes comandos desde la conexión SSH de administración del clúster:
+
+....
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- A –igroup VM-Host-Infra- A –lun-id 0
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- B –igroup VM-Host-Infra- B –lun-id 0
+....
+
+NOTE: Este paso se debe completar cuando se añaden servidores Cisco UCS C-Series adicionales.
+
+link:express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html["Siguiente: Procedimiento de puesta en marcha de VMware vSphere 6.7."]

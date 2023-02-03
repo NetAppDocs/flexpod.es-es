@@ -1,0 +1,184 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_optional_features.html 
+keywords: metrocluster, fc, nvme, fc, san, boot, cisco, mds, fcoe, iscsi 
+summary: NetApp admite varios componentes opcionales para mejorar aún más las arquitecturas de centros de datos de FlexPod. Los componentes opcionales se describen en las subsecciones siguientes. 
+---
+= Funciones opcionales
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp admite varios componentes opcionales para mejorar aún más las arquitecturas de centros de datos de FlexPod. Los componentes opcionales se describen en las subsecciones siguientes.
+
+
+
+== MetroCluster
+
+FlexPod es compatible con ambas variantes del software MetroCluster de NetApp para una disponibilidad continua, en configuraciones de clústeres de dos o cuatro nodos. MetroCluster proporciona replicación síncrona para cargas de trabajo cruciales. Requiere una configuración de sitio doble conectada con switches de Cisco. La distancia máxima admitida entre los sitios es aproximadamente de 300 km (186 millas) para MetroCluster FC y aumenta a 700 km (435 millas) aproximadamente para MetroCluster IP. Las siguientes figuras ilustran un centro de datos FlexPod con arquitectura MetroCluster de NetApp y el centro de datos FlexPod con arquitectura MetroCluster IP de NetApp, respectivamente.
+
+La figura siguiente muestra el centro de datos FlexPod con la arquitectura MetroCluster de NetApp.
+
+image:dc-tech-spec_image1.png["Error: Falta la imagen gráfica"]
+
+La siguiente figura muestra el centro de datos FlexPod con la arquitectura IP de MetroCluster de NetApp.
+
+image:dc-tech-spec_image2.png["Error: Falta la imagen gráfica"]
+
+A partir de ONTAP 9.8, ONTAP Mediator se puede instalar en un tercer sitio para supervisar la solución IP de MetroCluster y facilitar una conmutación de sitios no planificada automática cuando se produce un desastre en el sitio.
+
+Para la puesta en marcha de una solución IP de FlexPod MetroCluster con conectividad de sitio a sitio de capa 2 ampliada, se puede lograr una reducción de costes al compartir ISL y utilizar switches FlexPod como switches IP de MetroCluster compatibles si el ancho de banda y los switches de red cumplen los requisitos tal y como se muestra en la siguiente figura. Que muestra la solución IP de FlexPod MetroCluster con el uso compartido de ISL y switches conformes con la normativa.
+
+image:dc-tech-spec_image10.png["Error: Falta la imagen gráfica"]
+
+Las dos figuras siguientes muestran la estructura multisitio VXLAN y la estructura de almacenamiento IP MetroCluster para una solución IP FlexPod MetroCluster con implementación de estructura multisitio VXLAN.
+
+* Solución de estructura multisitio VXLAN para FlexPod MetroCluster IP
+
+
+image:dc-tech-spec_image11.png["Error: Falta la imagen gráfica"]
+
+* Estructura de almacenamiento IP de MetroCluster para solución FlexPod MetroCluster IP
+
+
+image:dc-tech-spec_image12.png["Error: Falta la imagen gráfica"]
+
+
+
+== FC-NVMe integral
+
+Un FC-NVMe integral amplía sin problemas la infraestructura SAN existente del cliente para aplicaciones en tiempo real a la vez que ofrece una tasa de IOPS y un rendimiento mejorados con una latencia reducida.
+
+Se puede utilizar un transporte SAN FC de 32 GB existente para transportar simultáneamente cargas de trabajo tanto NVMe como SCSI.
+
+La siguiente figura muestra el centro de datos FlexPod para FC con Cisco MDS.
+
+Si desea obtener más información sobre las configuraciones de FlexPod y las ventajas de rendimiento, consulte https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["Presentación del whitepaper integral sobre NVMe para FlexPod."^]
+
+Para obtener más información acerca de la implementación de ONTAP, consulte https://www.netapp.com/us/media/tr-4684.pdf["TR-4684: Implementación y configuración de San modernas con NVMe"^].
+
+image:dc-tech-spec_image3.png["Error: Falta la imagen gráfica"]
+
+
+
+== Arranque FC SAN mediante Cisco MDS
+
+Para proporcionar una mayor escalabilidad mediante el uso de una red SAN dedicada, FlexPod admite switches FC a través de switches Cisco MDS y switches Nexus con compatibilidad con FC como Cisco Nexus 93108TC-FX. La opción de arranque SAN FC a través de Cisco MDS tiene los siguientes requisitos de licencia y hardware:
+
+* Un mínimo de dos puertos FC por controladora de almacenamiento de NetApp; un puerto por cada estructura DE SAN
+* Una licencia de FC en cada controladora de almacenamiento de NetApp
+* Los switches Cisco MDS y las versiones de firmware compatibles con NetApp http://mysupport.netapp.com/matrix["IMT"^]
+
+
+Para obtener más información sobre un diseño basado en MDS, consulte el CVD https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["Guía de implementación de FlexPod Datacenter con VMware vSphere 6.7U1: Fibre Channel e iSCSI"^].
+
+Las siguientes figuras muestran un ejemplo de centro de datos FlexPod para FC con conectividad MDS y de centro de datos FlexPod para FC con Cisco Nexus 93180YC-FX, respectivamente.
+
+image:dc-tech-spec_image4.jpg["Error: Falta la imagen gráfica"]
+
+image:dc-tech-spec_image5.png["Error: Falta la imagen gráfica"]
+
+
+
+== Arranque SAN FC con Cisco Nexus
+
+La opción de arranque SAN FC clásica tiene los siguientes requisitos de licencia y hardware:
+
+* Cuando se realiza la división en zonas de FC en el switch Cisco Nexus 5000 Series, se requiere una licencia del paquete de servicios de protocolos de almacenamiento para los switches Cisco Nexus 5000 Series (FC_FEATURES_PKG).
+* Cuando se realiza la división en zonas de FC en el switch Cisco Nexus 5000 Series, se requieren enlaces SAN entre la interconexión de estructura y el switch Cisco Nexus 5000 Series. Para obtener redundancia adicional, se recomiendan canales DE puertos SAN entre los enlaces.
+* Los switches Cisco Nexus 5010, 5020 y 5548P requieren un módulo de puerto FC o universal (SUPERIOR) independiente para la conectividad con la interconexión de estructura Cisco UCS y con la controladora de almacenamiento de NetApp.
+* Cisco Nexus 93180YC-FX requiere una licencia de características de FC para poder habilitar FC.
+* Cada controladora de almacenamiento de NetApp requiere un mínimo de dos puertos FC de 8/16 GB para conectividad.
+* Se requiere una licencia de FC en la controladora de almacenamiento de NetApp.
++
+
+NOTE: El uso de la familia de switches Cisco Nexus 7000 o 9000 impide el uso de FC tradicional a menos que se realice la división en zonas de FC en la interconexión de estructura. En ese caso, no se admiten los vínculos superiores SAN al switch.
+
+
+
+La siguiente figura muestra una configuración de conectividad de FC.
+
+image:dc-tech-spec_image6.png["Error: Falta la imagen gráfica"]
+
+
+
+== Opción de arranque FCoE SAN
+
+La opción de arranque SAN FCoE tiene los siguientes requisitos de licencia y hardware:
+
+* Cuando se realiza una división en zonas de FC en el switch, una licencia del paquete de servicio de protocolos de almacenamiento para los switches de las series Cisco Nexus 5000 o 7000 `(FC_FEATURES_PKG`) es necesario.
+* Cuando se realiza la división en zonas de FC en el switch, se necesitan enlaces ascendentes FCoE entre la interconexión de estructura y los switches de las series Cisco Nexus 5000 o 7000. Para obtener redundancia adicional, también se recomiendan canales de puertos FCoE entre los enlaces.
+* Cada controladora de almacenamiento de NetApp requiere al menos una tarjeta complementaria de adaptador de objetivo unificado (UTA) de doble puerto para conectividad FCoE, a menos que haya puertos presentes el adaptador de destino unificado 2 (UTA2) integrados.
+* Esta opción requiere una licencia de FC en la controladora de almacenamiento de NetApp.
+* Si utiliza los switches Cisco Nexus serie 7000 y la división en zonas de FC se lleva a cabo en el switch, es necesaria una tarjeta de línea capaz de admitir FCoE.
++
+
+NOTE: El uso de switches de la serie Cisco Nexus 9000 excluye el uso de FCoE, a menos que se realice la división en zonas de FC en la interconexión de estructura y el almacenamiento esté conectado a las interconexiones de estructura con puertos del dispositivo. En ese caso, no se admiten los enlaces ascendentes FCoE para el switch.
+
+
+
+En la siguiente figura se muestra un escenario de arranque FCoE.
+
+image:dc-tech-spec_image7.png["Error: Falta la imagen gráfica"]
+
+
+
+== Opción de arranque iSCSI
+
+La opción de arranque iSCSI tiene los siguientes requisitos de licencia y hardware:
+
+* Se requiere una licencia de iSCSI en la controladora de almacenamiento de NetApp.
+* Se requiere un adaptador en el servidor Cisco UCS que sea capaz de arrancar iSCSI.
+* Se requiere un adaptador Ethernet de dos puertos 10 Gbps en la controladora de almacenamiento de NetApp.
+
+
+La siguiente figura muestra una configuración solo Ethernet que se inicia utilizando iSCSI.
+
+image:dc-tech-spec_image8.png["Error: Falta la imagen gráfica"]
+
+
+
+== Cisco UCS se conecta directamente con el almacenamiento de NetApp
+
+Las controladoras AFF y FAS de NetApp se pueden conectar directamente a las interconexiones de estructura de Cisco UCS sin tener que hacer ningún switch SAN aguas arriba.
+
+Se pueden utilizar cuatro tipos de puertos Cisco UCS para conectarse directamente con el almacenamiento de NetApp:
+
+* *Puerto FC de almacenamiento.* Conecte directamente este puerto a un puerto FC en el sistema de almacenamiento NetApp.
+* *Puerto FCoE de almacenamiento.* Conecte directamente este puerto a un puerto FCoE en el sistema de almacenamiento NetApp.
+* *Puerto del dispositivo.* Conecte directamente este puerto a un puerto 10GbE en almacenamiento NetApp.
+* *Puerto de almacenamiento unificado.* Conecte directamente este puerto a un UTA de NetApp.
+
+
+Los requisitos de licencia y hardware son los siguientes:
+
+* Se requiere una licencia de protocolo en la controladora de almacenamiento de NetApp.
+* Se requiere un adaptador (iniciador) de Cisco UCS en el servidor. Para obtener una lista de adaptadores de Cisco UCS compatibles, consulte NetApp http://mysupport.netapp.com/matrix["IMT"^].
+* Se requiere un adaptador de destino en la controladora de almacenamiento de NetApp.
+
+
+En la siguiente figura se muestra una configuración de conexión directa FC.
+
+image:dc-tech-spec_image9.png["Error: Falta la imagen gráfica"]
+
+*Notas:*
+
+* Cisco UCS se configura en modo de conmutación FC.
+* Los puertos FCoE de destino a las interconexiones de estructura se configuran como puertos de almacenamiento FCoE.
+* Los puertos FC del destino a las interconexiones de estructura se configuran como puertos de almacenamiento FC.
+
+
+En la siguiente figura se muestra una configuración de conexión directa iSCSI/Unified IP.
+
+image:dc-tech-spec_image10.png["Error: Falta la imagen gráfica"]
+
+*Notas:*
+
+* Cisco UCS se configura en el modo de conmutación Ethernet.
+* Los puertos iSCSI del destino a las interconexiones de estructura se configuran como puertos de almacenamiento Ethernet para datos iSCSI.
+* Los puertos Ethernet del destino a las interconexiones de estructura se configuran como puertos de almacenamiento Ethernet para datos CIFS/NFS.
+

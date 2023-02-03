@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_performance_considerations.html 
+keywords: performance, considerations, size, tier, cloud, fabricpool 
+summary: Al considerar el dimensionamiento, se deben evaluar las siguientes cosas. 
+---
+= Consideraciones de rendimiento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Configure el nivel de rendimiento
+
+Al realizar un dimensionamiento, tenga en cuenta que el nivel de rendimiento debe ser capaz de realizar las siguientes tareas:
+
+* Respaldar los datos activos
+* Al admitir datos inactivos hasta que el análisis de organización en niveles mueve los datos al nivel de cloud
+* Da soporte a los datos del nivel cloud que se activan y se vuelven a escribir en el nivel de rendimiento
+* Compatibilidad con metadatos de WAFL asociados con el nivel de cloud conectado
+
+
+Para la mayoría de los entornos, una tasa de rendimiento y capacidad de 1:10 en agregados de FabricPool es extremadamente conservadora, al tiempo que ofrece un ahorro significativo en almacenamiento. Por ejemplo, si el objetivo es establecer un nivel de 200 TB en el nivel de cloud, el agregado del nivel de rendimiento debería tener como mínimo 20 TB.
+
+
+NOTE: Las escrituras del nivel de cloud al nivel de rendimiento se deshabilitan si la capacidad del nivel de rendimiento es superior al 70 %. Si esto ocurre, los bloques se leen directamente desde el nivel de cloud.
+
+
+
+== Configure el nivel de cloud
+
+A la hora de ajustar el tamaño, el almacén de objetos que actúe como nivel de cloud debe poder realizar las siguientes tareas:
+
+* Admite lecturas de datos inactivos existentes
+* Compatibilidad con escrituras de nuevos datos fríos
+* Compatibilidad con la eliminación y desfragmentación de objetos
+

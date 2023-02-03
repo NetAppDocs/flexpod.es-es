@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_architecture.html 
+keywords: architecture, solution, technology, diagram, hardware, requirements, case, details, software, cloud, insights 
+summary: En esta sección, revisamos la arquitectura de una infraestructura convergente de centro de datos FlexPod, incluido un sistema AFF A800 de NetApp supervisado por Cloud Insights. 
+---
+= Arquitectura
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección, revisamos la arquitectura de una infraestructura convergente de centro de datos FlexPod, incluido un sistema AFF A800 de NetApp supervisado por Cloud Insights.
+
+
+
+== Tecnología de soluciones
+
+Una solución de centro de datos de FlexPod consta de los siguientes componentes mínimos para proporcionar un entorno de infraestructura convergente compatible, validado, escalable y de alta disponibilidad.
+
+* Dos nodos de almacenamiento ONTAP de NetApp (un par de alta disponibilidad)
+* Dos switches de red de centro de datos de Cisco Nexus
+* Dos switches de estructura Cisco MDS (opcional para puestas en marcha de FC)
+* Dos interconexiones de estructura Cisco UCS
+* Un chasis blade Cisco UCS con dos servidores blade Cisco UCS serie B
+
+
+O.
+
+* Dos servidores Cisco UCS C-Series en rack
+
+
+Para que Cloud Insights recopile datos, una organización debe poner en marcha una unidad de adquisición como máquina virtual o física dentro de su entorno del centro de datos FlexPod, o bien en una ubicación en la que pueda contactar con los componentes de los que recopila datos. Puede instalar el software de la unidad de adquisición en un sistema que ejecute varios sistemas operativos Windows o Linux admitidos. En la siguiente tabla se enumeran los componentes de la solución para este software.
+
+|===
+| De NetApp | Versión 
+
+
+| Microsoft Windows | 10 
+
+
+| Servidor Microsoft Windows | 2012, 2012 R2, 2016, 2019 
+
+
+| Red Hat Enterprise Linux | 7.2 – 7.6 
+
+
+| CentOS | 7.2 – 7.6 
+
+
+| Oracle Enterprise Linux | 7.5 
+
+
+| Debian | 9 
+
+
+| Ubuntu | 18.04 LTS 
+|===
+
+
+== Diagrama arquitectónico
+
+La siguiente figura muestra la arquitectura de la solución.
+
+image:cloud-insights_image2.png["Error: Falta la imagen gráfica"]
+
+
+
+== Requisitos de hardware
+
+En la siguiente tabla se enumeran los componentes de hardware necesarios para implementar la solución. Los componentes de hardware que se usan en cualquier implementación particular de la solución pueden variar en función de las necesidades del cliente.
+
+|===
+| Hardware subyacente | Cantidad 
+
+
+| Cisco Nexus 9336C-FX2 | 2 
+
+
+| Interconexión de estructura Cisco UCS 6454 | 2 
+
+
+| Chasis de servidor Blade UCS 5108 Cisco | 1 
+
+
+| Extensores de estructura Cisco UCS 2408 | 2 
+
+
+| Blades Cisco UCS B200 M5 | 2 
+
+
+| AFF A800 de NetApp | 2 
+|===
+
+
+== Requisitos de software
+
+En la siguiente tabla se enumeran los componentes de software necesarios para implementar la solución. Los componentes que se usan en cualquier implementación particular de la solución pueden variar en función de las necesidades del cliente.
+
+|===
+| De NetApp | Versión 
+
+
+| Firmware de Cisco Nexus | 9.3(5) 
+
+
+| Versión de Cisco UCS | 4.1(2a) 
+
+
+| Versión de ONTAP de NetApp | 9.7 
+
+
+| Versión de Cloud Insights de NetApp | Septiembre 2020, básico 
+
+
+| Red Hat Enterprise Linux | 7.6 
+
+
+| VSphere de VMware | 6.7U3 
+|===
+
+
+== Detalles de casos de uso
+
+Esta solución se aplica a los siguientes casos de uso:
+
+* El análisis del entorno con los datos proporcionados al asesor digital Active IQ de NetApp para la evaluación de los riesgos del sistema de almacenamiento y recomendaciones para la optimización del almacenamiento.
+* Solución de problemas del sistema de almacenamiento de ONTAP puesto en marcha en una solución de centro de datos de FlexPod mediante la examen de las estadísticas del sistema en tiempo real.
+* Generar consolas personalizadas para supervisar fácilmente puntos de interés específicos de los sistemas de almacenamiento de ONTAP que se ponen en marcha en una infraestructura convergente de FlexPod Datacenter.
+

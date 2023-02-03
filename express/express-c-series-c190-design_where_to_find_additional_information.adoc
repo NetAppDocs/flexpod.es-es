@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-design_where_to_find_additional_information.html 
+keywords: references 
+summary: Para obtener más información acerca de la información descrita en este documento, consulte los documentos y sitios web enumerados en esta página. 
+---
+= Dónde encontrar información adicional
+:allow-uri-read: 
+
+
+Para obtener más información sobre la información descrita en este documento, consulte los siguientes documentos y sitios web:
+
+* Centro de documentación de los sistemas AFF y FAS
++
+https://docs.netapp.com/platstor/index.jsp["https://docs.netapp.com/platstor/index.jsp"^]
+
+* Recursos de documentación de AFF
++
+https://www.netapp.com/us/documentation/all-flash-fas.aspx["https://www.netapp.com/us/documentation/all-flash-fas.aspx"^]
+
+* Guía de puesta en marcha de FlexPod Express con VMware vSphere 6.7 y AFF C190 de NetApp (en curso)
+* Documentación de NetApp
++
+https://docs.netapp.com["https://docs.netapp.com"^]
+
+

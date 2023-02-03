@@ -1,0 +1,298 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_architecture.html 
+keywords: medical, imaging, architecture, storage, tiers, network, connectivity, backup, recovery, networking 
+summary: La arquitectura de FlexPod está diseñada para proporcionar alta disponibilidad si falla un componente o un enlace en toda su pila de almacenamiento, red e informática. Las múltiples rutas de red para el acceso de los clientes y el acceso al almacenamiento proporcionan un equilibrio de carga y una utilización óptima de los recursos. 
+---
+= Arquitectura
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La arquitectura de FlexPod está diseñada para proporcionar alta disponibilidad si falla un componente o un enlace en toda su pila de almacenamiento, red e informática. Las múltiples rutas de red para el acceso de los clientes y el acceso al almacenamiento proporcionan un equilibrio de carga y una utilización óptima de los recursos.
+
+La siguiente figura ilustra la topología de Ethernet de 16 GB FC/40 GB (40 GbE) para la implementación de soluciones del sistema de imágenes médicas.
+
+image:medical-imaging_image3.png["Error: Falta la imagen gráfica"]
+
+
+
+== Arquitectura de almacenamiento
+
+Utilice las directrices de arquitectura de almacenamiento de esta sección para configurar la infraestructura de almacenamiento para un sistema de exploración médica empresarial.
+
+
+
+=== Niveles de almacenamiento
+
+Un entorno típico de exploración médica empresarial consta de varios niveles de almacenamiento distintos. Cada nivel tiene requisitos específicos de protocolo de almacenamiento y rendimiento. El almacenamiento de NetApp admite diversas tecnologías de RAID; puede encontrar más información https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-psmg%2FGUID-488B0EC4-3B03-4566-8321-5B8E568F34E4.html["aquí"^]. A continuación, se explica cómo los sistemas de almacenamiento AFF de NetApp satisfacen las necesidades de los distintos niveles de almacenamiento para el sistema de imagen:
+
+* *Almacenamiento de rendimiento (nivel 1).* este nivel ofrece alto rendimiento y alta redundancia para bases de datos, unidades de SO, almacenes de datos VMware Virtual Machine File System (VMFS), etc. Las operaciones de I/o en bloques se mueven por fibra a una cabina de almacenamiento compartido de SSD, tal y como se configura en ONTAP. La latencia mínima es de 1 ms a 3 ms, con una pico ocasional de 5 ms. Este nivel de almacenamiento se utiliza normalmente para la memoria caché de almacenamiento a corto plazo, normalmente de 6 a 12 meses de almacenamiento de imágenes para un acceso rápido a imágenes DICOM en línea. Este nivel ofrece alto rendimiento y alta redundancia para las cachés de imágenes, la copia de seguridad de la base de datos, etc. Las cabinas all-flash de NetApp proporcionan una latencia de <1 ms a un ancho de banda constante, lo cual es mucho inferior al tiempo de servicio que espera un entorno típico de imagen médica empresarial. ONTAP de NetApp es compatible con RAID-TEC (RAID de triple paridad para soportar tres errores de disco) y RAID DP (RAID de doble paridad para soportar dos fallos de disco).
+* *Almacenamiento de archivo (nivel 2).* este nivel se utiliza para el acceso a archivos típico con un coste optimizado, almacenamiento RAID 5 o RAID 6 para volúmenes más grandes y archivado a largo plazo con un coste/rendimiento más bajo. ONTAP de NetApp es compatible con RAID-TEC (RAID de triple paridad para soportar tres errores de disco) y RAID DP (RAID de doble paridad para soportar dos fallos de disco). FAS de NetApp en FlexPod permite realizar las operaciones de I/o de las aplicaciones de imagen a través de NFS/SMB en una cabina de discos SAS. Los sistemas FAS de NetApp ofrecen una latencia de ~10 ms con un ancho de banda constante, que es mucho menor que los tiempos de servicio esperados para el nivel 2 de almacenamiento en un entorno de sistema de imágenes médicas empresarial.
+
+
+El archivado basado en cloud en un entorno de cloud híbrido se puede utilizar para archivar en un proveedor de almacenamiento en cloud público mediante S3 o protocolos similares. La tecnología SnapMirror de NetApp permite la replicación de datos de imágenes desde cabinas all-flash o FAS en cabinas de almacenamiento basadas en disco más lentas o en Cloud Volumes ONTAP para AWS, Azure o Google Cloud.
+
+SnapMirror de NetApp ofrece funcionalidades de replicación de datos líderes del sector que ayudan a proteger el sistema de exploraciones médicas con replicación de datos unificada. Simplifique la gestión de la protección de datos en Data Fabric con la replicación entre plataformas: Del flash al disco y al cloud:
+
+* Transporte datos sin problemas y con eficiencia entre sistemas de almacenamiento de NetApp para hacer posible que los backups y recuperación ante desastres se lleven a cabo con el mismo volumen de destino y flujo de I/O.
+* Conmutación al nodo de respaldo en cualquier volumen secundario. Recupere desde cualquier copia Snapshot de un momento específico en el almacenamiento secundario.
+* Proteja sus cargas de trabajo más importantes con la replicación síncrona con cero pérdida de datos, que ya se encuentra disponible (RPO=0).
+* Reduzca el tráfico de red. Reduzca el espacio de almacenamiento con operaciones eficientes.
+* Reduzca el tráfico de red teniendo solo que transportar los bloques de datos que cambien.
+* Conserve las ventajas de la eficiencia del almacenamiento en el almacenamiento principal durante el transporte, incluidas la deduplicación, la compresión y la compactación.
+* Ofrezca otras eficiencias inline adicionales con la compresión de red.
+
+
+Se puede encontrar más información https://www.netapp.com/us/media/ds-3820.pdf["aquí"^].
+
+La tabla siguiente enumera cada nivel que un sistema de exploraciones médicas típico requiere para una latencia específica y las características de rendimiento.
+
+|===
+| Nivel de almacenamiento | Requisitos | Recomendación de NetApp 
+
+
+| 1 | Latencia de 1 a 5 ms, rendimiento de 35 a 500 Mbps | AFF con una pareja de alta disponibilidad (ha) de AFF A300 con <1 ms de latencia con dos bandejas de discos puede hacer frente al rendimiento de hasta 1,6 Gbps 
+
+
+.2+| 2 | Archivado local | FAS con una latencia de hasta 30 ms 
+
+
+| Archivado en el cloud | Replicación de SnapMirror en Cloud Volumes ONTAP o archivado de backups con el software StorageGRID de NetApp 
+|===
+
+
+=== Conectividad de la red de almacenamiento
+
+
+
+==== Estructura FC
+
+* La estructura FC es para I/o del sistema operativo del host de computación a almacenamiento.
+* Dos estructuras FC (Fabric A y Fabric B) están conectadas a Cisco UCS Fabric A y UCS Fabric B, respectivamente.
+* Hay una máquina virtual de almacenamiento (SVM) con dos interfaces lógicas de FC (LIF) en cada nodo de controladora. En cada nodo, un LIF está conectado a la estructura A y el otro está conectado a la estructura B.
+* La conectividad integral de FC de 16 Gbps se realiza mediante switches Cisco MDS. Se han configurado un único iniciador, varios puertos de destino y una división en zonas.
+* El arranque SAN FC se utiliza para crear informática sin estado. Los servidores se arrancan desde las LUN del volumen de arranque que está alojado en el clúster de almacenamiento de AFF.
+
+
+
+
+==== Red IP para acceso de almacenamiento a través de iSCSI, NFS y SMB/CIFS
+
+* Dos LIF iSCSI se encuentran en la SVM de cada nodo de controladora. En cada nodo, un LIF está conectado al tejido A y el segundo está conectado al tejido B.
+* Dos LIF de datos NAS se encuentran en la SVM de cada nodo de controladora. En cada nodo, un LIF está conectado al tejido A y el segundo está conectado al tejido B.
+* Grupos de interfaz de puertos de almacenamiento (canal de puerto virtual [VPC]) para un enlace de 10 Gbps para el switch N9k-A y para un enlace de 10 Gbps para el switch N9k-B.
+* Carga de trabajo en sistemas de archivos Ext4 o NTFS de un equipo virtual a otro:
++
+** Protocolo iSCSI por IP.
+
+
+* Equipos virtuales alojados en almacenes de datos NFS:
++
+** La actividad de I/o de VM OS se realiza sobre varias rutas Ethernet a través de switches Nexus.
+
+
+
+
+
+
+==== Gestión en banda (enlace activo-pasivo)
+
+* Enlace de 1 Gbps al conmutador de administración N9k-A y enlace de 1 Gbps al conmutador de administración N9k-B.
+
+
+
+
+=== Backup y recuperación
+
+FlexPod Datacenter se crea en una cabina de almacenamiento gestionada por el software para la gestión de datos ONTAP de NetApp. El software ONTAP ha evolucionado a lo largo de 20 años para ofrecer muchas funciones de gestión de datos para máquinas virtuales, bases de datos de Oracle, archivos compartidos SMB/CIFS y NFS. También proporciona tecnologías de protección como la tecnología Snapshot de NetApp, la tecnología SnapMirror y la tecnología de replicación de datos FlexClone de NetApp. El software SnapCenter de NetApp cuenta con un servidor y un cliente GUI para utilizar las funciones Snapshot, SnapRestore y FlexClone de ONTAP para VM, recursos compartidos de archivos SMB/CIFS, backup y recuperación de datos de Oracle y NFS.
+
+Utiliza el software SnapCenter de NetApp https://patents.google.com/patent/US20020083037A1/en["patentado"^] Tecnología Snapshot para crear un backup de toda una máquina virtual o base de datos de Oracle en un volumen de almacenamiento de NetApp de manera instantánea. En comparación con Oracle Recovery Manager (RMAN), las copias Snapshot no requieren una copia de backup completa de referencia, ya que no se almacenan como copias físicas de bloques. Las copias Snapshot se almacenan como punteros a los bloques de almacenamiento tal y como existían en el sistema de archivos ONTAP WAFL cuando se crearon las copias Snapshot. Debido a esta estrecha relación física, las copias Snapshot se mantienen en la misma cabina de almacenamiento que los datos originales. Las copias Snapshot también se pueden crear a nivel de archivo para ofrecer un control más granular para los backups.
+
+La tecnología Snapshot se basa en una técnica de redireccionamiento en escritura. Inicialmente, contiene solo punteros de metadatos y no consume mucho espacio hasta que los primeros cambios de datos cambian a un bloque de almacenamiento. Si un bloque existente está bloqueado por una copia snapshot, el sistema de archivos ONTAP WAFL escribe un bloque nuevo como una copia activa. Este enfoque evita las dobles escrituras que se producen con la técnica de cambio en escritura.
+
+Para el backup de bases de datos de Oracle, las copias Snapshot producen un ahorro de tiempo increíble. Por ejemplo, si se realiza una copia de seguridad que tardaba 26 horas en completarse sólo con RMAN, puede tardar menos de 2 minutos con el software SnapCenter.
+
+Además, como la restauración de datos no copia ningún bloque de datos, sino coloca los punteros en las imágenes de bloque Snapshot coherentes con la aplicación cuando se creó la copia Snapshot, es posible restaurar una copia de backup de Snapshot casi al instante. La clonación de SnapCenter crea una copia independiente de punteros de metadatos a una copia Snapshot existente y monta la nueva copia en un host de destino. Este proceso también es rápido y un almacenamiento eficiente.
+
+La tabla siguiente resume las principales diferencias entre Oracle RMAN y el software SnapCenter de NetApp.
+
+|===
+|  | Backup | Restaurar | Clonar | Necesita un backup completo | Uso del espacio | Copia externa 
+
+
+| RMAN | Lento | Lento | Lento | Sí | Alto | Sí 
+
+
+| SnapCenter | Y rápido | Y rápido | Y rápido | No | Bajo | Sí 
+|===
+En la siguiente figura, se presenta la arquitectura SnapCenter.
+
+image:medical-imaging_image4.png["Error: Falta la imagen gráfica"]
+
+Miles de empresas de todo el mundo usan las configuraciones de MetroCluster de NetApp para obtener alta disponibilidad (ha), cero pérdida de datos y operaciones no disruptivas tanto en el centro de datos como fuera de él. MetroCluster es una función gratuita del software ONTAP que refleja de forma síncrona los datos y la configuración entre dos clústeres de ONTAP en ubicaciones independientes o dominios de fallo. MetroCluster proporciona almacenamiento disponible de forma continua para las aplicaciones al gestionar automáticamente dos objetivos: Objetivo de punto de recuperación (RPO) cero mediante un mirroring sincrónico de los datos que se escriben en el clúster. El objetivo de tiempo de recuperación (RTO) prácticamente cero mediante la configuración de mirroring y la automatización del acceso a los datos en el segundo sitio MetroCluster ofrece simplicidad con mirroring automático de datos y configuración entre los dos clústeres independientes ubicados en los dos sitios. A medida que se aprovisiona el almacenamiento en un clúster, se replica automáticamente en el segundo clúster del segundo centro. La tecnología SyncMirror de NetApp proporciona una copia completa de todos los datos con un objetivo de punto de recuperación cero. , Por lo tanto, las cargas de trabajo de un sitio pueden cambiar en cualquier momento al sitio opuesto y continuar sirviendo datos sin pérdida de datos. Se puede encontrar más información https://fieldportal.netapp.com/content/746482["aquí"^].
+
+
+
+== Redes
+
+Un par de switches Cisco Nexus proporcionan rutas redundantes para el tráfico IP de computación a almacenamiento, y para clientes externos del visor de imágenes del sistema de imágenes médicas:
+
+* La agregación de enlaces que utiliza canales de puertos y VPs se emplea en todas partes, lo que permite un diseño de mayor ancho de banda y alta disponibilidad:
++
+** VPC se utiliza entre la cabina de almacenamiento de NetApp y los switches de Cisco Nexus.
+** VPC se utiliza entre la interconexión de estructura de Cisco UCS y los switches de Cisco Nexus.
+** Cada servidor dispone de tarjetas de interfaz de red virtual (vNIC) con conectividad redundante a la estructura unificada. La conmutación por error de NIC se utiliza entre las interconexiones de estructura para obtener redundancia.
+** Cada servidor tiene adaptadores de bus de host virtual (vHBA) con conectividad redundante a la estructura unificada.
+
+
+* Las interconexiones de estructura Cisco UCS se configuran en modo de host final como se recomienda, lo que permite fijar dinámicamente NIC a switches de enlace ascendente.
+* Una red de almacenamiento FC lo proporcionan un par de switches Cisco MDS.
+
+
+
+
+== Informática: Cisco Unified Computing System
+
+Dos estructuras de Cisco UCS mediante diferentes interconexiones de estructura proporcionan dos dominios de fallo. Cada estructura está conectada tanto a switches de red IP como a distintos switches de red de FC.
+
+Para ejecutar VMware ESXi, se crean perfiles de servicio idénticos para cada blade de Cisco UCS, tal y como se establecen en las prácticas recomendadas de FlexPod. Cada perfil de servicio debe tener los siguientes componentes:
+
+* Dos NIC (una en cada estructura) para transportar tráfico de clientes o gestión NFS, SMB/CIFS y NFS
+* VLAN adicionales necesarias a las NIC virtuales para tráfico de gestión o cliente NFS, SMB/CIFS y NFS
+* Dos NIC (una en cada estructura) para transportar tráfico iSCSI
+* Dos HBA de FC de almacenamiento (uno en cada estructura) para el tráfico de FC al almacenamiento
+* Arranque SAN
+
+
+
+
+== Virtualización
+
+El clúster de hosts VMware ESXi ejecuta máquinas virtuales de carga de trabajo. El clúster incluye instancias ESXi que se ejecutan en servidores blade Cisco UCS.
+
+Cada host ESXi incluye los siguientes componentes de red:
+
+* Arranque SAN mediante FC o iSCSI
+* Arranque los LUN en el almacenamiento de NetApp (en un FlexVol dedicado para SO de arranque)
+* Dos NIC de gestión (Cisco UCS VNIC) para NFS, SMB/CIFS o tráfico de gestión
+* Dos HBA de almacenamiento (Cisco UCS FC Vhba) para el tráfico de FC al almacenamiento
+* Switch estándar o switch virtual distribuido (según sea necesario)
+* Almacén de datos NFS para máquinas virtuales de carga de trabajo
+* Gestión, red de tráfico de clientes y grupos de puertos de red de almacenamiento para máquinas virtuales
+* Adaptador de red para la gestión, el tráfico de clientes y el acceso al almacenamiento (NFS, iSCSI o SMB/CIFS) de cada máquina virtual
+* DRS de VMware activado
+* Multivía nativa habilitada para rutas FC o iSCSI al almacenamiento
+* Snapshots de VMware para máquina virtual desactivadas
+* SnapCenter de NetApp puesto en marcha para VMware para backups de equipos virtuales
+
+
+
+
+== Arquitectura de sistemas de imágenes médicas
+
+En las organizaciones sanitarias, los sistemas de imágenes médicas son aplicaciones cruciales y están bien integrados en los flujos de trabajo clínicos que empiezan desde el registro de los pacientes y finalizan con las actividades relacionadas con la facturación en el ciclo de ingresos.
+
+El siguiente diagrama muestra los diversos sistemas implicados en un hospital grande típico; este diagrama está destinado a proporcionar un contexto arquitectónico a un sistema de imágenes médicas antes de que nos acercamos a los componentes arquitectónicos de un sistema típico de imágenes médicas. Los flujos de trabajo varían ampliamente y son hospitalarios y de uso específico.
+
+La figura siguiente muestra el sistema de imágenes médicas en el contexto de un paciente, una clínica comunitaria y un hospital grande.
+
+image:medical-imaging_image5.png["Error: Falta la imagen gráfica"]
+
+. El paciente visita la clínica comunitaria con síntomas. Durante la consulta, el médico de la comunidad coloca una orden de imagen que se envía al hospital más grande en forma de un mensaje de orden HL7.
+. El sistema EHR del médico de la comunidad envía el mensaje Order/ORD HL7 al hospital de gran tamaño.
+. El sistema de interoperabilidad empresarial (también conocido como bus de servicio empresarial [ESB]) procesa el mensaje de pedido y envía el mensaje de pedido al sistema EHR.
+. EHR procesa el mensaje de pedido. Si no existe un registro de paciente, se crea un nuevo registro de paciente.
+. La EHR envía una solicitud de diagnóstico por imágenes al sistema de imágenes médicas.
+. El paciente llama al gran hospital para una cita con imágenes.
+. La recepción de imágenes y el servicio de registro programa al paciente para una cita con imágenes utilizando información radiológica o un sistema similar.
+. El paciente llega para la cita con imágenes, y las imágenes o el vídeo se crean y envían al PACS.
+. El radiólogo lee las imágenes y anota las imágenes en el PACS utilizando un visor de diagnóstico con gráficos de gama alta/GPU habilitado. Ciertos sistemas de imágenes tienen capacidades de mejora de la eficiencia habilitadas para la inteligencia artificial (IA) en los flujos de trabajo de imágenes.
+. Los resultados del pedido de imágenes se envían al EHR en forma de mensaje ORU HL7 resultados de pedidos a través del ESB.
+. El EHR procesa los resultados del pedido en el registro del paciente, coloca la imagen en miniatura con un vínculo contextual a la imagen DICOM real. Los médicos pueden iniciar el visor de diagnóstico si se necesita una imagen de mayor resolución desde el EHR.
+. El médico revisa la imagen e introduce las notas del médico en el registro del paciente. El médico podría utilizar el sistema de apoyo a la toma de decisiones clínicas para mejorar el proceso de revisión y ayudar en el diagnóstico adecuado para el paciente.
+. A continuación, el sistema EHR envía los resultados de la orden en forma de un mensaje de resultados de la orden al hospital comunitario. En este punto, si el hospital comunitario puede recibir la imagen completa, entonces la imagen se envía a través de WADO o DICOM.
+. El médico de la comunidad completa el diagnóstico y proporciona los siguientes pasos al paciente.
+
+
+Un sistema típico de imágenes médicas utiliza una arquitectura de N niveles. El componente principal de un sistema de imágenes médicas es un servidor de aplicaciones que aloja varios componentes de la aplicación. Los servidores de aplicaciones típicos están basados en Java Runtime o en C# .Net CLR. La mayoría de las soluciones de imágenes médicas para empresas utilizan un servidor de bases de datos Oracle, MS SQL Server o Sybase como base de datos primaria. Además, algunos sistemas empresariales de exploración médica también utilizan bases de datos para la aceleración de contenidos y el almacenamiento en caché en una región geográfica. Algunos sistemas de imagen médica empresarial también utilizan bases de datos NoSQL como MongoDB, Redis, etc. junto con servidores de integración empresarial para interfaces DICOM y API.
+
+Un sistema típico de imágenes médicas proporciona acceso a imágenes para dos grupos distintos de usuarios: El usuario/radiólogo de diagnóstico, o el médico o el médico que ordenó la adquisición de imágenes.
+
+Los radiólogos suelen utilizar visores de diagnósticos de gama alta habilitados para gráficos que se ejecutan en estaciones de trabajo gráficas e informáticas de gama alta que son físicas o parte de una infraestructura de escritorios virtuales. Si está a punto de iniciar el recorrido hacia la infraestructura de puestos de trabajo virtuales, puede encontrar más información https://www.netapp.com/us/media/na-flexpod-vdi.pdf["aquí"^].
+
+Cuando el huracán Katrina destruyó dos de los principales hospitales docentes de Luisiana, se reunieron los líderes para construir un sistema de registros sanitarios electrónicos resistente que incluía más de 3000 equipos virtuales en un tiempo récord. Se puede encontrar más información sobre la arquitectura de referencia de casos de uso y los paquetes de referencia de FlexPod https://blog.netapp.com/virtual-desktop-infrastructure-bundles["aquí"^].
+
+Los médicos acceden a las imágenes de dos formas principales:
+
+* *Acceso basado en Web.* que suele utilizarse en los sistemas EHR para incorporar las imágenes PACS como enlaces contextuales al registro médico electrónico (EMR) del paciente, y vínculos que se pueden colocar en los flujos de trabajo de imágenes, los flujos de trabajo de procedimientos, los flujos de trabajo de notas de progreso, etc. Los enlaces basados en la Web también se utilizan para proporcionar acceso a imágenes a los pacientes a través de los portales de pacientes. El acceso basado en Web utiliza un patrón tecnológico llamado vínculos contextuales. Los vínculos con contexto pueden ser enlaces estáticos/URI al soporte DICOM directamente o enlaces generados dinámicamente mediante macros personalizadas.
+* *Cliente grueso.* algunos sistemas médicos empresariales también le permiten utilizar un enfoque de cliente grueso para ver las imágenes. Puede iniciar un cliente grueso desde el EMR del paciente o como una aplicación independiente.
+
+
+El sistema de imágenes médicas puede proporcionar acceso a imágenes a una comunidad de médicos o a médicos participantes en el CIN. Los sistemas de imágenes médicas típicos incluyen componentes que permiten la interoperabilidad de imágenes con otros sistemas INFORMÁTICOS de salud dentro y fuera de su organización sanitaria. Los médicos de la comunidad pueden acceder a imágenes mediante una aplicación basada en web o utilizar una plataforma de intercambio de imágenes para la interoperabilidad de imágenes. Las plataformas de intercambio de imágenes normalmente utilizan WADO o DICOM como el protocolo de intercambio de imágenes subyacente.
+
+Los sistemas de exploración médica también pueden admitir centros médicos académicos que necesitan sistemas PACS o de exploración para su uso en clases. Para apoyar las actividades académicas, un sistema típico de exploración médica puede tener las capacidades de un sistema PACS en una huella menor o en un entorno de exploración de solo enseñanza. Los sistemas de archivado típicos de proveedores y algunos sistemas de imágenes médicas de clase empresarial ofrecen funciones de morfología de etiquetas de imagen DICOM para anonimizar las imágenes que se utilizan con fines didácticos. Tag morfing permite a las organizaciones sanitarias intercambiar imágenes DICOM entre distintos sistemas de imágenes médicas de distintos proveedores de forma neutral con respecto a los proveedores. Además, TAG morfing permite que los sistemas de imágenes médicas implementen una capacidad de archivado para todas las empresas, neutral con respecto a los proveedores, para las imágenes médicas.
+
+Los sistemas de imágenes médicas están empezando a usarse https://www.netapp.com/us/media/sb-flexpod-datacenter-ai.pdf["Funcionalidades de computación basadas en GPU"^] mejorar los flujos de trabajo humanos preprocesando las imágenes y mejorando así la eficiencia. Los sistemas típicos de exploración médica empresarial aprovechan las funcionalidades de eficiencia del almacenamiento de NetApp, líderes del sector. Los sistemas de imágenes médicas empresariales suelen utilizar RMAN para realizar actividades de copia de seguridad, recuperación y restauración. Para mejorar el rendimiento y reducir el tiempo que se tarda en crear backups, la tecnología Snapshot está disponible para las operaciones de backup y la tecnología SnapMirror está disponible para la replicación.
+
+En la siguiente figura se muestran los componentes lógicos de la aplicación en una vista arquitectónica por capas.
+
+image:medical-imaging_image6.png["Error: Falta la imagen gráfica"]
+
+La siguiente figura muestra los componentes físicos de la aplicación.
+
+image:medical-imaging_image7.png["Error: Falta la imagen gráfica"]
+
+Los componentes lógicos de la aplicación requieren que la infraestructura admita un conjunto diverso de protocolos y sistemas de archivos. El software ONTAP de NetApp admite un conjunto de protocolos y sistemas de archivos líder en el sector.
+
+En la siguiente tabla se enumeran los componentes de la aplicación, el protocolo de almacenamiento y los requisitos del sistema de archivos.
+
+|===
+| Componente de aplicación | SAN/NAS | Tipo de sistema de archivos | Nivel de almacenamiento | Tipo de replicación 
+
+
+| BD de prod del host VMware | local | SAN | VMFS | Nivel 1 
+
+
+| Cliente más | BD de prod del host VMware | REP | SAN | VMFS 
+
+
+| Nivel 1 | Cliente más | Aplicación prod. Host VMware | local | SAN 
+
+
+| VMFS | Nivel 1 | Cliente más | Aplicación prod. Host VMware | REP 
+
+
+| SAN | VMFS | Nivel 1 | Cliente más | Servidor de bases de datos principal 
+
+
+| SAN | Ext4 | Nivel 1 | Cliente más | Servidor de bases de datos de respaldo 
+
+
+| SAN | Ext4 | Nivel 1 | Ninguno | Servidor de caché de imágenes 
+
+
+| NAS | SMB/CIFS | Nivel 1 | Ninguno | Servidor de archivado 
+
+
+| NAS | SMB/CIFS | Nivel 2 | Cliente más | Servidor web 
+
+
+| NAS | SMB/CIFS | Nivel 1 | Ninguno | Servidor WADO 
+
+
+| SAN | NFS | Nivel 1 | Cliente más | Servidor de inteligencia empresarial 
+
+
+| SAN | NTFS | Nivel 1 | Cliente más | Backup de inteligencia empresarial 
+
+
+| SAN | NTFS | Nivel 1 | Cliente más | Servidor de interoperabilidad 
+
+
+| SAN | Ext4 | Nivel 1 | Cliente más | Servidor de bases de datos de interoperabilidad 
+|===

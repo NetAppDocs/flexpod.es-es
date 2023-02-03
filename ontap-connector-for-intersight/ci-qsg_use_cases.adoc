@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_use_cases.html 
+keywords: netapp, ontap, cisco, intersight, storage, use cases, monitor, monitoring, orchestration, reference workflows, custom workflows, storage inventory, widgets 
+summary: Estos son algunos ejemplos de casos de uso para la supervisión y la orquestación del almacenamiento de NetApp de Cisco Intersight. 
+---
+= Casos de uso
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Estos son algunos ejemplos de casos de uso para la supervisión y la orquestación del almacenamiento de NetApp de Cisco Intersight.
+
+
+
+== Caso de uso 1: Supervisión del inventario y los widgets de almacenamiento de NetApp
+
+Si el entorno de almacenamiento de NetApp está disponible en Cisco Interview, puede supervisar los objetos de almacenamiento de NetApp de forma detallada desde el inventario de almacenamiento y obtener una descripción general de los widgets de almacenamiento.
+
+. Implemente el OVA de Intersight Assist (tarea OnPrem en el entorno de vCenter).
+. Añada dispositivos de mensajería unificada AIQ de NetApp en Intersight Assist.
+. Vaya a *Storage* y desplácese por el inventario de almacenamiento de NetApp.
+. Añada *Widgets* para almacenamiento de NetApp a su *Panel de monitores*.
++
+Aquí está un https://tv.netapp.com/detail/video/6228096841001["enlace"^] Al vídeo que muestra las funciones de supervisión del almacenamiento de ONTAP de NetApp de Cisco Intersight.
+
+
+
+
+
+== Caso de uso 2: Orquestación del almacenamiento de NetApp mediante flujos de trabajo de referencia
+
+Cuando hay disponibles entornos de almacenamiento de NetApp y vCenter en Cisco Intersight, puede ejecutar flujos de trabajo de referencia completos, disponibles de forma inmediata y que incluyan tareas de almacenamiento y virtualización.
+
+. Implemente el OVA de Intersight Assist (tarea OnPrem en el entorno de vCenter).
+. Añada dispositivos de mensajería unificada AIQ de NetApp en Intersight Assist.
+. Añada el destino de vCenter a Intersight mediante Intersight Assist.
+. Ejecutar flujos de trabajo de referencia disponibles de forma inmediata.
++
+Aquí tiene una lista de flujos de trabajo de referencia:
+
++
+** Nuevo almacén de datos NAS
+** Nueva Política de exportación de almacenamiento
+** Nuevo host de almacenamiento
+** Nueva interfaz de almacenamiento
+** Nuevo equipo virtual de almacenamiento
+** Nueva máquina virtual
+** Nuevo almacén de datos VMFS
+** Eliminar el almacén de datos NAS
+** Quitar política de exportación de almacenamiento
+** Quitar host de almacenamiento
+** Quitar el almacén de datos VMFS
+** Actualizar el almacén de datos NAS
+** Actualice el host de almacenamiento
+** Actualizar el almacén de datos de VMFS
+
+
+
+
+
+
+== Caso de uso 3: Flujos de trabajo personalizados utilizando un formulario sin diseñador
+
+Cuando haya disponibles los entornos de almacenamiento de NetApp y vCenter en Cisco Intersight, puede crear flujos de trabajo personalizados mediante las tareas de virtualización y almacenamiento de NetApp.
+
+. Implemente el OVA de Intersight Assist (tarea OnPrem en el entorno de vCenter)
+. Añada dispositivos de mensajería unificada AIQ de NetApp en Intersight Assist.
+. Añada un destino de vCenter a Intersight mediante Intersight Assist.
+. Desplácese hasta la ficha *orquestación* de Intersight.
+. Seleccione *Crear flujo de trabajo*.
+. Añada tareas de almacenamiento y virtualización a sus flujos de trabajo.
++
+Estas son las tareas de almacenamiento de NetApp que están disponibles en Cisco Intersight:
+
++
+** Añada una política de exportación de almacenamiento al volumen
+** Conecte los iniciadores al host de almacenamiento
+** Desconecte la política de exportación de almacenamiento del volumen
+** Editar agregados para la máquina virtual de almacenamiento
+** Editar regla de política de exportación de almacenamiento
+** Editar política de snapshot de almacenamiento
+** Editar la programación de la política de snapshot de almacenamiento
+** Amplíe Storage LUN
+** Expanda Storage Volume
+** Busque el mapa de LUN de igroup de NetApp
+** Busque LUN de almacenamiento por ID
+** Busque volumen de almacenamiento por ID
+** Nueva Política de exportación de almacenamiento
+** Nueva regla de política de exportación de almacenamiento
+** Nueva interfaz Fibre Channel de almacenamiento de NetApp
+** Nuevo host de almacenamiento
+** Nueva interfaz de Storage IP
+** Nuevo LUN de almacenamiento
+** Nuevo ID de LUN de almacenamiento
+** Nuevo volumen inteligente NAS de almacenamiento de NetApp
+** Nuevo LUN inteligente de almacenamiento de NetApp
+** Nueva Política de Snapshot de almacenamiento
+** Nueva programación de políticas de snapshot de almacenamiento
+** Nuevo equipo virtual de almacenamiento
+** Nuevo volumen de almacenamiento
+** Nueva snapshot de volumen de almacenamiento
+** Quitar política de exportación de almacenamiento
+** Quitar regla de política de exportación de almacenamiento
+** Quite la interfaz de almacenamiento FC
+** Quite el host de almacenamiento
+** Quite la interfaz de IP de almacenamiento
+** Quitar LUN de almacenamiento
+** Quitar ID de LUN de almacenamiento
+** Eliminar la LUN inteligente de almacenamiento de NetApp
+** Quitar política de snapshot de almacenamiento
+** Quitar programación de política de snapshot de almacenamiento
+** Quite la máquina virtual de almacenamiento
+** Quitar volumen de almacenamiento
+** Quitar snapshot de volumen de almacenamiento
+** Cambie el nombre de la snapshot de volumen de almacenamiento
++
+
+NOTE: Las nuevas tareas de volumen inteligente de NAS de almacenamiento y LUN inteligente de almacenamiento sólo funcionarán con ONTAP 9.8 y versiones posteriores. Actualmente, ONTAP 9.7P1 es la versión mínima admitida.
+
+
+
+
+
+Para obtener más información acerca de cómo personalizar flujos de trabajo con tareas de virtualización y almacenamiento de NetApp, vea el vídeo https://tv.netapp.com/detail/video/6228095945001["Orquestación de almacenamiento de NetApp ONTAP en Cisco Intersight"^].

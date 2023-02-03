@@ -1,0 +1,158 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-where-to-find-additional-information.html 
+keywords:  
+summary:  
+---
+= Agradecimientos, historial de versiones y dónde encontrar información adicional
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-conclusion.html["Anterior: Conclusión."]
+
+Si quiere obtener más información sobre el contenido de este documento, consulte los siguientes documentos y sitios web:
+
+* Guía de configuración de seguridad de la familia Cisco MDS 9000 NX-OS
++
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/mds9000/sw/8_x/config/security/cisco_mds9000_security_config_guide_8x/configuring_fips.html#task_1188151[]
+
+* Guía de configuración de seguridad de NX-OS con Cisco Nexus serie 9000, versión 9.3(x)
++
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/93x/security/configuration/guide/b-cisco-nexus-9000-nx-os-security-configuration-guide-93x/m-configuring-fips.html[]
+
+* Publicación 140-2 de NetApp y del estándar de procesamiento de información federal (FIPS)
++
+https://www.netapp.com/company/trust-center/compliance/fips-140-2/[]
+
+* FIPS 140-2
++
+https://fieldportal.netapp.com/content/902303[]
+
+* Guía de fortalecimiento de NetApp ONTAP 9
++
+https://www.netapp.com/us/media/tr-4569.pdf[]
+
+* Guía completa de cifrado de NetApp
++
+https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-nve%2Fhome.html[]
+
+* Especificaciones técnicas de NVE y NAE
++
+https://www.netapp.com/us/media/ds-3899.pdf[]
+
+* Especificaciones técnicas de NSE
++
+https://www.netapp.com/us/media/ds-3213-en.pdf[]
+
+* Centro de documentación de ONTAP 9
++
+http://docs.netapp.com[]
+
+* Publicación 140-2 de NetApp y del estándar de procesamiento de información federal (FIPS)
++
+https://www.netapp.com/company/trust-center/compliance/fips-140-2/[]
+
+* Cumplimiento de normativas Cisco y FIPS 140-2-2
++
+https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html[]
+
+* Módulo de seguridad de criptografía de NetApp
++
+https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp2648.pdf[]
+
+* Prácticas de ciberseguridad en la industria sanitaria: Gestión de amenazas y protección de pacientes
++
+https://www.phe.gov/Preparedness/planning/405d/Pages/hic-practices.aspx[]
+
+* Prácticas de ciberseguridad para medianas y grandes organizaciones sanitarias
++
+https://www.phe.gov/Preparedness/planning/405d/Documents/tech-vol2-508.pdf[]
+
+* Programa de validación de módulos de criptografía y Cisco (CMVP)
++
+https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Basic&Vendor=cisco&CertificateStatus=Active&ValidationYear=0[]
+
+* Cifrado del almacenamiento de NetApp, unidades de autocifrado NVMe, cifrado de volúmenes de NetApp y cifrado agregado de NetApp
++
+https://www.netapp.com/pdf.html?item=/media/17073-ds-3898.pdf[]
+
+* Cifrado de volúmenes de NetApp y cifrado de agregados de NetApp
++
+https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf[]
+
+* Cifrado del almacenamiento de NetApp
++
+https://www.netapp.com/pdf.html?item=/media/7563-ds-3213-en.pdf[]
+
+* FlexPod para sistemas de registros médicos electrónicos
++
+https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf[]
+
+* Datos ahora: Mejora de rendimiento en entornos EHR de Epic con la tecnología flash conectada al cloud
++
+https://www.netapp.com/media/10809-cloud-connected-flash-wp.pdf[]
+
+* Centro de datos FlexPod para infraestructura EHR de Epic
++
+https://www.netapp.com/pdf.html?item=/media/17061-ds-3683.pdf[]
+
+* Guía de puesta en marcha del centro de datos FlexPod para EHR de Epic
++
+https://www.netapp.com/media/10658-tr-4693.pdf[]
+
+* Infraestructura de centro de datos FlexPod para el software MEDITECH
++
+https://www.netapp.com/media/8552-flexpod-for-meditech-software.pdf[]
+
+* El estándar FlexPod se extiende al software MEDITECH
++
+https://blog.netapp.com/the-flexpod-standard-extends-to-meditech-software/[]
+
+* Guía de tamaños direccionales de FlexPod para MEDITECH
++
+https://www.netapp.com/pdf.html?item=/media/12429-tr4774.pdf[]
+
+* FlexPod para imágenes médicas
++
+https://www.netapp.com/media/19793-tr-4865.pdf[]
+
+* IA en la sanidad
++
+https://www.netapp.com/us/media/na-369.pdf[]
+
+* FlexPod para el sector sanitario facilita su transformación
++
+https://flexpod.com/solutions/verticals/healthcare/[]
+
+* FlexPod de Cisco y NetApp
++
+https://flexpod.com/[]
+
+
+
+
+
+== Reconocimientos
+
+* Abhinav Singh, Ingeniero Técnico de Marketing de NetApp
+* Brian o’Mahony, arquitecto de soluciones Healthcare (Epic), NetApp
+* Brian Pruitt, director de desarrollo comercial de NetApp
+* Arvind Ramakrishnan, arquitecto sénior de soluciones de NetApp
+* Michael Hommer, Director técnico de FlexPod Global Field, NetApp
+
+
+
+
+== Historial de versiones
+
+|===
+| Versión | Fecha | Historial de versiones del documento 
+
+
+| Versión 1.0 | Abril de 2021 | Versión inicial 
+|===

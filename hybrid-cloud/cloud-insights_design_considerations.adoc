@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_design_considerations.html 
+keywords: design, considerations, flexpod, datacenter, infrastructure, cisco, cloud, insights 
+summary: La solución FlexPod Datacenter es una infraestructura convergente diseñada por Cisco y NetApp para proporcionar un entorno de centro de datos dinámico, altamente disponible y escalable para la ejecución de cargas de trabajo empresariales. 
+---
+= Consideraciones de diseño
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La solución FlexPod Datacenter es una infraestructura convergente diseñada por Cisco y NetApp para proporcionar un entorno de centro de datos dinámico, altamente disponible y escalable para la ejecución de cargas de trabajo empresariales. Los recursos de computación y de red de la solución los proporcionan los productos Cisco UCS y Nexus, y el sistema de almacenamiento de ONTAP proporciona los recursos de almacenamiento. El diseño de la solución se mejora regularmente cuando hay disponibles versiones de software y firmware actualizadas de hardware. Estos detalles, junto con las mejores prácticas para el diseño y la puesta en marcha de soluciones, se recogen en documentos de Cisco Validated Design (CVD) o de NetApp Verified Architecture (NVA) y se publican regularmente.
+
+Ya está disponible el documento CVD más reciente que detalla el diseño de la solución para el centro de datos de FlexPod https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_vs_7_design.html["aquí"^].

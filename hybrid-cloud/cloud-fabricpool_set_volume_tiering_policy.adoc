@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html 
+keywords: volume, tiering, policy, ontap, cli, oncommand, system, manager, cloud, fabricpool 
+summary:  
+---
+= Establezca la política de organización en niveles del volumen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+De forma predeterminada, los volúmenes usan la política de organización en niveles None volume. Tras la creación del volumen, la política de organización en niveles del volumen se puede cambiar mediante el Administrador del sistema de OnCommand o la interfaz de línea de comandos de ONTAP.
+
+Cuando se utiliza con FlexPod, FabricPool proporciona tres políticas de organización en niveles de volúmenes, Auto, Snapshot-only y None.
+
+* *Auto*
++
+** Todos los bloques de datos fríos del volumen se mueven al nivel de cloud. Suponiendo que se utiliza el agregado más del 50%, se necesitan aproximadamente 31 días para que los bloques inactivos queden inactivos. El período de enfriamiento automático se puede ajustar entre 2 días y 63 días mediante el uso del `tiering-minimum-cooling-days` ajuste.
+** Cuando los bloques inactivos de un volumen con una política de organización en niveles configurada en Auto se leen de forma aleatoria, se realizan en caliente y se escriben en el nivel de rendimiento.
+** Cuando los bloques inactivos de un volumen con una política de organización en niveles configurada como Auto se leen de forma secuencial, permanecen inactivos y permanecen en el nivel del cloud. No se escriben en el nivel de rendimiento.
+
+
+* *Sólo instantánea*
++
+** Los bloques de instantáneas frías en el volumen que no están compartidos con el sistema de archivos activo se mueven al nivel de cloud. Si asumimos que el agregado está más del 50% utilizado, se tarda aproximadamente 2 días en que los bloques snapshot inactivos permanezcan inactivos. El período de refrigeración solo de Snapshot puede ajustarse de 2 a 63 días con la `tiering-minimum-cooling-days` ajuste.
+** Cuando se leen bloques inactivos de un volumen con una política de organización en niveles establecida en Snapshot únicamente, se realizan caliente y se escriben en el nivel de rendimiento.
+
+
+* *Ninguno (predeterminado)*
++
+** Los volúmenes establecidos para usar None, ya que su política de organización en niveles no organiza los datos inactivos en el nivel de cloud.
+** Si se configura la política de organización en niveles en None, se evitará la nueva organización en niveles.
+** Los datos de volumen que se han movido anteriormente al nivel de cloud permanecen en el nivel de cloud hasta que se activan y se vuelven a mover automáticamente al nivel de rendimiento.
+
+
+
+
+
+
+== System Manager de OnCommand
+
+Para cambiar la política de organización en niveles de un volumen mediante el Administrador del sistema de OnCommand, lleve a cabo los siguientes pasos:
+
+. Inicie OnCommand System Manager.
+. Seleccionar un volumen.
+. Haga clic en más acciones y seleccione Change Tiering Policy.
+. Seleccione la política de organización en niveles que se aplicará al volumen.
+. Haga clic en Guardar.
++
+image:cloud-fabricpool_image16.png["Error: Falta la imagen gráfica"]
+
+
+
+
+
+== CLI de ONTAP
+
+Para cambiar la política de organización en niveles de un volumen mediante la interfaz de línea de comandos de ONTAP, ejecute el siguiente comando:
+
+....
+volume modify -vserver <svm_name> -volume <volume_name>
+-tiering-policy <auto|snapshot-only|all|none>
+....
+link:cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html["Siguiente: Defina los días de enfriamiento mínimos de organización en niveles de volumen."]

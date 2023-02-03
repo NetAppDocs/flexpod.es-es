@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html 
+keywords: configure, vmware, vcenter, server, clustering, coredump, esxi, hosts 
+summary: Puede configurar la agrupación en clústeres de VMware vCenter Server 6.7 y vSphere siguiendo los pasos siguientes. 
+---
+= Configure VMware vCenter Server 6.7 y el clustering de vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Para configurar la agrupación en clústeres de VMware vCenter Server 6.7 y vSphere, complete los pasos siguientes:
+
+. Desplácese hasta \https://\<<FQDN or IP of vCenter>>/vsphere-client/.
+. Haga clic en Launch vSphere Client.
+. Inicie sesión con el nombre de usuario mailto:administrator@vspehre.loc/ loc/[administrator@vsphere.loc/] y la contraseña SSO que introdujo durante el proceso de configuración de VCSA.
+. Haga clic con el botón derecho en el nombre de vCenter y seleccione New Datacenter.
+. Introduzca un nombre para el centro de datos y haga clic en Aceptar.
+
+
+
+
+== Cree un clúster de vSphere
+
+Complete los siguientes pasos para crear un clúster de vSphere:
+
+. Haga clic con el botón derecho en el centro de datos recién creado y seleccione New Cluster.
+. Escriba un nombre para el clúster.
+. Active la recuperación ante desastres y vSphere ha seleccionando las casillas de verificación.
+. Haga clic en Aceptar.
++
+image:express-c-series-aff220-deploy_image49.png["Error: Falta la imagen gráfica"]
+
+
+
+
+
+== Añada hosts ESXi al clúster
+
+. Haga clic con el botón derecho en el clúster y seleccione Add Host.
++
+image:express-c-series-aff220-deploy_image50.png["Error: Falta la imagen gráfica"]
+
+. Para añadir un host ESXi al clúster, complete los siguientes pasos:
++
+.. Introduzca la dirección IP o el FQDN del host. Haga clic en Siguiente.
+.. Introduzca el nombre de usuario raíz y la contraseña. Haga clic en Siguiente.
+.. Haga clic en Sí para reemplazar el certificado del host por un certificado firmado por el servidor de certificados VMware.
+.. Haga clic en Siguiente en la página Resumen de host.
+.. Haga clic en el icono verde + para añadir una licencia al host de vSphere.
++
+
+NOTE: Este paso se puede completar más adelante si se desea.
+
+.. Haga clic en Siguiente para desactivar el modo de bloqueo.
+.. Haga clic en Next en la página de ubicación de la máquina virtual.
+.. Revise la página Listo para completar. Utilice el botón Atrás para realizar cualquier cambio o seleccione Finalizar.
+
+
+. Repita los pasos 1 y 2 para el host Cisco UCS B. Debe completar este proceso para los hosts adicionales que se agreguen a la configuración exprés de FlexPod.
+
+
+
+
+== Configure coredump en hosts ESXi
+
+. Utilice SSH, conéctese al host ESXi de IP de gestión, introduzca root para el nombre de usuario e introduzca la contraseña raíz.
+. Ejecute los siguientes comandos:
++
+....
+esxcli system coredump network set -i ip_address_of_core_dump_collector -v vmk0 -o 6500
+esxcli system coredump network set --enable=true
+esxcli system coredump network check
+....
+. El mensaje `Verified the configured netdump server is running` aparece después de introducir el comando final.
+
+
+Este proceso debe completarse para cualquier host adicional que se añada a FlexPod Express.

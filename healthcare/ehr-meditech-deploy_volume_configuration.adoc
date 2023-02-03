@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_volume_configuration.html 
+keywords: volume, provisioning, snapshot, copy, volume, default, aggregate, reallocate, schedule 
+summary: Los volúmenes de MEDITECH que están dedicados a hosts MEDITECH pueden ser gruesos o finos aprovisionados y pueden accederse a ellos mediante copias Snapshot. También puede usar la reubicación en el nivel de volumen para optimizar la distribución de los datos en el disco para mejorar las latencias de escritura y el acceso de lectura secuencial. 
+---
+= Configuración de volúmenes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Aprovisionamiento de volúmenes
+
+Los volúmenes de MEDITECH que están dedicados a los hosts MEDITECH pueden tener el aprovisionamiento ligero o grueso.
+
+
+
+== Copias Snapshot a nivel de volumen predeterminadas
+
+Las copias Snapshot se crean como parte del flujo de trabajo de backup. Cada copia Snapshot se puede utilizar para acceder a los datos almacenados en las LUN de MEDITECH en momentos diferentes. La solución de backup aprobada por MEDITECH crea volúmenes FlexClone aprovisionados mediante thin provisioning en función de estas copias Snapshot, para proporcionar copias puntuales de las LUN de MEDITECH. El entorno MEDITECH está integrado con una solución de software de backup aprobada. Por tanto, NetApp recomienda deshabilitar la programación de la copia Snapshot predeterminada en cada uno de los volúmenes FlexVol de NetApp que componen las LUN de la base de datos de producción de MEDITECH.
+
+*Importante:* los volúmenes FlexClone comparten espacio en el volumen de datos principal, por lo que es vital que el volumen tenga suficiente espacio para las LUN de datos de MEDITECH y los volúmenes FlexClone que crean los servidores de backup. Los volúmenes FlexClone no ocupan más espacio de la forma en que lo hacen los volúmenes de datos. Sin embargo, si hay grandes eliminaciones en las LUN de MEDITECH en un breve tiempo, es posible que los volúmenes clonados aumenten.
+
+
+
+== Número de volúmenes por agregado
+
+Para un sistema FAS de NetApp que usa el almacenamiento en caché Flash Pool o Flash Cache de NetApp, NetApp recomienda aprovisionar tres o más volúmenes por agregado dedicados a almacenar los archivos de datos, el diccionario y el programa MEDITECH.
+
+En el caso de sistemas AFF, NetApp recomienda dedicar cuatro o más volúmenes por agregado para almacenar el programa, el diccionario y los archivos de datos de MEDITECH.
+
+
+
+== Programa de reasignación de volúmenes
+
+La distribución de datos del almacenamiento será menos óptima con el tiempo, sobre todo cuando las cargas de trabajo que utilizan una gran cantidad de escrituras como las plataformas MEDITECH, 6.x y C/S 5.x. Con el tiempo, esta situación puede aumentar la latencia de lectura secuencial, lo que puede dar como resultado un mayor tiempo para completar el backup. Una distribución o fragmentación de datos incorrectas también pueden afectar a la latencia de escritura. Puede usar la reubicación en el nivel de volumen para optimizar la distribución de datos en el disco para mejorar las latencias de escritura y el acceso de lectura secuencial. La mejora del diseño del almacenamiento ayuda a completar el backup en el plazo de 8 horas asignado.
+
+|===
+| Mejor práctica 
+
+
+ a| 
+Como mínimo, NetApp recomienda implementar un programa de reasignación de volumen semanal para ejecutar operaciones de reasignación durante el tiempo de inactividad de mantenimiento asignado o durante las horas de menor actividad en un sitio de producción.
+
+
+NOTE: NetApp recomienda encarecidamente ejecutar la tarea de reasignación en un volumen cada vez por controladora.
+
+|===
+Para obtener más información acerca de cómo determinar un programa de reasignación de volumen adecuado para el almacenamiento de su base de datos de producción, consulte la sección 3.12 en https://fieldportal.netapp.com/content/192896["TR-3929 de NetApp: Guía para reasignar las mejores prácticas"^]. Esa sección también le guía sobre cómo crear un programa de reasignación semanal para un sitio ocupado.
+
+link:ehr-meditech-deploy_lun_configuration.html["Siguiente: Configuración de LUN."]

@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-overview-of-fips-140-2.html 
+keywords: fips 120-2, cryptographic module, security level, 
+summary: FIPS 140-2 especifica los requisitos de seguridad de un módulo criptográfico utilizado en un sistema de seguridad que protege la información confidencial en los sistemas informáticos y de telecomunicaciones. 
+---
+= Información general de FIPS 140-2
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-cybersecurity-threats-in-healthcare.html["Anterior: Amenazas de ciberseguridad en sanidad."]
+
+https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf["FIPS 140-2"^] especifica los requisitos de seguridad de un módulo criptográfico utilizado en un sistema de seguridad que protege la información confidencial en los sistemas informáticos y de telecomunicaciones. Un módulo criptográfico debe ser un conjunto de hardware, software, firmware o una combinación. FIPS se aplica a los algoritmos criptográficos, la generación de claves y los gestores de claves contenidos en un ámbito criptográfico. Es importante entender que FIPS 140-2 se aplica específicamente al módulo criptográfico, no al producto, la arquitectura, los datos o el ecosistema. El módulo criptográfico, que se define en los términos clave más adelante en este documento, es el componente específico (ya sea hardware, software o firmware) que implementa funciones de seguridad aprobadas. Además, FIPS 140-2 especifica cuatro niveles. Los algoritmos criptográficos aprobados son comunes a todos los niveles. Algunos de los elementos clave y requisitos de cada nivel de seguridad son:
+
+* *Nivel de seguridad 1*
++
+** Especifica los requisitos básicos de seguridad de un módulo criptográfico (se requiere al menos un algoritmo aprobado o una función de seguridad).
+** No se requieren mecanismos de seguridad física especificados para el nivel 1 más allá de los requisitos básicos para los componentes de nivel de producción.
+
+
+* *Nivel de seguridad 2*
++
+** Mejora los mecanismos de seguridad física al añadir el requisito de prueba de manipulación mediante el uso de soluciones a prueba de manipulación como revestimientos o sellos, bloqueos de cubiertas extraíbles o puertas de los módulos criptográficos.
+** Requiere, como mínimo, el control de acceso basado en funciones (RBAC) en el que el módulo criptográfico autentica la autorización de un operador o administrador para asumir una función específica y realizar un conjunto de funciones correspondiente.
+
+
+* *Nivel de seguridad 3*
++
+** Se basa en los requisitos de seguridad a prueba de manipulaciones del nivel 2 e intenta evitar un mayor acceso a los parámetros de seguridad críticos (CSP) del módulo criptográfico.
+** Los mecanismos de seguridad física necesarios en el nivel 3 tienen la intención de tener una alta probabilidad de detectar y responder a los intentos de acceso físico, o cualquier uso o modificación del módulo criptográfico. Los ejemplos pueden incluir carcasas fuertes, detección de manipulación y circuitos de respuesta que se ceros a todos los CSPs de texto sin formato cuando se abre una cubierta extraíble en el módulo criptográfico.
+** Requiere mecanismos de autenticación basados en identidades para mejorar la seguridad de los mecanismos RBAC especificados en el nivel 2. Un módulo criptográfico autentica la identidad de un operador y verifica que el operador está autorizado a utilizar una función y realizar las funciones de la función.
+
+
+* *Nivel de seguridad 4*
++
+** El nivel más alto de seguridad en FIPS 140-2.
+** El nivel más útil para operaciones en entornos físicamente sin protección.
+** En este nivel, los mecanismos de seguridad física tienen por objeto proporcionar una protección completa alrededor del módulo criptográfico, con la responsabilidad de detectar y responder a cualquier intento no autorizado de acceso físico.
+** La penetración o exposición del módulo criptográfico debe tener una alta probabilidad de detección y dar como resultado la zeroización inmediata de todos los CSPs no seguros o de texto sin formato.
+
+
+
+
+link:flexpod-fips-control-plane-versus-data-plane.html["Siguiente: Plano de control frente al plano de datos."]

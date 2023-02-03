@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_references.html 
+keywords: netapp, cisco, intersight, ontap, flexpod, connector, tr 4883, intersight appliance 
+summary: Para obtener más información, consulte los documentos de referencia y los sitios web. 
+---
+= Referencias
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Para obtener más información, consulte los siguientes documentos y sitios web:
+
+https://www.netapp.com/pdf.html?item=/media/25001-tr-4883.pdf["TR 4883: Centro de datos de FlexPod con ONTAP 9.8, el conector de almacenamiento de ONTAP para Cisco Intersight y el modo gestionado de Cisco Intersight"^]
+
+https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/flexpod/cisco-imm-for-flexpod.html["Cisco Intersight Managed Mode para FlexPod"^]
+
+https://intersight.com/help/saas/getting_started/overview["Introducción a Cisco Intersight Descripción general"^]
+
+https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["Guía de instalación y actualización de Intersight Appliance"^]

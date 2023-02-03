@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_solution_overview.html 
+keywords: flexpod, converged, infrastructure, verified, architecture, solution, technology 
+summary: Esta solución FlexPod Express forma parte del programa de infraestructura convergente de FlexPod. 
+---
+= Descripción general de la solución
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Esta solución FlexPod Express forma parte del programa de infraestructura convergente de FlexPod.
+
+
+
+== Programa de infraestructura convergente FlexPod
+
+Las arquitecturas de referencia FlexPod se proporcionan como diseños validados por Cisco (CVD) o como arquitecturas verificadas por NetApp (NVA). Se permiten las desviaciones basadas en los requisitos de los clientes de un CVD o NVA determinado si estas variaciones no crean una configuración incompatible.
+
+Como se muestra en la siguiente figura, el programa FlexPod incluye tres soluciones: FlexPod Express, FlexPod Datacenter y FlexPod Select:
+
+* *FlexPod Express.* ofrece a los clientes una solución de gama básica con tecnologías de Cisco y NetApp.
+* *FlexPod Datacenter.* proporciona una base multiuso óptima para diversas cargas de trabajo y aplicaciones.
+* *FlexPod Select.* incorpora los mejores aspectos del centro de datos FlexPod y adapta la infraestructura a una aplicación determinada.
+
+
+image:express-c-series-aff220-deploy_image3.png["Error: Falta la imagen gráfica"]
+
+
+
+== Programa Arquitectura validada por NetApp
+
+El programa Arquitectura verificada de NetApp ofrece a los clientes una arquitectura verificada para soluciones NetApp. Una arquitectura verificada de NetApp ofrece una arquitectura de solución de NetApp con las siguientes cualidades:
+
+* Ha sido probada a conciencia
+* Tiene naturaleza prescriptiva
+* Minimiza los riesgos de implementación
+* Reduce el plazo de comercialización
+
+
+Esta guía detalla el diseño de FlexPod Express con VMware vSphere. Además, este diseño usa el nuevo sistema AFF A220, que ejecuta ONTAP 9.4 de NetApp, los servidores Cisco Nexus 3172P y Cisco UCS C-Series C220 M5 como nodos de hipervisor.
+
+
+
+== Tecnología de soluciones
+
+Esta solución aprovecha las últimas tecnologías de NetApp, Cisco y VMware. Esta solución incluye el nuevo sistema AFF A220 de NetApp que ejecuta ONTAP 9.4, los conmutadores Cisco Nexus 3172P duales y los servidores de montaje en rack Cisco UCS C220 M5 que ejecutan VMware vSphere 6.7. Esta solución validada usa tecnología 10 GbE. También se ofrece orientación sobre cómo escalar la capacidad de computación mediante la adición de dos nodos de hipervisor a la vez para que la arquitectura FlexPod Express pueda adaptarse a las cambiantes necesidades empresariales de una organización.
+
+La figura siguiente muestra FlexPod Express con arquitectura 10 GbE de VMware vSphere.
+
+image:express-c-series-aff220-deploy_image4.png["Error: Falta la imagen gráfica"]
+
+
+NOTE: Esta validación utiliza conectividad de 10 GbE y un Cisco UCS VIC 1387, que es 40 GbE. Para lograr conectividad de 10 GbE, se utiliza el adaptador CVR-QSFP-SFP10G.
+
+
+
+== Resumen de casos de uso
+
+La solución FlexPod Express puede aplicarse a varios casos prácticos, incluidos los siguientes:
+
+* Oficinas remotas o sucursales
+* Pequeñas y medianas empresas
+* Entornos que requieren una solución dedicada y rentable
+
+
+FlexPod Express está indicado para cargas de trabajo virtualizadas y mixtas.
+
+
+NOTE: A pesar de que esta solución se validó con vSphere 6.7, es compatible con cualquier versión de vSphere que esté cualificada con los demás componentes de la herramienta de matriz de interoperabilidad de NetApp. NetApp recomienda implementar vSphere 6.7U1 para sus correcciones y funciones mejoradas.
+
+A continuación se muestran algunas de las características de vSphere 6.7 U1:
+
+* Cliente vSphere basado en web HTML5 con todas las funciones
+* VMotion para máquinas virtuales GRID vGPU de NVIDIA. Compatibilidad con Intel FPGA
+* VCenter Server reúnen la herramienta para pasar de PSC externo a PCS interno
+* Mejoras para VSAN (actualizaciones de HCI)
+* Biblioteca de contenido mejorada
+
+
+Para obtener más información sobre vSphere 6.7 U1, consulte https://blogs.vmware.com/vsphere/2018/10/whats-new-in-vcenter-server-6-7-update-1.html["Novedades de vCenter Server 6.7 Update 1"^].

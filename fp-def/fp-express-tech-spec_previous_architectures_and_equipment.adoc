@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__previous_architectures_and_equipment.html 
+keywords: architecture, equipment, previous, hardware, verified, small, medium, large, configuration 
+summary: En esta sección se muestran las arquitecturas y el hardware anteriores de FlexPod Express que se han utilizado. 
+---
+= Arquitecturas y equipos anteriores
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod es una solución flexible que permite a los clientes utilizar actualmente tanto equipos nuevos como existentes a la venta por parte de Cisco y NetApp. En ocasiones, ciertos modelos de equipos tanto de Cisco como de NetApp son designados al final de su vida útil.
+
+Aunque estos modelos de equipo ya no están disponibles, los clientes que compraron uno de estos modelos antes de la fecha de finalización de la venta pueden usar dicho equipo en una configuración FlexPod.
+
+Además, las arquitecturas FlexPod Express se actualizan periódicamente para presentar el hardware y software más reciente de Cisco y NetApp a la solución FlexPod Express. En esta sección se muestran las arquitecturas y el hardware anteriores de FlexPod Express que se han utilizado.
+
+
+
+== Arquitecturas FlexPod Express anteriores
+
+En esta sección se describen las arquitecturas exprés de FlexPod anteriores.
+
+
+
+=== Configuraciones pequeñas y medianas de FlexPod Express
+
+Las configuraciones pequeñas y medianas de FlexPod Express incluyen los siguientes componentes:
+
+* Dos switches Cisco Nexus 3048 en una configuración redundante
+* Al menos dos servidores de montaje en rack Cisco UCS C-Series
+* Dos controladoras de la serie FAS2200 o FAS2500 en una configuración de parejas de alta disponibilidad
+
+
+La siguiente figura muestra la configuración pequeña de FlexPod Express.
+
+image:fp-express-tech-spec_image4.png["Error: Falta la imagen gráfica"]
+
+La siguiente figura muestra la configuración mediana de FlexPod Express.
+
+image:fp-express-tech-spec_image5.png["Error: Falta la imagen gráfica"]
+
+
+
+=== Configuración grande de FlexPod Express
+
+La configuración grande de FlexPod Express incluye los siguientes componentes:
+
+* Dos switches Cisco Nexus serie 3500 o Cisco Nexus serie 9300 en una configuración redundante
+* Al menos dos servidores de montaje en rack Cisco UCS C-Series
+* Dos controladoras FAS2552, FAS2554 o FAS8020 en una configuración de par de alta disponibilidad (requiere dos puertos de 10 GbE por controladora)
+* Una bandeja de discos de NetApp con cualquier tipo de disco compatible (cuando se utiliza FAS8020)
+
+
+La siguiente figura ilustra la configuración de gran tamaño de FlexPod Express.
+
+image:fp-express-tech-spec_image6.png["Error: Falta la imagen gráfica"]
+
+
+
+=== Arquitecturas verificadas de FlexPod Express anteriores
+
+Todavía se admiten arquitecturas verificadas de FlexPod Express. Los documentos de arquitectura e implementación incluyen:
+
+* link:http://www.netapp.com/us/media/nva-0016-flexpod-express.pdf["FlexPod Express con Cisco UCS C-Series y FAS2500 Series de NetApp"]
+* link:http://www.netapp.com/us/media/nva-0020-deploy.pdf["FlexPod Express con VMware vSphere 6.0: Configuraciones pequeñas y medianas"]
+* link:http://www.netapp.com/us/media/nva-0017-flexpod-express.pdf["FlexPod Express con VMware vSphere 6.0: Configuración grande"]
+* link:http://www.netapp.com/us/media/nva-0021-deploy.pdf["FlexPod Express con Microsoft Windows Server 2012 R2 Hyper-V: Configuraciones pequeñas y medianas"]
+* link:http://www.netapp.com/us/media/tr-4350.pdf["FlexPod Express con Microsoft Windows Server 2012 R2 Hyper-V: Configuración grande"]
+
+
+
+
+=== Hardware anterior
+
+En la siguiente tabla se enumera el hardware utilizado en arquitecturas FlexPod Express anteriores.
+
+|===
+| Hardware utilizado en arquitecturas anteriores | Especificaciones técnicas (si están disponibles) 
+
+
+| CISCO UCS C220 M3 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c220-m3-rack-server/data_sheet_c78-700626.html[] 
+
+
+| CISCO UCS C24 M3 | http://www.cisco.com/en/US/prod/collateral/ps10265/ps10493/data_sheet_c78-706103.html[] 
+
+
+| CISCO UCS C22 M3 | http://www.cisco.com/en/US/prod/collateral/ps10265/ps10493/data_sheet_c78-706101.html[] 
+
+
+| CISCO UCS C240 M3 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c240-m3-rack-server/data_sheet_c78-700629.html[] 
+
+
+| CISCO UCS C260 M2 | http://www.cisco.com/en/US/prod/collateral/ps10265/ps10493/c260m2_specsheet.pdf[] 
+
+
+| CISCO UCS C420 M3 | http://www.cisco.com/en/US/products/ps12770/index.html[] 
+
+
+| CISCO UCS C460 M2 | http://www.cisco.com/en/US/prod/collateral/ps10265/ps10493/ps11587/spec_sheet_c17-662220.pdf[] 
+
+
+| CISCO UCS B200 M3 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b200-m3-blade-server/data_sheet_c78-700625.html[] 
+
+
+| CISCO UCS B420 M3 | N.A. 
+
+
+| CISCO UCS B22 M3 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b22m3_specsheet.pdf[] 
+
+
+| Cisco Nexus 3524 | http://www.cisco.com/c/en/us/products/switches/nexus-3524-switch/index.html[] 
+
+
+| FAS2240 |  
+
+
+| FAS2220 | http://www.netapp.com/us/products/storage-systems/fas2200/fas2200-tech-specs.aspx[] 
+
+
+| DS4243 | N.A. 
+|===

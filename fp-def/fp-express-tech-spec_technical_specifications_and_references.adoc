@@ -1,0 +1,396 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__technical_specifications_and_references.html 
+keywords: technical, specifications, references, blade, servers, ucs, b, series, rack, disk, shelves, fas, adapters, controllers 
+summary: En esta sección se describen otras especificaciones técnicas importantes adicionales para cada uno de los componentes de FlexPod Express. 
+---
+= Especificaciones técnicas y referencias
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección se describen otras especificaciones técnicas importantes adicionales para cada uno de los componentes de FlexPod Express.
+
+
+
+== Servidores blade Cisco UCS serie B
+
+En la siguiente tabla se enumeran las opciones del servidor blade Cisco UCS B-Series.
+
+|===
+| Componente | CISCO UCS B200 M4 | CISCO UCS B420 M4 | CISCO UCS B200 M5 
+
+
+| Compatibilidad con procesadores | Intel Xeon E5-2600 | Intel Xeon E5-4600 | Procesadores escalables Intel Xeon 
+
+
+| Capacidad máxima de memoria | 24 DIMM para un máximo de 768 GB | 48 DIMM para un máximo de 3 TB | 24 DIMM para un máximo de 3072 GB 
+
+
+| Tamaño y velocidad de la memoria | 32 GB DDR4; 2133 MHz | 64 GB DDR4; 2400 MHz | 16, 32 GB, 64 y 128 GB DDR4; 2666 MHz 
+
+
+| Soporte de arranque SAN | Sí | Sí | Sí 
+
+
+| Ranuras del adaptador de I/o mezzanine | 2 | 3 | 2, frontal y posterior, incluido el soporte para GPU 
+
+
+| Máximo rendimiento de I/O. | 80 Gbps | 160 Gbps | 80 Gbps 
+|===
+
+
+== Servidores de montaje en rack Cisco UCS C-Series
+
+En la siguiente tabla se enumeran las opciones del servidor de montaje en rack Cisco UCS C-Series.
+
+|===
+| Componente | CISCO UCS C220 M4 | CISCO UCS C240 M4 | CISCO UCS C460 M4 | CISCO UCS C220 M5 
+
+
+| Compatibilidad con procesadores | 1 o 2 Intel E5-2600 | 1 o 2 Intel Xeon serie E5-2600 | 2 o 4 Intel Xeon serie E7-4800/8800 | Procesadores escalables Intel Xeon (1 o 2) 
+
+
+| Capacidad máxima de memoria | 1,5 GB | 1,5 TB | 6 TB | 3072 GB 
+
+
+| Ranuras PCIe | 2 | 6 | 10 | 2 
+
+
+| Factor de forma | 1RU | 2 RU | 4 RU | 1 RU 
+|===
+En la siguiente tabla se enumeran las especificaciones técnicas para las opciones del servidor de montaje en rack Cisco UCS C-Series.
+
+|===
+| Componente | Especificaciones técnicas de Cisco UCS 
+
+
+| CISCO UCS C220 M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m4-sff-spec-sheet.pdf[] 
+
+
+| CISCO UCS C240 M4 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c240-m4-rack-server/datasheet-c78-732455.html[] 
+
+
+| CISCO UCS C460 M4 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c460-m4-rack-server/datasheet-c78-730907.html[] 
+
+
+| CISCO UCS C220 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m5-sff-specsheet.pdf[] 
+|===
+
+
+== Switches Cisco Nexus 3000 Series
+
+En la siguiente tabla se enumeran las opciones del switch de la serie Cisco Nexus 3000.
+
+|===
+| Componente | Cisco Nexus 3048 | Cisco Nexus 3524 | Cisco Nexus 31108 | Cisco Nexus 3172PQ 
+
+
+| Factor de forma | 1RU | 1RU | 1RU | 1 RU 
+
+
+| Número máximo de puertos de 1 Gbps | 48 | 24 | 48 (10/40 Gbps) | 72 puertos de 1/10 GbE o 48 de 1/10 GbE más seis puertos de 40 GbE 
+
+
+| Velocidad de reenvío | 132 Mbps | 360 Mbps | 1.2Bpps | 1 habitación 
+
+
+| Compatibilidad con trama gigante | Sí | Sí | Sí | Sí 
+|===
+En la siguiente tabla se enumeran las especificaciones técnicas para las opciones de los switches Cisco Nexus serie 3000.
+
+|===
+| Componente | Especificaciones técnicas de Cisco Nexus 
+
+
+| Cisco Nexus 31108 | http://www.cisco.com/c/en/us/products/switches/nexus-31108pc-v-switch/index.html[] 
+
+
+| Cisco Nexus 3172PQ | https://www.cisco.com/c/en/us/products/switches/nexus-3172pq-switch/index.html[] 
+
+
+| Cisco Nexus 3048 | https://www.cisco.com/c/en/us/products/switches/nexus-3048-switch/index.html[] 
+
+
+| Cisco Nexus 3172PQ-XL | https://www.cisco.com/c/en/us/products/switches/nexus-3172pq-switch/index.html[] 
+
+
+| Cisco Nexus 3548 XL | https://www.cisco.com/c/en/us/products/switches/nexus-3548-x-switch/index.html[] 
+
+
+| Cisco Nexus 3524 XL | https://www.cisco.com/c/en/us/products/switches/nexus-3524-x-switch/index.html[] 
+
+
+| Cisco Nexus 3548 | https://www.cisco.com/c/en/us/products/switches/nexus-3548-x-switch/index.html[] 
+
+
+| Cisco Nexus 3524 | https://www.cisco.com/c/en/us/products/switches/nexus-3524-x-switch/index.html[] 
+|===
+En la siguiente tabla se enumeran las opciones del switch de la serie Cisco Nexus 9000.
+
+|===
+| Componente | Cisco Nexus 9396 | Cisco Nexus 9372 
+
+
+| Factor de forma | 2 RU | 1RU 
+
+
+| Número máximo de puertos | 60 | 54 
+
+
+| Puertos de enlace ascendente SFP+ de 10 Gbps | 48 | 48 
+|===
+En la siguiente tabla se enumeran las especificaciones técnicas de opciones de los switches de la serie Cisco Nexus 9000.
+
+|===
+| Componente | Especificaciones técnicas de Cisco Nexus 
+
+
+| Cisco Nexus 9396 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html[] 
+
+
+| Cisco Nexus 9372 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html[] 
+
+
+| Nexus 9396X | https://www.cisco.com/c/en/us/products/switches/nexus-9396px-switch/index.html?dtid=osscdc000283[] 
+|===
+
+
+== Controladoras de almacenamiento FAS de NetApp
+
+La siguiente tabla enumera las opciones actuales de la controladora de almacenamiento FAS de NetApp.
+
+|===
+| Componente actual | FAS2620 | FAS2650 
+
+
+| Configuración | 2 controladoras en un chasis de 2U | 2 controladoras en un chasis de 4U 
+
+
+| Capacidad bruta máxima | 1440 TB | 1243 TB 
+
+
+| Unidades internas | 12 | 24 
+
+
+| Número máximo de unidades (internas y externas) | 144 | 144 
+
+
+| Tamaño de volumen máximo 2+| 100 TB 
+
+
+| Tamaño máximo de agregado 2+| 4 TB 
+
+
+| Número máximo de LUN 2+| 2,048 por controladora 
+
+
+| Redes de almacenamiento compatibles 2+| ISCSI, FC, FCoE, NFS y CIFS 
+
+
+| Número máximo de volúmenes FlexVol de NetApp 2+| 1,000 por controladora 
+
+
+| El número máximo de copias Snapshot de NetApp 2+| 255,000 por controladora 
+
+
+| Almacenamiento en caché máximo inteligente de datos Flash Pool de NetApp 2+| 24 TB 
+|===
+
+NOTE: Para obtener detalles acerca de la opción FAS Storage Controller, consulte https://hwu.netapp.com/Controller/Index?platformTypeId=2032["Modelos FAS"^] Del Hardware Universe. Para AFF, consulte https://hwu.netapp.com/Controller/Index?platformTypeId=5265148["Modelos AFF"^] sección.
+
+En la siguiente tabla, se enumeran las características de un sistema de controladoras FAS8020.
+
+|===
+| Componente | FAS8020 
+
+
+| Configuración | Dos controladoras en un chasis 3U 
+
+
+| Capacidad bruta máxima | 2880 TB 
+
+
+| Número máximo de unidades | 480 
+
+
+| Tamaño de volumen máximo | 70 TB 
+
+
+| Tamaño máximo de agregado | 324 TB 
+
+
+| Número máximo de LUN | 8,192 por controladora 
+
+
+| Redes de almacenamiento compatibles | ISCSI, FC, NFS y CIFS 
+
+
+| El número máximo de volúmenes de FlexVol | 1,000 por controladora 
+
+
+| El número máximo de copias de Snapshot | 255,000 por controladora 
+
+
+| Almacenamiento en caché máximo inteligente de datos en caché Flash Cache de NetApp | 3 TB 
+
+
+| Almacenamiento máximo de datos en caché de Flash Pool | 24 TB 
+|===
+La siguiente tabla enumera las especificaciones técnicas para las controladoras de almacenamiento de NetApp.
+
+|===
+| Componente | Especificaciones técnicas de la controladora de almacenamiento 
+
+
+| Serie FAS2600 | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
+
+
+| Serie FAS2500 | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| Serie FAS8000 | http://www.netapp.com/us/products/storage-systems/fas8000/fas8000-tech-specs.aspx[] 
+|===
+
+
+== Adaptadores Ethernet FAS de NetApp
+
+La tabla siguiente enumera los adaptadores de 10 GbE de FAS de NetApp.
+
+|===
+| Componente | X1117A-R6 
+
+
+| Número de puertos | 2 
+
+
+| Tipo de adaptador | SFP+ con fibra 
+|===
+El adaptador SFP+ X1117A-R6 es compatible con las controladoras de la serie FAS8000.
+
+Los sistemas de almacenamiento de las series FAS2600 y FAS2500 tienen puertos 10 GbE incorporados. Para obtener más información, consulte https://hwu.netapp.com/Resources/generatedPDFs/AdapterCards-9.1_ONTAP-FAS.pdf?tag=8020["Especificaciones técnicas del adaptador 10 GbE de NetApp"^].
+
+
+NOTE: Para obtener más detalles del adaptador basados en los modelos AFF o FAS, consulte https://hwu.netapp.com/Adapter/Index["Sección del adaptador"^] En la Hardware Universe.
+
+
+
+== Bandejas de discos FAS de NetApp
+
+En la siguiente tabla se enumeran las opciones actuales de la bandeja de discos FAS de NetApp.
+
+|===
+| Componente | DS460C | DS224C | DS212C | DS2246 | DS4246 
+
+
+| Factor de forma | 4 RU | 2 RU | 2 RU | 2 RU | 4 RU 
+
+
+| Unidades por compartimento | 60 | 24 | 12 | 24 | 24 
+
+
+| Factor de forma de unidad | factor de forma grande de 3.5" | factor de forma pequeño de 2.5" | factor de forma grande de 3.5" | factor de forma pequeño de 2.5" | factor de forma grande de 3.5" 
+
+
+| Módulos I/o de bandeja | Módulos IOM12 dobles | Módulos IOM12 dobles | Módulos IOM12 dobles | Módulos IOM6 dobles | Módulos IOM6 dobles 
+|===
+Si desea más información, consulte las especificaciones técnicas de las bandejas de discos de NetApp.
+
+
+NOTE: Para obtener más información sobre las bandejas de discos, consulte Hardware Universe de NetApp https://hwu.netapp.com/Shelves/Index?osTypeId=2032["Sección bandejas de discos"^].
+
+
+
+== Unidades de disco FAS de NetApp
+
+Las especificaciones técnicas de los discos de NetApp incluyen tamaño de factor de forma, capacidad de disco, RPM del disco, controladoras compatibles y requisitos de versión de Data ONTAP, y se encuentran en la sección Drives de la http://hwu.netapp.com/Drives/Index?queryId=1581392["Hardware Universe de NetApp"^].
+
+
+
+== Controladoras de almacenamiento E-Series
+
+En la siguiente tabla aparecen las opciones actuales de las controladoras de almacenamiento E-Series.
+
+|===
+| Componente actual | E2812 | E2824 | E2860 
+
+
+| Configuración | 2 controladoras en un chasis de 2U | 2 controladoras en un chasis de 2U | 2 controladoras en un chasis de 4U 
+
+
+| Capacidad bruta máxima | 1800 TB | 17068 TB | 1800 TB 
+
+
+| Unidades internas | 12 | 24 | 60 
+
+
+| Número máximo de unidades (internas y externas) 3+| 180 
+
+
+| SSD máximo 3+| 120 
+
+
+| Tamaño de volumen máximo para volumen de pool de discos 3+| 1024 TB 
+
+
+| Pools de discos máximos 3+| 20 
+
+
+| Redes de almacenamiento compatibles 3+| ISCSI y FC 
+
+
+| Número máximo de volúmenes 3+| 512 
+|===
+La tabla siguiente enumera las especificaciones técnicas para la controladora de almacenamiento E-Series actual.
+
+|===
+| Componente | Especificaciones técnicas de la controladora de almacenamiento 
+
+
+| E2800 | http://www.netapp.com/us/media/ds-3805.pdf[] 
+|===
+
+
+== Adaptadores de E-Series
+
+En la siguiente tabla se enumeran los adaptadores de E-Series.
+
+|===
+| Componente | X-56023-00-0E-C | X-56025-00-0E-C | X-56027-00-0E-C | X-56024-00-0E-C | X-56026-00-0E-C 
+
+
+| Número de puertos | 2 | 4 | 4 | 2 | 2 
+
+
+| Tipo de adaptador | Base-T de 10 GB | FC DE 16 G e iSCSI de 10 GbE | SAS | FC DE 16 G e iSCSI de 10 GbE | SAS 
+|===
+
+
+== Bandejas de discos E-Series
+
+La siguiente tabla enumera las opciones de las bandejas de discos E-Series.
+
+|===
+| Componente | DE212C | DE224C | DE460C 
+
+
+| Factor de forma | 2 RU | 2 RU | 4 RU 
+
+
+| Unidades por compartimento | 12 | 24 | 60 
+
+
+| Factor de forma de unidad | factor de forma pequeño de 2.5" 3.5" | 2.5" | factor de forma pequeño de 2.5" 3.5" 
+
+
+| Módulos I/o de bandeja | IOM12 | IOM12 | IOM12 
+|===
+
+
+== Unidades de disco E-Series
+
+Las especificaciones técnicas de las unidades de disco de NetApp incluyen tamaño de factor de forma, capacidad de disco, RPM del disco, controladoras compatibles y requisitos de versión de SANtricity, y se encuentran en la sección Drives de la http://hwu.netapp.com/Drives/Index?queryId=1844075["Hardware Universe de NetApp"^].

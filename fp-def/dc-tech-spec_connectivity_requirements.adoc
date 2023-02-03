@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_connectivity_requirements.html 
+keywords: connectivity, requirements, cisco, ucs, fabric, interconnect, uplink, direct, san 
+summary: A continuación se enumeran los requisitos de conectividad para la configuración de FlexPod. 
+---
+= Requisitos de conectividad
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Una configuración FlexPod tiene los siguientes requisitos de conectividad:
+
+* Se requiere una red de gestión fuera de banda Ethernet de 100 Mbps y 1 GB independiente para todos los componentes.
+* NetApp recomienda que habilite la compatibilidad con las tramas gigantes en todo el entorno, pero no es necesario.
+* Los puertos de la aplicación Cisco UCS Fabric Interconnect solo se recomiendan para conexiones iSCSI y NAS.
+* No se puede colocar ningún equipo adicional en línea entre los componentes principales de FlexPod.
+
+
+Conexiones de enlace ascendente:
+
+* Los puertos de las controladoras de almacenamiento de NetApp deben estar conectados a los switches de las series Cisco Nexus 5000, 7000 o 9000 para permitir la compatibilidad con los canales de puertos virtuales (VPC).
+* Los ordenadores virtuales se requieren desde los switches de las series Cisco Nexus 5000, 7000 o 9000 a las controladoras de almacenamiento de NetApp.
+* Los ordenadores virtuales se necesitan desde los switches de las series Cisco Nexus 5000, 7000 o 9000 a las interconexiones de estructura.
+* Se requieren al menos dos conexiones para un VPC. Es posible aumentar el número de conexiones dentro de un VPC en función de los requisitos de carga de las aplicaciones y de rendimiento.
+
+
+Conexiones directas:
+
+* Los puertos de las controladoras de almacenamiento de NetApp que están conectados directamente a las interconexiones estructurales pueden agruparse para habilitar un canal de puertos. VPC no es compatible con esta configuración.
+* Se recomiendan canales de puertos FCoE para diseños FCoE integrales.
+
+
+Arranque SAN:
+
+* Las soluciones FlexPod están diseñadas en torno a una arquitectura DE arranque SAN mediante los protocolos iSCSI, FC o FCoE. El uso de tecnologías "arranque desde SAN" proporciona la configuración más flexible de la infraestructura del centro de datos y permite disponer de las completas funciones de cada componente de la infraestructura. Aunque el arranque desde SAN es la configuración más eficiente, el arranque desde el almacenamiento de servidor local es una configuración válida y compatible.
+* No se admite el arranque SAN sobre FC-NVME.
+

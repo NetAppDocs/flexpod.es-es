@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, cisco, end, life, eol, flexpod, datacenter, technical, specifications 
+summary: 'FlexPod es una solución flexible que le permite utilizar su equipo existente y el nuevo equipo a la venta actualmente por Cisco y NetApp. Ocasionalmente, algunos modelos de equipo de Cisco y NetApp están designados como fin de su vida útil (EOL).' 
+---
+= Equipo existente
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod es una solución flexible que le permite utilizar su equipo existente y el nuevo equipo a la venta actualmente por Cisco y NetApp. Ocasionalmente, algunos modelos de equipo de Cisco y NetApp están designados como fin de su vida útil (EOL).
+
+Aunque estos modelos de equipos ya no están disponibles, si ha adquirido uno de estos modelos antes de la fecha de finalización de la disponibilidad (EOA), puede utilizar dicho equipo en una configuración de FlexPod. Puede consultar una lista completa de los modelos de equipo heredado que son compatibles con FlexPod y que ya no están a la venta en la https://mysupport.netapp.com/info/eoa/index.html["Índice de fin de disponibilidad de los programas de productos de servicio y soporte de NetApp"^].
+
+Si quiere más información sobre equipos antiguos de Cisco, consulte los avisos de fin de vida útil y fin de disponibilidad de Cisco de http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Servidores en rack Cisco UCS serie C"^], http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b-series-blade-servers/eos-eol-notice-listing.html["Servidores blade Cisco UCS serie B"^], y. https://www.cisco.com/c/en/us/products/eos-eol-listing.html["Switches Nexus"^].
+
+La compatibilidad con la estructura FC heredada incluye lo siguiente:
+
+* Tejido de 2 GB
+* Estructura de 4 GB
+
+
+El software heredado incluye lo siguiente:
+
+* Sistema operativo Data ONTAP de NetApp en 7-Mode, 7.3.5 y versiones posteriores
+* ONTAP 8.1.x a 9.0.x
+* Cisco UCS Manager 1.3 y posterior
+* Cisco UCS Manager 2.1 a 2.2.7
+

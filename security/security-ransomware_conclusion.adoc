@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_conclusion.html 
+keywords: ransomware, attack, data, backup, recovery, business, planning 
+summary: Los autores recomiendan no pagar el rescate en caso de un ataque porque hacerlo refuerza la fe del atacante en su modelo de negocios. Las operaciones de backup y restauración de datos juegan un papel importante de la recuperación de ransomware. Por lo tanto, deben incluirse como parte integral de la planificación empresarial. 
+---
+= Conclusión
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+El ransomware es un producto de la delincuencia organizada, y los atacantes no operan con la ética. Pueden abstenerse de proporcionar la clave para el descifrado incluso después de recibir el rescate. La víctima no solo pierde sus datos, sino también una cantidad importante de dinero, y se enfrenta a las consecuencias asociadas con la pérdida de datos de producción.
+
+Según a https://www.forbes.com/sites/leemathews/2018/03/09/why-you-should-never-pay-a-ransomware-ransom/["Artículo de Forbes"^], sólo el 19% de las víctimas de ransomware obtienen sus datos después de pagar el rescate. Por lo tanto, los autores recomiendan no pagar un rescate en caso de un ataque porque hacerlo refuerza la fe del atacante en su modelo de negocios.
+
+Las operaciones de backup y restauración de datos juegan un papel importante de la recuperación de ransomware. Por lo tanto, deben incluirse como parte integral de la planificación empresarial. La implementación de estas operaciones se debe presupuestar para que no exista ningún compromiso en las funcionalidades de recuperación en caso de ataque.
+
+La clave está en seleccionar el partner tecnológico correcto en este viaje. FlexPod proporciona la mayoría de las funcionalidades necesarias de forma nativa sin coste adicional en un sistema FAS all-flash.

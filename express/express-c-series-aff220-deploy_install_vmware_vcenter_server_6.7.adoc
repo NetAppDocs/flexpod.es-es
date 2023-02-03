@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_install_vmware_vcenter_server_6.7.html 
+keywords: install, vmware, vcenter, server, appliance 
+summary: En esta sección, se proporcionan los procedimientos detallados para instalar VMware vCenter Server 6.7 en una configuración exprés de FlexPod. 
+---
+= Instale VMware vCenter Server 6.7
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección, se proporcionan los procedimientos detallados para instalar VMware vCenter Server 6.7 en una configuración exprés de FlexPod.
+
+
+NOTE: FlexPod Express utiliza el dispositivo de VMware vCenter Server (VCSA).
+
+
+
+== Descargue el dispositivo VMware vCenter Server
+
+. Descargue el VCSA. Acceda al enlace de descarga haciendo clic en el icono Get vCenter Server cuando gestione el host ESXi.
++
+image:express-c-series-aff220-deploy_image41.png["Error: Falta la imagen gráfica"]
+
+. Descargue el VCSA desde el sitio de VMware.
++
+
+NOTE: Aunque se admite la instalación de Microsoft Windows vCenter Server, VMware recomienda VCSA para las nuevas implementaciones.
+
+. Monte la imagen ISO.
+. Desplácese al directorio vcsa-ui-installer> win32. Haga doble clic en Installer.exe.
+. Haga clic en instalar.
+. Haga clic en Siguiente en la página Introducción.
+. Acepte el acuerdo de licencia para el usuario final.
+. Seleccione Embedded Platform Services Controller (controladora de servicios de plataforma integrada) como tipo de implementación.
++
+image:express-c-series-aff220-deploy_image42.png["Error: Falta la imagen gráfica"]
+
++
+
+NOTE: Si es necesario, también admite la puesta en marcha de la controladora de servicios de plataforma externa como parte de la solución FlexPod Express.
+
+. En Appliance Deployment Target, introduzca la dirección IP de un host ESXi implementado, así como el nombre de usuario raíz y la contraseña raíz.
++
+image:express-c-series-aff220-deploy_image43.png["Error: Falta la imagen gráfica"]
+
+. Introduzca para establecer la máquina virtual del dispositivo `VCSA` Como el nombre del equipo virtual y la contraseña raíz que desea utilizar para el VCSA.
++
+image:express-c-series-aff220-deploy_image44.png["Error: Falta la imagen gráfica"]
+
+. Seleccione el tamaño de puesta en marcha que mejor se adapte a su entorno. Haga clic en Siguiente.
++
+image:express-c-series-aff220-deploy_image45.png["Error: Falta la imagen gráfica"]
+
+. Seleccione el almacén de datos de infra_datastore_1. Haga clic en Siguiente.
++
+image:express-c-series-aff220-deploy_image46.png["Error: Falta la imagen gráfica"]
+
+. Introduzca la siguiente información en la página Configure network settings y haga clic en Next.
++
+.. Seleccione MGMT-Network para Red.
+.. Introduzca el FQDN o IP que se va a utilizar para la VCSA.
+.. Introduzca la dirección IP que se utilizará.
+.. Introduzca la máscara de subred que desea utilizar.
+.. Introduzca la pasarela predeterminada.
+.. Introduzca el servidor DNS.
+
+
+. En la página Ready to Complete Stage 1, compruebe que los ajustes introducidos son correctos. Haga clic en Finalizar.
++
+image:express-c-series-aff220-deploy_image47.png["Error: Falta la imagen gráfica"]
+
++
+La VCSA se instala ahora. Este proceso tarda varios minutos.
+
+. Una vez completada la fase 1, aparece un mensaje que indica que se ha completado. Haga clic en continuar para iniciar la configuración de la fase 2.
+. En la página Introducción de fase 2, haga clic en Siguiente.
++
+image:express-c-series-aff220-deploy_image48.png["Error: Falta la imagen gráfica"]
+
+. Introduzca `\<<var_ntp_id>>` Para la dirección del servidor NTP. Puede introducir varias direcciones IP de NTP.
++
+Si tiene pensado utilizar la alta disponibilidad (ha) de vCenter Server, asegúrese de que el acceso SSH esté habilitado.
+
+. Configure el nombre de dominio, la contraseña y el nombre del sitio de SSO. Haga clic en Siguiente.
++
+Registre estos valores para la referencia, especialmente si se desvía del nombre de dominio vsphere.local.
+
+. Únase al programa de experiencia del cliente de VMware si lo desea. Haga clic en Siguiente.
+. Vea el resumen de la configuración. Haga clic en Finalizar o utilice el botón Atrás para editar la configuración.
+. Aparece un mensaje que indica que no podrá detener o detener la instalación una vez iniciada. Haga clic en OK para continuar.
++
+La configuración del dispositivo continúa. Esto tarda varios minutos.
+
++
+Aparece un mensaje que indica que la configuración se ha realizado correctamente.
+
++
+Los enlaces que el instalador proporciona para acceder a vCenter Server pueden hacer clic.
+
+
+
+link:express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html["Siguiente: Configure VMware vCenter Server 6.7 y vSphere agrupando en clústeres."]

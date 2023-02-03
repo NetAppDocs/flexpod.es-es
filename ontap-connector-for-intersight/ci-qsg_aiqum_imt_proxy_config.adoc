@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_aiqum_imt_proxy_config.html 
+keywords: cisco, intersight, intersight assist, netapp, ontap, connector, configuration, active iq unified manager, proxy, imt, deployment, interoperability, ai qm, ova, cli 
+summary: PARA utilizar el servicio IMT, ES necesario configurar AIQ UM con el servidor proxy a través de la interfaz de línea de comandos. 
+---
+= Configure el servidor proxy de mensajería unificada de AIQ para el servicio IMT
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Si utiliza un servidor proxy con AIQ para Cisco Intersight con el almacenamiento ONTAP de NetApp, debe configurar la configuración a través de la interfaz de línea de comandos (CLI) para utilizar el servicio de la herramienta de matriz de interoperabilidad (IMT). El servicio IMT está disponible en la pestaña *Interoperability* de la página *sistemas integrados*. Debe usar el shell de Diag de máquina virtual (OVA) de Active IQ Unified Manager para configurar la configuración del servidor proxy de AIQ.
+
+
+NOTE: Para obtener información sobre cómo acceder al shell AIQ UM Diag, consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/How_to_access_Active_IQ_Unified_Manager_Virtual_Machine_OVA_DIAG_shell["Cómo acceder al shell de DIAG de máquina virtual Active IQ Unified Manager (OVA)"]
+
+* Pasos*
+
+. Inicie sesión en el terminal de mensajería unificada de AIQ y ejecute el siguiente comando para iniciar sesión en um.
++
+[listing]
+----
+um cli login -u <um maintenance user name>
+----
++
+*ejemplo*
+
++
+[listing]
+----
+um cli login -u admin
+----
+. Ajuste la `imt_proxy_host` y.. `imt_proxy_port` ejecutando los siguientes comandos.
++
+
+NOTE: El proxy de IMT es una configuración independiente de las configuraciones de proxy de AutoSupport (ASUP).
+
++
+[listing]
+----
+um option set imt.https.proxy.host=<IMT_PROXY_HOST>
+um option set imt.https.proxy.port=<IMT_PROXY_PORT>
+----
++
+*ejemplo*
+
++
+[listing]
+----
+um option set imt.https.proxy.host=example-proxy.cls.eng.com
+um option set imt.https.proxy.port=8200
+----
++
+
+NOTE: Las configuraciones del servidor proxy IMT no admiten la autenticación.
+
+. Consulte los detalles del proxy IMT para verificar el `proxy_host` y.. `proxy_port` los ajustes a través del comando siguiente.
++
+[listing]
+----
+um option list |grep imt
+----
+

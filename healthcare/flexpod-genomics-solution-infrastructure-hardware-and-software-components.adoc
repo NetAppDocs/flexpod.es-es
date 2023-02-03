@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html 
+keywords: GATK, setup, validation, cabling, hardware, software 
+summary: En esta sección se describen la infraestructura de la solución y los componentes de software que se emplean en esta solución. 
+---
+= Infraestructura de la solución componentes de hardware y software
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["Anterior: Ventajas de la puesta en marcha de cargas de trabajo genómicos en FlexPod"]
+
+La siguiente figura muestra el sistema FlexPod utilizado para la instalación y validación de GATK. Nosotros usamos https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["FlexPod Datacenter con VMware vSphere 7.0 y NetApp ONTAP 9.7 Cisco Validated Design (CVD)"^] durante el proceso de configuración.
+
+image:flexpod-genomics-image6.png["Error: Falta la imagen gráfica"]
+
+En el siguiente diagrama se describen los detalles del cableado FlexPod.
+
+image:flexpod-genomics-image7.png["Error: Falta la imagen gráfica"]
+
+La siguiente tabla enumera los componentes de hardware utilizados durante la prueba de GATK que se activa en un FlexPod. Aquí está la https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT) y. https://ucshcltool.cloudapps.cisco.com/public/["Lista de compatibilidad de hardware (HCL) de Cisco"^].
+
+|===
+| Capa | Familia de productos | Cantidad y modelo | Detalles 
+
+
+| Informática | Chasis Cisco UCS 5108 | 1 o 2 |  
+
+
+|  | Servidores blade Cisco UCS | 6 B200 M5 | Cada uno con 2 20 núcleos o más, 2,7 GHz y 128 GB de RAM 
+
+
+|  | Tarjeta de interfaz virtual (VIC) de Cisco UCS | Cisco UCS 1440 | Consulte 
+
+
+|  | 2 interconexiones de estructura Cisco UCS | 6332 | - 
+
+
+| Red | Switches Cisco Nexus | 2 switches Cisco Nexus 9332 | - 
+
+
+| Red de almacenamiento | Red IP para el acceso de almacenamiento mediante protocolos SMB/CIFS, NFS o iSCSI | Los mismos switches de red que se han descrito anteriormente | - 
+
+
+|  | Acceso a almacenamiento mediante FC | 2 Cisco MDS 9148S | - 
+
+
+| Reducida | Sistema de almacenamiento all-flash AFF A700 de NetApp | Clúster 1 | Clúster con dos nodos 
+
+
+|  | Bandeja de discos | Una bandeja de discos DS224C o NS224 | Totalmente lleno con 24 unidades 
+
+
+|  | SSD | 24, 1,2 TB o más capacidad | - 
+|===
+Esta tabla enumera el software de infraestructura.
+
+|===
+| De NetApp | Familia de productos | Versión o versión | Detalles 
+
+
+| Varios | Linux | RHEL 8.3 | - 
+
+
+|  | Windows | Windows Server 2012 R2 (64 bits) | - 
+
+
+|  | ONTAP de NetApp | ONTAP 9.8 o posterior | - 
+
+
+|  | Interconexión de estructura Cisco UCS | Cisco UCS Manager 4.1 o posterior | - 
+
+
+|  | Switches de las series Cisco Ethernet 3000 o 9000 | Para la serie 9000, 7.0(3)I7(7) o posterior para la serie 3000, 9.2(4) o posterior | - 
+
+
+|  | Cisco FC: Cisco MDS 9132T | 8.4(1a) o posterior | - 
+
+
+|  | Hipervisor | VMware vSphere ESXi 7.0 | - 
+
+
+| Reducida | Sistema de gestión de hipervisores | VMware vCenter Server 7.0 (vcsa) o versiones posteriores | - 
+
+
+| Red | Virtual Storage Console (VSC) de NetApp | VSC 9.7 o posterior | - 
+
+
+|  | SnapCenter de NetApp | SnapCenter 4.3 o posterior | - 
+
+
+|  | Administrador de Cisco UCS | 4.1(3c) o posterior |  
+
+
+| Hipervisor | ESXi |  |  
+
+
+| Gestión | Sistema de gestión del hipervisor VMware vCenter Server 7.0 (vcsa) o versiones posteriores |  |  
+
+
+|  | Virtual Storage Console (VSC) de NetApp | VSC 9.7 o posterior |  
+
+
+|  | SnapCenter de NetApp | SnapCenter 4.3 o posterior |  
+
+
+|  | Administrador de Cisco UCS | 4.1(3c) o posterior |  
+|===
+link:flexpod-genomics-genomics---gatk-setup-and-execution.html["Siguiente: Genómica - instalación y ejecución de GATK."]

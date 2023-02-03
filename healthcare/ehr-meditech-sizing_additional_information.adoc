@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_additional_information.html 
+keywords: additional, information, guides, meditech, sizing 
+summary: Para obtener más información sobre la información descrita en este documento, consulte los siguientes documentos o sitios web. 
+---
+= Información adicional
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Si quiere obtener más información sobre la información descrita en este documento, consulte los siguientes documentos o sitios web:
+
+* Centro de datos FlexPod con diseño validado por FC Cisco.
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html"^]
+
+* Directrices de puesta en marcha de NetApp para entornos MEDITECH.
++
+https://fieldportal.netapp.com/content/248456["https://fieldportal.netapp.com/content/248456"^] (Se requiere inicio de sesión de NetApp)
+
+* Estimaciones de tamaño de NetApp para entornos de MEDITECH.
++
+http://www.netapp.com/us/media/tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
+
+* Centro de datos FlexPod para la puesta en marcha de EHR de Epic
++
+http://www.netapp.com/us/media/tr-4693.pdf["www.netapp.com/us/media/tr-4693.pdf"^]
+
+* Zona de diseño de FlexPod
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* FlexPod DC con almacenamiento FC (switches MDS) mediante NetApp AFF, vSphere 6.5U1 y Cisco UCS Manager
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html"^]
+
+* Asistencia sanitaria de Cisco
++
+https://www.cisco.com/c/en/us/solutions/industries/healthcare.html?dtid=osscdc000283["https://www.cisco.com/c/en/us/solutions/industries/healthcare.html?dtid=osscdc000283"^]
+
+

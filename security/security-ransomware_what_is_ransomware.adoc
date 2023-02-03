@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_what_is_ransomware.html 
+keywords: data, loss, ransomware, financial, risk, center, spread, solution 
+summary: El ransomware es un tipo de malware basado en la criptovirología, que es el uso de criptografía para crear software malicioso. Este malware puede utilizar tanto el cifrado simétrico como el cifrado de claves asimétricas para bloquear los datos de una víctima y exigir un rescate para proporcionar la clave para descifrar los datos de la víctima. 
+---
+= TR-4802: FlexPod, la solución para ransomware
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Arvind Ramakrishnan, NetApp
+
+En colaboración con:image:cisco logo.png["Error: Falta la imagen gráfica"]
+
+Para comprender el ransomware, es necesario en primer lugar comprender algunos puntos clave sobre la criptografía. Los métodos criptográficos permiten el cifrado de datos con una clave secreta compartida (cifrado de clave simétrica) o un par de claves (cifrado de claves asimétrico). Una de estas claves es una clave pública ampliamente disponible y la otra es una clave privada no revelada.
+
+El ransomware es un tipo de malware basado en la criptovirología, que es el uso de criptografía para crear software malicioso. Este malware puede utilizar tanto el cifrado simétrico como el cifrado de claves asimétricas para bloquear los datos de una víctima y exigir un rescate para proporcionar la clave para descifrar los datos de la víctima.
+
+
+
+== ¿Cómo funciona el ransomware?
+
+Los siguientes pasos describen cómo el ransomware utiliza la criptografía para cifrar los datos de la víctima sin ningún ámbito para su descifrado o recuperación por parte de la víctima:
+
+. El atacante genera un par de claves como en el cifrado de claves asimétricas. La clave pública generada se coloca dentro del malware y el malware se libera.
+. Después de que el malware haya entrado en el equipo o sistema de la víctima, genera una clave simétrica aleatoria utilizando un generador de números pseudoorandom (PRNG) o cualquier otro algoritmo viable de generación de números aleatorios.
+. El malware utiliza esta clave simétrica para cifrar los datos de la víctima. Finalmente, cifra la clave simétrica mediante el uso de la clave pública del atacante que se incrustó en el malware. El resultado de este paso es un cifrado asimétrico de la clave simétrica cifrada y el texto cifrado simétrico de los datos de la víctima.
+. El malware borra los datos de la víctima y la clave simétrica que se utilizó para cifrar los datos, sin así dejar margen para la recuperación.
+. La víctima se muestra ahora el texto cifrado asimétrico de la clave simétrica y un valor de rescate que debe pagarse para obtener la clave simétrica que se utilizó para cifrar los datos.
+. La víctima paga el rescate y comparte el cifrado asimétrico con el atacante. El atacante descifra el cifrado con su clave privada, lo que da como resultado la clave simétrica.
+. El atacante comparte esta clave simétrica con la víctima, que se puede utilizar para descifrar todos los datos y, por tanto, recuperarse del ataque.
+
+
+
+
+== Retos
+
+Individuos y organizaciones se enfrentan a los siguientes retos cuando son atacados por ransomware:
+
+* El desafío más importante es que se cobra un costo inmediato en la productividad de la organización o del individuo. Toma tiempo para volver a un estado de normalidad, porque todos los archivos importantes deben ser recuperados, y los sistemas deben ser asegurados.
+* Podría llevar a una filtración de datos que contenga información confidencial y confidencial de clientes o clientes, y provocar una situación de crisis que una organización querría evitar claramente.
+* Existe una gran posibilidad de que los datos entren en las manos equivocadas o se eliminen por completo, lo que conduce a un punto de retorno nulo que podría ser desastroso para las organizaciones y los individuos.
+* Después de pagar el rescate, no hay garantía de que el atacante proporcionará la clave para restaurar los datos.
+* No hay garantías de que el atacante se abstenga de transmitir los datos delicados a pesar de pagar el rescate.
+* En las grandes empresas, identificar la laguna que llevó a un ataque de ransomware es una tarea tediosa, y asegurar todos los sistemas implica un gran esfuerzo.
+
+
+
+
+== ¿Quién está en riesgo?
+
+Cualquiera puede ser atacado por ransomware, incluidos individuos y organizaciones grandes. Las organizaciones que no aplican medidas y prácticas de seguridad bien definidas son aún más vulnerables a esos ataques. El efecto del ataque en una organización grande puede ser varias veces mayor de lo que un individuo podría soportar.
+
+El ransomware representa aproximadamente el 28 % de todos los ataques de malware. En otras palabras, más de uno de cada cuatro incidentes de malware es un ataque de ransomware. El ransomware puede propagarse automática e indiscriminadamente a través de Internet y, cuando hay un lapso de seguridad, puede entrar en los sistemas de la víctima y continuar extendiéndose a otros sistemas conectados. Los atacantes tienden a dirigirse a personas u organizaciones que realizan un gran uso compartido de archivos, tienen una gran cantidad de datos confidenciales y críticos o a mantener una protección inadecuada frente a ataques.
+
+Los atacantes tienden a centrarse en los siguientes objetivos potenciales:
+
+* Universidades y comunidades estudiantiles
+* Oficinas y organismos gubernamentales
+* Hospitales
+* De Estados Unidos
+
+
+Esta no es una lista exhaustiva de objetivos. Usted no puede considerarse seguro de los ataques si se encuentra fuera de una de estas categorías.
+
+
+
+== ¿Cómo se introduce el ransomware en un sistema o se distribuye?
+
+Existen varias formas en las que el ransomware puede entrar en un sistema o propagarse a otros sistemas. En el mundo actual, casi todos los sistemas están conectados entre sí a través de Internet, LAN, WAN, etc. La cantidad de datos que se generan e intercambian entre estos sistemas no hace más que aumentar.
+
+Algunos de los métodos más comunes mediante los que se puede distribuir el ransomware incluyen métodos que utilizamos diariamente para compartir o acceder a los datos:
+
+* Correo electrónico
+* Redes P2P
+* Descargas de archivos
+* Redes sociales
+* Dispositivos móviles
+* Conectarse a redes públicas no seguras
+* Acceso a direcciones URL Web
+
+
+
+
+== Consecuencias de la pérdida de datos
+
+Las consecuencias o los efectos de la pérdida de datos pueden ser más amplios de lo que las organizaciones podrían anticipar. Los efectos pueden variar en función de la duración del tiempo de inactividad o del período de tiempo durante el cual una organización no tiene acceso a sus datos. Cuanto más dure el ataque, mayor será el efecto sobre los ingresos, la Marca y la reputación de la organización. Una organización también puede enfrentarse a problemas legales y a una fuerte disminución de la productividad.
+
+A medida que estas cuestiones continúan persistiéndose con el tiempo, comienzan a magnificar y podrían terminar cambiando la cultura de una organización, dependiendo de cómo responda al ataque. En el mundo actual, la información se propaga rápidamente y las noticias negativas sobre una organización podrían causar un daño permanente a su reputación. Una organización podría enfrentarse a enormes sanciones por pérdida de datos, lo que podría desembocar en el cierre de un negocio.
+
+
+
+== Efectos financieros
+
+Según un informe reciente https://www.mcafee.com/enterprise/en-us/assets/executive-summaries/es-economic-impact-cybercrime.pdf["Informe de McAfee"^], Los costos globales incurridos por el crimen cibernético son aproximadamente 600 mil millones de dólares, lo que representa aproximadamente el 0.8% del PIB global. Cuando esta cantidad se compara con la creciente economía mundial de internet de 4.2 billones de dólares, equivale a un impuesto del 14% sobre el crecimiento.
+
+El ransomware asume una parte importante de este coste financiero. En 2018, los costos incurridos debido a los ataques de ransomware fueron aproximadamente de $8 mil millones―una cantidad que se prevé que alcanzará los $11.5 mil millones en 2019.
+
+
+
+== ¿Cuál es la solución?
+
+La recuperación a partir de un ataque de ransomware con un tiempo de inactividad mínimo solo es posible gracias a la implementación de un plan de recuperación ante desastres proactivo. Tener la capacidad para recuperarse de un ataque es bueno, pero evitar un ataque es ideal.
+
+Aunque hay varios frentes que se deben revisar y reparar para evitar un ataque, el componente central que permite prevenir o recuperar de un ataque es el centro de datos.
+
+El diseño del centro de datos y las funciones que proporciona para proteger los puntos finales de red, informática y almacenamiento tienen un papel fundamental a la hora de crear un entorno seguro para las operaciones cotidianas. Este documento muestra cómo las funciones de una infraestructura de cloud híbrido de FlexPod pueden ayudar a lograr una recuperación de datos rápida en caso de ataque, y también pueden ayudar a evitar ataques.

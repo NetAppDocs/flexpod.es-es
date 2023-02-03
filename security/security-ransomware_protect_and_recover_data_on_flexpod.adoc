@@ -1,0 +1,192 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_protect_and_recover_data_on_flexpod.html 
+keywords: testbed, ransomeware, attack, vm, snapshot, copy, wannacry, detection, remediation, cifs 
+summary: En esta sección se describe cómo se pueden recuperar los datos de un usuario final en caso de un ataque y cómo se pueden prevenir los ataques mediante un sistema FlexPod. 
+---
+= Proteja y recupere datos en FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección se describe cómo se pueden recuperar los datos de un usuario final en caso de un ataque y cómo se pueden prevenir los ataques mediante un sistema FlexPod.
+
+
+
+== Resumen de banco
+
+Para presentar la detección, la corrección y la prevención de FlexPod, se creó un banco de pruebas basado en las directrices especificadas en el último CVD de plataforma disponible en el momento en el que se escribió este documento: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["FlexPod Datacenter con VMware vSphere 6.7 U1, Cisco UCS de cuarta generación y NetApp AFF A-Series CVD"^].
+
+Se puso en marcha un equipo virtual con Windows 2016, que proporcionaba un recurso compartido CIFS del software ONTAP de NetApp, en la infraestructura de VMware vSphere. A continuación, se configuró FPolicy de NetApp en el recurso compartido de CIFS para evitar la ejecución de archivos con ciertos tipos de extensiones. El software SnapCenter de NetApp también se puso en marcha para gestionar las copias Snapshot de los equipos virtuales de la infraestructura para proporcionar copias Snapshot coherentes con las aplicaciones.
+
+
+
+== Estado del equipo virtual y sus archivos antes de un ataque
+
+En esta sección se muestra el estado de los archivos antes de un ataque a la máquina virtual y al recurso compartido CIFS que se le ha asignado.
+
+La carpeta Documentos del equipo virtual tenía un conjunto de archivos PDF que todavía no han sido cifrados por el malware WannaCry.
+
+image:security-ransomware_image3.png["Error: Falta la imagen gráfica"]
+
+La siguiente captura de pantalla muestra el recurso compartido de CIFS asignado a la máquina virtual.
+
+image:security-ransomware_image4.png["Error: Falta la imagen gráfica"]
+
+La siguiente captura de pantalla muestra los archivos del recurso compartido CIFS `fpolicy_share` Que todavía no han sido cifrados por el malware WannaCry.
+
+image:security-ransomware_image5.png["Error: Falta la imagen gráfica"]
+
+
+
+== Información sobre deduplicación y copias snapshot antes de un ataque
+
+Los detalles de la eficiencia del almacenamiento y el tamaño de la copia Snapshot antes de un ataque se indican y se utilizan como referencia durante la fase de detección.
+
+Se obtuvo un ahorro del 19% en el almacenamiento, gracias a la deduplicación en el volumen que alojaba el equipo virtual.
+
+image:security-ransomware_image6.png["Error: Falta la imagen gráfica"]
+
+Se obtuvo un ahorro del 45% gracias a la deduplicación en la unidad CIFS `fpolicy_share`.
+
+image:security-ransomware_image7.png["Error: Falta la imagen gráfica"]
+
+Se observó un tamaño de copia snapshot de 456 KB para el volumen donde se alojaba el equipo virtual.
+
+image:security-ransomware_image8.png["Error: Falta la imagen gráfica"]
+
+Se observó un tamaño de copia Snapshot de 160 KB para el recurso compartido de CIFS `fpolicy_share`.
+
+image:security-ransomware_image9.png["Error: Falta la imagen gráfica"]
+
+
+
+== Infección de WannaCry en VM y recursos compartidos de CIFS
+
+En esta sección, mostramos cómo se introdujo el malware de WannaCry en el entorno de FlexPod y los posteriores cambios en el sistema que se observaron.
+
+Los pasos siguientes muestran cómo se introdujo el binario de malware WannaCry en el equipo virtual:
+
+. Se extrajo el malware protegido.
++
+image:security-ransomware_image10.png["Error: Falta la imagen gráfica"]
+
+. Se ejecutó el binario.
++
+image:security-ransomware_image11.png["Error: Falta la imagen gráfica"]
+
+
+
+
+
+=== Caso 1: WannaCry cifra el sistema de archivos dentro del equipo virtual y el recurso compartido CIFS asignado
+
+El sistema de archivos local y el recurso compartido CIFS asignado fueron cifrados por el malware WannaCry.
+
+El malware comienza a cifrar archivos con extensiones WNCRY.
+
+image:security-ransomware_image12.png["Error: Falta la imagen gráfica"]
+
+El malware cifra todos los archivos del equipo virtual local y del recurso compartido asignado.
+
+image:security-ransomware_image13.png["Error: Falta la imagen gráfica"]
+
+
+
+==== Detección
+
+Desde el momento en que el malware comenzó a cifrar los archivos, se activó un aumento exponencial del tamaño de las copias snapshot y una reducción exponencial del porcentaje de eficiencia del almacenamiento.
+
+Se detectó un aumento espectacular del tamaño de snapshot a 820,98 MB para el volumen que aloja la unidad CIFS durante el ataque.
+
+image:security-ransomware_image14.png["Error: Falta la imagen gráfica"]
+
+Hemos detectado un aumento en el tamaño de la copia snapshot a 404,3 MB para el volumen donde se aloja la máquina virtual.
+
+image:security-ransomware_image15.png["Error: Falta la imagen gráfica"]
+
+La eficiencia de almacenamiento para el volumen que aloja la unidad CIFS se redujo a un 34 %.
+
+image:security-ransomware_image16.png["Error: Falta la imagen gráfica"]
+
+
+
+==== Reparación
+
+Restaurar el equipo virtual y el recurso compartido CIFS asignado mediante una copia Snapshot limpia creada antes del ataque
+
+*Restaurar VM*
+
+Para restaurar el equipo virtual, complete los siguientes pasos:
+
+. Use la copia Snapshot que creó con SnapCenter para restaurar la máquina virtual.
++
+image:security-ransomware_image17.png["Error: Falta la imagen gráfica"]
+
+. Seleccione la copia de Snapshot coherente con VMware que desee restaurar.
++
+image:security-ransomware_image18.png["Error: Falta la imagen gráfica"]
+
+. Toda la máquina virtual se restaura y se reinicia.
++
+image:security-ransomware_image19.png["Error: Falta la imagen gráfica"]
+
+. Haga clic en Finalizar para iniciar el proceso de restauración.
++
+image:security-ransomware_image20.png["Error: Falta la imagen gráfica"]
+
+. Se restauran el equipo virtual y sus archivos.
++
+image:security-ransomware_image21.png["Error: Falta la imagen gráfica"]
+
+
+
+*Restaurar recurso compartido CIFS*
+
+Para restaurar el recurso compartido CIFS, realice los siguientes pasos:
+
+. Utilice la copia snapshot del volumen que haya tomado antes del ataque para restaurar el recurso compartido.
++
+image:security-ransomware_image22.png["Error: Falta la imagen gráfica"]
+
+. Haga clic en OK para iniciar la operación de restauración.
++
+image:security-ransomware_image23.png["Error: Falta la imagen gráfica"]
+
+. Vea el recurso compartido CIFS después de la restauración.
++
+image:security-ransomware_image24.png["Error: Falta la imagen gráfica"]
+
+
+
+
+
+=== Caso 2: WannaCry cifra el sistema de archivos dentro del equipo virtual e intenta cifrar el recurso compartido CIFS asignado que está protegido mediante FPolicy
+
+
+
+==== Prevención
+
+*Configurar FPolicy*
+
+Para configurar FPolicy en el recurso compartido de CIFS, ejecute los siguientes comandos en el clúster de ONTAP:
+
+....
+vserver fpolicy policy event create -vserver infra_svm -event-name Ransomware_event -protocol cifs -file-operations create,rename,write,open
+vserver fpolicy policy create -vserver infra_svm -policy-name Ransomware_policy -events Ransomware_event -engine native
+vserver fpolicy policy scope create -vserver infra_svm -policy-name Ransomware_policy -shares-to-include fpolicy_share -file-extensions-to-include WNCRY,Locky,ad4c
+vserver fpolicy enable -vserver infra_svm -policy-name Ransomware_policy -sequence-number 1
+....
+Con esta directiva, los archivos con extensiones WNCRY, Locky y ad4c no pueden realizar las operaciones de archivo crear, cambiar el nombre, escribir o abrir.
+
+Ver el estado de los archivos antes del ataque: Están sin cifrar y en un sistema limpio.
+
+image:security-ransomware_image25.png["Error: Falta la imagen gráfica"]
+
+Los archivos del equipo virtual están cifrados. El malware WannaCry intenta cifrar los archivos en el recurso compartido de CIFS, pero FPolicy evita que afecten a los archivos.
+
+image:security-ransomware_image26.png["Error: Falta la imagen gráfica"]

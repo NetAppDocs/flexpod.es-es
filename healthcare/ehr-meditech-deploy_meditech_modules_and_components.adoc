@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_meditech_modules_and_components.html 
+keywords: meditech, modules, components, application, function, type 
+summary: La aplicación MEDITECH cubre varios módulos y componentes. 
+---
+= Módulos y componentes de MEDITECH
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La aplicación MEDITECH cubre varios módulos y componentes. En la siguiente tabla se enumeran las funciones que están cubiertas por estos módulos. Para obtener más información sobre la configuración y la implementación de estos módulos, consulte la documentación de MEDITECH.
+
+|===
+| Función | Tipo 
+
+
+| Conectividad  a| 
+* Servidor web
+* Servidor de aplicaciones en directo (WI – Web Integration)
+* Probar el servidor de aplicaciones (WI)
+* Servidor de autenticación SAML (WI)
+* Servidor proxy SAML (WI)
+* Servidor de bases de datos
+
+
+
+
+| De almacenamiento  a| 
+* Servidor de ficheros
+* Cliente de trabajo en segundo plano
+* Servidor de conexión
+* Servidor de transacciones
+
+
+
+
+| Análisis y archivado  a| 
+* Servidor de imágenes
+
+
+
+
+| Almacén de datos  a| 
+* Servidor SQL
+
+
+
+
+| Análisis clínicos y empresariales  a| 
+* Servidor de inteligencia en directo (BCA)
+* Servidor de inteligencia de prueba (BCA)
+* Servidor de bases de datos (BCA)
+
+
+
+
+| Cuidado en el hogar  a| 
+* Solución para ubicaciones remotas
+* Conectividad
+* De almacenamiento
+* Impresión
+* Dispositivos de campo
+* Escaneado
+* Requisitos del sitio alojado
+* Configuración del firewall
+
+
+
+
+| Soporte técnico  a| 
+* Cliente de trabajo en segundo plano (CAL: Licencia de acceso de cliente)
+
+
+
+
+| Dispositivos de usuario  a| 
+* Tabletas
+* Dispositivos fijos
+
+
+
+
+| Impresión  a| 
+* Servidor de impresión en red activo (obligatorio; puede que ya exista)
+* Probar el servidor de impresión de red (obligatorio; puede que ya exista)
+
+
+
+
+| Requisito de terceros  a| 
+* First Databank (FDB) MedKnowledge Framework v4.3
+
+
+|===

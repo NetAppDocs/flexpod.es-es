@@ -1,0 +1,149 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_solution_sizing.html 
+keywords: solution, sizing, storage, comput, network, cisco, ucs, infrastructure 
+summary: En esta sección se describe el número de estudios y los requisitos de infraestructura correspondientes. 
+---
+= Ajuste del tamaño de la solución
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Ajuste de tamaño del almacenamiento
+
+En esta sección se describe el número de estudios y los requisitos de infraestructura correspondientes.
+
+Los requisitos de almacenamiento que se enumeran en la siguiente tabla suponen que los datos existentes tienen un valor de 1 año más un crecimiento previsto para un año de estudio en el sistema primario (nivel 1, 2). Las necesidades de almacenamiento adicionales para el crecimiento previsto para 3 años después de los dos primeros años se enumeran por separado.
+
+|===
+|  | Pequeño | Mediano | Grande 
+
+
+| Estudios anuales | <250.000 estudios | Estudios de 250K–500K | 500 000–1 millón de estudios 
+
+
+4+| Almacenamiento de nivel 1 
+
+
+| IOPS (promedio) | 1,5K–5K | 5000 A 15 000 | DE 15K A 40K 
+
+
+| IOPS (pico) | 5000 | 20 K | 65 000 
+
+
+| Rendimiento | 50–100 Mbps | De 50 a 150 Mbps | 100–300 Mbps 
+
+
+| Capacidad del centro de datos 1 (1 año de datos antiguos y 1 año de estudio nuevo) | 70 TB | 140 TB | 260 TB 
+
+
+| Capacidad del centro de datos 1 (necesidad adicional durante 4 años para un nuevo estudio) | 25 TB | 45 TB | 80 TB 
+
+
+| Capacidad del centro de datos 2 (1 año de datos antiguos y 1 año de estudio nuevo) | 45 TB | 110 TB | 165 TB 
+
+
+| Capacidad del centro de datos 2 (necesidad adicional durante 4 años para un estudio nuevo) | 25 TB | 45 TB | 80 TB 
+
+
+4+| Almacenamiento en dos niveles 
+
+
+| IOPS (promedio) | 1K | 2K | 3.000 
+
+
+| Capacidad del centro de datos 1 | 320 TB | 800 TB | 2000 TB 
+|===
+
+
+== Ajuste de tamaño de computación
+
+En la siguiente tabla se enumeran los requisitos informáticos para sistemas de imágenes médicas pequeños, medianos y grandes.
+
+|===
+|  | Pequeño | Mediano | Grande 
+
+
+| Estudios anuales | <250.000 estudios | Estudios de 250K–500K | 500 000–1 millón de estudios 
+
+
+4+| Centro de datos 1 
+
+
+| Número de máquinas virtuales | 21 | 27 | 35 
+
+
+| Número total de CPU virtuales (vCPU) | 56 | 124 | 220 
+
+
+| Requisito de memoria total | 225 GB | 450 GB | 900 GB 
+
+
+| Especificaciones de servidores físicos (blades) (presuponga 1 vCPU -=1 núcleo) | 4 servidores con 20 núcleos y 192 GB de RAM cada uno | 8 servidores con 20 núcleos y 128 GB de RAM cada uno | 14 servidores con 20 núcleos y 128 GB de RAM cada uno 
+
+
+4+| Centro de datos 2 
+
+
+| Número de máquinas virtuales | 15 | 17 | 22 
+
+
+| Número total de vCPU | 42 | 72 | 140 
+
+
+| Requisito de memoria total | 179 GB | 243 GB | 513 GB 
+
+
+| Especificaciones de servidores físicos (blades) (presuponga 1 vCPU = 1 núcleo) | 3 servidores con 20 núcleos y 168 GB de RAM cada uno | 6 servidores con 20 núcleos y 128 GB de RAM cada uno | 8 servidores con 24 núcleos y 128 GB de RAM cada uno 
+|===
+
+
+== Ajuste de tamaño de la infraestructura de redes y Cisco UCS
+
+En la siguiente tabla se enumeran los requisitos de la infraestructura de red y Cisco UCS para sistemas de imágenes médicas pequeños, medianos y grandes.
+
+|===
+|  | Pequeño | Mediano | Grande 
+
+
+4+| Centro de datos 1 
+
+
+| El número de puertos del nodo de almacenamiento | 2 adaptadores de red convergentes (CNA); 2 FCs | 2 CNA; 2 FCF | 2 CNA; 2 FCF 
+
+
+| Puertos del switch de red de IP (Cisco Nexus 9000) | switch de 48 puertos | switch de 48 puertos | switch de 48 puertos 
+
+
+| Switch FC (Cisco MDS) | switch de 32 puertos | switch de 32 puertos | switch de 48 puertos 
+
+
+| Número de chasis Cisco UCS | 1 x 5108 | 1 x 5108 | 2 x 5108 
+
+
+| Interconexión de estructura Cisco UCS | 2 x 6332 | 2 x 6332 | 2 x 6332 
+
+
+4+| Centro de datos 2 
+
+
+| Número de chasis Cisco UCS | 1 x 5108 | 1 x 5108 | 1 x 5108 
+
+
+| Interconexión de estructura Cisco UCS | 2 x 6332 | 2 x 6332 | 2 x 6332 
+
+
+| El número de puertos del nodo de almacenamiento | 2 CNA; 2 FCF | 2 CNA; 2 FCF | 2 CNA; 2 FCF 
+
+
+| Puertos del switch de red de IP (Cisco Nexus 9000) | switch de 48 puertos | switch de 48 puertos | switch de 48 puertos 
+
+
+| Switch FC (Cisco MDS) | switch de 32 puertos | switch de 32 puertos | switch de 48 puertos 
+|===

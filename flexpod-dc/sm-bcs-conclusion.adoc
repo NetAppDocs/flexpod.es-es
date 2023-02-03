@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-conclusion.html 
+keywords: conclusion 
+summary: El centro de datos FlexPod con SM-BC utiliza un diseño de centro de datos activo-activo para proporcionar continuidad del negocio y recuperación ante desastres para cargas de trabajo vitales para el negocio. Por lo general, la solución interconecta dos centros de datos implementados en ubicaciones separadas y geográficamente dispersas en una zona metropolitana. La solución SM-BC de NetApp utiliza replicación síncrona para proteger los servicios de datos críticos para el negocio frente a un fallo de sitio. La solución requiere que los dos sitios de puesta en marcha de FlexPod tengan una latencia de red de ida y vuelta inferior a 10 milisegundos. 
+---
+= Conclusión
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-validated-scenarios.html["Anterior: Validación de la solución - escenarios validados."]
+
+El centro de datos FlexPod con SM-BC utiliza un diseño de centro de datos activo-activo para proporcionar continuidad del negocio y recuperación ante desastres para cargas de trabajo vitales para el negocio. Por lo general, la solución interconecta dos centros de datos implementados en ubicaciones separadas y geográficamente dispersas en una zona metropolitana. La solución SM-BC de NetApp utiliza replicación síncrona para proteger los servicios de datos críticos para el negocio frente a un fallo de sitio. La solución requiere que los dos sitios de puesta en marcha de FlexPod tengan una latencia de red de ida y vuelta inferior a 10 milisegundos.
+
+El Mediador ONTAP de NetApp puesto en marcha en un tercer sitio supervisa la solución SM-BC y permite la conmutación por error automatizada cuando se detecta un desastre en el sitio. La instancia de VMware vCenter con VMware ha y la configuración ampliada de clústeres de almacenamiento Metro de VMware vSphere funcionan sin problemas con el SM-BC de NetApp para permitir que la solución cumpla los objetivos de objetivo de punto de recuperación cero deseados y de objetivo de tiempo de recuperación casi cero.
+
+La solución FlexPod SM-BC también puede ponerse en marcha en infraestructuras FlexPod existentes si cumplen los requisitos o añadiendo una solución FlexPod adicional a un FlexPod existente para alcanzar los objetivos de continuidad del negocio. NetApp y Cisco ofrecen herramientas adicionales de gestión, supervisión y automatización, como Cisco Intersight, Ansible y la automatización basada en HashiCorp Terraform, para que pueda supervisar fácilmente la solución, obtener información sobre sus operaciones y automatizar su puesta en marcha y sus operaciones.
+
+Desde la perspectiva de una aplicación vital para el negocio como Microsoft SQL Server, sigue estando disponible una base de datos que reside en un almacén de datos VMware protegido por una relación de CG de SM-BC de ONTAP a pesar de una interrupción del servicio de almacenamiento del sitio. Tal y como se verificó durante las pruebas de validación, tras una interrupción del suministro eléctrico del clúster de almacenamiento en el que reside la base de datos, se produce una conmutación por error de la relación de CG de SM-BC y las transacciones de Microsoft SQL Server se reanudan sin interrupción de las aplicaciones.
+
+Con la protección de datos granular de aplicaciones, es posible crear las relaciones de CG del SM-BC de ONTAP para sus aplicaciones vitales para el negocio de modo que cumplan con los requisitos de RPO cero y RTO casi cero. Así, que el clúster de VMware en el que se ejecuta la aplicación Microsoft SQL Server puede sobrevivir a una interrupción del almacenamiento del sitio, las LUN de arranque de los hosts ESXi de cada sitio también están protegidas por una relación de CG de SM-BC.
+
+La flexibilidad y la escalabilidad de FlexPod le permite empezar con una infraestructura del tamaño adecuado que puede crecer y evolucionar a medida que cambien los requisitos de su negocio. Este diseño validado le permite poner en marcha de forma fiable un cloud privado basado en vSphere de VMware en una infraestructura distribuida e integrada, por lo que ofrece una solución flexible para numerosos escenarios de un único punto de fallo y fallos en un centro para proteger los servicios de datos empresariales cruciales.
+
+link:sm-bcs-where-to-find-additional-information-and-version-history.html["Siguiente: Dónde encontrar información adicional e historial de versiones."]

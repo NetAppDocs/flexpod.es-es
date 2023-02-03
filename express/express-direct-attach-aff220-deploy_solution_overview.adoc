@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-aff220-deploy_solution_overview.html 
+keywords: solution, overview, flexpod, express, converged, infrastructure, program, verified, architecture, case, summary 
+summary: Esta solución FlexPod Express forma parte del programa de infraestructura convergente de FlexPod. 
+---
+= Descripción general de la solución
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Esta solución FlexPod Express forma parte del programa de infraestructura convergente de FlexPod.
+
+
+
+== Programa de infraestructura convergente FlexPod
+
+Las arquitecturas de referencia FlexPod se proporcionan como diseños validados por Cisco (CVD) o como arquitecturas verificadas por NetApp (NVA). Se permiten las desviaciones basadas en los requisitos de los clientes de un CVD o NVA determinado si estas variaciones no crean una configuración incompatible.
+
+Como se muestra en la siguiente figura, el programa FlexPod incluye tres soluciones: FlexPod Express, FlexPod Datacenter y FlexPod Select:
+
+* *FlexPod Express* ofrece a los clientes una solución de gama básica con tecnologías de Cisco y NetApp.
+* *FlexPod Datacenter* proporciona una base multiuso óptima para diversas cargas de trabajo y aplicaciones.
+* *FlexPod Select* incorpora los mejores aspectos del centro de datos FlexPod y adapta la infraestructura a una aplicación determinada.
+
+
+En la siguiente figura se muestran los componentes técnicos de la solución.
+
+image:express-direct-attach-aff220-deploy_image2.png["Error: Falta la imagen gráfica"]
+
+
+
+== Programa Arquitectura validada por NetApp
+
+El programa NVA ofrece a los clientes una arquitectura verificada para las soluciones NetApp. NVA proporciona una arquitectura de solución de NetApp con las siguientes cualidades:
+
+* Ha sido probada a conciencia
+* Tiene naturaleza prescriptiva
+* Minimiza los riesgos de implementación
+* Reduce el plazo de comercialización
+
+
+En esta guía se detalla el diseño de FlexPod Express con almacenamiento de NetApp de conexión directa. Las secciones siguientes enumeran los componentes utilizados para el diseño de esta solución.
+
+
+
+=== Componentes de hardware
+
+* AFF A220 de NetApp
+* Cisco UCS Mini
+* CISCO UCS B200 M5
+* Cisco UCS VIC 1440/1480.
+* Switches Cisco Nexus serie 3000
+
+
+
+
+=== Componentes de software
+
+* ONTAP 9 de NetApp. 5
+* VMware vSphere 6.7U1
+* Cisco UCS Manager 4.0(1b)
+* Firmware Cisco NXOS 7.0(3)I6(1)
+
+
+
+
+== Tecnología de soluciones
+
+Esta solución aprovecha las últimas tecnologías de NetApp, Cisco y VMware. Incluye el nuevo AFF A220 de NetApp que ejecute ONTAP 9.5, los conmutadores Cisco Nexus 31108PCV duales y los servidores Cisco UCS B200 M5 que ejecutan VMware vSphere 6.7U1. Esta solución validada usa almacenamiento IP de Direct Connect con tecnología 10GbE.
+
+La siguiente figura muestra FlexPod Express con VMware vSphere 6.7U1, una arquitectura Direct Connect basada en IP.
+
+image:express-direct-attach-aff220-deploy_image3.png["Error: Falta la imagen gráfica"]
+
+
+
+== Resumen de casos de uso
+
+La solución FlexPod Express puede aplicarse a varios casos prácticos, incluidos los siguientes:
+
+* ROBOS
+* Pequeñas y medianas empresas
+* Entornos que requieren una solución dedicada y rentable
+
+
+FlexPod Express está indicado para cargas de trabajo virtualizadas y mixtas.

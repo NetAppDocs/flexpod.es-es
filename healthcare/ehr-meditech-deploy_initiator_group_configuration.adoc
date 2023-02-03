@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_initiator_group_configuration.html 
+keywords: initiator, group, configuration, fc, data, network, protocol, igroups 
+summary: 'Cuando se utiliza FC como protocolo de red de datos, se deben crear dos iGroups en cada controladora de almacenamiento. El primer igroup contiene los WWPN de las tarjetas de interfaz de host FC en los servidores ESXi de VMware que alojan las máquinas virtuales del host de MEDITECH (igroup para MEDITECH).' 
+---
+= Configuración del iGroup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cuando se utiliza FC como protocolo de red de datos, se deben crear dos iGroups en cada controladora de almacenamiento. El primer igroup contiene los WWPN de las tarjetas de interfaz de host FC en los servidores ESXi de VMware que alojan las máquinas virtuales del host de MEDITECH (igroup para MEDITECH).
+
+Debe establecer el tipo de sistema operativo MEDITECH igroup según la configuración del entorno. Por ejemplo:
+
+* Utilice el tipo de sistema operativo del igroup `Windows` Para aplicaciones que se instalan en hardware de servidor con configuración básica en un entorno de Windows Server.
+* Utilice el tipo de sistema operativo del igroup `VMware` Para las aplicaciones que se virtualizan mediante el hipervisor VMware vSphere.
+
+
+
+NOTE: El tipo de sistema operativo de un igroup puede ser diferente del tipo de sistema operativo de una LUN. Por ejemplo, para los hosts MEDITECH virtualizados, debe establecer el tipo de sistema operativo igroup en `VMware`. Para las LUN que utilizan los hosts MEDITECH virtualizados, debe establecer el tipo de sistema operativo en `Windows 2008 or later`. Utilice esta configuración porque el sistema operativo host MEDITECH es Windows Server 2008 R2 64-bit Enterprise Edition.
+
+Para determinar el valor correcto para el tipo de sistema operativo, consulte las secciones “LUN iGroup Create” y “LUN Create” en la https://library.netapp.com/ecm/ecm_download_file/ECMP1366832["Comandos de Clustered Data ONTAP 8.2: Referencia de páginas del manual"^].
+
+link:ehr-meditech-deploy_lun_mappings.html["Siguiente: Asignaciones de LUN."]

@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_introduction.html 
+keywords: flexpod, directional, sizing, solution, benefits, scope, audience 
+summary: Este informe proporciona directrices para dimensionar FlexPod en un entorno de software de aplicaciones EHR de MEDITECH. 
+---
+= TR-4774: FlexPod para el dimensionamiento direccional de MEDITECH
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Brandon Agee, John Duignan, NetApp Mike Brennan, Jon Ebmeir, Cisco
+
+En colaboración con:image:cisco logo.png["Error: Falta la imagen gráfica"]
+
+Este informe proporciona directrices para dimensionar FlexPod en un entorno de software de aplicaciones EHR de MEDITECH.
+
+
+
+== Específico
+
+Los sistemas FlexPod se pueden poner en marcha para alojar servicios MEDITECH EXPANSE, 6.x, 5.x y MAGIC. Los servidores FlexPod que alojan la capa de aplicación de MEDITECH proporcionan una plataforma integrada para una infraestructura fiable de alto rendimiento. La plataforma integrada de FlexPod se pone en marcha rápidamente por parte de partners de canal de FlexPod cualificados y cuenta con el soporte de los centros de asistencia técnica de Cisco y NetApp.
+
+El dimensionamiento se basa en la información contenida en la propuesta de configuración de hardware de MEDITECH y en el documento de tareas de MEDITECH. El objetivo es determinar el tamaño óptimo para los componentes de infraestructura de almacenamiento, red y computación.
+
+La link:ehr-meditech-sizing_meditech_workload_overview.html["Descripción general de la carga de trabajo de MEDITECH"] La sección describe los tipos de cargas de trabajo de computación y almacenamiento que se pueden encontrar en entornos de MEDITECH.
+
+La link:ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html["Especificaciones técnicas para arquitecturas pequeñas, medianas y grandes"] La sección detalla una lista de materiales de muestra para las diferentes arquitecturas de almacenamiento descritas en la sección. Las configuraciones que se proporcionan son únicamente directrices generales. Configure siempre los sistemas utilizando los adaptadores de tamaño en función de la carga de trabajo y ajuste las configuraciones según corresponda.
+
+
+
+== Beneficios generales de la solución
+
+Ejecutar un entorno MEDITECH con la base arquitectónica FlexPod puede ayudar a las organizaciones sanitarias a mejorar la productividad y reducir los gastos operativos y de capital. FlexPod proporciona una infraestructura convergente, rigurosamente probada, validada previamente desde la alianza estratégica de Cisco y NetApp. Se ha diseñado y diseñado específicamente para proporcionar un sistema con una alta disponibilidad y un rendimiento predecibles de baja latencia. Este enfoque permite reducir el tiempo de respuesta a los usuarios del sistema EHR de MEDITECH.
+
+La solución FlexPod de Cisco y NetApp cumple los requisitos del sistema MEDITECH con un sistema modular, validado, convergente, virtualizado y de alto rendimiento. plataforma eficiente, escalable y rentable. FlexPod Datacenter con MEDITECH proporciona diversas ventajas específicas del sector sanitario:
+
+* *Arquitectura modular*. FlexPod satisface las distintas necesidades de la arquitectura modular de MEDITECH con sistemas FlexPod personalizados para cada carga de trabajo específica. Todos los componentes están conectados a través de un tejido de gestión del almacenamiento y de servidor en clúster y utilizan un conjunto de herramientas de gestión cohesivo.
+* *Operaciones simplificadas y costes reducidos*. Puede eliminar el gasto y la complejidad de las plataformas heredadas reemplazándolas por un recurso compartido más eficiente y escalable que pueda ayudar a los médicos dondequiera que estén. Esta solución ofrece un mejor uso de los recursos para un mayor retorno de la inversión (ROI).
+* *Implantación más rápida de la infraestructura*. El diseño integrado del centro de datos FlexPod con MEDITECH permite a los clientes tener la nueva infraestructura en funcionamiento de forma rápida y sencilla tanto en los centros de datos locales como remotos.
+* *Arquitectura de escalabilidad horizontal*. Puede escalar SAN y NAS de terabytes a decenas de petabytes sin tener que reconfigurar las aplicaciones en ejecución.
+* *Operaciones no disruptivas*. Puede realizar operaciones de mantenimiento del almacenamiento y de ciclo de vida del hardware, así como actualizaciones de software, sin interrumpir la actividad de la empresa.
+* *Multitenancy seguro*. Esta ventaja respalda las necesidades crecientes de servidores virtualizados e infraestructura de almacenamiento compartido, lo que permite un multi-tenancy seguro de información específica de las instalaciones. Esta ventaja es importante si aloja varias instancias de bases de datos y software.
+* *Optimización de recursos agrupados*. Esta ventaja puede ayudar a reducir el número de controladoras de almacenamiento y servidores físicos, equilibrar la carga de trabajo, aumentar la utilización y mejorar el rendimiento simultáneamente.
+* *Calidad de servicio (QoS).* FlexPod ofrece calidad de servicio (QoS) en toda la pila. Las políticas de almacenamiento de calidad de servicio líderes del sector permiten niveles de servicio diferenciados en un entorno compartido. Estas normativas ofrecen un rendimiento óptimo para las cargas de trabajo y ayudan a aislar y controlar aplicaciones fuera de control.
+* *Eficiencia del almacenamiento*. Puede reducir los costes de almacenamiento con la eficiencia del almacenamiento de 7:1 de NetApp.
+* *Agilidad*. Las herramientas de automatización, orquestación y gestión de flujos de trabajo líderes del sector que ofrecen los sistemas FlexPod permiten que LA TI tenga mucho más capacidad de respuesta a las solicitudes de empresa. Estas solicitudes pueden abarcar desde el backup y el aprovisionamiento de MEDITECH de más entornos de prueba y entrenamiento, hasta las replicaciones de bases de datos de análisis para las iniciativas de gestión del estado de la población.
+* *Productividad*. Puede poner en marcha y escalar rápidamente esta solución para obtener experiencias de usuario final médicas óptimas.
+* *Data Fabric*. La arquitectura Data Fabric de NetApp aúna los datos de distintos sitios, sin que los barreras físicas y de todas las aplicaciones. Data Fabric de NetApp se ha creado pensando en empresas basadas en datos en un mundo donde todo gira alrededor de ellos. Los datos se crean y se usan en varias ubicaciones y, a menudo, se comparten con las aplicaciones y las infraestructuras. Data Fabric ofrece una forma de gestionar datos que es coherente y está integrada. Además, ofrece a LA TECNOLOGÍA más control sobre los datos y simplifica la cada vez mayor complejidad TECNOLÓGICA.
+
+
+
+
+== Ámbito
+
+Este documento cubre los entornos que usan almacenamiento basado en Cisco UCS y ONTAP de NetApp. Proporciona ejemplos de arquitecturas de referencia para alojar MEDITECH.
+
+No cubre:
+
+* Guía detallada sobre el ajuste de tamaño mediante System Performance Modeler (SPM) de NetApp u otras herramientas de ajuste de tamaño de NetApp.
+* Dimensionamiento para cargas de trabajo no productivas.
+
+
+
+
+== Destinatarios
+
+Este documento está dirigido a ingenieros de sistemas de NetApp y partners y al personal de Servicios profesionales de NetApp. NetApp asume que el lector tiene un buen conocimiento de los conceptos de configuración de almacenamiento y computación, así como de la familiaridad técnica con los sistemas de almacenamiento de Cisco UCS y NetApp.
+
+
+
+== Documentos relacionados
+
+Los siguientes informes técnicos y otros documentos son relevantes para este informe técnico y constituyen un conjunto completo de documentos necesarios para el dimensionamiento, el diseño y la implementación de MEDITECH en la infraestructura FlexPod.
+
+* https://www.netapp.com/us/media/tr-4753.pdf["TR-4753: Guía de puesta en marcha de FlexPod Datacenter para MEDITECH"^]
+* https://www.netapp.com/us/media/tr-4190.pdf["TR-4190: Directrices de tamaño de NetApp para entornos de MEDITECH"^]
+* https://fieldportal.netapp.com/content/248456["TR-4319: Directrices de puesta en marcha de NetApp para entornos de MEDITECH"^]
+
+
+
+NOTE: Se necesitan credenciales de inicio de sesión para Field Portal de NetApp para acceder a algunos de estos informes.

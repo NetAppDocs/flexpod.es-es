@@ -1,0 +1,247 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__netapp_components.html 
+keywords: storage, controller, options, fas, e, series, disk, shelves, licensing, software 
+summary: Las controladoras de almacenamiento de NetApp proporcionan la base sobre la que se basa la arquitectura FlexPod Express, tanto para el almacenamiento de datos de arranque como de aplicaciones. En esta sección se muestran las distintas opciones de NetApp de la arquitectura de FlexPod Express. 
+---
+= Componentes de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Las controladoras de almacenamiento de NetApp proporcionan la base sobre la que se basa la arquitectura FlexPod Express, tanto para el almacenamiento de datos de arranque como de aplicaciones. En esta sección se muestran las distintas opciones de NetApp de la arquitectura de FlexPod Express.
+
+
+
+== Opciones de la controladora de almacenamiento de NetApp
+
+
+
+== FAS de NetApp
+
+Se requieren controladoras redundantes de las series AFF C190, AFF A220 o FAS2750 en la arquitectura FlexPod Express. Las controladoras ejecutan el software ONTAP. Al solicitar las controladoras de almacenamiento, esta es la versión de software preferida que se puede precargar en las controladoras. En el caso de ONTAP, el clúster se puede poner en marcha con un par de switches de Cluster Interconnect o en una configuración de clúster sin switch.
+
+Los números de pieza enumerados en la siguiente tabla son para un controlador vacío. Existen diferentes opciones y configuraciones disponibles en función de la plataforma de almacenamiento seleccionada. Consulte a su representante de ventas para obtener información sobre estos componentes adicionales.
+
+|===
+| Controladora de almacenamiento | Número de referencia de FAS | Especificaciones técnicas 
+
+
+| FAS2750 | Según las opciones individuales elegidas | https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx[] 
+
+
+| FAS2720 | Según las opciones individuales elegidas | https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx[] 
+
+
+| C190 de AFF | Según las opciones individuales elegidas | https://www.netapp.com/us/products/entry-level-aff.aspx[] 
+
+
+| AFF A220 | Según las opciones individuales elegidas | https://www.netapp.com/us/documentation/all-flash-fas.aspx[] 
+
+
+| FAS2620 | Según las opciones individuales elegidas | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
+
+
+| FAS2650 | Según las opciones individuales elegidas | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
+|===
+
+
+=== Almacenamiento E-Series de NetApp
+
+Se requiere un par de alta disponibilidad de controladoras de la serie E2800 de NetApp en la arquitectura FlexPod Express. Las controladoras ejecutan el sistema operativo SANtricity.
+
+Los números de pieza enumerados en la siguiente tabla son para un controlador vacío. Existen diferentes opciones y configuraciones disponibles en función de la plataforma de almacenamiento seleccionada. Consulte a su representante de ventas para obtener información sobre estos componentes adicionales.
+
+|===
+| Controladora de almacenamiento | Número de pieza | Especificaciones técnicas 
+
+
+| E2800 | Según las opciones individuales elegidas | http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx[] 
+|===
+
+
+== Módulos de ampliación Ethernet de NetApp
+
+
+
+=== FAS de NetApp
+
+La siguiente tabla muestra las opciones del adaptador FAS10 GbE de NetApp.
+
+|===
+| Componente | Número de pieza | Especificaciones técnicas 
+
+
+| X1117A de NetApp | X1117A-R6 | https://library.netapp.com/ecm/ecm_download_file/ECMM1280307[] 
+|===
+[NOTE]
+====
+Los sistemas de almacenamiento de las series FAS2500 y 2600 tienen puertos 10 GbE integrados.
+
+El adaptador NetApp X1117A es para sistemas de almacenamiento FAS8020.
+
+====
+
+
+=== Almacenamiento E-Series de NetApp
+
+En la siguiente tabla se enumeran las opciones de adaptador 10 GbE de E-Series.
+
+|===
+| Componente | Número de pieza 
+
+
+| 10 GbE iSCSI/FC de 16 GB 4 puertos | X-56025-00-0E-C 
+
+
+| 10 GbE iSCSI/FC de 16 GB 2 puertos | X-56024-00-0E-C 
+|===
+[NOTE]
+====
+Los sistemas de almacenamiento de la serie E2824 tienen puertos 10 GbE incorporados.
+
+La tarjeta de interfaz del host (HIC) de 4 puertos (HIC) de 10 GbE iSCSI/16 GB FC se puede usar para la densidad de puertos adicional.
+
+====
+Los puertos internos y la HIC pueden funcionar como adaptadores iSCSI o adaptadores de FC según la función activada en el sistema operativo SANtricity.
+
+Para obtener más información acerca de las opciones de adaptador compatibles, consulte la sección adaptador de https://hwu.netapp.com/Adapter/Index["Hardware Universe de NetApp"^].
+
+
+
+== Bandejas de discos y discos de NetApp
+
+
+
+== FAS de NetApp
+
+Se requiere un mínimo de una bandeja de discos NetApp para controladoras de almacenamiento. El tipo de bandeja de NetApp seleccionado determina los tipos de unidad disponibles en esa bandeja.
+
+Las series FAS2700 y FAS2600 de controladoras se ofrecen como una configuración que incluye controladoras de almacenamiento duales más discos alojados en el mismo chasis. Esta configuración se ofrece con unidades SATA o SAS; por tanto, no se necesitan bandejas de discos externas adicionales a menos que los requisitos de rendimiento o capacidad dicten más discos.
+
+[NOTE]
+====
+Todos los números de pieza de la bandeja de discos son para la bandeja vacía con dos fuentes de alimentación de CA. Consulte a su representante de ventas para obtener números de pieza adicionales.
+
+Los números de pieza de la unidad de disco varían de acuerdo con el tamaño y el factor de forma del disco que se desea adquirir. Consulte a su representante de ventas para obtener números de pieza adicionales.
+
+====
+La siguiente tabla enumera las opciones de la bandeja de discos de NetApp, junto con las unidades compatibles con cada tipo de bandeja, que se pueden encontrar en Hardware Universe de NetApp. Siga el enlace Hardware Universe, seleccione la versión de ONTAP que utiliza y, a continuación, seleccione el tipo de bandeja. En la imagen de la bandeja, haga clic en unidades compatibles para ver las unidades compatibles con versiones específicas de ONTAP y las bandejas de discos.
+
+|===
+| Bandeja de discos | Número de pieza | Especificaciones técnicas 
+
+
+| DS212C | DS212C-0-12 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Especificaciones técnicas de bandejas de discos y medios de almacenamiento unidades compatibles con Hardware Universe de NetApp"] 
+
+
+| DS224C | DS224C-0-24 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Especificaciones técnicas de bandejas de discos y medios de almacenamiento unidades compatibles con Hardware Universe de NetApp"] 
+
+
+| DS460C | DS460C-0-60 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Especificaciones técnicas de bandejas de discos y medios de almacenamiento unidades compatibles con Hardware Universe de NetApp"] 
+
+
+| DS2246 | X559A-R6 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Especificaciones técnicas de bandejas de discos y medios de almacenamiento unidades compatibles con Hardware Universe de NetApp"] 
+
+
+| DS4246 | X24M-R6 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Especificaciones técnicas de bandejas de discos y medios de almacenamiento unidades compatibles con Hardware Universe de NetApp"] 
+
+
+| DS4486 | DS4486-144 TB-R5-C | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Especificaciones técnicas de bandejas de discos y medios de almacenamiento unidades compatibles con Hardware Universe de NetApp"] 
+|===
+
+
+=== Almacenamiento E-Series de NetApp
+
+Se requiere un mínimo de una bandeja de discos de NetApp para las controladoras de almacenamiento que no alojan ninguna unidad en su chasis. El tipo de bandeja de NetApp seleccionado determina los tipos de unidad disponibles en esa bandeja.
+
+La serie E2800 de controladoras se ofrece como una configuración que incluye controladoras de almacenamiento duales más discos alojados en una bandeja de discos compatible. Esta configuración se ofrece con unidades SSD o SAS.
+
+
+NOTE: Los números de pieza de la unidad de disco varían de acuerdo con el tamaño y el factor de forma del disco que se desea adquirir. Consulte a su representante de ventas para obtener números de pieza adicionales.
+
+La siguiente tabla enumera las opciones de la bandeja de discos de NetApp y las unidades compatibles con cada tipo de bandeja, que se pueden encontrar en Hardware Universe de NetApp. Siga el enlace Hardware Universe, seleccione la versión de ONTAP que utiliza y, a continuación, seleccione el tipo de bandeja. En la imagen de la bandeja, haga clic en unidades compatibles para ver las unidades compatibles con versiones específicas de ONTAP y las bandejas de discos.
+
+|===
+| Bandeja de discos | Número de pieza | Especificaciones técnicas 
+
+
+| DE460C | E-X5730A-DM-0E-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Especificaciones técnicas de las bandejas de discos unidades compatibles con Hardware Universe de NetApp"] 
+
+
+| DE224C | E-X5721A-DM-0E-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Especificaciones técnicas de las bandejas de discos unidades compatibles con Hardware Universe de NetApp"] 
+
+
+| DE212C | E-X5723A-DM-0E-C | link:https://hwu.netapp.com/Shelves/Index?osTypeId=2357027["Especificaciones técnicas de las bandejas de discos unidades compatibles con Hardware Universe de NetApp"] 
+|===
+
+
+== Opciones de licencias de software de NetApp
+
+
+
+=== FAS de NetApp
+
+En la siguiente tabla se enumeran las opciones de licencias del software FAS de NetApp.
+
+|===
+| Licencias de software de NetApp | Número de pieza | Especificaciones técnicas 
+
+
+| Licencia de clúster base 2+| Consulte a su equipo de ventas de NetApp si desea obtener más información sobre licencias. 
+|===
+
+
+=== Almacenamiento E-Series de NetApp
+
+En la siguiente tabla se enumeran las opciones de licencia del software E-Series.
+
+|===
+| Licencias de software de NetApp | Número de pieza | Especificaciones técnicas 
+
+
+| Características estándar 2.2+| Consulte a su equipo de ventas de NetApp si desea obtener más información sobre licencias. 
+
+
+| Funciones excepcionales 
+|===
+
+
+== Opciones de licencias de soporte de NetApp
+
+Se requieren licencias de SupportEdge Premium y los números de pieza de dichas licencias varían en función de las opciones seleccionadas en el diseño de FlexPod Express.
+
+
+
+=== FAS de NetApp
+
+En la siguiente tabla se enumeran las opciones de licencia de soporte de NetApp para FAS de NetApp.
+
+|===
+| Licencias de soporte de NetApp | Número de pieza | Especificaciones técnicas 
+
+
+| SupportEdge Premium4 horas in situ; meses: 36 | CS-O2-4HR | link:www.netapp.com/us/support/supportedge.html["http://www.netapp.com/us/support/supportedge.html"] 
+|===
+
+
+=== Almacenamiento E-Series de NetApp
+
+En la siguiente tabla se enumeran las opciones de licencia de soporte de NetApp para el almacenamiento E-Series.
+
+|===
+| Licencias de soporte de NetApp | Número de pieza | Especificaciones técnicas 
+
+
+| Soporte de hardware Premium 4 horas en las instalaciones; meses: 36 | SVC-O2-4HR-E .3+| link:www.netapp.com/us/support/supportedge.html["http://www.netapp.com/us/support/supportedge.html"] 
+
+
+| Soporte de software | SW-SSP-O2-4HR-E 
+
+
+| Instalación inicial | SVC-INST-O2-4HR-E 
+|===

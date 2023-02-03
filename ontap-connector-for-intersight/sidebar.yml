@@ -1,0 +1,24 @@
+---
+section: ontap-connector-for-intersight
+title: Cisco Intersight con el almacenamiento ONTAP de NetApp
+entries:
+- title: Introducción
+  url: "/ontap-connector-for-intersight/index.html"
+  type: solutions
+- title: Novedades
+  url: "/ontap-connector-for-intersight/ci-qsg_new.html"
+- title: Requisitos
+  url: "/ontap-connector-for-intersight/ci-qsg_requirements.html"
+- title: Antes de empezar
+  url: "/ontap-connector-for-intersight/ci-qsg_before_you_begin.html"
+- title: Configure el servidor proxy de mensajería unificada de AIQ para el servicio
+    IMT
+  url: "/ontap-connector-for-intersight/ci-qsg_aiqum_imt_proxy_config.html"
+- title: Objetivos de reclamaciones
+  url: "/ontap-connector-for-intersight/ci-qsg_claim_targets.html"
+- title: Supervise el almacenamiento de NetApp de Cisco Intersight
+  url: "/ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html"
+- title: Casos de uso
+  url: "/ontap-connector-for-intersight/ci-qsg_use_cases.html"
+- title: Referencias
+  url: "/ontap-connector-for-intersight/ci-qsg_references.html"

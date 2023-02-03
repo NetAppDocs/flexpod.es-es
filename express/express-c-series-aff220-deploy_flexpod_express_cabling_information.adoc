@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html 
+keywords: cabling, information, validation, cisco, nexus, switches 
+summary: En esta sección se detalla una referencia para la información de cableado y validación de los switches Cisco Nexus 3172P A y B, y las controladoras de almacenamiento AFF A220 De NetApp A y B. 
+---
+= Información sobre el cableado exprés de FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La siguiente figura muestra el cableado de validación de referencia.
+
+image:express-c-series-aff220-deploy_image5.png["Error: Falta la imagen gráfica"]
+
+En la siguiente tabla se muestra información sobre el cableado del switch Cisco Nexus 3172P A.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+| Switch Cisco Nexus 3172P A | Eth1/1 | Controladora De almacenamiento A AFF A220 de NetApp | e0c 
+
+
+|  | Eth1/2 | Controladora de almacenamiento B de AFF A220 de NetApp | e0c 
+
+
+|  | Eth1/3 | El servidor A independiente Cisco UCS C220 C-Series | MLOM1 con adaptador CVR-QSFP-SFP10G 
+
+
+|  | Eth1/4 | Servidor B independiente Cisco UCS C220 C-Series | MLOM1 con adaptador CVR-QSFP-SFP10G 
+
+
+|  | Eth1/25 | Switch Cisco Nexus 3172P B | Eth1/25 
+
+
+|  | Eth1/26 | Switch Cisco Nexus 3172P B | Eth1/26 
+
+
+|  | Eth1/33 | Controladora De almacenamiento A AFF A220 de NetApp | E0M 
+
+
+|  | Eth1/34 | El servidor A independiente Cisco UCS C220 C-Series | CIMC 
+|===
+En la siguiente tabla se muestra información sobre el cableado del switch Cisco Nexus 3172P B.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+| Switch Cisco Nexus 3172P B | Eth1/1 | Controladora De almacenamiento A AFF A220 de NetApp | e0d 
+
+
+|  | Eth1/2 | Controladora de almacenamiento B de AFF A220 de NetApp | e0d 
+
+
+|  | Eth1/3 | El servidor A independiente Cisco UCS C220 C-Series | MLOM2 con adaptador CVR-QSFP-SFP10G 
+
+
+|  | Eth1/4 | Servidor B independiente Cisco UCS C220 C-Series | MLOM2 con adaptador CVR-QSFP-SFP10G 
+
+
+|  | Eth1/25 | Switch Cisco Nexus 3172P A | Eth1/25 
+
+
+|  | Eth1/26 | Switch Cisco Nexus 3172P A | Eth1/26 
+
+
+|  | Eth1/33 | Controladora de almacenamiento B de AFF A220 de NetApp | E0M 
+
+
+|  | Eth1/34 | Servidor B independiente Cisco UCS C220 C-Series | CIMC 
+|===
+La siguiente tabla muestra la información de cableado de la controladora de almacenamiento AFF A220 A. de NetApp
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+| Controladora De almacenamiento A AFF A220 de NetApp | e0a | Controladora de almacenamiento B de AFF A220 de NetApp | e0a 
+
+
+|  | e0b | Controladora de almacenamiento B de AFF A220 de NetApp | e0b 
+
+
+|  | e0c | Switch Cisco Nexus 3172P A | Eth1/1 
+
+
+|  | e0d | Switch Cisco Nexus 3172P B | Eth1/1 
+
+
+|  | E0M | Switch Cisco Nexus 3172P A | Eth1/33 
+|===
+La siguiente tabla muestra información de cableado para la controladora de almacenamiento B de AFF A220 de NetApp
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+| Controladora de almacenamiento B de AFF A220 de NetApp | e0a | Controladora De almacenamiento A AFF A220 de NetApp | e0a 
+
+
+|  | e0b | Controladora De almacenamiento A AFF A220 de NetApp | e0b 
+
+
+|  | e0c | Switch Cisco Nexus 3172P A | Eth1/2 
+
+
+|  | e0d | Switch Cisco Nexus 3172P B | Eth1/2 
+
+
+|  | E0M | Switch Cisco Nexus 3172P B | Eth1/33 
+|===

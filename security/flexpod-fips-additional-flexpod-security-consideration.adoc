@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-additional-flexpod-security-consideration.html 
+keywords: security, cisco intersight, fpolicy, data at rest, data in flight, secure multitenancy 
+summary: 'La infraestructura FlexPod es una plataforma modular, convergente, opcionalmente virtualizada, escalable (escalado horizontal y vertical) y rentable. Con la plataforma FlexPod, puede escalar horizontalmente de forma independiente la computación, la red y el almacenamiento para acelerar la puesta en marcha de las aplicaciones. Además, la arquitectura modular posibilita operaciones no disruptivas incluso durante las actividades de escalado horizontal y actualización del sistema.' 
+---
+= Otras consideraciones de seguridad de FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html["Anterior: Ventajas de la solución de la infraestructura convergente de FlexPod."]
+
+La infraestructura FlexPod es una plataforma modular, convergente, opcionalmente virtualizada, escalable (escalado horizontal y vertical) y rentable. Con la plataforma FlexPod, puede escalar horizontalmente de forma independiente la computación, la red y el almacenamiento para acelerar la puesta en marcha de las aplicaciones. Además, la arquitectura modular posibilita operaciones no disruptivas incluso durante las actividades de escalado horizontal y actualización del sistema.
+
+Los diferentes componentes de un sistema HIT requieren que los datos se almacenen en sistemas de archivos SMB/CIFS, NFS, Ext4 y NTFS. Este requisito implica que la infraestructura debe proporcionar acceso a datos a través de los protocolos NFS, CIFS y SAN. Un único sistema de almacenamiento de NetApp es compatible con todos estos protocolos, lo que elimina la necesidad de utilizar sistemas de almacenamiento específicos de protocolos existentes. Además, un único sistema de almacenamiento de NetApp es compatible CON múltiples CARGAS de trabajo DE HIT, como EHR, PACS o VNA, genómica, VDI, etc. con niveles de rendimiento garantizados y configurables.
+
+CUANDO se implementa en un sistema FlexPod, HIT ofrece varias ventajas específicas para el sector sanitario. La siguiente lista es una descripción de alto nivel de estas ventajas:
+
+* *Seguridad FlexPod*. La seguridad es la base misma de un sistema FlexPod. En los últimos años, el ransomware se ha convertido en una amenaza. El ransomware es un tipo de malware basado en la criptovirología, el uso de criptografía para crear software malicioso. Este malware puede utilizar cifrado de clave simétrica y asimétrica para bloquear los datos de una víctima y exigir un rescate para proporcionar la clave para descifrar los datos. Para descubrir cómo la solución FlexPod ayuda a mitigar amenazas como el ransomware, consulte https://www.netapp.com/us/media/tr-4802.pdf["TR-4802: La solución para el ransomware"^]. Los componentes de infraestructura de FlexPod también lo son https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf["Conforme a FIPS 140-2"^].
+* * Cisco Intersight.* Cisco Intersight es una plataforma innovadora basada en la nube y de gestión como servicio que proporciona un único panel para la gestión y orquestación de FlexPod en toda la pila. La plataforma InterSight utiliza módulos criptográficos compatibles con la seguridad FIPS 140-2. La arquitectura de gestión fuera de banda de la plataforma lo hace fuera del alcance de algunos estándares o auditorías como HIPAA. Nunca se envía al portal Intersight ningún tipo de información de salud identificable de la red.
+* *La tecnología FPolicy de NetApp.* FPolicy de NetApp (una evolución de la política de archivos de nombres) es un marco de notificaciones de acceso a archivos para supervisar y gestionar el acceso a archivos a través de los protocolos NFS o SMB/CIFS. Esta tecnología forma parte del software de gestión de datos ONTAP desde hace más de una década, lo cual resulta útil para detectar ransomware. Este motor Zero Trust proporciona medidas de seguridad adicionales más allá de los permisos en las listas de control de acceso (ACL). FPolicy tiene dos modos de funcionamiento: Nativo y externo:
++
+** El modo nativo proporciona tanto la lista negra como la lista blanca de extensiones de archivo.
+** El modo externo tiene las mismas funcionalidades que el modo nativo, pero también se integra con un servidor FPolicy que se ejecuta externamente al sistema ONTAP así como un sistema SIEM (información de seguridad y gestión de eventos). Para obtener más información sobre cómo combatir el ransomware, consulte la https://blog.netapp.com/fighting-ransomware-tools["Lucha contra el ransomware: Parte tres – FPolicy de ONTAP, otra potente herramienta nativa (también conocida como gratuita)"^] blog.
+
+
+* *Datos en reposo*. ONTAP 9 y versiones posteriores tienen tres soluciones de cifrado de datos en reposo conformes con la normativa FIPS 140-2:
++
+** NSe es una solución de hardware que utiliza unidades de autocifrado.
+** NVE es una solución de software que permite el cifrado de cualquier volumen de datos en cualquier tipo de unidad donde se habilita con una clave única para cada volumen.
+** NAE es una solución de software que permite el cifrado de cualquier volumen de datos en cualquier tipo de unidad en la que se habilita con claves únicas para cada agregado.
+
+
+
+
+
+NOTE: A partir de ONTAP 9.7, NAE y NVE están habilitados por defecto si el paquete de licencia NetApp NVE con el nombre ve está en su lugar.
+
+* *Datos en vuelo*. A partir de ONTAP 9.8, IPsec (el protocolo de seguridad de Internet) proporciona compatibilidad con cifrado de extremo a extremo para todo el tráfico de IP entre un cliente y una SVM de ONTAP. El cifrado de datos IPSec para todo el tráfico IP incluye protocolos NFS, iSCSI y SMB/CIFS. IPSec proporciona la única opción de cifrado en vuelo para el tráfico iSCSI.
+* *Cifrado de datos integral en una estructura de datos multicloud híbrida*. Los clientes que usan tecnologías de cifrado de datos en reposo como NSE, NVE y el cifrado de paridad de clúster (CPE) para el tráfico de replicación de datos pueden ahora usar el cifrado integral entre el cliente y el almacenamiento en su estructura de datos multicloud híbrido mediante la actualización a ONTAP 9.8 o una versión posterior y mediante IPsec. A partir de ONTAP 9, puede habilitar el modo de cumplimiento normativo FIPS 140-2 para las interfaces en el plano de control de todo el clúster. De manera predeterminada, se deshabilita el modo FIPS 140-2-only. A partir de ONTAP 9.6, CPE proporciona compatibilidad del cifrado TLS 1.2 AES-256 GCM para las funciones de replicación de datos de ONTAP como las tecnologías SnapMirror, NetApp SnapVault y NetApp FlexCache. El cifrado se configura mediante una clave precompartida (PSK) entre dos pares de clústeres.
+* *Multitenancy seguro*. Admite el aumento de las necesidades de la infraestructura compartida de servidores virtualizados y almacenamiento, lo que permite una multi-tenancy seguro de información específica del centro, en particular cuando se alojan varias instancias de bases de datos y software.
+
+
+link:flexpod-fips-conclusion.html["Siguiente: Conclusión."]

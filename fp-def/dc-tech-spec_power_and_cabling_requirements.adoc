@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_power_and_cabling_requirements.html 
+keywords: power, cabling, requirements, minimum, techincal, datacenter, specifications 
+summary: Un diseño de FlexPod tiene requisitos mínimos de alimentación y cableado. 
+---
+= Requisitos de alimentación y cableado
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Un diseño de FlexPod tiene requisitos mínimos de alimentación y cableado.
+
+
+
+== Requisitos de alimentación
+
+Los requisitos de alimentación del centro de datos de FlexPod difieren en función de la ubicación en la que se ha instalado la configuración del centro de datos de FlexPod.
+
+Para obtener más datos acerca de la potencia máxima necesaria y para obtener otra información detallada sobre la alimentación, consulte las especificaciones técnicas de cada componente de hardware enumerado en la sección link:dc-tech-spec_technical_specifications_and_references.html["Especificaciones técnicas y referencias: Componentes de hardware"].
+
+Para obtener información detallada sobre los datos de alimentación de Cisco UCS, consulte http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Calculadora de potencia de Cisco UCS"^].
+
+Para ver los datos de alimentación de la controladora de almacenamiento de NetApp, consulte http://hwu.netapp.com/Controller/Index?platformTypeId=6780858["Hardware Universe de NetApp"^]. En Platforms, seleccione la plataforma de almacenamiento que desee utilizar en la configuración (FAS/V-Series o AFF). Seleccione la versión de ONTAP y la controladora de almacenamiento y haga clic en el botón Mostrar resultados.
+
+
+
+== Requisitos mínimos de cable
+
+La cantidad y el tipo de cables y adaptadores necesarios varían en función de la puesta en marcha del centro de datos de FlexPod. El tipo de cable, el tipo de transceptor y el número se determinan durante el proceso de diseño en función de sus necesidades. En la tabla siguiente se indica el número mínimo de cables necesarios.
+
+|===
+| Hardware subyacente | Número de modelo | Cables necesarios 
+
+
+| Chasis Cisco UCS | Cisco UCS 5108 | Al menos dos cables twinaxiales por módulo Cisco UCS 2104XP, 2204XP o 2208XP 
+
+
+.6+| Cisco UCS Fabric Interconnect | Cisco UCS 6248UP  a| 
+* Dos cables CAT5e para puertos de gestión
+* Dos cables CAT5e para las interconexiones L1, L2 por par de interconexiones de estructura
+* Al menos cuatro cables twinaxiales por interconexión de estructura
+* Al menos cuatro cables FC por interconexión de estructura
+
+
+
+
+| Cisco UCS 6296UP 
+
+
+| Cisco UCS 6332-16UP 
+
+
+| Cisco UCS 6454 
+
+
+| Cisco UCS 6332  a| 
+* Dos cables CAT5e para puertos de gestión
+* Dos cables CAT5e para las interconexiones L1, L2 por par de interconexiones de estructura
+* Al menos cuatro cables twinaxiales por interconexión de estructura
+
+
+
+
+| Cisco UCS 6324  a| 
+* Dos puertos de gestión de 10/100 Mbps
+* Al menos dos cables twinaxiales por interconexión de estructura
+
+
+
+
+.2+| Switches de las series Cisco Nexus 5000 y 7000 | Serie Nexus 5000 de Cisco  a| 
+* Al menos dos cables twinaxial o de fibra de 10 GbE por switch
+* Al menos dos cables FC por switch (si se requiere conectividad FC/FCoE)
+
+
+
+
+| Serie Nexus 7000 de Cisco 
+
+
+| Switches Cisco Nexus serie 9000 | Serie Nexus 9000 de Cisco | Al menos dos cables de 10 GbE por switch 
+
+
+.2+| Controladoras FAS de NetApp | AFF a-Series  a| 
+* Un par de cables SAS o SATA por controladora de almacenamiento
+* Al menos dos cables FC por controladora, si se utiliza FC existente
+* Al menos dos cables de 10 GbE por controladora
+* Al menos un cable GbE para gestión por controladora
+* Para ONTAP, se necesitan ocho cables twinaxiales cortos por par de switches de interconexión de clúster
+
+
+
+
+| Serie FAS 
+
+
+.4+| Bandejas de discos de NetApp | DS212C .3+| Dos cables SAS, SATA o FC por bandeja de discos 
+
+
+| DS224C 
+
+
+| DS460C 
+
+
+| NS224 | Dos cables de cobre de 100 Gbps por bandeja de discos 
+|===

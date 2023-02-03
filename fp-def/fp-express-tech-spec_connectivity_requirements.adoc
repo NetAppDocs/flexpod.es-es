@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_connectivity_requirements.html 
+keywords: connectivity, requirements, flexpod, express, aff, fas, e, series 
+summary: En esta sección se describen los requisitos de conectividad para las distintas versiones de FlexPod Express. 
+---
+= Requisitos de conectividad
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección se describen los requisitos de conectividad para las distintas versiones de FlexPod Express.
+
+
+
+== Requisitos de conectividad de FlexPod Express con FAS de NetApp
+
+Entre los requisitos de conectividad de FlexPod Express con FAS de NetApp se incluyen:
+
+* Las controladoras de almacenamiento FAS de NetApp deben estar conectadas directamente a los switches Cisco Nexus, excepto en la configuración gestionada por Cisco UCS, donde las controladoras de almacenamiento están conectadas a las interconexiones de estructura.
+* No se puede colocar ningún equipo adicional entre los componentes FlexPod principales.
+* Se necesitan canales de puertos virtuales (VPC) para conectar los switches Cisco Nexus serie 3000/9000 a las controladoras de almacenamiento de NetApp.
+* Aunque no es necesario, se recomienda habilitar la compatibilidad con tramas gigantes en todo el entorno.
+
+
+
+
+== Requisitos de conectividad de FlexPod Express con E-Series de NetApp
+
+Entre los requisitos de conectividad de FlexPod Express con E-Series se incluyen:
+
+* Las controladoras de almacenamiento E-Series deben estar conectadas directamente a las interconexiones de estructura.
+* No se debe colocar ningún equipo adicional entre los componentes FlexPod principales.
+* Los ordenadores virtuales son necesarios entre las interconexiones de estructura y los switches Ethernet.
+
+
+
+
+== Requisitos de conectividad de FlexPod Express con AFF de NetApp
+
+Entre los requisitos de conectividad de FlexPod Express con AFF de NetApp se incluyen:
+
+* Las controladoras de almacenamiento AFF de NetApp se deben conectar directamente a los switches Cisco Nexus, excepto en la configuración gestionada por Cisco UCS, donde las controladoras de almacenamiento están conectadas al entramado. interconexiones.
+* No se puede colocar ningún equipo adicional entre los componentes FlexPod principales.
+* Se necesitan canales de puertos virtuales (VPC) para conectar los switches Cisco Nexus serie 3000/9000 a las controladoras de almacenamiento de NetApp.
+* Aunque no es necesario, se recomienda habilitar la compatibilidad con tramas gigantes en todo el entorno.
+

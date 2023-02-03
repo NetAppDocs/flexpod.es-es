@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html 
+keywords: netapp, storage, cisco intersight, monitor, orchestrate, orchestration, storage inventory, storage widgets 
+summary: Después de reclamar los destinos, los widgets de almacenamiento de NetApp, el inventario de almacenamiento y las pestañas de virtualización quedan disponibles si dispone de una licencia de nivel Advantage. Hay pestañas de orquestación disponibles si tiene una licencia de nivel Premier. 
+---
+= Supervise el almacenamiento de NetApp de Cisco Intersight
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Después de reclamar los destinos, los widgets de almacenamiento de NetApp, el inventario de almacenamiento y las pestañas de virtualización quedan disponibles si dispone de una licencia de nivel Advantage. Hay pestañas de orquestación disponibles si tiene una licencia de nivel Premier.
+
+
+
+== Información general del inventario de almacenamiento
+
+La siguiente captura de pantalla muestra la pantalla *operar > almacenamiento*.
+
+image:ci-qsg_image9.png["La captura de pantalla muestra la pantalla gestionar  almacenamiento"]
+
+La siguiente captura de pantalla muestra la descripción general del clúster de almacenamiento.
+
+
+NOTE: La siguiente información de resumen de las métricas de rendimiento solo se muestra si la cabina de almacenamiento se supervisa mediante Active IQ Unified Manager 9.9 de NetApp o versiones posteriores.
+
+image:ci-qsg_image10.png["la captura de pantalla muestra la descripción general del clúster de almacenamiento"]
+
+
+
+== Widgets de almacenamiento
+
+Para ver los widgets de almacenamiento, vaya a *Supervisión > Paneles > Ver widgets de almacenamiento de NetApp*.
+
+* La siguiente captura de pantalla muestra el widget Storage Version Summary.
+
+
+image:ci-qsg_image11.jpg["La captura de pantalla muestra el widget Storage Version Summary"]
+
+* Esta captura de pantalla muestra el widget 5 principales cabinas de almacenamiento por aprovechamiento de la capacidad.
+
+
+image:ci-qsg_image12.png["La captura de pantalla muestra el widget 5 principales cabinas de almacenamiento por aprovechamiento de la capacidad"]
+
+* Esta captura de pantalla muestra el widget 5 principales volúmenes de almacenamiento por utilización de la capacidad.
+
+
+image:ci-qsg_image13.png["La captura de pantalla muestra el widget 5 volúmenes de almacenamiento principales por utilización de la capacidad"]

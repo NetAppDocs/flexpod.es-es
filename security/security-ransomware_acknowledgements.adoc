@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_acknowledgements.html 
+keywords: acknowledgements, author, contributors, flexpod, ransomware 
+summary: El autor desea agradecer a las siguientes personas sus contribuciones a la creación de esta guía. 
+---
+= Reconocimientos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+El autor desea agradecer a las siguientes personas su apoyo en la creación de este documento:
+
+* Jorge Gómez Navarrete, NetApp
+* Ganesh Kamath, NetApp
+

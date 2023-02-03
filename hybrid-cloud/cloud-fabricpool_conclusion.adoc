@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_conclusion.html 
+keywords: cloud, fabricpool, flexpod, conclusion 
+summary: La transición a la infraestructura en nube varía entre organizaciones, entre unidades de negocio e, incluso, entre unidades de negocio de las organizaciones. 
+---
+= Conclusión
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La transición a la infraestructura en nube varía entre organizaciones, entre unidades de negocio e, incluso, entre unidades de negocio de las organizaciones. Algunos eligen una adopción rápida, mientras que otros prefieren una estrategia más conservadora. FabricPool encaja en la estrategia cloud de las organizaciones independientemente de su tamaño y de la velocidad de adopción del cloud, lo que demuestra aún más los beneficios de eficiencia y escalabilidad de una infraestructura de FlexPod.

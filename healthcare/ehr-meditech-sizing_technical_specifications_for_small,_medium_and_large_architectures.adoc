@@ -1,0 +1,206 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html 
+keywords: technical, specifications, small, medium, large, architectures, bill, material 
+summary: En esta sección se describe una lista de ejemplos de materiales para arquitecturas de almacenamiento de diferentes tamaños. 
+---
+= Especificaciones técnicas para arquitecturas pequeñas, medianas y grandes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección se describe una lista de ejemplos de materiales para arquitecturas de almacenamiento de diferentes tamaños.
+
+
+
+== Lista de materiales para arquitecturas pequeñas, medianas y grandes.
+
+El diseño de FlexPod es una infraestructura flexible que abarca muchos componentes y versiones de software diferentes. Uso https://fieldportal.netapp.com/content/443847["TR-4036: Especificaciones técnicas de FlexPod"^] Como guía para el montaje de una configuración de FlexPod válida. Las configuraciones que aparecen en la siguiente tabla son los requisitos mínimos de FlexPod, y son solo una muestra. La configuración se puede ampliar para cada familia de productos según sea necesario para distintos entornos y casos de uso.
+
+Para este ejercicio de tamaño pequeño corresponde a un entorno MEDITECH de categoría 3, de categoría media a categoría 5 y de categoría grande a categoría 6.
+
+|===
+|  | Pequeño | Mediano | Grande 
+
+
+| Plataforma | Un par de alta disponibilidad de sistema de almacenamiento all-flash AFF A220 de NetApp | Un par de alta disponibilidad de AFF A220 de NetApp | Un par de alta disponibilidad del sistema de almacenamiento all-flash AFF A300 de NetApp 
+
+
+| Bandejas de discos | 9 TB x 3,8 TB | 13 TB x 3,8 TB | 19 TB x 3,8 TB 
+
+
+| Tamaño de la base de datos de MEDITECH | 3 TB-12 TB | 17 TB | >30 TB 
+
+
+| IOPS DE MEDITECH | <22,000 IOPS | >25,000 IOPS | >32,000 IOPS 
+
+
+| IOPS totales | 22000 | 27000 | 35000 
+
+
+| Sin formato | 34,2 TB | 49,4 TB | 68,4 TB 
+
+
+| Capacidad utilizable | 18,53 TIB | 27,96 TIB | 33,82 TIB 
+
+
+| Capacidad efectiva (eficiencia del almacenamiento 2:1) | 55,6 TIB | 83.89TIB | 101,47 TIB 
+|===
+
+NOTE: Algunos entornos de cliente pueden tener varias cargas de trabajo de producción de MEDITECH simultáneamente o pueden tener requisitos de IOPS más altos. En estos casos, trabaje con el equipo de cuentas de NetApp para ajustar el tamaño de los sistemas de almacenamiento de acuerdo con las IOPS y la capacidad necesarias. Se debe poder determinar cuál es la plataforma correcta para servir las cargas de trabajo. Por ejemplo, hay clientes que ejecutan con éxito varios entornos de MEDITECH en un par de alta disponibilidad del sistema de almacenamiento all-flash A700 de AFF.
+
+La siguiente tabla muestra el software estándar necesario para las configuraciones de MEDITECH.
+
+|===
+| De NetApp | Familia de productos | Versión o versión | Detalles 
+
+
+| Reducida | ONTAP | Disponibilidad general de ONTAP 9.4 (GA) |  
+
+
+.3+| Red | Interconexiones de estructura Cisco UCS | Cisco UCSM 4.x | Versión actual recomendada 
+
+
+| Switches Ethernet Cisco Nexus | 7.0(3)I7(6) | Versión actual recomendada 
+
+
+| Cisco FC: Cisco MDS 9132T | 8.3(2) | Versión actual recomendada 
+
+
+| Hipervisor | Hipervisor | VMware vSphere ESXi 6.7 |  
+
+
+|  | Máquinas virtuales (VM) | Windows 2016 |  
+
+
+.4+| Gestión | Sistema de gestión de hipervisores | VMware vCenter Server 6.7 U1 (VCSA) |  
+
+
+| Virtual Storage Console (VSC) de NetApp | VSC 7.0P1 |  
+
+
+| SnapCenter de NetApp | SnapCenter 4.0 |  
+
+
+| Administrador de Cisco UCS | 4.x. |  
+|===
+En la siguiente tabla se muestra un ejemplo de configuración pequeña (categoría 3): Componentes de infraestructura.
+
+|===
+| Capa | Familia de productos | Cantidad y modelo | Detalles 
+
+
+.5+| Informática | Chasis Cisco UCS 5108 | 1 | Admite hasta ocho hojas de media anchura o cuatro de anchura completa. Agregue chasis conforme aumente la necesidad de servidor. 
+
+
+| Módulos de I/o de chasis de Cisco | 2 x 2208 | 8 GB x 10 GB de puertos de enlace ascendente 
+
+
+| Servidores blade Cisco UCS | 4 x B200 M5 | Cada una con 2 x 14 núcleos, 2,6 GHz o una velocidad de reloj superior y 3.2 GB de BIOS (3#) 
+
+
+| Tarjetas de interfaz virtual Cisco UCS | 4 × UCS 1440 | Controlador VMware ESXi fnic FC: Controlador 1.6.0.47 VMware ESXi ENIC Ethernet: 1.0.27.0 (consulte la matriz de interoperabilidad: https://ucshcltool.cloudapps.cisco.com/public/)[] 
+
+
+| 2 x interconexiones de estructura Cisco UCS (FI) | 2 X UCS 6454 FI | Interconexiones de estructura de cuarta generación que admiten Ethernet de 10/100/100 GB y FC de 25 GB 
+
+
+| Red | Switches Ethernet de Cisco | 2 Nexus 9336c-FX2 | 1 GB, 10 GB, 25 GB, 40 GB Y 100 GB 
+
+
+.2+| Red de almacenamiento | Red IP Nexus 9k para almacenamiento BLOB |  | Chasis FI y UCS 
+
+
+| FC: CISCO MDS 9132T |  | Dos switches Cisco 9132T 
+
+
+.3+| Reducida | Sistema de almacenamiento all-flash AFF A300 de NetApp | 1 par de alta disponibilidad | Clúster de 2 nodos para todas las cargas de trabajo de MEDITECH (File Server, Image Server, SQL Server, VMware, etc.) 
+
+
+| Bandeja de discos DS224C | 1 Bandeja de discos DS224C |  
+
+
+| Unidad de estado sólido (SSD) | 9 x 3,8 TB |  
+|===
+En la siguiente tabla se muestra una configuración de ejemplo de medio (categoría 5): Componentes de infraestructura
+
+|===
+| Capa | Familia de productos | Cantidad y modelo | Detalles 
+
+
+.5+| Informática | Chasis Cisco UCS 5108 | 1 | Admite hasta ocho hojas de media anchura o cuatro de anchura completa. Agregue chasis conforme aumente la necesidad de servidor. 
+
+
+| Módulos I/o de chasis de Cisco | 2 x 2208 | 8 GB x 10 GB de puertos de enlace ascendente 
+
+
+| Servidores blade Cisco UCS | 6 x B200 M5 | Con 2 x 16 núcleos, 2,5 GHz/o más de velocidad de reloj y 384 GB de memoria BIOS 3.2 (3#) 
+
+
+| Tarjeta de interfaz virtual (VIC) Cisco UCS | 6 × UCS 1440 VIC | Controlador VMware ESXi fnic FC: Controlador 1.6.0.47 VMware ESXi ENIC Ethernet: 1.0.27.0 (consulte la matriz de interoperabilidad: ) 
+
+
+| 2 x interconexiones de estructura Cisco UCS (FI) | 2 X UCS 6454 FI | Interconexiones de estructura de cuarta generación con Ethernet de 10 GB/25 GB/100 GB y FC de 32 GB 
+
+
+| Red | Switches Ethernet de Cisco | 2 Nexus 9336c-FX2 | 1 GB, 10 GB, 25 GB, 40 GB Y 100 GB 
+
+
+.2+| Red de almacenamiento | Red IP Nexus 9k para almacenamiento BLOB |  |  
+
+
+| FC: CISCO MDS 9132T |  | Dos switches Cisco 9132T 
+
+
+.3+| Reducida | Sistema de almacenamiento all-flash AFF A220 de NetApp | 2 par de alta disponibilidad | Clúster de 2 nodos para todas las cargas de trabajo de MEDITECH (File Server, Image Server, SQL Server, VMware, etc.) 
+
+
+| Bandeja de discos DS224C | 1 bandeja de discos DS224C |  
+
+
+| SSD | 13 x 3,8 TB |  
+|===
+En la siguiente tabla se muestra un ejemplo de configuración grande (categoría 6): Componentes de infraestructura.
+
+|===
+| Capa | Familia de productos | Cantidad y modelo | Detalles 
+
+
+.5+| Informática | Chasis Cisco UCS 5108 | 1 |  
+
+
+| Módulos I/o de chasis de Cisco | 2 x 2208 | 8 puertos de enlace ascendente de 10 GB 
+
+
+| Servidores blade Cisco UCS | 8 x B200 M5 | Cada uno con 2 x 24 núcleos, 2,7 GHz y 768 GB de BIOS 3.2(3#) 
+
+
+| Tarjeta de interfaz virtual (VIC) Cisco UCS | 8 × UCS 1440 VIC | Controlador VMware ESXi fnic FC: Controlador 1.6.0.47 VMware ESXi ENIC Ethernet: 1.0.27.0 (consulte la matriz de interoperabilidad: https://ucshcltool.cloudapps.cisco.com/public/)[] 
+
+
+| 2 interconexiones de estructura Cisco UCS (FI) | 2 X UCS 6454 FI | Interconexiones de estructura de cuarta generación con Ethernet de 10 GB/25 GB/100 GB y FC de 32 GB 
+
+
+| Red | Switches Ethernet de Cisco | 2 Nexus 9336c-FX2 | 2 Nexus 9332PQ1 de Cisco, 10 GB, 25 GB, 40 GB y 100 GB 
+
+
+.2+| Red de almacenamiento | IP Network N9k para almacenamiento BLOB |  |  
+
+
+| FC: CISCO MDS 9132T |  | Dos switches Cisco 9132T 
+
+
+.3+| Reducida | AFF A300 | 1 par de alta disponibilidad | Clúster de 2 nodos para todas las cargas de trabajo de MEDITECH (File Server, Image Server, SQL Server, VMware, etc.) 
+
+
+| Bandeja de discos DS224C | 1 bandejas de discos DS224C |  
+
+
+| SSD | 19 x 3,8 TB |  
+|===
+
+NOTE: Estas configuraciones proporcionan un punto de partida para calcular el tamaño. Algunos entornos de cliente pueden tener varias cargas de trabajo de MEDITECH de producción y no MEDITECH simultáneamente, o pueden tener requisitos de IOP más altos. Debe colaborar con el equipo de cuentas de NetApp para dimensionar los sistemas de almacenamiento en función de las IOPS, las cargas de trabajo y la capacidad requeridas para determinar la plataforma adecuada para prestar servicio a las cargas de trabajo.

@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html 
+keywords: cabling, express, information, cisco, nexus, switch, aff, storage, controller, ucs, fabric 
+summary: El cableado de validación de referencia se documenta en las siguientes tablas. 
+---
+= Información de cableado exprés de FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+El cableado de validación de referencia se documenta en las siguientes tablas.
+
+La tabla siguiente enumera información de cableado para el switch Cisco Nexus 31108PCV A.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.6+| Switch Cisco Nexus 31108PCV A | Eth1/1 | Controladora De almacenamiento A AFF A220 de NetApp | E0M 
+
+
+| Eth1/2 | Cisco UCS-mini FI-A. | mgmt0 
+
+
+| Eth1/3 | Cisco UCS-mini FI-A. | Eth1/1 
+
+
+| ETH 1/4 | Cisco UCS-mini FI-B | Eth1/1 
+
+
+| ETH 1/13 | CISCO NX 31108PCV B | ETH 1/13 
+
+
+| ETH 1/14 | CISCO NX 31108PCV B | ETH 1/14 
+|===
+En la siguiente tabla se muestra la información de cableado del switch Cisco Nexus 31108PCV B.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.6+| Switch Cisco Nexus 31108PCV B | Eth1/1 | Controladora de almacenamiento B de AFF A220 de NetApp | E0M 
+
+
+| Eth1/2 | Cisco UCS-mini FI-B | mgmt0 
+
+
+| Eth1/3 | Cisco UCS-mini FI-A. | Eth1/2 
+
+
+| ETH 1/4 | Cisco UCS-mini FI-B | Eth1/2 
+
+
+| ETH 1/13 | CISCO NX 31108PCV A | ETH 1/13 
+
+
+| ETH 1/14 | CISCO NX 31108PCV A | ETH 1/14 
+|===
+En la siguiente tabla se muestra información de cableado para la controladora de almacenamiento AFF A220 A. de NetApp
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.5+| Controladora De almacenamiento A AFF A220 de NetApp | e0a | Controladora de almacenamiento B de AFF A220 de NetApp | e0a 
+
+
+| e0b | Controladora de almacenamiento B de AFF A220 de NetApp | e0b 
+
+
+| e0e | Cisco UCS-mini FI-A. | Eth1/3 
+
+
+| e0f | Cisco UCS-mini FI-B | Eth1/3 
+
+
+| E0M | CISCO NX 31108PCV A | Eth1/1 
+|===
+La siguiente tabla enumera información de cableado para la controladora de almacenamiento AFF A220 B.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.5+| Controladora de almacenamiento B de AFF A220 de NetApp | e0a | Controladora de almacenamiento B de AFF A220 de NetApp | e0a 
+
+
+| e0b | Controladora de almacenamiento B de AFF A220 de NetApp | e0b 
+
+
+| e0e | Cisco UCS-mini FI-A. | Eth1/4 
+
+
+| e0f | Cisco UCS-mini FI-B | Eth1/4 
+
+
+| E0M | CISCO NX 31108PCV B | Eth1/1 
+|===
+La siguiente tabla enumera la información de cableado para Cisco UCS Fabric Interconnect A.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.5+| Interconexión de estructura Cisco UCS a | Eth1/1 | CISCO NX 31108PCV A | Eth1/3 
+
+
+| Eth1/2 | CISCO NX 31108PCV B | Eth1/3 
+
+
+| Eth1/3 | Controladora De almacenamiento A AFF A220 de NetApp | e0e 
+
+
+| Eth1/4 | Controladora de almacenamiento B de AFF A220 de NetApp | e0e 
+
+
+| mgmt0 | CISCO NX 31108PCV A | Eth1/2 
+|===
+La siguiente tabla enumera información de cableado para Cisco UCS Fabric Interconnect B.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.5+| Interconexión de estructura B de Cisco UCS | Eth1/1 | CISCO NX 31108PCV A | Eth1/4 
+
+
+| Eth1/2 | CISCO NX 31108PCV B | Eth1/4 
+
+
+| Eth1/3 | Controladora De almacenamiento A AFF A220 de NetApp | e0f 
+
+
+| Eth1/4 | Controladora de almacenamiento B de AFF A220 de NetApp | e0f 
+
+
+| mgmt0 | CISCO NX 31108PCV B | Eth1/2 
+|===

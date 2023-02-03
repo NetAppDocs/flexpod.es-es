@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__optional_features.html 
+keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas 
+summary: En esta sección se describen las funciones opcionales de FlexPod Express. 
+---
+= Funciones opcionales
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En esta sección se describen las funciones opcionales de FlexPod Express.
+
+
+
+== Opción de arranque iSCSI
+
+La arquitectura FlexPod Express utiliza un arranque iSCSI. Los requisitos mínimos para la opción de arranque iSCSI son los siguientes:
+
+* Una función o licencia de iSCSI activada en la controladora de almacenamiento de NetApp
+* Un adaptador Ethernet de dos puertos 10 Gbps en cada nodo del par de alta disponibilidad de la controladora de almacenamiento de NetApp
+* Un adaptador en el servidor Cisco UCS que sea capaz de arrancar iSCSI
+
+
+
+
+== Opciones de configuración
+
+En esta sección, se proporciona más información acerca de la configuración que se necesita y que se valida en la arquitectura FlexPod Express.
+
+
+
+=== FlexPod Express con Cisco UCS C-Series y AFF C190 Series
+
+La siguiente figura muestra la solución FlexPod Express con Cisco UCS C-Series y AFF C190. Esta solución admite tanto enlaces ascendentes de 10 GbE.
+
+image:fp-express-tech-spec_image2.png["Error: Falta la imagen gráfica"]
+
+Para obtener más información sobre esta configuración, consulte el documento Express de FlexPod con VMware vSphere 6.7 y la Guía de puesta en marcha de NVA para AFF C190 de NetApp (en curso).
+
+
+
+=== FlexPod Express con Cisco UCS Mini y AFF A220 y FAS 2750/2720
+
+La siguiente figura muestra la configuración gestionada de FlexPod Express con Cisco UCS.
+
+image:fp-express-tech-spec_image3.png["Error: Falta la imagen gráfica"]
+
+Para obtener más información sobre esta configuración, consulte https://www.netapp.com/us/media/nva-1131-deploy.pdf["FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento basado en IP incluido directamente"^].

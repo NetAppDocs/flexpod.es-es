@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-conclusion.html 
+keywords: conclusion 
+summary: En esta solución, el servicio de datos en el cloud de NetApp, la infraestructura de Cloud Volumes ONTAP y el centro de datos de FlexPod se usaron para crear una solución de recuperación ante desastres con un cloud público con la tecnología de Cisco Intersight Cloud Orchestrator. La solución de FlexPod ha evolucionado constantemente para permitir a los clientes modernizar sus aplicaciones y procesos de entrega de negocio. Con esta solución, puede crear un plan BCDR con el cloud público mientras se utiliza la ubicación para un plan de recuperación ante desastres puntual o a tiempo completo, sin por ello dejar de mantener el coste de la solución de recuperación ante desastres bajo. 
+---
+= Conclusión
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-solution-validation.html["Anterior: Validación de la solución."]
+
+En esta solución, el servicio de datos en el cloud de NetApp, la infraestructura de Cloud Volumes ONTAP y el centro de datos de FlexPod se usaron para crear una solución de recuperación ante desastres con un cloud público con la tecnología de Cisco Intersight Cloud Orchestrator. La solución de FlexPod ha evolucionado constantemente para permitir a los clientes modernizar sus aplicaciones y procesos de entrega de negocio. Con esta solución, puede crear un plan BCDR con el cloud público mientras se utiliza la ubicación para un plan de recuperación ante desastres puntual o a tiempo completo, sin por ello dejar de mantener el coste de la solución de recuperación ante desastres bajo.
+
+La replicación de datos entre FlexPod en las instalaciones y Cloud Volumes ONTAP de NetApp se realizó mediante la tecnología SnapMirror contrastada, pero también puede seleccionar otras herramientas de transferencia y sincronización de datos de NetApp como Cloud Sync para sus requisitos de movilidad de datos. Seguridad de los datos en tránsito gracias a las tecnologías de cifrado integradas basadas en TLS/AES.
+
+Independientemente de que tenga un plan temporal de recuperación ante desastres para una aplicación o un plan de recuperación ante desastres a tiempo completo para una empresa, la cartera de productos utilizados en esta solución puede satisfacer ambos requisitos a escala. Con la tecnología de Cisco InterSight Workflow Orchestrator, también se puede automatizar con flujos de trabajo preconfigurados que no solo eliminen la necesidad de reconstruir procesos, sino que también aceleren la implementación de un plan BCDR.
+
+La solución permite la gestión de FlexPod en las instalaciones y la replicación de datos en un cloud híbrido de una forma muy sencilla y cómoda con automatización y orquestación proporcionada por Cisco Intersight Cloud Orchestrator.
+
+
+
+== Dónde encontrar información adicional
+
+Si quiere más información sobre el contenido de este documento, consulte los siguientes documentos o sitios web:
+
+
+
+=== GitHub
+
+* Todas las configuraciones de Terraform utilizadas
++
+https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO"^]
+
+* Archivos JSON para la importación de flujos de trabajo
++
+https://github.com/ucs-compute-solutions/FlexPod_DR_Workflows["https://github.com/ucs-compute-solutions/FlexPod_DR_Workflows"^]
+
+
+
+
+
+=== Cisco Intersight
+
+* Centro de ayuda de Cisco Intersight
++
+https://intersight.com/help/saas/home["https://intersight.com/help/saas/home"^]
+
+* Documentación de Cisco Intersight Cloud Orchestrator:
++
+https://intersight.com/help/saas/features/orchestration/configure["https://intersight.com/help/saas/features/orchestration/configure#intersight_cloud_orchestrator"^]
+
+* Cisco Intersight Service para la Documentación de Terraform de HashiCorp
++
+https://intersight.com/help/saas/features/terraform_cloud/admin["https://intersight.com/help/saas/features/terraform_cloud/admin"^]
+
+* Hoja de datos de Cisco Intersight
++
+https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/intersight-ds.html["https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/intersight-ds.html"^]
+
+* Hoja de datos de Cisco Intersight Cloud Orchestrator
++
+https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/nb-06-intersight-cloud-orch-aag-cte-en.html["https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/nb-06-intersight-cloud-orch-aag-cte-en.html"^]
+
+* Hoja de datos de Terraform del servicio Cisco Intersight para HashiCorp
++
+https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/nb-06-intersight-terraf-ser-aag-cte-en.html["https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/nb-06-intersight-terraf-ser-aag-cte-en.html"^]
+
+
+
+
+
+=== FlexPod
+
+* Página de inicio de FlexPod
++
+https://www.flexpod.com["https://www.flexpod.com"^]
+
+* Guías de puesta en marcha y diseño validado por Cisco para FlexPod
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2_design.html["Guía de diseño de FlexPod Datacenter con Cisco UCS 4.2(1) en UCS Managed Mode, VMware vSphere 7.0 U2 y NetApp ONTAP 9.9"^]
+
+* Centro de datos FlexPod con Cisco UCS X-Series
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_esxi7u2_design.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_esxi7u2_design.html"^]
+
+
+
+
+
+=== Interoperabilidad
+
+* Herramienta de matriz de interoperabilidad de NetApp
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+* Herramienta de interoperabilidad de hardware y software Cisco UCS
++
+http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html"^]
+
+* Guía de compatibilidad de VMware
++
+http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/resources/compatibility/search.php"^]
+
+
+
+
+
+=== Documentos de referencia Cloud Volumes ONTAP de NetApp
+
+* Cloud Manager de NetApp
++
+https://docs.netapp.com/us-en/occm/concept_overview.html["https://docs.netapp.com/us-en/occm/concept_overview.html"^]
+
+* Cloud Volumes ONTAP
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html[]
+
+* Calculadora del coste total de propiedad de Cloud Volumes ONTAP
++
+https://cloud.netapp.com/google-cloud-calculator[]
+
+* Dimensionador Cloud Volumes ONTAP
++
+https://cloud.netapp.com/cvo-sizer["https://cloud.netapp.com/cvo-sizer"^]
+
+* Herramienta de evaluación de cloud
++
+https://cloud.netapp.com/assessments[]
+
+* Cloud híbrido de NetApp
++
+https://cloud.netapp.com/hybrid-cloud[]
+
+* Documentación sobre API de Cloud Manager
++
+https://docs.netapp.com/us-en/occm/reference_infrastructure_as_code.html["https://docs.netapp.com/us-en/occm/reference_infrastructure_as_code.html"^]
+
+
+
+
+
+=== Resolución de problemas
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)["https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)"^]
+
+
+
+=== Terraform
+
+* Cloud Terraform
++
+https://www.terraform.io/cloud["https://www.terraform.io/cloud"^]
+
+* Documentación de Terraform
++
+https://www.terraform.io/docs/["https://www.terraform.io/docs/"^]
+
+* Registro de Cloud Manager de NetApp
++
+https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/lates["https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/lates"^]
+
+
+
+
+
+=== GCP
+
+* Alta disponibilidad de ONTAP para GCP
++
+https://cloud.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick["https://cloud.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick"^]
+
+* GCP perisite
++
+https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3d0368b-7165-4d43-a76e-ae01011853d6["https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3d0368b-7165-4d43-a76e-ae01011853d6"^]
+
+

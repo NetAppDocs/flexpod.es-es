@@ -1,0 +1,48 @@
+---
+section: security
+title: FlexPod y Seguridad
+entries:
+- title: FlexPod, la solución a ransomware
+  type: solutions
+  entries:
+  - title: "¿Qué es el ransomware?"
+    url: "/security/security-ransomware_what_is_ransomware.html"
+  - title: Información general de FlexPod
+    url: "/security/security-ransomware_flexpod_overview.html"
+  - title: Medidas de protección contra ransomware
+    url: "/security/security-ransomware_ransomware_protection_measures.html"
+  - title: Proteja y recupere sus datos en FlexPod
+    url: "/security/security-ransomware_protect_and_recover_data_on_flexpod.html"
+  - title: Continuar operaciones de negocios sin pagar Ransom
+    url: "/security/security-ransomware_continue_business_operations_without_paying_ransom.html"
+  - title: Conclusión
+    url: "/security/security-ransomware_conclusion.html"
+  - title: Reconocimientos
+    url: "/security/security-ransomware_acknowledgements.html"
+  - title: Información adicional
+    url: "/security/security-ransomware_additional_information.html"
+- title: Solución FlexPod para el sector sanitario conforme a la seguridad FIPS 140-2-2
+  type: solutions
+  entries:
+  - title: Introducción
+    url: "/security/flexpod-fips-introduction.html"
+  - title: Amenazas de ciberseguridad en sanidad
+    url: "/security/flexpod-fips-cybersecurity-threats-in-healthcare.html"
+  - title: Información general de FIPS 140-2
+    url: "/security/flexpod-fips-overview-of-fips-140-2.html"
+  - title: Plano de control frente al plano de datos
+    url: "/security/flexpod-fips-control-plane-versus-data-plane.html"
+  - title: Computación Cisco UCS de FlexPod y FIPS 140-2
+    url: "/security/flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html"
+  - title: Redes Cisco de FlexPod y FIPS 140-2
+    url: "/security/flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html"
+  - title: Almacenamiento ONTAP de FlexPod y FIPS 140-2
+    url: "/security/flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html"
+  - title: Ventajas para las soluciones de la infraestructura convergente de FlexPod
+    url: "/security/flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html"
+  - title: Otras consideraciones de seguridad de FlexPod
+    url: "/security/flexpod-fips-additional-flexpod-security-consideration.html"
+  - title: Conclusión
+    url: "/security/flexpod-fips-conclusion.html"
+  - title: Acknowlegements, historial de versiones y dónde encontrar información adicional
+    url: "/security/flexpod-fips-where-to-find-additional-information.html"

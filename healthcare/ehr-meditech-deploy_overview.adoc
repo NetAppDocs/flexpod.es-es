@@ -1,0 +1,315 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_overview.html 
+keywords: datacenter, meditech, deployment, solution, benefits, infrastructure, architecture, cisco, storage, volume, lun 
+summary: Al ejecutar un entorno MEDITECH en la base arquitectónica FlexPod, su organización sanitaria puede esperar una mejora en la productividad del personal y una reducción en los gastos operativos y de capital. 
+---
+= TR-4753: Guía de puesta en marcha de FlexPod Datacenter para MEDITECH
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Brandon Agee y John Duignan, NetApp Mike Brennan y Jon Ebmeier, Cisco
+
+En colaboración con:image:cisco logo.png["Error: Falta la imagen gráfica"]
+
+
+
+== Beneficios generales de la solución
+
+Al ejecutar un entorno MEDITECH en la base arquitectónica FlexPod, su organización sanitaria puede esperar una mejora en la productividad del personal y una reducción en los gastos operativos y de capital. FlexPod Datacenter para MEDITECH proporciona diversas ventajas específicas del sector sanitario, como:
+
+* *Operaciones simplificadas y costes reducidos.* elimine el gasto y la complejidad de las plataformas heredadas reemplazándolas con un recurso compartido más eficiente y escalable que pueda dar soporte a los médicos dondequiera que estén. Esta solución ofrece un mayor uso de recursos para un mayor retorno de la inversión (ROI).
+* *Implementación más rápida de la infraestructura.* tanto si se trata de un centro de datos existente como de una ubicación remota, con el diseño integrado y probado del centro de datos FlexPod, puede tener su nueva infraestructura en funcionamiento en menos tiempo y con menos esfuerzo.
+* *Almacenamiento certificado.* el software de gestión de datos ONTAP de NetApp con MEDITECH le proporciona la fiabilidad superior de un proveedor de almacenamiento probado y certificado. MEDITECH no certifica otros componentes de la infraestructura.
+* *Arquitectura de escalabilidad horizontal.* Escale SAN y NAS de terabytes (TB) a decenas de petabytes (PB) sin necesidad de reconfigurar las aplicaciones en ejecución.
+* *Operaciones no disruptivas.* realice el mantenimiento del almacenamiento, las operaciones del ciclo de vida del hardware y las actualizaciones de FlexPod sin interrumpir el negocio.
+* *Multitenancy seguro.* Soporte a las crecientes necesidades de la infraestructura compartida de almacenamiento y servidor virtualizado, permitiendo multi-tenancy seguro de la información específica de la instalación, particularmente si su sistema aloja varias instancias de bases de datos y software.
+* *Optimización de recursos agrupados.* Ayuda a reducir el número de servidores físicos y controladores de almacenamiento, las demandas de carga de trabajo de equilibrio y aumentar la utilización a la vez que mejora el rendimiento.
+* *Calidad de servicio (QoS).* FlexPod ofrece QoS en toda la pila. Políticas de calidad de servicio, computación y almacenamiento líderes del sector que permiten niveles de servicio diferenciados en un entorno compartido. Estas normativas ofrecen un rendimiento óptimo para las cargas de trabajo y ayudan a aislar y controlar aplicaciones fuera de control.
+* *Eficiencia del almacenamiento.* reduzca los costes de almacenamiento con el http://www.netapp.com/us/media/netapp-aff-efficiency-guarantee.pdf["Garantía de eficiencia del almacenamiento 7:1 de NetApp"^].
+* *Agilidad.* con las herramientas de automatización, coordinación y gestión de flujos de trabajo líderes del sector que proporcionan los sistemas FlexPod, su equipo DE TI puede responder mucho más a las solicitudes empresariales. Estas solicitudes pueden abarcar desde el backup y el aprovisionamiento de MEDITECH de más entornos de prueba y entrenamiento, hasta las replicaciones de bases de datos de análisis para las iniciativas de gestión del estado de la población.
+* *Mayor productividad.* despliegue y escale rápidamente esta solución para obtener experiencias óptimas de usuario final clínico.
+* *Data Fabric de NetApp.* la arquitectura Data Fabric de NetApp aúna los datos de un sitio a otro, más allá de los límites físicos y de las aplicaciones. Data Fabric de NetApp se ha creado pensando en empresas basadas en datos en un mundo donde todo gira alrededor de ellos. Los datos se crean y se usan en varias ubicaciones y, a menudo, es necesario aprovecharlos y compartirlos con otras ubicaciones, aplicaciones e infraestructuras. Necesita una forma de gestionar sus datos que sea coherente y esté integrada. Data Fabric ofrece una forma de gestionar los datos que los controla y simplifica la cada vez mayor complejidad TECNOLÓGICA.
+
+
+
+
+== FlexPod
+
+
+
+=== Nuevo enfoque de la infraestructura para MEDITECH EHR
+
+Las organizaciones de proveedores de atención médica como la suya siguen presionadas para maximizar los beneficios de una inversión sustancial en registros médicos electrónicos de MEDITECH (EHR) líderes del sector. Para aplicaciones de misión crítica, cuando los clientes diseñan sus centros de datos para soluciones MEDITECH, suelen identificar los siguientes objetivos por su arquitectura de centro de datos:
+
+* Alta disponibilidad de las aplicaciones de MEDITECH
+* Altas prestaciones
+* Facilidad de implementación de MEDITECH en el centro de datos
+* Agilidad y escalabilidad para hacer posible el crecimiento con las nuevas aplicaciones o versiones de MEDITECH
+* Rentabilidad
+* Alinee las directrices de MEDITECH y las plataformas objetivo
+* Facilidad de administración, estabilidad y soporte
+* Sólida protección de datos, backup, recuperación y continuidad del negocio
+
+
+A medida que los usuarios de MEDITECH transforman sus organizaciones en organizaciones de atención médica responsables y se adaptan a modelos de reembolso ajustados y agrupados, el reto pasa a proporcionar la infraestructura MEDITECH necesaria en un modelo DE prestación DE SERVICIOS DE TI más eficiente y ágil.
+
+
+
+=== Valor de la infraestructura convergente prevalidada
+
+Dado que existe el requisito general de proporcionar un rendimiento del sistema previsible de baja latencia y alta disponibilidad, MEDITECH tiene el requisito más preceptivo en cuanto a los requisitos de hardware de sus clientes.
+
+FlexPod es una infraestructura convergente prevalidada y rigurosamente probada desde la alianza estratégica de Cisco y NetApp. Se ha diseñado y diseñado específicamente para proporcionar un sistema predecible de baja latencia y una alta disponibilidad. Este enfoque da como resultado la conformidad con MEDITECH y, en última instancia, el tiempo de respuesta óptimo para los usuarios del sistema MEDITECH.
+
+La solución FlexPod de Cisco y NetApp cumple los requisitos del sistema MEDITECH con un sistema modular, validado, convergente, virtualizado y de alto rendimiento. plataforma eficiente, escalable y rentable. Proporciona:
+
+* *Arquitectura modular.* FlexPod satisface las variadas necesidades de la arquitectura modular de MEDITECH con plataformas FlexPod configuradas específicamente para cada carga de trabajo específica. Todos los componentes están conectados a través de un servidor en clúster y un tejido de gestión del almacenamiento y un conjunto de herramientas de gestión cohesivo.
+* *La tecnología líder del sector en todos los niveles de la pila convergente.* Cisco, NetApp, VMware y Microsoft Windows están clasificados como número 1 o número 2 por analistas del sector en sus respectivas categorías de servidores, redes, almacenamiento y sistemas operativos.
+* *Protección de la inversión con TECNOLOGÍA DE LA INFORMACIÓN flexible y estandarizada.* la arquitectura de referencia de FlexPod anticipa nuevas versiones y actualizaciones de productos, con rigurosas pruebas de interoperabilidad continuas para acomodar tecnologías futuras a medida que estén disponibles.
+* *Implementación probada en una amplia gama de entornos.* probado previamente y validado conjuntamente con los hipervisores, sistemas operativos, aplicaciones y software de infraestructura más populares, FlexPod se ha instalado en varias organizaciones de clientes de MEDITECH.
+
+
+
+
+=== Arquitectura FlexPod y soporte conjunto demostrados
+
+FlexPod es una solución de centro de datos probada que ofrece una infraestructura compartida flexible que se puede escalar fácilmente para respaldar las demandas crecientes de sus cargas de trabajo sin que esto afecte al rendimiento de forma negativa. Al aprovechar la arquitectura de FlexPod, esta solución ofrece todas las ventajas de FlexPod, como:
+
+* *Rendimiento para cumplir con los requisitos de carga de trabajo de MEDITECH.* dependiendo de los requisitos de la propuesta de configuración del hardware de MEDITECH, pueden ponerse en marcha diferentes plataformas ONTAP para satisfacer sus requisitos de E/S y latencia necesarios.
+* *Escalabilidad para adaptarse fácilmente al crecimiento de datos clínicos.* ampliar dinámicamente las máquinas virtuales (VM), los servidores y la capacidad de almacenamiento bajo demanda, sin límites tradicionales.
+* *Eficiencia mejorada.* reduzca tanto el tiempo de administración como el coste total de propiedad gracias a una infraestructura virtualizada convergente, que es más fácil de gestionar y que almacena los datos de forma más eficiente a la vez que aumenta el rendimiento del software MEDITECH.
+* *Reducción del riesgo.* minimice la interrupción del negocio con una plataforma prevalidada que se basa en una arquitectura definida que elimina las conjeturas de la implementación y se adapta a la optimización continua de la carga de trabajo.
+* *Soporte conjunto de FlexPod.* NetApp y Cisco han establecido Soporte conjunto, un modelo de soporte sólido, escalable y flexible para cumplir los requisitos de soporte exclusivos de la infraestructura convergente de FlexPod. Este modelo utiliza la experiencia combinada de NetApp y Cisco, así como sus recursos y conocimientos en el campo del soporte técnico, para proporcionar un proceso optimizado para identificar y solucionar su problema de soporte de FlexPod, con independencia de dónde se encuentre el problema. Con el modelo de soporte conjunto de FlexPod, su sistema de FlexPod funciona de forma eficiente y se beneficia de la tecnología más actualizada, y trabaja con un equipo experimentado para ayudarle a resolver problemas de integración.
++
+El soporte conjunto de FlexPod resulta especialmente valioso para las organizaciones sanitarias que ejecutan aplicaciones vitales para el negocio, como MEDITECH, en la infraestructura convergente FlexPod. En la siguiente figura se muestra el modelo de soporte conjunto de FlexPod.
+
+
+
+image:ehr-meditech-deploy_image2.png["Error: Falta la imagen gráfica"]
+
+Además de estas ventajas, cada componente de la pila del centro de datos FlexPod con la solución MEDITECH proporciona ventajas específicas a los flujos de trabajo MEDEHR.
+
+
+
+=== Sistema Cisco Unified Computing
+
+Cisco Unified Computing System (Cisco UCS) es un sistema de integración automática que consta de un único dominio de gestión interconectado con una infraestructura de I/o unificada. Por lo que la infraestructura puede proporcionar información crítica al paciente con la máxima disponibilidad, Cisco UCS para entornos MEDITECH ha seguido las recomendaciones y prácticas recomendadas de la infraestructura MEDITECH.
+
+La base de MEDITECH en la arquitectura Cisco UCS es la tecnología Cisco UCS, con sus sistemas integrados de gestión, procesadores Intel Xeon y virtualización de servidores. Estas tecnologías integradas resuelven los retos de los centros de datos y le ayudan a cumplir sus objetivos de diseño de centros de datos de MEDITECH. Cisco UCS unifica la gestión de LAN, SAN y sistemas en un enlace simplificado para servidores en rack, servidores blade y máquinas virtuales. Cisco UCS es una arquitectura de I/o integral que incorpora la estructura unificada de Cisco y la tecnología FEX (tecnología FEX) para conectar todos los componentes de Cisco UCS con una única estructura de red y una única capa de red.
+
+El sistema se puede poner en marcha como una única o varias unidades lógicas que incorporen y escalan entre varios chasis blade, servidores en rack, racks y centros de datos. El sistema implementa una arquitectura radicalmente simplificada que elimina los múltiples dispositivos redundantes que pueblan el chasis de servidor blade tradicional y los servidores en rack. En los sistemas tradicionales, los dispositivos redundantes como adaptadores Ethernet y FC y los módulos de gestión de chasis dan lugar a capas de complejidad. Cisco UCS está formado por un par redundante de interconexiones de estructura (FIS) de Cisco UCS que proporciona un único punto de gestión y un único punto de control para todo el tráfico de I/O.
+
+Cisco UCS utiliza perfiles de servicio para ayudar a garantizar que los servidores virtuales de la infraestructura Cisco UCS estén configurados correctamente. Los perfiles de servicio están compuestos por políticas de red, almacenamiento e informática que los expertos en la materia crean una vez en cada disciplina. Los perfiles de servicio incluyen información crítica del servidor acerca de la identidad del servidor, como direccionamiento LAN y SAN, configuraciones de E/S, versiones de firmware, orden de arranque, red virtual LAN (VLAN), puerto físico y políticas QoS. Los perfiles de servicio pueden crearse y asociarse de forma dinámica con cualquier servidor físico del sistema en cuestión de minutos, en lugar de horas o días. La asociación de perfiles de servicio con servidores físicos se realiza como una única operación sencilla y permite la migración de identidades entre servidores del entorno sin necesidad de cambios de configuración física. Facilita un aprovisionamiento sencillo y rápido de sustituciones de servidores retirados.
+
+El uso de perfiles de servicio ayuda a garantizar que los servidores estén configurados de forma coherente en toda la empresa. Cuando se emplean varios dominios de gestión de Cisco UCS, Cisco UCS Central puede utilizar perfiles de servicio globales para sincronizar la información de configuración y políticas entre dominios. Si es necesario realizar tareas de mantenimiento en un dominio, la infraestructura virtual se puede migrar a otro dominio. Este enfoque ayuda a garantizar que incluso cuando un único dominio está desconectado, las aplicaciones siguen funcionando con alta disponibilidad.
+
+Para demostrar que cumple con los requisitos de configuración del servidor, Cisco UCS ha sido ampliamente probado con MEDITECH a lo largo de un período de varios años. Cisco UCS es una plataforma de servidor compatible, tal y como se indica en el sitio de soporte del sistema de recursos de productos de MEDITECH.
+
+
+
+=== Redes Cisco
+
+Los switches Cisco Nexus y los directores multicapa Cisco MDS ofrecen conectividad empresarial y consolidación SAN. Las redes de almacenamiento multiprotocolo de Cisco reducen el riesgo empresarial al proporcionar flexibilidad y opciones: FC, Fibre Connection (FICON), FC a través de Ethernet (FCoE), SCSI sobre IP (iSCSI) y FC sobre IP (FCIP).
+
+Los switches Cisco Nexus ofrecen uno de los conjuntos de funciones de red de centro de datos más completos de una única plataforma. Ofrecen un alto rendimiento y densidad tanto para los centros de datos como para los núcleos de campus. También ofrecen un conjunto completo de funciones para la agregación de centros de datos, el fin de la fila y la interconexión de centros de datos en una plataforma modular altamente resiliente.
+
+Cisco UCS integra los recursos de computación con los switches de Cisco Nexus y una estructura de I/o unificada que identifica y gestiona diferentes tipos de tráfico de red. Este tráfico incluye la I/o de almacenamiento, el tráfico de escritorios distribuido, la gestión y el acceso a aplicaciones clínicas y empresariales. Obtendrá:
+
+* *Escalabilidad de la infraestructura.* la virtualización, la energía y refrigeración eficientes, la escala de la nube con automatización, alta densidad y alto rendimiento son compatibles con el crecimiento eficiente del centro de datos.
+* *Continuidad operativa.* el diseño integra hardware, características del software NX-OS y gestión para admitir entornos sin tiempos de inactividad.
+* *QoS de red e informática.* Cisco ofrece clase de servicio (cos) basada en políticas y QoS en las redes, el almacenamiento y la estructura informática para un rendimiento óptimo de las aplicaciones de misión crítica.
+* *Flexibilidad de transporte.* adoptar gradualmente nuevas tecnologías de red con una solución rentable.
+
+
+Juntos, Cisco UCS, con switches Cisco Nexus y directores multicapa Cisco MDS, proporciona una solución óptima de conectividad San, redes e informática para MEDITECH.
+
+
+
+=== ONTAP de NetApp
+
+El almacenamiento de NetApp que ejecuta el software ONTAP reduce los costes generales de almacenamiento a la vez que proporciona los tiempos de respuesta de lectura y escritura de baja latencia y las IOPS que necesitan las cargas de trabajo de MEDITECH. ONTAP admite tanto configuraciones de almacenamiento all-flash como híbrido para crear una plataforma de almacenamiento óptima que cumpla con los requisitos de MEDITECH. Los sistemas acelerados mediante flash de NetApp han recibido la validación y la certificación de MEDITECH, lo que le proporciona como cliente de MEDITECH el rendimiento y la capacidad de respuesta que son claves de las operaciones de MEDITECH sensibles a la latencia. Al crear varios dominios de fallos en un único clúster, los sistemas de NetApp también pueden aislar la producción de la producción de la producción. Los sistemas de NetApp también reducen los problemas de rendimiento con un nivel de rendimiento mínimo garantizado para las cargas de trabajo con la calidad de servicio de ONTAP.
+
+La arquitectura de escalado horizontal del software ONTAP puede adaptarse con flexibilidad a varias cargas de trabajo de I/O. Para proporcionar el rendimiento necesario y la baja latencia que necesitan las aplicaciones clínicas a la vez que proporciona una arquitectura modular de escalado horizontal, las configuraciones all-flash normalmente se utilizan en arquitecturas ONTAP. Los nodos AFF de NetApp se pueden combinar en el mismo clúster de escalado horizontal con nodos de almacenamiento híbridos (HDD y flash) adecuados para almacenar conjuntos de datos de gran tamaño con un alto rendimiento. Junto con una solución de backup aprobada por MEDITECH, puede clonar, replicar y hacer backups de su entorno MEDITECH desde el costoso almacenamiento de unidades de estado sólido (SSD) a almacenamiento HDD más económico en otros nodos. Este enfoque cumple o supera las directrices de MEDITECH para el clonado basado en SAN y el backup de los pools de producción.
+
+Muchas de las funciones de ONTAP son especialmente útiles en entornos de MEDITECH: Simplificar la gestión, aumentar la disponibilidad y la automatización, y reducir la cantidad total de almacenamiento necesaria. Con estas funciones obtendrá:
+
+* *Rendimiento excepcional *. La solución AFF de NetApp comparte la arquitectura de almacenamiento unificado, el software ONTAP, la interfaz de gestión, los servicios de datos enriquecidos y el conjunto de funciones avanzadas que ofrecen el resto de las familias de productos FAS de NetApp. Esta innovadora combinación de medios all-flash con ONTAP ofrece la baja latencia consistente y las altas IOPS de almacenamiento all-flash con la calidad líder del sector del software ONTAP.
+* *Eficiencia del almacenamiento.* reduzca los requisitos de capacidad total con deduplicación, tecnología de replicación de datos FlexClone de NetApp, compresión inline, compactación inline, thin replication, thin provisioning y deduplicación agregada.
++
+La deduplicación de NetApp proporciona deduplicación a nivel de bloque en un volumen FlexVol de NetApp o un componente de datos. En esencia, la deduplicación elimina los bloques duplicados y solo almacena los bloques únicos en el volumen FlexVol o el componente de datos.
+
++
+La deduplicación funciona con un alto grado de granularidad y funciona en el sistema de archivos activo del volumen FlexVol o el componente de datos. Es transparente para las aplicaciones; por lo tanto, puede utilizarlas para deduplicar datos que se originan de cualquier aplicación que utilice el sistema de NetApp. Es posible ejecutar la deduplicación del volumen como un proceso en línea (a partir de ONTAP 8.3.2). También puede ejecutarlo como un proceso en segundo plano que puede configurar para que se ejecute automáticamente, para programar o para que se ejecute manualmente a través de la interfaz de línea de comandos, desde ONTAP System Manager de NetApp o desde Active IQ Unified Manager de NetApp.
+
++
+La figura siguiente ilustra cómo funciona la deduplicación de NetApp en el nivel más alto.
+
+
+
+image:ehr-meditech-deploy_image3.png["Error: Falta la imagen gráfica"]
+
+* *Clonado con gestión eficiente del espacio.* la funcionalidad FlexClone le permite crear clones casi al instante para admitir la actualización del entorno de copia de seguridad y pruebas. Estos clones consumen más almacenamiento únicamente cuando se realizan cambios.
+* *Las tecnologías Snapshot y SnapMirror de NetApp.* ONTAP puede crear copias Snapshot de los números de unidad lógica (LUN) que utiliza el host MEDITECH con el ahorro de espacio. En el caso de puestas en marcha en sitio doble, puede implementar el software SnapMirror para obtener más resiliencia y replicación de datos.
+* *Protección de datos integrada.* las funciones completas de protección de datos y recuperación ante desastres le ayudan a proteger los activos de datos críticos y a proporcionar recuperación ante desastres.
+* *Operaciones no disruptivas.* puede realizar actualizaciones y mantenimiento sin tener que desconectar los datos.
+* *QoS y Adaptive QoS (AQoS).* la calidad de servicio del almacenamiento le permite limitar las posibles cargas de trabajo de intimidación. Y lo que es más importante, la calidad de servicio puede garantizar un rendimiento mínimo para cargas de trabajo cruciales como la producción de MEDITECH. Al limitar la contención, la calidad de servicio de NetApp puede reducir los problemas relacionados con el rendimiento. AQoS funciona con grupos de políticas predefinidos que se pueden aplicar directamente a un volumen. Estos grupos de normativas pueden escalar automáticamente los límites máximos de rendimiento o de espacio en volumen, manteniendo la ratio de IOPS por terabytes y gigabytes a medida que cambie el tamaño del volumen.
+* *Data Fabric de NetApp.* Data Fabric de NetApp simplifica e integra la gestión de datos en entornos de cloud y en las instalaciones para acelerar la transformación digital. Proporciona servicios y aplicaciones de gestión de datos consistentes e integrados para ofrecer visibilidad, información, acceso, control, protección y seguridad. NetApp se integra con Amazon Web Services (AWS), Azure, Google Cloud Platform e IBM Cloud, lo que aporta una gran variedad de opciones.
+
+
+La siguiente figura muestra la arquitectura FlexPod para cargas de trabajo de MEDITECH.
+
+image:ehr-meditech-deploy_image4.png["Error: Falta la imagen gráfica"]
+
+
+
+== Información general de MEDITECH
+
+Medical Information Technology, Inc., comúnmente conocida como MEDITECH, es una compañía de software con sede en Massachusetts que proporciona sistemas de información a organizaciones sanitarias. MEDITECH proporciona un sistema EHR diseñado para almacenar y organizar los datos más recientes del paciente y proporcionar los datos al personal clínico. Los datos del paciente incluyen, entre otros, datos demográficos; antecedentes médicos; medicamentos; resultados de pruebas de laboratorio; imágenes radiológicos; e información personal como edad, altura y peso.
+
+Supera el alcance de este documento para cubrir la amplia gama de funciones que admite el software MEDITECH. El Apéndice A proporciona más información sobre estos amplios conjuntos de funciones de MEDITECH. Las aplicaciones de MEDITECH requieren varias máquinas virtuales para admitir estas funciones. Para poner en marcha estas aplicaciones, consulte las recomendaciones de MEDITECH.
+
+Para cada puesta en marcha, desde el punto de vista del sistema de almacenamiento, todos los sistemas de software de MEDITECH requieren una base de datos distribuida centrada en el paciente. MEDITECH tiene su propia base de datos propietaria, que utiliza el sistema operativo Windows.
+
+Bridgehead y CommVault son las dos aplicaciones de software de backup certificadas por NetApp y MEDITECH. El alcance de este documento no cubre la implementación de estas aplicaciones de backup.
+
+El objetivo principal de este documento es hacer que la pila FlexPod (servidores y almacenamiento) cumpla los requisitos de rendimiento establecidos para la base de datos de MEDITECH y los requisitos de backup del entorno EHR.
+
+
+
+=== Creado específicamente para cargas de trabajo de MEDITECH específicas
+
+MEDITECH no distribuye el hardware, los hipervisores o los sistemas operativos de servidor, la red o el almacenamiento; sin embargo, tiene requisitos específicos para cada componente de la pila de la infraestructura. Por lo tanto, Cisco y NetApp han trabajado juntos para probar y permitir que FlexPod Datacenter se configure, se ponga en marcha y sea compatible con éxito para cumplir los requisitos del entorno de producción de MEDITECH, tanto de clientes como usted.
+
+
+
+=== Categorías de MEDITECH
+
+MEDITECH asocia el tamaño de la implementación con un número de categoría que oscila entre 1 y 6. La categoría 1 representa las implementaciones de MEDITECH más pequeñas y la categoría 6 representa las implementaciones de MEDITECH más grandes.
+
+Para obtener información sobre las características de I/o y los requisitos de rendimiento de un host MEDITECH en cada categoría, consulte NetApp https://fieldportal.netapp.com/content/198446["TR-4190: Directrices de tamaño de NetApp para entornos de MEDITECH"^].
+
+
+
+=== Plataforma MEDITECH
+
+La plataforma MEDITECH expanse es la última versión del software EHR de la compañía. Las plataformas MEDITECH anteriores son Client/Server 5.x y MAGIC. En esta sección se describe la plataforma MEDITECH (aplicable a expanse, 6.x, C/S 5.x y MAGIC), en relación con el host MEDITECH y sus requisitos de almacenamiento.
+
+En todas las plataformas MEDITECH anteriores, varios servidores ejecutan el software MEDITECH, realizando diversas tareas. La figura anterior muestra un sistema MEDITECH típico, incluidos los hosts MEDITECH que funcionan como servidores de base de datos de aplicaciones y otros servidores MEDITECH. Entre los ejemplos de otros servidores de MEDITECH se incluyen la aplicación Data Repository, la aplicación Scanning and Archiving y los clientes de trabajos en segundo plano. Para obtener una lista completa de otros servidores de MEDITECH, consulte los documentos “propuesta de configuración de hardware” (para implementaciones nuevas) y “tarea de evaluación de hardware” (para implementaciones existentes). Puede obtener estos documentos de MEDITECH a través del integrador del sistema MEDITECH o de su MEDITECH Technical Account Manager (TAM).
+
+
+
+=== Host MEDITECH
+
+Un host MEDITECH es un servidor de base de datos. Este host también se conoce como servidor de archivos MEDITECH (para la plataforma expanse, 6.x o C/S 5.x) o COMO máquina MÁGICA (para la plataforma MAGIC). Este documento utiliza el término host de MEDITECH para hacer referencia a un servidor de archivos MEDITECH o A una máquina MÁGICA.
+
+Los hosts MEDITECH pueden ser servidores físicos o máquinas virtuales que se ejecuten en el sistema operativo Microsoft Windows Server. Los hosts MEDITECH más comúnmente instalados en el sector, se ponen en marcha como máquinas virtuales Windows que se ejecutan en un servidor VMware ESXi. En el momento en el que se ha redactado este documento, VMware es el único hipervisor que admite MEDITECH. Un host de MEDITECH almacena sus archivos de programa, diccionario y datos en una unidad de Microsoft Windows (por ejemplo, unidad E) en el sistema Windows.
+
+En un entorno virtual, una unidad E de Windows se encuentra en un LUN conectado a la máquina virtual mediante una asignación de dispositivo sin formato (RDM) en modo de compatibilidad física. MEDITECH no admite el uso de archivos de disco de máquina virtual (VMDK) como unidad Windows E en este escenario.
+
+
+
+=== Característica de I/o de la carga de trabajo del host de MEDITECH
+
+La característica de E/S de cada host de MEDITECH y el sistema en su conjunto depende de la plataforma MEDITECH que usted ponga en marcha. Todas las plataformas MEDITECH (expanse, 6.x, C/S 5.x y MAGIC) generan cargas de trabajo 100% aleatorias.
+
+La plataforma de expansión MEDITECH genera la carga de trabajo más exigente porque tiene el mayor porcentaje de operaciones de escritura y de IOPS generales por host, seguido por 6.x, C/S 5.x y las plataformas MÁGICAS.
+
+Para obtener más información sobre las descripciones de la carga de trabajo de MEDITECH, consulte https://www.netapp.com/us/media/tr-4190.pdf["TR-4190: Directrices de tamaño de NetApp para entornos de MEDITECH"^].
+
+
+
+=== Red de almacenamiento
+
+MEDITECH requiere que el protocolo FC sea utilizado para el tráfico de datos entre el sistema FAS o AFF de NetApp y los hosts MEDITECH de todas las categorías.
+
+
+
+=== Presentación del almacenamiento para un host de MEDITECH
+
+Cada host de MEDITECH utiliza dos unidades Windows:
+
+* *Drive C.* esta unidad almacena el sistema operativo Windows Server y los archivos de la aplicación host MEDITECH.
+* *Drive E.* el host MEDITECH almacena sus archivos de programa, diccionario y datos en la unidad E del sistema operativo Windows Server. La unidad E es un LUN asignado desde el sistema FAS o AFF de NetApp mediante el protocolo FC. MEDITECH requiere que se utilice el protocolo FC para que se cumplan los requisitos de IOPS y de latencia de lectura y escritura del host MEDITECH.
+
+
+
+
+=== Convención de nomenclatura de LUN y volúmenes
+
+MEDITECH requiere que se utilice una convención de nomenclatura específica para todas las LUN.
+
+Antes de cualquier implementación de almacenamiento, verifique la propuesta de configuración de hardware de MEDITECH para confirmar la convención de nomenclatura para las LUN. El proceso de backup de MEDITECH se basa en la convención de nomenclatura de LUN y volúmenes para identificar correctamente las LUN específicas a las que se debe realizar el backup.
+
+
+
+== Herramientas de gestión completas y funcionalidades de automatización
+
+
+
+=== Cisco UCS con Cisco UCS Manager
+
+Cisco se centra en tres elementos clave para ofrecer una infraestructura de centro de datos superior: Simplificación, seguridad y escalabilidad. El software Cisco UCS Manager, combinado con la modularidad de plataforma, ofrece una plataforma de virtualización de puestos de trabajo simplificada, segura y escalable:
+
+* *Simplificado.* Cisco UCS ofrece un nuevo enfoque radical de la informática estándar del sector y proporciona el núcleo de la infraestructura del centro de datos para todas las cargas de trabajo. Cisco UCS ofrece numerosas funciones y ventajas, como la reducción del número de servidores que necesita y la reducción del número de cables que se utilizan por servidor. Otra función importante es la capacidad de poner en marcha o volver a aprovisionar servidores rápidamente mediante perfiles de servicio de Cisco UCS. Con menos servidores y cables que gestionar y con un provisionamiento optimizado de cargas de trabajo de servidores y aplicaciones, las operaciones se simplifican. La mayor parte de los servidores blade y en rack se pueden aprovisionar en minutos con los perfiles de servicio de Cisco UCS Manager. Los perfiles de servicio de Cisco UCS eliminan las agendas de integración de servidores y eliminan la deriva en la configuración. Este método acelera el tiempo de productividad de los usuarios finales, mejora la agilidad empresarial y permite asignar recursos TECNOLÓGICOS a otras tareas.
++
+Cisco UCS Manager automatiza muchas operaciones rutinarias y propensas a errores, como la configuración y el aprovisionamiento de infraestructura de acceso a servidores, redes y almacenamiento. Además, los servidores blade Cisco UCS B-Series y los servidores de montaje en rack C-Series con grandes espacios de memoria permiten una alta densidad de usuarios de aplicaciones, lo que ayuda a reducir los requisitos de infraestructura del servidor.
+
++
+La simplificación conduce a una puesta en marcha de la infraestructura MEDITECH más rápida y satisfactoria.
+
+* *Seguro.* aunque los equipos virtuales son inherentemente más seguros que sus predecesores físicos, introducen nuevos desafíos de seguridad. Los servidores web y de aplicaciones de misión crítica que utilizan una infraestructura común, como los escritorios virtuales, corren ahora un riesgo mayor de sufrir amenazas de seguridad. El tráfico entre máquinas virtuales ahora plantea una importante consideración de seguridad que sus administradores DE TI deben tratar, especialmente en entornos dinámicos en los que las máquinas virtuales, mediante VMware vMotion, se mueven por la infraestructura de servidores.
++
+Por lo tanto, la virtualización aumenta de forma significativa la necesidad de conocer las políticas y la seguridad a nivel de equipo virtual, sobre todo teniendo en cuenta la naturaleza dinámica y fluida de la movilidad de equipos virtuales en una infraestructura informática ampliada. La facilidad con la que pueden proliferar los nuevos escritorios virtuales amplía la importancia de una red compatible con la virtualización y una infraestructura de seguridad. La infraestructura de centro de datos de Cisco (soluciones de la familia Cisco UCS, Cisco MDS y Cisco Nexus) para la virtualización de escritorios proporciona una seguridad sólida de centros de datos, redes y escritorios, con una seguridad completa desde el escritorio hasta el hipervisor. La seguridad se mejora con la segmentación de puestos de trabajo virtuales, la administración y las políticas para máquinas virtuales y la seguridad de la red en la infraestructura LAN y WAN.
+
+* *Escalable.* el crecimiento de las soluciones de virtualización es casi inevitable, por lo que una solución debe ser capaz de escalar, y de escalar de manera predecible, con ese crecimiento. Las soluciones de virtualización de Cisco admiten una alta densidad de equipos virtuales (equipos virtuales por servidor) y más servidores escalan con un rendimiento casi lineal. La infraestructura de centro de datos de Cisco proporciona una plataforma flexible para crecer y mejora la agilidad empresarial. Los perfiles de servicio de Cisco UCS Manager permiten el aprovisionamiento de hosts bajo demanda y facilitan la puesta en marcha de cientos de hosts al poner en marcha docenas.
++
+Los servidores Cisco UCS ofrecen un rendimiento y escalado prácticamente lineales. Cisco UCS implementa la tecnología patentada de memoria ampliada de Cisco para ofrecer espacios de memoria grandes con menos sockets (con escalabilidad de hasta 1 TB de memoria con servidores de 2 y 4 sockets). Al usar la tecnología Unified Fabric como elemento básico, el ancho de banda agregado de Cisco UCS Server puede escalarse hasta 80 Gbps por servidor, mientras que el conector de estructura Cisco UCS, enlazado al norte, puede proporcionar 2 TB a velocidad de línea. Esta funcionalidad ayuda a evitar los cuellos de botella de I/o y de memoria en la virtualización de puestos de trabajo. Cisco UCS, gracias a su arquitectura de redes unificada de alto rendimiento y baja latencia basada en Unified Fabric, admite grandes volúmenes de tráfico de escritorios virtuales, incluido el tráfico de comunicaciones y vídeo de alta resolución. Además, ONTAP ayuda a mantener la disponibilidad de datos y un rendimiento óptimo durante los arranques e inicios de sesión masivos como parte de las soluciones de virtualización de FlexPod.
+
++
+Los diseños de infraestructuras de centros de datos de Cisco UCS, Cisco MDS y Cisco Nexus proporcionan una plataforma excelente para el crecimiento. Obtiene un escalado transparente de los recursos de servidor, red y almacenamiento para dar soporte a la virtualización de puestos de trabajo, las aplicaciones del centro de datos y el cloud computing.
+
+
+
+
+
+=== Servidor VMware vCenter
+
+VMware vCenter Server proporciona una plataforma centralizada para la gestión de entornos MEDITECH, de modo que su organización sanitaria pueda automatizar y proporcionar una infraestructura virtual con total confianza:
+
+* *Implementación sencilla.* ponga en marcha de forma rápida y sencilla vCenter Server con un dispositivo virtual.
+* *Control y visibilidad centralizados.* administre toda la infraestructura VMware vSphere desde una única ubicación.
+* *Optimización proactiva.* asignar y optimizar los recursos para lograr la máxima eficiencia.
+* *Administración.* Utilice potentes complementos y herramientas para simplificar la administración y ampliar el control.
+
+
+
+
+=== Virtual Storage Console para VMware vSphere
+
+Virtual Storage Console (VSC), API de vSphere para el proveedor de conocimiento del almacenamiento (VASA) y VMware Storage Replication Adapter (SRA) para VMware vSphere de NetApp forman un único dispositivo virtual. La suite de productos incluye SRA y VASA Provider como complementos para vCenter Server, lo que proporciona gestión integral del ciclo de vida de las máquinas virtuales en entornos VMware que usan los sistemas de almacenamiento de NetApp.
+
+El dispositivo virtual para VSC, proveedor VASA y SRA se integra sin problemas con VMware vSphere Web Client y permite utilizar los servicios SSO. En un entorno con varias instancias de VMware vCenter Server, cada instancia de vCenter Server que desea gestionar debe tener su propia instancia registrada de VSC. La página de consola VSC permite comprobar rápidamente el estado general de los almacenes de datos y las máquinas virtuales.
+
+Al implementar el dispositivo virtual para VSC, proveedor VASA y SRA, puede realizar las siguientes tareas:
+
+* *Use VSC para implementar y gestionar almacenamiento y configurar el host ESXi.* puede usar VSC para añadir credenciales, eliminar credenciales, asignar credenciales y configurar permisos para controladoras de almacenamiento en el entorno VMware. Además, puede gestionar servidores ESXi conectados a sistemas de almacenamiento de NetApp. Con un par de clics puede establecer valores de prácticas recomendadas para los tiempos de espera del host, NAS y multivía para todos los hosts. También puede ver detalles del almacenamiento y recopilar información de diagnóstico.
+* *Utilice VASA Provider para crear perfiles de capacidad de almacenamiento y para establecer alarmas.* VASA Provider para ONTAP se registra en VSC cuando se activa la extensión VASA Provider. Se pueden crear y utilizar perfiles de funcionalidad del almacenamiento y almacenes de datos virtuales. También se pueden configurar alarmas para que avisen cuando los umbrales de los volúmenes y agregados estén casi llenos. Es posible supervisar el rendimiento de los VMDK y las máquinas virtuales que se crean en almacenes de datos virtuales.
+* *Utilice SRA para la recuperación ante desastres.* puede utilizar SRA para configurar sitios protegidos y de recuperación en su entorno para la recuperación ante desastres durante los fallos.
+
+
+
+
+=== OnCommand Insight y ONTAP de NetApp
+
+OnCommand Insight de NetApp integra la gestión de la infraestructura en la cadena de suministro de servicios de MEDITECH. Este enfoque le proporciona a su organización del sector sanitario un mejor control, automatización y análisis de su infraestructura de almacenamiento, red y computación. Puede optimizar su infraestructura actual para maximizar las ventajas, a la vez que simplifica el proceso de determinar qué comprar y cuándo. Asimismo, se mitigan los riesgos asociados a las complejas migraciones tecnológicas. Como no requiere agentes, su instalación es sencilla y sin interrupciones. OnCommand Insight busca continuamente dispositivos DE almacenamiento y SAN; asimismo, recopila información detallada para ofrecer una visibilidad total de todo el entorno de almacenamiento. Puede identificar rápidamente activos mal utilizados, mal alineados, infrautilizados o huérfanos, y recuperarlos para abastecer una futura expansión. OnCommand Insight le ayuda a:
+
+* *Optimizar los recursos existentes.* identificar activos mal utilizados, infrautilizados o huérfanos mediante el uso de mejores prácticas establecidas para evitar problemas y satisfacer los niveles de servicio.
+* *Tomar mejores decisiones.* los datos en tiempo real ayudan a resolver los problemas de capacidad más rápidamente para planificar con precisión las compras futuras, evitar el gasto excesivo y aplazar los gastos de capital.
+* *Acelerar las iniciativas DE TI.* comprender mejor sus entornos virtuales para ayudarle a gestionar los riesgos, minimizar el tiempo de inactividad y acelerar la implementación de la nube.
+

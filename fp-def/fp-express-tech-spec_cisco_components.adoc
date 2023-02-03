@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__cisco_components.html 
+keywords: cisco, components, blade, server, options, rack, ucs, nexus, switches 
+summary: Cisco contribuye de manera considerable al diseño y la arquitectura de FlexPod Express; contribuye a las capas de red e informática de la solución. 
+---
+= Componentes de Cisco
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cisco contribuye de manera considerable al diseño y la arquitectura de FlexPod Express; contribuye a las capas de red e informática de la solución. En esta sección se describen los componentes de Cisco UCS y Cisco Nexus disponibles para FlexPod Express.
+
+
+
+== Opciones del servidor blade Cisco UCS serie B
+
+Los blades Cisco UCS B-Series actualmente compatibles con la plataforma Cisco UCS Mini son B200 M5 y B420 M4. En la siguiente tabla aparecerán otros blades a medida que sean compatibles con la plataforma Cisco UCS Mini.
+
+|===
+| Servidor Cisco UCS B-Series | Número de pieza | Especificaciones técnicas 
+
+
+| CISCO UCS B200 M5 | UCSB-B200-M5 | https://www.cisco.com/c/en/us/support/servers-unified-computing/ucs-b200-m5-blade-server/model.html[] 
+
+
+| CISCO UCS B200 M4 | UCSB-B200-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b200m4-specsheet.pdf[] 
+
+
+| CISCO UCS B420 M4 | UCSB-B420-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b420m4-spec-sheet.pdf[] 
+|===
+
+
+== Opciones del servidor de montaje en rack Cisco UCS C-Series
+
+Los blades Cisco UCS C-Series están disponibles en variedades de uno y dos racks de unidades (RU), con varias opciones de CPU, memoria y E/S. Los números de referencia indicados en la siguiente tabla son para el servidor base; no incluyen CPU, memoria, unidades de disco, tarjetas PCIe ni Cisco FEX. Hay varias opciones de configuración disponibles y compatibles con FlexPod.
+
+|===
+| Servidor de montaje en rack Cisco UCS C-Series | Número de pieza | Especificaciones técnicas 
+
+
+| CISCO UCS C220 M4 | UCSC-C220-M4S | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m4-sff-spec-sheet.pdf[] 
+
+
+| CISCO UCS C240 M4 | UCSC-C240-M4S | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m4-sff-spec-sheet.pdf[] 
+
+
+| CISCO UCS C460 M4 | UCSC-C460-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c460m4_specsheet.pdf[] 
+|===
+
+
+== Switches Cisco Nexus
+
+Se necesitan switches redundantes para todas las arquitecturas de FlexPod Express.
+
+La arquitectura de FlexPod Express con AFF o FAS de NetApp está diseñada con el switch Cisco Nexus 31108. Se valida FlexPod Express con la arquitectura Cisco UCS Mini (Cisco UCS- managed) mediante el switch Cisco Nexus 3524. Esta configuración también se puede implementar con un switch estándar.
+
+FlexPod Express con E-Series puede ponerse en marcha con un switch estándar.
+
+En la siguiente tabla se enumeran los números de pieza del chasis de la serie Cisco Nexus; no se incluyen SFP ni módulos adicionales.
+
+|===
+| Switch Cisco Nexus Series | Número de pieza | Especificaciones técnicas 
+
+
+| Cisco Nexus 3048 | N3K-C3048TP-1GE | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-685363.html[] 
+
+
+| Cisco Nexus 31108 | N3K-C31108PC-V | http://www.cisco.com/c/en/us/products/switches/nexus-31108pc-v-switch/index.html[] 
+
+
+| Cisco Nexus 9396 | N9K-C9396PX | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729405.html[] 
+
+
+| Cisco Nexus 3172 | N3K-C3172 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html[] 
+|===
+
+
+== Opciones de licencias de soporte de Cisco
+
+Se requieren contratos de soporte SMARTnet válidos en todo el equipo de Cisco de la arquitectura de FlexPod Express.
+
+
+NOTE: El representante de ventas debe verificar las licencias necesarias y los números de artículo de dichas licencias porque pueden diferir de productos diferentes.
+
+En la siguiente tabla se enumeran las opciones de licencias de soporte de Cisco.
+
+|===
+| Licencias de soporte de Cisco | Guía de licencias 
+
+
+| 24xSMARTnet 7x4 | http://www.cisco.com/web/services/portfolio/product-technical-support/smartnet/index.html[] 
+|===

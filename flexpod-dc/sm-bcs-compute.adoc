@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-compute.html 
+keywords: compute, connectivity, service profiles, san boot 
+summary: La configuración informática de la solución FlexPod SM-BC sigue las prácticas recomendadas habituales de la solución FlexPod. En las siguientes secciones se destacan algunas de las configuraciones y conectividad utilizadas para la validación. También se destacan algunas de las consideraciones relacionadas con SM-BC para proporcionar referencias y orientación de implementación. 
+---
+= Validación de soluciones: Computación
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-solution-validation_overview.html["Preivous: Validación de la solución - Descripción general."]
+
+La configuración informática de la solución FlexPod SM-BC sigue las prácticas recomendadas habituales de la solución FlexPod. En las siguientes secciones se destacan algunas de las configuraciones y conectividad utilizadas para la validación. También se destacan algunas de las consideraciones relacionadas con SM-BC para proporcionar referencias y orientación de implementación.
+
+
+
+== Conectividad
+
+La conectividad entre los servidores blade UCS B200 y los IOM es proporcionada por la tarjeta UCS VIC a través de las conexiones de plano posterior del chasis UCS 5108. Los extensores de estructura UCS 2204XP utilizados para la validación tienen dieciséis puertos 10 G cada uno para conectarse con los ocho servidores blade de media anchura, por ejemplo, dos para cada servidor. Para aumentar el ancho de banda de la conectividad del servidor, se puede agregar un VIC basado en mezzanine para conectar el servidor a la IOM de UCS 2408 alternativa, que proporciona cuatro conexiones de 10 G a cada servidor.
+
+image:sm-bcs-image17.png["Error: Falta la imagen gráfica"]
+
+La conectividad entre el chasis UCS 5108 y UCS 6454 FIS utilizados para la validación está proporcionada por el IOM 2204XP que utiliza cuatro conexiones 10G. Los puertos FI 1 a 4 se configuran como puertos de servidor para estas conexiones. Los puertos FI 25 a 28 se configuran como puertos de enlace ascendente de red al conmutador Nexus A y B del sitio local. La siguiente figura y tabla proporcionan el diagrama de conectividad y los detalles de conexión de puertos para la conexión de la controladora FIS UCS 6454 con el fin de conectarse al chasis UCS 5108 y a los switches Nexus.
+
+image:sm-bcs-image18.png["Error: Falta la imagen gráfica"]
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+| UCS 6454 FI A | 1 | IOM A | 1 
+
+
+|  | 2 |  | 2 
+
+
+|  | 3 |  | 3 
+
+
+|  | 4 |  | 4 
+
+
+|  | 25 | Nexus a | 1/13/1 
+
+
+|  | 26 |  | 1/13/2 
+
+
+|  | 27 | Nexus B | 1/13/3 
+
+
+|  | 28 |  | 1/13/4 
+
+
+|  | L1 | UCS 6454 FI B | L1 
+
+
+|  | L2 |  | L2 
+
+
+| UCS 6454 FI B | 1 | IOM B | 1 
+
+
+|  | 2 |  | 2 
+
+
+|  | 3 |  | 3 
+
+
+|  | 4 |  | 4 
+
+
+|  | 25 | Nexus a | 1/13/3 
+
+
+|  | 26 |  | 1/13/4 
+
+
+|  | 27 | Nexus B | 1/13/1 
+
+
+|  | 28 |  | 1/13/2 
+
+
+|  | L1 | UCS 6454 FI A | L1 
+
+
+|  | L2 |  | L2 
+|===
+
+NOTE: Las conexiones anteriores son similares para los dos sitios A y B, a pesar del sitio A que utiliza switches Nexus 9336C-FX2y el sitio B mediante switches Nexus 3232C. Los cables de salida DE 40 G a 4 10 G se utilizan para las conexiones Nexus a FI. LAS conexiones FI a Nexus utilizan canales de puertos y los canales de puertos virtuales se configuran en los switches Nexus para agregar las conexiones a cada RED.
+
+
+NOTE: Cuando se utilice una combinación diferente de componentes del switch IOM, FI y Nexus, asegúrese de utilizar los cables y la velocidad de puerto adecuados para la combinación de entorno.
+
+
+NOTE: Se puede lograr un ancho de banda adicional usando componentes que admitan conexiones de mayor velocidad o más conexiones. Se puede lograr redundancia adicional agregando conexiones adicionales con componentes que los admitan.
+
+
+
+== Perfiles de servicio
+
+Un chasis de servidor blade con interconexiones de estructura gestionadas por UCS Manager (UCSM) o Cisco Intersight pueden abstraer los servidores utilizando los perfiles de servicio disponibles en UCSM y los perfiles de servidor de Intersight. Esta validación emplea perfiles UCSM y de servicio para simplificar la gestión de servidores. Con los perfiles de servicio, la sustitución o actualización de un servidor se puede realizar simplemente asociando el perfil de servicio original con el nuevo hardware.
+
+Los perfiles de servicio creados admiten lo siguiente para los hosts VMware ESXi:
+
+* Arranque SAN desde el almacenamiento A250 de AFF en cualquiera de las ubicaciones mediante el protocolo iSCSI.
+* Se crean seis vNIC para los servidores en los que:
++
+** Dos NIC redundantes (vSwitch0-A y vSwitch0-B) transportan tráfico de gestión en banda. Opcionalmente, estos vNIC también pueden ser utilizados por datos del protocolo NFS que no están protegidos por SM-BC.
+** El switch distribuido de vSphere utiliza dos NIC redundantes (VDS-A y VDS-B) para transportar el tráfico de VMware vMotion y otras aplicaciones.
+** ISCSI-A VNIC utilizado por iSCSI-a vSwitch para proporcionar acceso a la ruta iSCSI-A.
+** VNIC iSCSI-B utilizado por el vSwitch de iSCSI-B para proporcionar acceso a la ruta iSCSI-B.
+
+
+
+
+
+
+== Arranque SAN
+
+Para la configuración de arranque SAN iSCSI, los parámetros de arranque iSCSI se establecen para permitir el arranque iSCSI desde ambas estructuras iSCSI. Para acomodar la situación de conmutación por error SM-BC en la que un LUN de arranque SAN iSCSI se sirve desde el clúster secundario cuando el clúster primario no está disponible, la configuración de destino estático iSCSI debe incluir destinos tanto del sitio A como del sitio B. Además, para maximizar la disponibilidad del LUN de arranque, configure los parámetros de arranque iSCSI para arrancar desde todas las controladoras de almacenamiento.
+
+El destino estático iSCSI se puede configurar en la política de inicio de las plantillas de perfil de servicio bajo el cuadro de diálogo definir parámetros de arranque iSCSI, como se muestra en la siguiente figura. La configuración recomendada del parámetro de arranque iSCSI se muestra en la tabla siguiente, que implementa la estrategia de arranque descrita anteriormente para lograr una alta disponibilidad.
+
+image:sm-bcs-image19.png["Error: Falta la imagen gráfica"]
+
+|===
+| Estructura iSCSI | Prioridad | Destino iSCSI | LIF iSCSI 
+
+
+| ISCSI a | 1 | Site un destino iSCSI | Site A Controller 1 iSCSI: LIF 
+
+
+|  | 2 | Destino iSCSI del sitio B. | Controladora 2 del centro B iSCSI a LIF 
+
+
+| ISCSI B | 1 | Destino iSCSI del sitio B. | LIF iSCSI B de la controladora del centro B 
+
+
+|  | 2 | Site un destino iSCSI | Controladora a del sitio 2 LIF iSCSI B 
+|===
+link:sm-bcs-network.html["Siguiente: Validación de soluciones - Red."]

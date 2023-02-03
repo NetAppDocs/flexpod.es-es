@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html 
+keywords: add, cloud, tier, ontap, aggregate, storage, fabricpool, flexpod, ontap, cli, oncommand, manager 
+summary: Antes de que un almacén de objetos se pueda asociar a un agregado, ONTAP debe agregarlo e identificarlo. Esta tarea se puede completar tanto con OnCommand System Manager como con la interfaz de línea de comandos de ONTAP. 
+---
+= Añada un nivel de cloud a ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Antes de que un almacén de objetos se pueda asociar a un agregado, ONTAP debe agregarlo e identificarlo. Esta tarea se puede completar tanto con OnCommand System Manager como con la interfaz de línea de comandos de ONTAP.
+
+FabricPool admite Amazon S3, IBM Object Cloud Storage y almacenes de objetos de almacenamiento blob de Microsoft Azure como niveles de cloud.
+
+Necesita la siguiente información:
+
+* Nombre del servidor (FQDN); por ejemplo, `s3.amazonaws.com`
+* ID de clave de acceso
+* Clave secreta
+* Nombre de contenedor (nombre de bloque)
+
+
+
+
+== System Manager de OnCommand
+
+Para añadir un nivel de cloud con System Manager de OnCommand, complete los siguientes pasos:
+
+. Inicie OnCommand System Manager.
+. Haga clic en Storage.
+. Haga clic en Aggregates & Disks.
+. Haga clic en Cloud Tiers.
+. Seleccione un proveedor de almacén de objetos.
+. Complete los campos de texto según sea necesario para el proveedor del almacén de objetos.
++
+En el campo Container Name, introduzca el nombre del contenedor o el bloque del almacén de objetos.
+
+. Haga clic en Save and Attach Aggregates.
+
+
+image:cloud-fabricpool_image13.png["Error: Falta la imagen gráfica"]
+
+
+
+== CLI de ONTAP
+
+Para añadir un nivel de cloud con la interfaz de línea de comandos de ONTAP, escriba los siguientes comandos:
+
+....
+object-store config create
+-object-store-name <name>
+-provider-type <AWS>
+-port <443/8082> (AWS)
+-server <name>
+-container-name <bucket-name>
+-access-key <string>
+-secret-password <string>
+-ssl-enabled true
+-ipspace default
+....
+link:cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html["Siguiente: Adjunte un nivel de cloud a un agregado de ONTAP."]

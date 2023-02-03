@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html 
+keywords: volume, tiering, minimum, cooling, days, set, auto, ontap, cli, snapshot 
+summary: El ajuste de días de organización en niveles, mínimo de refrigeración, determina cuántos días deben transcurrir antes de que los datos inactivos de un volumen con la política solo de Snapshot o automático se consideren fríos y reúnan los requisitos necesarios para la organización en niveles. 
+---
+= Establezca los días de enfriamiento mínimos de organización en niveles de volumen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La `tiering-minimum-cooling-days` La configuración determina cuántos días deben pasar antes de que los datos inactivos de un volumen con la política solo de copias Snapshot se consideren inactivos y sean aptos para la organización en niveles.
+
+
+
+== Automático
+
+El valor predeterminado `tiering-minimum-cooling-days` La configuración de la política de organización automática en niveles es de 31 días.
+
+Como las lecturas mantienen las temperaturas de bloque activas, aumentar este valor puede reducir la cantidad de datos elegibles para la organización en niveles y aumentar la cantidad de datos mantenidos en el nivel de rendimiento.
+
+Si desea reducir este valor desde los 31 días predeterminados, tenga en cuenta que los datos no deben estar activos antes de que se marquen como inactivos. Por ejemplo, si se espera que una carga de trabajo de varios días realice un número significativo de escrituras el día 7, el volumen `tiering-minimum-cooling-days` el ajuste no debe ser inferior a 8 días.
+
+
+NOTE: El almacenamiento de objetos no es transaccional, como el almacenamiento de archivos o bloques. La realización de cambios en los archivos que se almacenan como objetos en volúmenes con días mínimos de refrigeración excesivamente agresivos puede provocar la creación de nuevos objetos, la fragmentación de los objetos existentes y la adición de ineficiencias del almacenamiento.
+
+
+
+== Solo Snapshot
+
+El valor predeterminado `tiering-minimum-cooling-days` La configuración de la política de organización en niveles solo de Snapshot es de 2 días. Un mínimo de 2 días da tiempo adicional a los procesos en segundo plano para proporcionar la máxima eficiencia del almacenamiento y evita que los procesos diarios de protección de datos tengan que leer datos del nivel de cloud.
+
+
+
+== CLI de ONTAP
+
+Para cambiar el volumen `tiering-minimum-cooling-days` Si configura mediante la CLI de ONTAP, ejecute el siguiente comando:
+
+....
+volume modify -vserver <svm_name> -volume <volume_name> -tiering-minimum-cooling-days <2-63>
+....
+Se requiere el nivel de privilegio avanzado.
+
+
+NOTE: Al cambiar la política de organización en niveles entre Auto y Snapshot-only (o viceversa), se restablece el período de inactividad de los bloques en el nivel de rendimiento. Por ejemplo, un volumen que utilice la política de organización en niveles automática de volumen con los datos en el nivel de rendimiento que ha estado inactivo durante 20 días tendrá la inactividad de los datos en el nivel de rendimiento se restablecerá a 0 días si la política de organización en niveles se establece en solo Snapshot.

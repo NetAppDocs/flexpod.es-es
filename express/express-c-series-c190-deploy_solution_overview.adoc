@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_solution_overview.html 
+keywords: solution, overview, flexpod, express,c, series, deployment, infrastructure, verified, architecture, converged, case 
+summary: Esta solución FlexPod Express forma parte del programa de infraestructura convergente de FlexPod. 
+---
+= Descripción general de la solución
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Esta solución FlexPod Express forma parte del programa de infraestructura convergente de FlexPod.
+
+
+
+== Programa de infraestructura convergente FlexPod
+
+Las arquitecturas de referencia FlexPod se proporcionan como diseños validados por Cisco (CVD) o como arquitecturas verificadas por NetApp (NVA). Se permiten las desviaciones basadas en los requisitos de los clientes de un CVD o NVA determinado si estas variaciones no crean una configuración incompatible.
+
+El programa FlexPod incluye dos soluciones: FlexPod Express y FlexPod Datacenter.
+
+* *FlexPod Express.* ofrece a los clientes una solución de gama básica con tecnologías de Cisco y NetApp.
+* *FlexPod Datacenter.* proporciona una base multiuso óptima para diversas cargas de trabajo y aplicaciones.
+
+
+image:express-c-series-c190-deploy_image1.png["Error: Falta la imagen gráfica"]
+
+
+
+== Programa Arquitectura validada por NetApp
+
+El programa Arquitectura verificada de NetApp ofrece a los clientes una arquitectura verificada para soluciones NetApp. Una arquitectura verificada de NetApp ofrece una arquitectura de solución de NetApp con las siguientes cualidades:
+
+* Completamente probado
+* Naturaleza prescriptiva
+* Riesgos mínimos en la implementación
+* Plazos de comercialización reducidos
+
+
+Esta guía detalla el diseño de FlexPod Express con VMware vSphere. Además, este diseño utiliza el nuevo sistema AFF C190 (que ejecuta ONTAP® 9.6 de NetApp), los servidores Cisco Nexus 31108 y Cisco UCS C-Series C220 M5 como nodos de hipervisor.
+
+
+
+== Tecnología de soluciones
+
+Esta solución aprovecha las últimas tecnologías de NetApp, Cisco y VMware. Esta solución incluye el nuevo sistema AFF C190 de NetApp con ONTAP 9.6, switches Cisco Nexus 31108 duales y servidores de rack Cisco UCS C220 M5 con VMware vSphere 6.7U2. Esta solución validada usa tecnología 10 GbE. También se ofrece orientación sobre cómo escalar la capacidad de computación mediante la adición de dos nodos de hipervisor a la vez para que la arquitectura FlexPod Express pueda adaptarse a las cambiantes necesidades empresariales de una organización.
+
+image:express-c-series-c190-deploy_image2.png["Error: Falta la imagen gráfica"]
+
+
+NOTE: Para utilizar los cuatro puertos físicos de 10 GbE del VIC 1457 de manera eficiente, crear dos enlaces adicionales desde cada servidor hasta los switches de bastidor superior.
+
+
+
+== Resumen de casos de uso
+
+La solución FlexPod Express puede aplicarse a varios casos prácticos, incluidos los siguientes:
+
+* Oficinas remotas o filiales
+* Pequeñas y medianas empresas
+* Entornos que requieren una solución dedicada y rentable
+
+
+FlexPod Express está indicado para cargas de trabajo virtualizadas y mixtas. Aunque esta solución se validó con vSphere 6.7U2, es compatible con cualquier versión de vSphere cualificada con el resto de componentes de la herramienta de matriz de interoperabilidad de NetApp. NetApp recomienda implementar vSphere 6.7U2 debido a sus correcciones y funciones mejoradas, como:
+
+* Nueva compatibilidad de protocolos para backup y restauración de un dispositivo servidor vCenter, incluidos HTTP, HTTPS, FTP, FTPS, SCP, NFS Y SMB.
+* Nuevo funcionalmente al utilizar la biblioteca de contenido. La sincronización de plantillas de equipos virtuales nativas entre bibliotecas de contenido ahora está disponible cuando vCenter Server está configurado para el modo vinculado mejorado.
+* Una página actualizada del complemento de cliente.
+* Se han añadido mejoras en vSphere Update Manager (VUM) y el cliente de vSphere. Ahora puede realizar las acciones de adjuntar, comprobar y solucionar, todas desde una sola pantalla.
+
+
+Para obtener más información sobre este tema, consulte https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["Página vSphere 6.7U2"^] y la https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u2-release-notes.html["Notas de la versión de vCenter Server 6.7U2"^].

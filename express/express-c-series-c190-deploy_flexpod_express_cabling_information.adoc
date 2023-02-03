@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_flexpod_express_cabling_information.html 
+keywords: flexpod, express, cabling, information, storage, controller, switch, cisco, nexus 
+summary: Esta validación de referencia se cablea como se muestra en las siguientes figuras y tablas. 
+---
+= Información sobre el cableado exprés de FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Esta validación de referencia se cablea como se muestra en las siguientes figuras y tablas.
+
+En esta figura, se muestra el cableado de validación de referencia.
+
+image:express-c-series-c190-deploy_image3.png["Error: Falta la imagen gráfica"]
+
+En la siguiente tabla se muestra la información de cableado del switch Cisco Nexus 31108PC-V-A.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.10+| Switch Cisco Nexus 31108PC-V A | Eth1/1 | La controladora De almacenamiento C190 de AFF de NetApp | e0c 
+
+
+| Eth1/2 | Controladora de almacenamiento AFF C190 de NetApp B. | e0c 
+
+
+| Eth1/3 | El servidor A independiente Cisco UCS C220 C-Series | MLOM0 
+
+
+| Eth1/4 | Servidor B independiente Cisco UCS C220 C-Series | MLOM0 
+
+
+| Eth1/5 | El servidor A independiente Cisco UCS C220 C-Series | MLOM1 
+
+
+| Eth1/6 | Servidor B independiente Cisco UCS C220 C-Series | MLOM1 
+
+
+| Eth1/25 | Switch Cisco Nexus 31108PC-V B | Eth1/25 
+
+
+| Eth1/26 | Switch Cisco Nexus 31108PC-V B | Eth1/26 
+
+
+| Eth1/33 | La controladora De almacenamiento C190 de AFF de NetApp | E0M 
+
+
+| Eth1/34 | El servidor A independiente Cisco UCS C220 C-Series | CIMC (FEX135/1/25) 
+|===
+Esta tabla enumera la información de cableado del switch Cisco Nexus 31108PC-V- B.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.10+| Switch Cisco Nexus 31108PC-V B | Eth1/1 | La controladora De almacenamiento C190 de AFF de NetApp | e0d 
+
+
+| Eth1/2 | Controladora de almacenamiento AFF C190 de NetApp B. | e0d 
+
+
+| Eth1/3 | El servidor A independiente Cisco UCS C220 C-Series | MLOM2 
+
+
+| Eth1/4 | Servidor B independiente Cisco UCS C220 C-Series | MLOM2 
+
+
+| Eth1/5 | El servidor A independiente Cisco UCS C220 C-Series | MLOM3 
+
+
+| Eth1/6 | Servidor B independiente Cisco UCS C220 C-Series | MLOM3 
+
+
+| Eth1/25 | Switch Cisco Nexus 31108 a | Eth1/25 
+
+
+| Eth1/26 | Switch Cisco Nexus 31108 a | Eth1/26 
+
+
+| Eth1/33 | Controladora de almacenamiento AFF C190 de NetApp B. | E0M 
+
+
+| Eth1/34 | Servidor B independiente Cisco UCS C220 C-Series | CIMC (FEX135/1/26) 
+|===
+Esta tabla enumera la información de cableado de la controladora de almacenamiento AFF C190 de NetApp
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.5+| La controladora De almacenamiento C190 de AFF de NetApp | e0a | Controladora de almacenamiento AFF C190 de NetApp B. | e0a 
+
+
+| e0b | Controladora de almacenamiento AFF C190 de NetApp B. | e0b 
+
+
+| e0c | Switch Cisco Nexus 31108PC-V A | Eth1/1 
+
+
+| e0d | Switch Cisco Nexus 31108PC-V B | Eth1/1 
+
+
+| E0M | Switch Cisco Nexus 31108PC-V A | Eth1/33 
+|===
+Esta tabla enumera la información de cableado de la controladora de almacenamiento AFF C190 de NetApp B.
+
+|===
+| Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
+
+
+.5+| Controladora de almacenamiento AFF C190 de NetApp B. | e0a | La controladora De almacenamiento C190 de AFF de NetApp | e0a 
+
+
+| e0b | La controladora De almacenamiento C190 de AFF de NetApp | e0b 
+
+
+| e0c | Switch Cisco Nexus 31108PC-V A | Eth1/2 
+
+
+| e0d | Switch Cisco Nexus 31108PC-V B | Eth1/2 
+
+
+| E0M | Switch Cisco Nexus 31108PC-V B | Eth1/33 
+|===

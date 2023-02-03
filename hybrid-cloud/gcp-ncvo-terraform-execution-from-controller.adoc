@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-terraform-execution-from-controller.html 
+keywords: prerequisites, clone github repo, terraform execution, init, plan, apply, destroy 
+summary: Podemos ejecutar el plan de Terraform con una controladora. Puede omitir esta sección si ya ha ejecutado su plan de Terraform mediante un flujo de trabajo ICO. 
+---
+= Ejecución de Terraform desde la controladora
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-dr-workflow.html["Anterior: Flujo de trabajo de recuperación ante desastres."]
+
+Podemos ejecutar el plan de Terraform con una controladora. Puede omitir esta sección si ya ha ejecutado su plan de Terraform mediante un flujo de trabajo ICO.
+
+
+
+== Requisitos previos
+
+La configuración de la solución comienza con una estación de trabajo de gestión que tiene acceso a Internet y con una instalación de Terraform en funcionamiento.
+
+Puede encontrar una guía para instalar Terraform https://learn.hashicorp.com/tutorials/terraform/install-cli["aquí"^].
+
+
+
+== Clonar GitHub repo
+
+El primer paso del proceso es clonar GitHub repo en una nueva carpeta vacía de la estación de trabajo de gestión. Para clonar el repositorio de GitHub, complete los siguientes pasos:
+
+. Desde la estación de trabajo de gestión, cree una nueva carpeta para el proyecto. Cree una nueva carpeta dentro de esta carpeta llamada `/root/snapmirror-cvo` Y Clone GitHub repo en él.
+. Abra una línea de comandos o una interfaz de consola en la estación de trabajo de administración y cambie los directorios a la nueva carpeta que acaba de crear.
+. Clone la colección GitHub con el siguiente comando:
+
+
+....
+Git clone https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO
+....
+. Cambie los directorios a la nueva carpeta llamada `snapmirror-cvo`.
+
+
+*Ejecución de Terraform*
+
+image:gcp-ncvo-image77.png["Esquema para la ejecución de Terraform."]
+
+* *Init.* inicialice el entorno de Terraform (local). Normalmente se ejecuta sólo una vez por sesión.
+* *Plan.* Compare el estado de la terraform con el estado como en la nube y construya y visualice un plan de ejecución. Esto no modifica la implementación (sólo lectura).
+* *Aplicar.* aplicar el plan desde la fase del plan. Esto puede cambiar potencialmente la implementación (lectura y escritura).
+* *Destruir.* todos los recursos que se rigen por este entorno de Terraform específico.
++
+Para obtener más información, consulte https://www.terraform.io/cli/commands["aquí"^].
+
+
+
+link:gcp-ncvo-solution-validation.html["Siguiente: Validación de la solución."]

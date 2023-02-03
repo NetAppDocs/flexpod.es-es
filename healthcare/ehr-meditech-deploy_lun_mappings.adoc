@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_lun_mappings.html 
+keywords: lun, mappings, meditech, host 
+summary: Las asignaciones de LUN para los hosts de MEDITECH se establecen cuando se crean las LUN. 
+---
+= Asignaciones de LUN
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Las asignaciones de LUN para los hosts de MEDITECH se establecen cuando se crean las LUN.
