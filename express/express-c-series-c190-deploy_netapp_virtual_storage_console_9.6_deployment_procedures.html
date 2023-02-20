@@ -1,0 +1,4656 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head class="at-element-marker">
+  <title>Procedimientos de puesta en marcha de Virtual Storage Console 9.6 de NetApp</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Procedimientos de puesta en marcha de Virtual Storage Console 9.6 de NetApp" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/es-es/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" />
+	<meta property="og:description" content="En esta sección se describen los procedimientos de puesta en marcha de Virtual Storage Console (VSC) de NetApp." />
+  <meta property="og:image" content="https://docs.netapp.com/es-es/flexpod/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="En esta sección se describen los procedimientos de puesta en marcha de Virtual Storage Console (VSC) de NetApp.">
+  <meta name="keywords" content=" virtual, storage, console, deployment, procedures, install, nfs, vaai"><!-- Icons -->
+  <link rel="icon" href="/es-es/flexpod/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/es-es/flexpod/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/es-es/flexpod/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/es-es/flexpod/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/es-es/flexpod/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/es-es/flexpod/js/na-search.js'></script><script src='/es-es/flexpod/js/na-pagenav.js'></script><script src='/es-es/flexpod/js/na-utility.js'></script>
+  <script src='/es-es/flexpod/js/clouddocs.js'></script>
+  <script src='/es-es/flexpod/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/es-es/flexpod/js/toc.js'></script>
+  <script src='/es-es/flexpod/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/es-es/flexpod"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/es-es/flexpod/js/custom-dropdown.js'></script>
+  <script src='/es-es/flexpod/js/FileSaver.min.js'></script>
+  <script src='/es-es/flexpod/js/jszip-utils.min.js'></script>
+  <script src='/es-es/flexpod/js/jszip.min.js'></script>
+  <script src='/es-es/flexpod/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/flexpod/issues/new?body=Page%3A%20[Procedimientos de puesta en marcha de Virtual Storage Console 9.6 de NetApp](https://docs.netapp.com/es-es/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/es-es/flexpod/images/discuss-sm.svg" alt="" class="github-icon" />Solicitar cambios en el documento</a><a target="_blank" href="https://github.com/NetAppDocs/flexpod/blob/main/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.adoc" class="page-nav-contribute-link" role="button"><img src="/es-es/flexpod/images/edit-sm.svg" alt="" class="github-icon" />Editar en GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/es-es/flexpod/images/article-sm.svg" alt="" class="github-icon" />Guía del colaborador</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">EN ESTA PÁGINA</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Producto y soluciones</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Asistencia y capacitación</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Comunidad</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Historias de clientes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/es-es/flexpod/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/es-es/flexpod/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/es-es/flexpod/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/es-es/flexpod/search.html"
+          data-type="widget" 
+          data-placeholder="Buscar documentación"
+          data-no-results-found="No se encontraron resultados para {query}"
+          data-did-you-mean="Buscar {suggestion}."
+          data-no-results-found-did-you-mean="No se encontraron resultados para {query}. ¿Quiso decir {suggestion}?"
+          data-results-found="{hitCount} resultados encontrados"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/flexpod/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Español</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/flexpod/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/es-es/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li></ul>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/es-es/flexpod/images/collapse.png" alt="Contraer panel de navegación"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>PDFs disponibles<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/es-es/flexpod/pdfs/fullsite-sidebar/Soluciones_FlexPod.pdf" >
+          <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>PDF de este sitio de documentos</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Definición_de_FlexPod.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Definición de FlexPod
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Especificaciones_técnicas_de_FlexPod_Express.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Especificaciones técnicas de FlexPod Express
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Especificaciones_técnicas_de_FlexPod_Datacenter.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Especificaciones técnicas de FlexPod Datacenter
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Centro_de_datos_FlexPod.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Centro de datos FlexPod
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod_DataCenter_con_NetApp_SnapMirror_Business_Continuity_y_ONTAP_9_10.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod DataCenter con NetApp SnapMirror Business Continuity y ONTAP 9.10
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Validación_de_la_solución.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Validación de la solución
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Cloud_híbrido.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Cloud híbrido
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Cloud_híbrido_de_FlexPod_para_Google_Cloud_Platform_con_Cloud_Volumes_ONTAP_de_NetApp_y_Cisco_Intersight.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Cloud híbrido de FlexPod para Google Cloud Platform con Cloud Volumes ONTAP de NetApp y Cisco Intersight
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Instalación_y_configuración.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Instalación y configuración
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Cloud_híbrido_de_FlexPod_con_NetApp_Astra_y_Cisco_Intersight_para_Red_Hat_OpenShift.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Cloud híbrido de FlexPod con NetApp Astra y Cisco Intersight para Red Hat OpenShift
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Instalación_y_configuración.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Instalación y configuración
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Validación_de_la_solución.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Validación de la solución
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Cloud_Insights_de_NetApp_para_FlexPod.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Cloud Insights de NetApp para FlexPod
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod_con_FabricPool__Organización_en_niveles_de_datos_inactiva_en_Amazon_AWS_S3.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod con FabricPool: Organización en niveles de datos inactiva en Amazon AWS S3
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Configuración.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Configuración
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Bases_de_datos_empresariales.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Bases de datos empresariales
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/SAP.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            SAP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Oracle.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Oracle
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Microsoft_SQL_Server.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Microsoft SQL Server
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Sector_sanitario.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Sector sanitario
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod_para_genomas.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod para genomas
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Guía_de_tamaños_direccionales_de_FlexPod_para_MEDITECH.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Guía de tamaños direccionales de FlexPod para MEDITECH
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Guía_de_puesta_en_marcha_de_FlexPod_Datacenter_para_MEDITECH.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Guía de puesta en marcha de FlexPod Datacenter para MEDITECH
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Puesta_en_marcha_y_configuración.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Puesta en marcha y configuración
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod_para_exploración_médica.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod para exploración médica
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Infraestructura_de_puestos_de_trabajo_virtuales.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Infraestructura de puestos de trabajo virtuales
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Aplicaciones_modernas.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Aplicaciones modernas
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Aplicaciones_de_Microsoft.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Aplicaciones de Microsoft
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod_Express.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod Express
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Guía_de_diseño_de_FlexPod_Express_con_Cisco_UCS_C_Series_y_la_serie_AFF_C190_de_NetApp.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Guía de diseño de FlexPod Express con Cisco UCS C-Series y la serie AFF C190 de NetApp
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Guía_de_puesta_en_marcha_de_FlexPod_Express_con_Cisco_UCS_C_Series_y_la_serie_AFF_C190_de_NetApp.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y la serie AFF C190 de NetApp
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Procedimientos_de_implantación.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Procedimientos de implantación
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Guía_de_diseño_de_FlexPod_Express_con_Cisco_UCS_C_Series_y_AFF_A220_Series.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Guía de diseño de FlexPod Express con Cisco UCS C-Series y AFF A220 Series
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Guía_de_puesta_en_marcha_de_FlexPod_Express_con_Cisco_UCS_C_Series_y_AFF_A220_Series.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y AFF A220 Series
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Procedimientos_de_implantación.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Procedimientos de implantación
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod_Express_con_VMware_vSphere_6_7U1_y_NetApp_AFF_A220_con_guía_de_diseño_de_almacenamiento_basado_en_IP_directamente_incluido.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con guía de diseño de almacenamiento basado en IP directamente incluido
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod_Express_con_VMware_vSphere_6_7U1_y_NetApp_AFF_A220_con_almacenamiento_basado_en_IP_directamente_incluido.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento basado en IP directamente incluido
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod_y_Seguridad.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod y Seguridad
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/FlexPod__la_solución_a_ransomware.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            FlexPod, la solución a ransomware
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Solución_FlexPod_para_el_sector_sanitario_conforme_a_la_seguridad_FIPS_140_2_2.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Solución FlexPod para el sector sanitario conforme a la seguridad FIPS 140-2-2
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/Cisco_Intersight_con_el_almacenamiento_ONTAP_de_NetApp.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            Cisco Intersight con el almacenamiento ONTAP de NetApp
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/De_almacenamiento.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            De almacenamiento
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/es-es/flexpod/pdfs/sidebar/NVMe_integral_para_FlexPod_con_Cisco_UCSM__VMware_vSphere_7_0_y_ONTAP_9_de_NetApp.pdf" 
+            
+          >
+            <img src="/es-es/flexpod/images/pdf.png" alt="" width="16" height="16"/>
+            NVMe integral para FlexPod con Cisco UCSM, VMware vSphere 7.0 y ONTAP 9 de NetApp
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/es-es/flexpod/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Colección de documentos PDF separados<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documentación de las soluciones FlexPod"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/index.html">
+        Documentación de las soluciones FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Definición de FlexPod"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Definición de FlexPod</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Especificaciones técnicas de FlexPod Express"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Especificaciones técnicas de FlexPod Express</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plataformas FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_flexpod_platforms.html">
+        Plataformas FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reglas de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_flexpod_rules.html">
+        Reglas de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuraciones de FlexPod admitidas frente a validadas"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_supported_versus_validated_flexpod_configurations.html">
+        Configuraciones de FlexPod admitidas frente a validadas
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Software de almacenamiento"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_storage_software.html">
+        Software de almacenamiento
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos mínimos de hardware"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_minimum_hardware_requirements.html">
+        Requisitos mínimos de hardware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos mínimos de software"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_minimum_software_requirements.html">
+        Requisitos mínimos de software
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos de conectividad"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_connectivity_requirements.html">
+        Requisitos de conectividad
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Otros requisitos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_other_requirements.html">
+        Otros requisitos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Funciones opcionales"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec__optional_features.html">
+        Funciones opcionales
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Componentes de Cisco"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec__cisco_components.html">
+        Componentes de Cisco
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Componentes de NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec__netapp_components.html">
+        Componentes de NetApp
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos de alimentación y cableado"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec__power_and_cabling_requirements.html">
+        Requisitos de alimentación y cableado
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Especificaciones técnicas y referencias"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec__technical_specifications_and_references.html">
+        Especificaciones técnicas y referencias
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Arquitecturas y equipos anteriores"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec__previous_architectures_and_equipment.html">
+        Arquitecturas y equipos anteriores
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Equipo existente"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_legacy_equipment.html">
+        Equipo existente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/fp-express-tech-spec_additional_information.html">
+        Información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Especificaciones técnicas de FlexPod Datacenter"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Especificaciones técnicas de FlexPod Datacenter</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_solution_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plataformas FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_flexpod_platforms.html">
+        Plataformas FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reglas de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_flexpod_rules.html">
+        Reglas de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Compatible con configuraciones de FlexPod validadas frente a las validadas"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html">
+        Compatible con configuraciones de FlexPod validadas frente a las validadas
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP de NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_netapp_ontap.html">
+        ONTAP de NetApp
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modos de funcionamiento de switches de Cisco Nexus"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html">
+        Modos de funcionamiento de switches de Cisco Nexus
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos mínimos de hardware"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_minimum_hardware_requirements.html">
+        Requisitos mínimos de hardware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos mínimos de software"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_minimum_software_requirements.html">
+        Requisitos mínimos de software
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos de conectividad"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_connectivity_requirements.html">
+        Requisitos de conectividad
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Otros requisitos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_other_requirements.html">
+        Otros requisitos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Funciones opcionales"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_optional_features.html">
+        Funciones opcionales
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Componentes de Cisco"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_cisco_components.html">
+        Componentes de Cisco
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Componentes de NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_netapp_components.html">
+        Componentes de NetApp
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos de alimentación y cableado"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_power_and_cabling_requirements.html">
+        Requisitos de alimentación y cableado
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Especificaciones técnicas y referencias"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_technical_specifications_and_references.html">
+        Especificaciones técnicas y referencias
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Equipo existente"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_legacy_equipment.html">
+        Equipo existente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/fp-def/dc-tech-spec_where_to_find_additional_information.html">
+        Dónde encontrar información adicional
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Centro de datos FlexPod"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Centro de datos FlexPod</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod DataCenter con NetApp SnapMirror Business Continuity y ONTAP 9.10"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod DataCenter con NetApp SnapMirror Business Continuity y ONTAP 9.10</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Introducción"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-introduction.html">
+        Introducción
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Solución FlexPod SM-BC"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-flexpod-sm-bc-solution.html">
+        Solución FlexPod SM-BC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Validación de la solución"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Validación de la solución</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-solution-validation_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Informática"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-compute.html">
+        Informática
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Red"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-network.html">
+        Red
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reducida"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-storage.html">
+        Reducida
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Virtualización"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-virtualization.html">
+        Virtualización
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Escenarios validados"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-validated-scenarios.html">
+        Escenarios validados
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional e historial de versiones"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/flexpod-dc/sm-bcs-where-to-find-additional-information-and-version-history.html">
+        Dónde encontrar información adicional e historial de versiones
+      </a></li></ul></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño del centro de datos FlexPod con VMware vSphere 7.0, estructura de un solo sitio Cisco VXLAN y ONTAP 9.7 de NetApp"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html">
+        Guía de diseño del centro de datos FlexPod con VMware vSphere 7.0, estructura de un solo sitio Cisco VXLAN y ONTAP 9.7 de NetApp
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con VMware vSphere 7.0 y ONTAP 9.7 de NetApp"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html">
+        FlexPod Datacenter con VMware vSphere 7.0 y ONTAP 9.7 de NetApp
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con NetApp ONTAP 9.7, Cisco Intersight y VMware vSphere 6.7 U3 - Design"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html">
+        FlexPod Datacenter con NetApp ONTAP 9.7, Cisco Intersight y VMware vSphere 6.7 U3 - Design
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con NetApp ONTAP 9.7, Cisco Intersight y VMware vSphere 6.7 U3 - Deploy"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html">
+        FlexPod Datacenter con NetApp ONTAP 9.7, Cisco Intersight y VMware vSphere 6.7 U3 - Deploy
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño del centro de datos FlexPod con Intersight de Cisco y ONTAP 9.7 de NetApp"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html">
+        Guía de diseño del centro de datos FlexPod con Intersight de Cisco y ONTAP 9.7 de NetApp
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con NetApp ONTAP 9.6, Cisco UCS 4th Gen, VMware vSphere 6.7U2 (CVD)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_u2.html">
+        FlexPod Datacenter con NetApp ONTAP 9.6, Cisco UCS 4th Gen, VMware vSphere 6.7U2 (CVD)
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con VMware vSphere 6.7 U1, Cisco UCS de cuarta generación y NetApp AFF A-Series - Diseño"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html">
+        FlexPod Datacenter con VMware vSphere 6.7 U1, Cisco UCS de cuarta generación y NetApp AFF A-Series - Diseño
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con VMware vSphere 6.7 U1, Cisco UCS de cuarta generación y NetApp AFF A-Series - Deploy"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html">
+        FlexPod Datacenter con VMware vSphere 6.7 U1, Cisco UCS de cuarta generación y NetApp AFF A-Series - Deploy
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Presentamos NVMe integral para FlexPod"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html">
+        Presentamos NVMe integral para FlexPod
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño de FlexPod Datacenter con Cisco ACI Multi-Pod, MetroCluster IP de NetApp y VMware vSphere 6.7 Design"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster_design.html">
+        Guía de diseño de FlexPod Datacenter con Cisco ACI Multi-Pod, MetroCluster IP de NetApp y VMware vSphere 6.7 Design
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de puesta en marcha de FlexPod Datacenter con Cisco ACI Multi-Pod, MetroCluster IP de NetApp y VMware vSphere 6.7"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html">
+        Guía de puesta en marcha de FlexPod Datacenter con Cisco ACI Multi-Pod, MetroCluster IP de NetApp y VMware vSphere 6.7
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud híbrido"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Cloud híbrido</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud híbrido de FlexPod para Google Cloud Platform con Cloud Volumes ONTAP de NetApp y Cisco Intersight"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Cloud híbrido de FlexPod para Google Cloud Platform con Cloud Volumes ONTAP de NetApp y Cisco Intersight</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-solution-overview.html">
+        Descripción general de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Componentes de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-solution-components.html">
+        Componentes de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Instalación y configuración"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Instalación y configuración</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ponga en marcha FlexPod"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-deploy-flexpod.html">
+        Ponga en marcha FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de Cisco Intersight"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-cisco-intersight-configuration.html">
+        Configuración de Cisco Intersight
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Integración en la nube con Terraform requisito previo de la ICO"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html">
+        Integración en la nube con Terraform requisito previo de la ICO
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure el proveedor de servicios de cloud público"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-configure-public-cloud-service-provider.html">
+        Configure el proveedor de servicios de cloud público
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Puesta en marcha automatizada del almacenamiento de NetApp en el cloud híbrido"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html">
+        Puesta en marcha automatizada del almacenamiento de NetApp en el cloud híbrido
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flujo de trabajo de recuperación ante desastres"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-dr-workflow.html">
+        Flujo de trabajo de recuperación ante desastres
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ejecución de Terraform desde la controladora"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-terraform-execution-from-controller.html">
+        Ejecución de Terraform desde la controladora
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Validación de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-solution-validation.html">
+        Validación de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/gcp-ncvo-conclusion.html">
+        Conclusión
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud híbrido de FlexPod con NetApp Astra y Cisco Intersight para Red Hat OpenShift"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Cloud híbrido de FlexPod con NetApp Astra y Cisco Intersight para Red Hat OpenShift</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-solution-overview.html">
+        Descripción general de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Componentes de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-solution-components.html">
+        Componentes de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Instalación y configuración"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Instalación y configuración</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Instalación de configuración básica de FlexPod para OpenShift Container Platform 4"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html">
+        Instalación de configuración básica de FlexPod para OpenShift Container Platform 4
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Red Hat OpenShift en AWS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-red-hat-openshift-on-aws.html">
+        Red Hat OpenShift en AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Volumes ONTAP de NetApp"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-netapp-cloud-volumes-ontap.html">
+        Cloud Volumes ONTAP de NetApp
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Instalación de Astra Control Center en OpenShift Container Platform"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html">
+        Instalación de Astra Control Center en OpenShift Container Platform
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Validación de la solución"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Validación de la solución</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-solution-validation_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Recuperación de aplicaciones con backups remotos"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-application-recovery-with-remote-backups.html">
+        Recuperación de aplicaciones con backups remotos
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/flexpod-rho-cvo-conclusion.html">
+        Conclusión
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloud Insights de NetApp para FlexPod"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Cloud Insights de NetApp para FlexPod</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Casos de uso"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-insights_use_cases.html">
+        Casos de uso
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Arquitectura"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-insights_architecture.html">
+        Arquitectura
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Consideraciones de diseño"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-insights_design_considerations.html">
+        Consideraciones de diseño
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ponga en marcha Cloud Insights para FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html">
+        Ponga en marcha Cloud Insights para FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Casos de uso"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-insights_use_cases_01.html">
+        Casos de uso
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Vídeos y demostraciones"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-insights_videos_and_demos.html">
+        Vídeos y demostraciones
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-insights_additional_information.html">
+        Información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod con FabricPool: Organización en niveles de datos inactiva en Amazon AWS S3"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod con FabricPool: Organización en niveles de datos inactiva en Amazon AWS S3</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_introduction.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información general y arquitectura de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html">
+        Información general y arquitectura de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FabricPool"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_fabricpool.html">
+        FabricPool
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos de FabricPool"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html">
+        Requisitos de FabricPool
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Configuración</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Revisiones de software de FabricPool"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_software_revisions.html">
+        Revisiones de software de FabricPool
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Instale la licencia de FabricPool"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html">
+        Instale la licencia de FabricPool
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cree el bloque de AWS S3"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html">
+        Cree el bloque de AWS S3
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Añada un nivel de cloud a ONTAP"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html">
+        Añada un nivel de cloud a ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Adjuntar un nivel de cloud a un agregado de ONTAP"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html">
+        Adjuntar un nivel de cloud a un agregado de ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Establezca la política de organización en niveles del volumen"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html">
+        Establezca la política de organización en niveles del volumen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Establezca los días de enfriamiento mínimos de organización en niveles de volumen"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html">
+        Establezca los días de enfriamiento mínimos de organización en niveles de volumen
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Consideraciones de rendimiento"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_performance_considerations.html">
+        Consideraciones de rendimiento
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Coste de propiedad"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_cost_of_ownership.html">
+        Coste de propiedad
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/hybrid-cloud/cloud-fabricpool_where_to_find_additional_information.html">
+        Dónde encontrar información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con IBM Cloud Private con Cisco UCS Manager, NetApp ONTAP 9.3 AFF, y VMware vSphere 6.5U1 [Diseño]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html">
+        FlexPod Datacenter con IBM Cloud Private con Cisco UCS Manager, NetApp ONTAP 9.3 AFF, y VMware vSphere 6.5U1 [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod para la plataforma como servicio con Apprenda 8.2, Cisco ACI 3.1 y Kubernetes 1.9.4 [Diseño]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-740803.pdf">
+        Centro de datos FlexPod para la plataforma como servicio con Apprenda 8.2, Cisco ACI 3.1 y Kubernetes 1.9.4 [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos de FlexPod para cloud híbrido con Cisco CloudCenter y almacenamiento privado de NetApp [Diseño}"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html">
+        Centro de datos de FlexPod para cloud híbrido con Cisco CloudCenter y almacenamiento privado de NetApp [Diseño}
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod para cloud híbrido con Cisco CloudCenter y almacenamiento privado de NetApp [ponga en marcha]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html">
+        Centro de datos FlexPod para cloud híbrido con Cisco CloudCenter y almacenamiento privado de NetApp [ponga en marcha]
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Bases de datos empresariales"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Bases de datos empresariales</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SAP"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> SAP</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Introducción a SAP con FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ent-db/index.html">
+        Introducción a SAP con FlexPod
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="CVD SAN FC DE SAP HANA [PUESTA EN MARCHA]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html">
+        CVD SAN FC DE SAP HANA [PUESTA EN MARCHA]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="SAP no HANA con el libro blanco de SQL (WP) [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf">
+        SAP no HANA con el libro blanco de SQL (WP) [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod para la solución SAP con UCS de tercera generación de Cisco y AFF A-Series de NetApp [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html">
+        Centro de datos FlexPod para la solución SAP con UCS de tercera generación de Cisco y AFF A-Series de NetApp [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod para la solución SAP uso DE SAN FibreChannel con Cisco UCS Manager 4.0 y ONTAP 9.7 de NetApp [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan_design.html">
+        Centro de datos FlexPod para la solución SAP uso DE SAN FibreChannel con Cisco UCS Manager 4.0 y ONTAP 9.7 de NetApp [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Ponga en marcha el centro de datos SAP en FlexPod con la plataforma de contenedores de Cisco (whitepaper)"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sap-datahub-on-flexpod-with-cisco-container-platform.html">
+        Ponga en marcha el centro de datos SAP en FlexPod con la plataforma de contenedores de Cisco (whitepaper)
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter para la solución SAP con Cisco ACI, Cisco UCS Manager 4.0 y AFF A-Series de NetApp [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html">
+        FlexPod Datacenter para la solución SAP con Cisco ACI, Cisco UCS Manager 4.0 y AFF A-Series de NetApp [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter para la solución SAP con Cisco ACI, Cisco UCS Manager 4.0 y AFF A-Series de NetApp [puesta en marcha]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html">
+        FlexPod Datacenter para la solución SAP con Cisco ACI, Cisco UCS Manager 4.0 y AFF A-Series de NetApp [puesta en marcha]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod para la solución SAP con Cisco UCS Manager 4.0 y NetApp AFF A con ONTAP 9.6 (CVD) [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html">
+        Centro de datos FlexPod para la solución SAP con Cisco UCS Manager 4.0 y NetApp AFF A con ONTAP 9.6 (CVD) [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Servidores de aplicaciones SAP en FlexPod con bases de datos Oracle y Cisco UCS y AFF de NetApp (whitepaper)"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/flexpod-oracle-database-sap-app-servers.html">
+        Servidores de aplicaciones SAP en FlexPod con bases de datos Oracle y Cisco UCS y AFF de NetApp (whitepaper)
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="SAP HANA virtualizado sobre el centro de datos FlexPod: Consideraciones de diseño y prácticas recomendadas (whitepaper)"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/whitepaper-c11-741878.pdf">
+        SAP HANA virtualizado sobre el centro de datos FlexPod: Consideraciones de diseño y prácticas recomendadas (whitepaper)
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter para la solución SAP con Cisco UCS Manager 3.2 y Application Centric Infrastructure (ACI) de Cisco [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_aci_UCSM32.html">
+        FlexPod Datacenter para la solución SAP con Cisco UCS Manager 3.2 y Application Centric Infrastructure (ACI) de Cisco [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod para la solución SAP con almacenamiento basado en IP usando AFF A-Series de NetApp y Cisco UCS Manager 3.2"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_n9k_aff_ucsm.html">
+        Centro de datos FlexPod para la solución SAP con almacenamiento basado en IP usando AFF A-Series de NetApp y Cisco UCS Manager 3.2
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Solución de centro de datos FlexPod para SAP uso DE SAN FibreChannel con Cisco UCS Mnager 4.0 y ONTAP 9.7 de NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html">
+        Solución de centro de datos FlexPod para SAP uso DE SAN FibreChannel con Cisco UCS Mnager 4.0 y ONTAP 9.7 de NetApp
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Instalación de servidores de aplicaciones SAP en FlexPod con SQL"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf">
+        Instalación de servidores de aplicaciones SAP en FlexPod con SQL
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter para la solución SAP con Cisco ACI, Cisco UCS Manager 4.0 y AFF A-Series de NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html">
+        FlexPod Datacenter para la solución SAP con Cisco ACI, Cisco UCS Manager 4.0 y AFF A-Series de NetApp
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Ponga en marcha el concentrador de datos SAP en FlexPod con la plataforma de contenedores de Cisco"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sap-datahub-on-flexpod-with-cisco-container-platform.html">
+        Ponga en marcha el concentrador de datos SAP en FlexPod con la plataforma de contenedores de Cisco
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño de FlexPod Datacenter para la solución SAP con Cisco ACI, Cisco UCS Manager 4.0 y AFF A-Series de NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html">
+        Guía de diseño de FlexPod Datacenter para la solución SAP con Cisco ACI, Cisco UCS Manager 4.0 y AFF A-Series de NetApp
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod para la solución SAP con UCS de tercera generación de Cisco y AFF A-Series de NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html">
+        Centro de datos FlexPod para la solución SAP con UCS de tercera generación de Cisco y AFF A-Series de NetApp
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter para solución SAP con Cisco UCS Manager 4.0 y NetApp AFF A con ONTAP 9.6"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html">
+        FlexPod Datacenter para solución SAP con Cisco UCS Manager 4.0 y NetApp AFF A con ONTAP 9.6
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Oracle"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Oracle</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Base de datos FlexPod Datacenter con Oracle 19c RAC en Cisco UCS y AFF de NetApp con NVMe over FibreChannel [Deploy]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_oracle_ucs_m5.html">
+        Base de datos FlexPod Datacenter con Oracle 19c RAC en Cisco UCS y AFF de NetApp con NVMe over FibreChannel [Deploy]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod con bases de datos RAC de Oracle en Cisco UCS y AFF A-Series de NetApp [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html">
+        Centro de datos FlexPod con bases de datos RAC de Oracle en Cisco UCS y AFF A-Series de NetApp [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con Oracle RAC en Oracle Linux [Deploy]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orcrac_12c_bm.html">
+        FlexPod Datacenter con Oracle RAC en Oracle Linux [Deploy]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod con bases de datos RAC de Oracle en Cisco UCS y AFF A-Series de NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html">
+        Centro de datos FlexPod con bases de datos RAC de Oracle en Cisco UCS y AFF A-Series de NetApp
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Microsoft SQL Server"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Microsoft SQL Server</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter para Microsoft SQL Server 2019 y VMware vSphere 6.7 [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html">
+        FlexPod Datacenter para Microsoft SQL Server 2019 y VMware vSphere 6.7 [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con Microsoft SQL Server 2016 y VMware vSphere 6.5"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2016_flexpod_vmware_cvd.html">
+        FlexPod Datacenter con Microsoft SQL Server 2016 y VMware vSphere 6.5
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod con Microsoft SQL Server 2017 sobre Linux VM ejecutándose en VMware y Hyper-V [Diseño]"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html">
+        Centro de datos FlexPod con Microsoft SQL Server 2017 sobre Linux VM ejecutándose en VMware y Hyper-V [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter para Microsoft SQL Server 2019 y VMware vSphere 6.7"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html">
+        FlexPod Datacenter para Microsoft SQL Server 2019 y VMware vSphere 6.7
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod con Microsoft SQL Server 2017 sobre Linux VM ejecutándose en VMware y Hyper-V."
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html">
+        Centro de datos FlexPod con Microsoft SQL Server 2017 sobre Linux VM ejecutándose en VMware y Hyper-V.
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sector sanitario"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Sector sanitario</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod para genomas"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod para genomas</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Introducción"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-introduction.html">
+        Introducción
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ventajas de la puesta en marcha de cargas de trabajo genómicos en FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html">
+        Ventajas de la puesta en marcha de cargas de trabajo genómicos en FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Infraestructura de la solución componentes de hardware y software"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html">
+        Infraestructura de la solución componentes de hardware y software
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Genómica - instalación y ejecución de GATK"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-genomics---gatk-setup-and-execution.html">
+        Genómica - instalación y ejecución de GATK
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Salida para la ejecución de GATK utilizando el archivo JAR"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-appendix-a.html">
+        Salida para la ejecución de GATK utilizando el archivo JAR
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Salida para la ejecución de GATK usando el script ./gatk"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-appendix-b.html">
+        Salida para la ejecución de GATK usando el script ./gatk
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Salida para la ejecución del GATK utilizando el motor Cromwell"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-appendix-c.html">
+        Salida para la ejecución del GATK utilizando el motor Cromwell
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de GPU"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-appendix-d-gpu-setup.html">
+        Configuración de GPU
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/flexpod-genomics-conclusion.html">
+        Conclusión
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Guía de tamaños direccionales de FlexPod para MEDITECH"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Guía de tamaños direccionales de FlexPod para MEDITECH</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-sizing_introduction.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general de la carga de trabajo de MEDITECH"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-sizing_meditech_workload_overview.html">
+        Descripción general de la carga de trabajo de MEDITECH
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Especificaciones técnicas para arquitecturas pequeñas, medianas y grandes"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html">
+        Especificaciones técnicas para arquitecturas pequeñas, medianas y grandes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-sizing_additional_information.html">
+        Información adicional
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reconocimientos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-sizing_acknowledgments.html">
+        Reconocimientos
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Guía de puesta en marcha de FlexPod Datacenter para MEDITECH"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Guía de puesta en marcha de FlexPod Datacenter para MEDITECH</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Diseño"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_design.html">
+        Diseño
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Puesta en marcha y configuración"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Puesta en marcha y configuración</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de la infraestructura base"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html">
+        Configuración de la infraestructura base
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de switch y servidor blade Cisco UCS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html">
+        Configuración de switch y servidor blade Cisco UCS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prácticas recomendadas de configuración de ESXi"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html">
+        Prácticas recomendadas de configuración de ESXi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de NetApp"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_netapp_configuration.html">
+        Configuración de NetApp
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de agregados"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_aggregate_configuration.html">
+        Configuración de agregados
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de la máquina virtual de almacenamiento"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_storage_virtual_machine_configuration.html">
+        Configuración de la máquina virtual de almacenamiento
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de volúmenes"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_volume_configuration.html">
+        Configuración de volúmenes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de LUN"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_lun_configuration.html">
+        Configuración de LUN
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración del iGroup"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html">
+        Configuración del iGroup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Asignaciones de LUN"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_lun_mappings.html">
+        Asignaciones de LUN
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Módulos y componentes de MEDITECH"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_meditech_modules_and_components.html">
+        Módulos y componentes de MEDITECH
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reconocimientos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_acknowledgments.html">
+        Reconocimientos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/ehr-meditech-deploy_where_to_find_additional_information.html">
+        Dónde encontrar información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod para exploración médica"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod para exploración médica</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/medical-imaging_introduction.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Arquitectura"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/medical-imaging_architecture.html">
+        Arquitectura
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Infraestructura de la solución componentes de hardware y software"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html">
+        Infraestructura de la solución componentes de hardware y software
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ajuste del tamaño de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/medical-imaging_solution_sizing.html">
+        Ajuste del tamaño de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Mejores prácticas"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/medical-imaging_best_practices.html">
+        Mejores prácticas
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/medical-imaging_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/healthcare/medical-imaging_additional_information.html">
+        Información adicional
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Infraestructura de puestos de trabajo virtuales"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Infraestructura de puestos de trabajo virtuales</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod con Citrix Virtual Apps & Desktops 1912 LTSR y VMware vSphere 7 para hasta 6000 puestos"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_ctx1912esxi7u1_flexpodV2.html">
+        Centro de datos FlexPod con Citrix Virtual Apps & Desktops 1912 LTSR y VMware vSphere 7 para hasta 6000 puestos
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod con ONTAP 9.6 de NetApp, VMware Horizon View 7.10 y VMware vSphere 6.7 U2 con Cisco UCS Manager 4.0 para hasta 6700 puestos"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html">
+        Centro de datos FlexPod con ONTAP 9.6 de NetApp, VMware Horizon View 7.10 y VMware vSphere 6.7 U2 con Cisco UCS Manager 4.0 para hasta 6700 puestos
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod para visualización de gráficos 3D con VMware y NVIDIA (whitepaper)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741654.pdf">
+        FlexPod para visualización de gráficos 3D con VMware y NVIDIA (whitepaper)
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con Citrix XenDesktop/XenApp 7.15 y VMware vSphere 6.5 Update 1 para 6000 puestos"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_xd715esxi65u1_flexpod.html">
+        FlexPod Datacenter con Citrix XenDesktop/XenApp 7.15 y VMware vSphere 6.5 Update 1 para 6000 puestos
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con VMware Horizon View 7.3 y VMware vSphere 6.5 Update 1 con Cisco UCS Manager 3.2 para 5000 puestos"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_horizon_n9k_aff_ucsm32.html">
+        FlexPod Datacenter con VMware Horizon View 7.3 y VMware vSphere 6.5 Update 1 con Cisco UCS Manager 3.2 para 5000 puestos
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod con ONTAP 9.6 de NetApp, VMware Horizon View 7.10 y VMware vSphere 6.7 U2 con Cisco UCS Manager 4.0 para hasta 6700 puestos"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html">
+        Centro de datos FlexPod con ONTAP 9.6 de NetApp, VMware Horizon View 7.10 y VMware vSphere 6.7 U2 con Cisco UCS Manager 4.0 para hasta 6700 puestos
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aplicaciones modernas"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Aplicaciones modernas</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño de FlexPod Datacenter para IA/ML con Cisco UCS 480 ML y Nvidia T4 y vGPU para aprendizaje profundo CVD [Diseño]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        Guía de diseño de FlexPod Datacenter para IA/ML con Cisco UCS 480 ML y Nvidia T4 y vGPU para aprendizaje profundo CVD [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Implemente el complemento Trident CSI de NetApp en la plataforma de contenedores de Cisco con FlexPod [Deploy]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/trident-on-container-platform-with-flexpod.pdf">
+        Implemente el complemento Trident CSI de NetApp en la plataforma de contenedores de Cisco con FlexPod [Deploy]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter para OpenShift Container Platform 4 (implementación)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift_platform_4.html">
+        FlexPod Datacenter para OpenShift Container Platform 4 (implementación)
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño de FlexPod Datacenter para AI/ML con Cisco UCS C480 ML para aprendizaje profundo [Diseño]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        Guía de diseño de FlexPod Datacenter para AI/ML con Cisco UCS C480 ML para aprendizaje profundo [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Centro de datos FlexPod con Docker Datacenter para gestión de contenedores [Diseño]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_docker_deploy_design.html">
+        Centro de datos FlexPod con Docker Datacenter para gestión de contenedores [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño de FlexPod Datacenter para OpenShift Container Platform 4"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift4_design.html">
+        Guía de diseño de FlexPod Datacenter para OpenShift Container Platform 4
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño de FlexPod Datacenter para IA/ML con Cisco UCS 480 ML y Nvidia T4 y vGPU para aprendizaje profundo CVD"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        Guía de diseño de FlexPod Datacenter para IA/ML con Cisco UCS 480 ML y Nvidia T4 y vGPU para aprendizaje profundo CVD
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de puesta en marcha de FlexPod Datacenter para IA/ML con Cisco UCS 480 ML y Nvidia T4 y vGPU para aprendizaje profundo CVD"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_480ml_aiml_deployment.html">
+        Guía de puesta en marcha de FlexPod Datacenter para IA/ML con Cisco UCS 480 ML y Nvidia T4 y vGPU para aprendizaje profundo CVD
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="Guía de diseño de FlexPod Datacenter para AI/ML con Cisco UCS C480 ML para aprendizaje profundo"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        Guía de diseño de FlexPod Datacenter para AI/ML con Cisco UCS C480 ML para aprendizaje profundo
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod para visualización de gráficos 3D con VMware y NVIDIA"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/desktop-virtualization-solutions-vmware-horizon-view/whitepaper-c11-741606.pdf">
+        FlexPod para visualización de gráficos 3D con VMware y NVIDIA
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod para visualización de gráficos 3D con Citrix y NVIDIA (whitepaper)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/whitepaper-c11-741586.pdf">
+        FlexPod para visualización de gráficos 3D con Citrix y NVIDIA (whitepaper)
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aplicaciones de Microsoft"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Aplicaciones de Microsoft</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con Microsoft Exchange 2013, F5 BIG-IP y Cisco ACI [Diseño]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/exchange2013_aci_flexpod_vmware_design.html">
+        FlexPod Datacenter con Microsoft Exchange 2013, F5 BIG-IP y Cisco ACI [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con Microsoft Exchange 2013, F5 BIG-IP y Cisco ACI [Deploy]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/exchange2013_aci_flexpod_vmware.html">
+        FlexPod Datacenter con Microsoft Exchange 2013, F5 BIG-IP y Cisco ACI [Deploy]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con Microsoft SharePoint 2013 y Cisco ACI [Diseño]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="http://www.cisco.com/c/dam/en/us/td/docs/unified_computing/ucs/UCS_CVDs/sharepoint2013_aci_flexpod_vmware.pdf">
+        FlexPod Datacenter con Microsoft SharePoint 2013 y Cisco ACI [Diseño]
+      </a></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Datacenter con Microsoft SharePoint 2013 y Cisco ACI [Deploy]"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="http://www.cisco.com/c/dam/en/us/td/docs/unified_computing/ucs/UCS_CVDs/sharepoint2013_aci_flexpod_vmware_deploy.pdf">
+        FlexPod Datacenter con Microsoft SharePoint 2013 y Cisco ACI [Deploy]
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod Express"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Guía de diseño de FlexPod Express con Cisco UCS C-Series y la serie AFF C190 de NetApp"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Guía de diseño de FlexPod Express con Cisco UCS C-Series y la serie AFF C190 de NetApp</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-design_executive_summary.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Resumen del programa"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-design_program_summary.html">
+        Resumen del programa
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos tecnológicos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-design_technology_requirements.html">
+        Requisitos tecnológicos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Opciones de diseño"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-design_design_choices.html">
+        Opciones de diseño
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-design_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-design_where_to_find_additional_information.html">
+        Dónde encontrar información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y la serie AFF C190 de NetApp"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y la serie AFF C190 de NetApp</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_program_summary_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_solution_overview.html">
+        Descripción general de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos tecnológicos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_technology_requirements.html">
+        Requisitos tecnológicos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información sobre el cableado exprés de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_flexpod_express_cabling_information.html">
+        Información sobre el cableado exprés de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimientos de implantación"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Procedimientos de implantación</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_deployment_procedures_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ponga en marcha Cisco Nexus 31108PC-V"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_deploy_cisco_nexus_31108pc-v.html">
+        Ponga en marcha Cisco Nexus 31108PC-V
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento de instalación de almacenamiento NetApp (parte 1)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html">
+        Procedimiento de instalación de almacenamiento NetApp (parte 1)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Poner en marcha el servidor de montaje en rack Cisco UCS C-Series"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_deploy_cisco_ucs_c-series_rack_server.html">
+        Poner en marcha el servidor de montaje en rack Cisco UCS C-Series
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento de puesta en marcha del almacenamiento AFF de NetApp (parte 2)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html">
+        Procedimiento de puesta en marcha del almacenamiento AFF de NetApp (parte 2)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento de puesta en marcha de VMware vSphere 6.7U2"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html">
+        Procedimiento de puesta en marcha de VMware vSphere 6.7U2
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento de instalación de VMware vCenter Server 6.7U2"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html">
+        Procedimiento de instalación de VMware vCenter Server 6.7U2
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configuración de clustering de VMware vCenter Server 6.7U2 y vSphere"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html">
+        Configuración de clustering de VMware vCenter Server 6.7U2 y vSphere
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimientos de puesta en marcha de Virtual Storage Console 9.6 de NetApp"
+      data-li-level="4#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html">
+        Procedimientos de puesta en marcha de Virtual Storage Console 9.6 de NetApp
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reconocimientos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_acknowledgments.html">
+        Reconocimientos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_where_to_find_additional_information.html">
+        Dónde encontrar información adicional
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Historial de versiones"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-c190-deploy_version_history.html">
+        Historial de versiones
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Guía de diseño de FlexPod Express con Cisco UCS C-Series y AFF A220 Series"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Guía de diseño de FlexPod Express con Cisco UCS C-Series y AFF A220 Series</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-design_executive_summary.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Resumen del programa"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-design_program_summary.html">
+        Resumen del programa
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-design_solution_overview.html">
+        Descripción general de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos tecnológicos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-design_technology_requirements.html">
+        Requisitos tecnológicos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Opciones de diseño"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-design_design_choices.html">
+        Opciones de diseño
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificación de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-design_solution_verification.html">
+        Verificación de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-design_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-design_where_to_find_additional_information.html">
+        Dónde encontrar información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y AFF A220 Series"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y AFF A220 Series</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_program_summary.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_solution_overview.html">
+        Descripción general de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos tecnológicos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_technology_requirements.html">
+        Requisitos tecnológicos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información sobre el cableado exprés de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html">
+        Información sobre el cableado exprés de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimientos de implantación"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/es-es/flexpod/express/express-c-series-aff220-deploy_deployment_procedures_overview.html">
+        <div class="na-navbar-padding"> Procedimientos de implantación</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento de puesta en marcha de Cisco Nexus 3172P"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_cisco_nexus_3172p_deployment_procedure.html">
+        Procedimiento de puesta en marcha de Cisco Nexus 3172P
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento de instalación de almacenamiento NetApp (parte 1)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_@part_1@.html">
+        Procedimiento de instalación de almacenamiento NetApp (parte 1)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento para la puesta en marcha de servidores en rack Cisco UCS C-Series"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_cisco_ucs_c-series_rack_server_deployment_procedure.html">
+        Procedimiento para la puesta en marcha de servidores en rack Cisco UCS C-Series
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento de instalación de almacenamiento AFF de NetApp (parte 2)"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html">
+        Procedimiento de instalación de almacenamiento AFF de NetApp (parte 2)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimiento de puesta en marcha de VMware vSphere 6.7"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html">
+        Procedimiento de puesta en marcha de VMware vSphere 6.7
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Instale VMware vCenter Server 6.7"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_install_vmware_vcenter_server_6.7.html">
+        Instale VMware vCenter Server 6.7
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure VMware vCenter Server 6.7 y el clustering de vSphere"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html">
+        Configure VMware vCenter Server 6.7 y el clustering de vSphere
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-c-series-aff220-deploy_where_to_find_additional_information.html">
+        Dónde encontrar información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con guía de diseño de almacenamiento basado en IP directamente incluido"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con guía de diseño de almacenamiento basado en IP directamente incluido</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-design_overview.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Resumen del programa"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-design_program_summary.html">
+        Resumen del programa
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-design_solution_overview.html">
+        Descripción general de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos tecnológicos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-design_technology_requirements.html">
+        Requisitos tecnológicos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Opciones de diseño"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-design_design_choices.html">
+        Opciones de diseño
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificación de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-design_solution_verification.html">
+        Verificación de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-design_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-design_where_to_find_additional_information.html">
+        Dónde encontrar información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento basado en IP directamente incluido"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento basado en IP directamente incluido</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html">
+        Descripción general
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Descripción general de la solución"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-aff220-deploy_solution_overview.html">
+        Descripción general de la solución
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos tecnológicos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-aff220-deploy_technology_requirements.html">
+        Requisitos tecnológicos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información de cableado exprés de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html">
+        Información de cableado exprés de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedimientos de implantación"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-aff220-deploy_deployment_procedures.html">
+        Procedimientos de implantación
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-aff220-deploy_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/express/express-direct-attach-aff220-deploy_additional_information.html">
+        Información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="false" 
+      data-pdf-filename="FlexPod Express para VMware vSphere 7.0 con Cisco UCS Mini y AFF / FAS de NetApp (NVA)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf">
+        FlexPod Express para VMware vSphere 7.0 con Cisco UCS Mini y AFF / FAS de NetApp (NVA)
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod y Seguridad"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod y Seguridad</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="FlexPod, la solución a ransomware"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> FlexPod, la solución a ransomware</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="¿Qué es el ransomware?"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/security-ransomware_what_is_ransomware.html">
+        ¿Qué es el ransomware?
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información general de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/security-ransomware_flexpod_overview.html">
+        Información general de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Medidas de protección contra ransomware"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/security-ransomware_ransomware_protection_measures.html">
+        Medidas de protección contra ransomware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Proteja y recupere sus datos en FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/security-ransomware_protect_and_recover_data_on_flexpod.html">
+        Proteja y recupere sus datos en FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Continuar operaciones de negocios sin pagar Ransom"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/security-ransomware_continue_business_operations_without_paying_ransom.html">
+        Continuar operaciones de negocios sin pagar Ransom
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/security-ransomware_conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Reconocimientos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/security-ransomware_acknowledgements.html">
+        Reconocimientos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/security-ransomware_additional_information.html">
+        Información adicional
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Solución FlexPod para el sector sanitario conforme a la seguridad FIPS 140-2-2"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Solución FlexPod para el sector sanitario conforme a la seguridad FIPS 140-2-2</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Introducción"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-introduction.html">
+        Introducción
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amenazas de ciberseguridad en sanidad"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-cybersecurity-threats-in-healthcare.html">
+        Amenazas de ciberseguridad en sanidad
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Información general de FIPS 140-2"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-overview-of-fips-140-2.html">
+        Información general de FIPS 140-2
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plano de control frente al plano de datos"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-control-plane-versus-data-plane.html">
+        Plano de control frente al plano de datos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Computación Cisco UCS de FlexPod y FIPS 140-2"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html">
+        Computación Cisco UCS de FlexPod y FIPS 140-2
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Redes Cisco de FlexPod y FIPS 140-2"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html">
+        Redes Cisco de FlexPod y FIPS 140-2
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Almacenamiento ONTAP de FlexPod y FIPS 140-2"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html">
+        Almacenamiento ONTAP de FlexPod y FIPS 140-2
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ventajas para las soluciones de la infraestructura convergente de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html">
+        Ventajas para las soluciones de la infraestructura convergente de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Otras consideraciones de seguridad de FlexPod"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-additional-flexpod-security-consideration.html">
+        Otras consideraciones de seguridad de FlexPod
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-conclusion.html">
+        Conclusión
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Acknowlegements, historial de versiones y dónde encontrar información adicional"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/security/flexpod-fips-where-to-find-additional-information.html">
+        Acknowlegements, historial de versiones y dónde encontrar información adicional
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cisco Intersight con el almacenamiento ONTAP de NetApp"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Cisco Intersight con el almacenamiento ONTAP de NetApp</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Introducción"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/index.html">
+        Introducción
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Novedades"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/ci-qsg_new.html">
+        Novedades
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisitos"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/ci-qsg_requirements.html">
+        Requisitos
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Antes de empezar"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/ci-qsg_before_you_begin.html">
+        Antes de empezar
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure el servidor proxy de mensajería unificada de AIQ para el servicio IMT"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/ci-qsg_aiqum_imt_proxy_config.html">
+        Configure el servidor proxy de mensajería unificada de AIQ para el servicio IMT
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Objetivos de reclamaciones"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/ci-qsg_claim_targets.html">
+        Objetivos de reclamaciones
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Supervise el almacenamiento de NetApp de Cisco Intersight"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html">
+        Supervise el almacenamiento de NetApp de Cisco Intersight
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Casos de uso"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/ci-qsg_use_cases.html">
+        Casos de uso
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Referencias"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/ontap-connector-for-intersight/ci-qsg_references.html">
+        Referencias
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="De almacenamiento"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> De almacenamiento</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NVMe integral para FlexPod con Cisco UCSM, VMware vSphere 7.0 y ONTAP 9 de NetApp"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> NVMe integral para FlexPod con Cisco UCSM, VMware vSphere 7.0 y ONTAP 9 de NetApp</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Introducción"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/infrastructure/nvme-vsphere-introduction.html">
+        Introducción
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Método de prueba"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/infrastructure/nvme-vsphere-testing-approach.html">
+        Método de prueba
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Resultados de la prueba"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/infrastructure/nvme-vsphere-test-results.html">
+        Resultados de la prueba
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conclusión"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/es-es/flexpod/infrastructure/nvme-vsphere-conclusion.html">
+        Conclusión
+      </a></li></ul></li></ul></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/es-es/flexpod/images/expand.png" alt="Expandir panel de navegación"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/es-es/flexpod/">FlexPod</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/es-es/flexpod/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> Se proporciona el idioma español mediante traducción automática para su comodidad. En caso de alguna inconsistencia, el inglés precede al español. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Procedimientos de puesta en marcha de Virtual Storage Console 9.6 de NetApp</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2023-02-20 19:42:58 +0000">02/20/2023</time>
+    
+  
+
+<span>Colaboradores
+</span>
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>En esta sección se describen los procedimientos de puesta en marcha de Virtual Storage Console (VSC) de NetApp.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="instalar-virtual-storage-console-9-6">Instalar Virtual Storage Console 9.6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Para instalar el software VSC 9.6 mediante una implementación de formato de virtualización abierta (OVF), siga estos pasos:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Vaya a vSphere Web Client &gt; Host Cluster &gt; Deploy OVF Template.</p>
+</li>
+<li>
+<p>Desplácese hasta el archivo OVF de VSC descargado del sitio de soporte de NetApp.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image49.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>Introduzca el nombre de la máquina virtual y seleccione el centro de datos o la carpeta en la que desea implementar. Haga clic en Siguiente.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image50.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>Seleccione el clúster FlexPod-Cluster ESXi y haga clic en Next.</p>
+</li>
+<li>
+<p>Revise los detalles y haga clic en Next.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image51.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>Haga clic en Aceptar para aceptar la licencia y haga clic en Siguiente.</p>
+</li>
+<li>
+<p>Seleccione el formato de disco virtual de thin provisioning y uno de los almacenes de datos NFS. Haga clic en Siguiente.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image52.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>En Seleccionar redes, elija una red de destino y haga clic en Siguiente.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image53.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>En Customize Template, introduzca la contraseña del administrador de VSC, el nombre o la dirección IP de vCenter y otros detalles de la configuración, y haga clic en Next.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image54.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>Revise los detalles de la configuración introducidos y haga clic en Finish para completar la puesta en marcha de la máquina virtual de NetApp-VSC.</p>
+</li>
+<li>
+<p>Encienda la máquina virtual de NetApp-VSC y abra la consola de equipos virtuales.</p>
+</li>
+<li>
+<p>Durante el proceso de arranque de máquinas virtuales NetApp-VSC, verá un aviso para instalar las herramientas de VMware. En vCenter, seleccione NetApp-VSC VM &gt; SO invitado &gt; instalar VMware Tools.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image55.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>La información de registro de vCenter y la configuración de la red se proporcionó durante la personalización de la plantilla OVF. Por lo tanto, una vez que se ejecuta la máquina virtual de NetApp-VSC, VSC, las API de vSphere para el reconocimiento del almacenamiento (VASA) y el adaptador de replicación de almacenamiento (SRA) de VMware se registran en vCenter.</p>
+</li>
+<li>
+<p>Cierre la sesión en vCenter Client y vuelva a iniciarla. En el menú Inicio, confirme que VSC de NetApp está instalado.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image56.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="descargue-e-instale-el-complemento-vaai-para-nfs-de-netapp">Descargue e instale el complemento VAAI para NFS de NetApp</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Para descargar e instalar el complemento VAAI para NFS de NetApp, complete los siguientes pasos:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Descargue el complemento NFS de NetApp 1.1.2 para VMware <code>. vib</code> Archivo desde la página de descarga del complemento NFS y guárdelo en el equipo local o en el host de administración.</p>
+</li>
+<li>
+<p>Descargue el plugin de NetApp NFS para VMware VAAI:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Vaya a la <a href="https://mysupport.netapp.com/NOW/download/software/nfs_plugin_vaai_esxi6/1.1.2/" target="_blank" rel="noopener">"página de descarga del software"</a>.</p>
+</li>
+<li>
+<p>Desplácese hacia abajo y haga clic en NetApp NFS Plug-in for VMware VAAI.</p>
+</li>
+<li>
+<p>En la pantalla de inicio del cliente web de vSphere, seleccione Virtual Storage Console.</p>
+</li>
+<li>
+<p>En Virtual Storage Console &gt; Configuración &gt; NFS VAAI Tools, cargue el plugin de NFS seleccionando Select File y desplácese hasta la ubicación donde se almacena el plugin descargado.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image57.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Haga clic en Upload para transferir el plugin a vCenter.</p>
+</li>
+<li>
+<p>Seleccione el host y, a continuación, seleccione NetApp VSC &gt; Install NFS Plug-in for VMware VAAI.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image58.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-la-configuración-de-almacenamiento-óptima-para-los-hosts-esxi">Use la configuración de almacenamiento óptima para los hosts ESXi</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>VSC permite configurar de forma automatizada ajustes relacionados con el almacenamiento para todos los hosts ESXi conectados a controladoras de almacenamiento de NetApp. Para utilizar esta configuración, lleve a cabo los siguientes pasos:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>En la pantalla Inicio, seleccione vCenter &gt; hosts and Clusters. Para cada host ESXi, haga clic con el botón derecho y seleccione NetApp VSC &gt; Set Recommended Values.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image59.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>Compruebe la configuración que desea aplicar a los hosts de vSphere seleccionados. Haga clic en Aceptar para aplicar la configuración.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image60.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/express-c-series-c190-deploy_image61.png" alt="Error: Falta la imagen gráfica"></span></p>
+</div>
+</li>
+<li>
+<p>Reinicie el host ESXI después de aplicar esta configuración.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Términos y condiciones</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Política de privacidad</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Política de Cookies</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Configuración de cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Enviar comentarios sobre esta página</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/es-es/flexpod/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/es-es/flexpod/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/es-es/flexpod/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/es-es/flexpod/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/es-es/flexpod/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/es-es/flexpod/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/es-es/flexpod/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/es-es/flexpod/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/es-es/flexpod/js/prism.js'></script>
+      <script type="text/javascript" src='/es-es/flexpod/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/es-es/flexpod/js/www-ntap.js'></script>
+    <script src='/es-es/flexpod/js/tabbed-blocks.js'></script>
+    <script src='/es-es/flexpod/js/sidebar.js'></script>
+  </body></html>
