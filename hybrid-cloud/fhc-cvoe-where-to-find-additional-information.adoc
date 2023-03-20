@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-where-to-find-additional-information.html 
+keywords:  
+summary:  
+---
+= Dónde encontrar información adicional
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-conclusion.html["Anterior: Conclusión."]
+
+[role="lead"]
+Si quiere más información sobre el contenido de este documento, consulte los siguientes documentos o sitios web:
+
+* Página de inicio de FlexPod
++
+https://www.flexpod.com["https://www.flexpod.com"^]
+
+* Guías de puesta en marcha y diseño validado por Cisco para FlexPod
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* BlueXP de NetApp
++
+https://bluexp.netapp.com/["https://bluexp.netapp.com/"^]
+
+* Cloud Volumes ONTAP de NetApp
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-overview-cvo.html["https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-overview-cvo.html"^]
+
+* Inicio rápido para Cloud Volumes ONTAP en AWS
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html"^]
+
+* Replicación de SnapMirror
++
+https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html"^]
+
+* TR-3928: Prácticas recomendadas de NetApp para Epic
++
+https://www.netapp.com/pdf.html?item=/media/17137-tr3928pdf.pdf["https://www.netapp.com/pdf.html?item=/media/17137-tr3928pdf.pdf"^]
+
+* TR-4693: Guía de puesta en marcha de FlexPod Datacenter para EHR de Epic
++
+https://www.netapp.com/media/10658-tr-4693.pdf["https://www.netapp.com/media/10658-tr-4693.pdf"^]
+
+* FlexPod para Epic
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmw_epic.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmw_epic.html"^]
+
+* Herramienta de matriz de interoperabilidad de NetApp
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+* Herramienta de interoperabilidad de hardware y software Cisco UCS
++
+http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html"^]
+
+* Guía de compatibilidad de VMware
++
+http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/resources/compatibility/search.php"^]
+
+
+
+
+
+=== Historial de versiones
+
+|===
+| Versión | Fecha | Historial de versiones del documento 
+
+
+| Versión 1.0 | Marzo de 2023 | Versión inicial 
+|===
