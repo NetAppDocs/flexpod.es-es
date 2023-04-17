@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-cisco-vsphere-design.html 
+keywords: flexpod, cisco, data, center, vmware, vsphere, 
+summary: Este documento describe la solución FlexPod de Cisco y NetApp, la cual es un enfoque validado para poner en marcha tecnologías de Cisco y NetApp como infraestructura de cloud compartida. 
+---
+= FlexPod Datacenter con VMware vSphere 6,7 U1, la estructura de cuarta generación de Cisco UCS y AFF A-Series de NetApp: Diseño
+:allow-uri-read: 
+
+
+John George, Cisco Sree Lakshmi Lanka, NetApp
+
+Este documento describe la solución FlexPod de Cisco y NetApp, la cual es un enfoque validado para poner en marcha tecnologías de Cisco y NetApp como infraestructura de cloud compartida. Este diseño validado proporciona un marco para poner en marcha VMware vSphere, la plataforma de virtualización más popular en centros de datos de clase empresarial en FlexPod.
+
+FlexPod es una infraestructura integrada líder que admite una amplia gama de cargas de trabajo empresariales y casos prácticos. Esta solución permite a los clientes poner en marcha de forma rápida y fiable cloud privado basado en VMware vSphere en una infraestructura integrada.
+
+La arquitectura de la solución recomendada se basa en Cisco Unified Computing System (Cisco UCS) mediante el lanzamiento de software unificado para admitir las plataformas de hardware de Cisco UCS, incluidos servidores de rack Cisco UCS B-Series y C-Series, interconexiones de estructura Cisco UCS 6454, switches Cisco Nexus 9000 Series, switches Fibre Channel de Cisco MDS, Y cabinas de almacenamiento All Flash Series de NetApp. Además, incluye VMware vSphere 6,7 Update 1, que proporciona una serie de nuevas funciones para optimizar la utilización del almacenamiento y facilitar una nube privada.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html["FlexPod Datacenter con VMware vSphere 6,7 U1, la estructura de cuarta generación de Cisco UCS y AFF A-Series de NetApp: Diseño"^]

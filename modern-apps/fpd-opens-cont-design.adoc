@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: modern-apps/fpd-opens-cont-design.html 
+keywords:  
+summary: Cisco y NetApp se han asociado para ofrecer una serie de soluciones FlexPod que permiten crear plataformas estratégicas de centros de datos. 
+---
+= FlexPod Datacenter para OpenShift Container Platform 4: Diseño
+:allow-uri-read: 
+
+
+Haseeb Niazi, Cisco Alan Cowles, NetApp
+
+Cisco y NetApp se han asociado para ofrecer una serie de soluciones FlexPod que permiten crear plataformas estratégicas de centros de datos. La solución FlexPod proporciona una arquitectura integrada que incorpora prácticas recomendadas para informática, almacenamiento y diseño de red, lo que minimiza los riesgos de LA TECNOLOGÍA mediante la validación de la arquitectura integrada para garantizar la compatibilidad entre varios componentes. La solución también soluciona los problemas DE TI al proporcionar indicaciones de diseño documentadas, directrices para la puesta en marcha y soporte que se puede utilizar en varias etapas (planificación, diseño e implementación) de una implementación.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift4_design.html["FlexPod Datacenter para OpenShift Container Platform 4: Diseño"^]

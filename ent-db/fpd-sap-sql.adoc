@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-sql.html 
+keywords: flexpod, cisco, white, paper,sap, non-hana, sql 
+summary: El sector de LA TECNOLOGÍA actual está siendo testigo de una transformación espectacular en las soluciones de centros de datos. 
+---
+= White paper SAP no HANA con SQL: Diseño
+:allow-uri-read: 
+
+
+El sector de LA TECNOLOGÍA actual está siendo testigo de una transformación espectacular en las soluciones de centros de datos. En los últimos años se ha producido un interés considerable en las soluciones de centros de datos prevalidadas y diseñadas. La introducción de la tecnología de virtualización en áreas críticas ha tenido un gran impacto en los principios de diseño y en la arquitectura de estas soluciones. Ha permitido que muchas aplicaciones se ejecuten en sistemas de configuración básica migren a nuevas soluciones virtualizadas integradas. FlexPod es una solución de centro de datos validada previamente y diseñada para responder a las necesidades que cambian rápidamente los departamentos DE TECNOLOGÍA. Cisco y NetApp se han asociado para proporcionar FlexPod, que utiliza componentes informáticos, de redes y almacenamiento de excelente calidad como base para diversas cargas de trabajo empresariales, incluidas bases de datos, planificación de recursos empresariales (ERP), gestión de relaciones con el cliente (CRM) y aplicaciones web.
+
+La consolidación de las aplicaciones DE TI, en particular las bases de datos, ha generado un interés considerable en los últimos años. La plataforma de bases de datos más adoptada e instalada en los últimos años es Microsoft SQL Server. Las bases de datos de SQL Server con frecuencia se han convertido en sujetos al aumento descontrolado de las bases de datos, lo cual lleva a retos de TI, como servidores infrautilizados, licencias incorrectas, problemas de seguridad, preocupaciones de gestión y enormes costes operativos. Por lo tanto, las bases de datos de SQL Server son buenas candidatas para la consolidación en una plataforma más sólida, flexible y resiliente. Este documento describe la arquitectura de referencia de FlexPod para desplegar y consolidar bases de datos SQL Server.
+
+link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf["White paper SAP no HANA con SQL: Diseño"^]

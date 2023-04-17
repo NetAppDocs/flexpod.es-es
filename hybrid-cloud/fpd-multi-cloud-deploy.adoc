@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/multi-cloud-deploy.html 
+keywords: flexpod, cisco, data, fabric, cloudcenter, hybrid, cloud, 
+summary: Este documento contiene directrices detalladas de configuración e implementación para configurar el centro de datos FlexPod para el cloud híbrido 
+---
+= FlexPod Datacenter para multicloud con Cisco CloudCenter y Data Fabric de NetApp
+:allow-uri-read: 
+
+
+Haseeb Niazi, Cisco David Arnette, NetApp
+
+Este documento contiene directrices detalladas de configuración e implementación para configurar el centro de datos FlexPod para el cloud híbrido. Los siguientes elementos de diseño distinguen esta versión de FlexPod de los modelos anteriores:
+
+* Integración de Cisco CloudCenter con FlexPod Datacenter con ACI como cloud privado
+* Integración de Cisco CloudCenter con los clouds públicos de Amazon Web Services (AWS) y Microsoft Azure Resource Manager (MS Azure RM)
+* Ofrecer conectividad segura entre el centro de datos de FlexPod y las nubes públicas para lograr tráfico seguro entre máquinas virtuales (VM)
+* Proporcionar conectividad segura entre el centro de datos de FlexPod y el Almacenamiento privado de NetApp (NPS) para el tráfico de replicación de datos
+* Capacidad de poner en marcha instancias de aplicaciones en clouds públicos o privados y de crear datos de aplicaciones actualizados disponibles para estas instancias mediante una orquestación impulsada por Cisco CloudCenter
+* Configuración, validación y resaltado de los aspectos operativos de un entorno de desarrollo y pruebas en este nuevo modo de cloud híbrido.
+
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html["FlexPod Datacenter para multicloud con Cisco CloudCenter y Data Fabric de NetApp"^]

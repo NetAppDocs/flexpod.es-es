@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-microsoft-sql-2017-hyper.html 
+keywords: flexpod, datacenter, microsoft, linux, hyper-v, aff-series, cisco 
+summary: Este documento trata una arquitectura de referencia de FlexPod utilizando los productos de hardware y software más recientes y ofrece recomendaciones de puesta en marcha para alojar bases de datos de Microsoft SQL Server en entornos virtualizados de VMware ESXi y Microsoft Windows Hyper-V con compatibilidad de Linux de la puesta en marcha de Microsoft para SQL Server. 
+---
+= FlexPod Datacenter con Microsoft SQL Server 2017 sobre Linux VM ejecutándose en VMware y Hyper-V.
+:allow-uri-read: 
+
+
+Gopu Narasimha Reddy, Cisco Sanjeev Naldurgkar, Cisco Atul Bhalodia y NetApp
+
+Este documento trata una arquitectura de referencia de FlexPod utilizando los productos de hardware y software más recientes y ofrece recomendaciones de puesta en marcha para alojar bases de datos de Microsoft SQL Server en entornos virtualizados de VMware ESXi y Microsoft Windows Hyper-V con compatibilidad de Linux de la puesta en marcha de Microsoft para SQL Server.
+
+La arquitectura de la solución recomendada se basa en Cisco Unified Computing System (Cisco UCS) mediante la versión de software unificado 4,0.1c para admitir las plataformas de hardware Cisco UCS, incluidos servidores blade Cisco UCS serie B, interconexiones de estructura Cisco UCS 6300, switches de la serie Cisco Nexus 9000 y cabinas de almacenamiento serie AFF de NetApp.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html["FlexPod Datacenter con Microsoft SQL Server 2017 sobre Linux VM ejecutándose en VMware y Hyper-V."^]
