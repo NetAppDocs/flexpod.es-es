@@ -17,18 +17,6 @@ En esta sección se enumeran las nuevas funciones y funcionalidades disponibles 
 
 
 
-== Abril de 2023
-
-* Agregadas políticas de protección (SnapMirror) y políticas de Snapshot en la página Políticas de la sección Inventario de la interfaz de usuario.
-* Se ha agregado la página Clientes NFS en la sección Inventario de la interfaz de usuario.
-* Se ha agregado la columna Protected en la página Storage VMs en la sección Inventory de la interfaz de usuario.
-* Se ha modificado la forma en que se informa y se muestra la información de Reducción de datos.
-* Se han agregado pestañas Nivel Local y Nivel de Nube en la página Niveles de la sección Inventario de la interfaz de usuario.
-* La columna Nodo ahora se muestra después de la columna Nombre en la página Puertos dentro de la sección Inventario de la interfaz de usuario.
-
-
-
-
 == Enero de 2023
 
 
@@ -138,5 +126,5 @@ NOTE: Las métricas de rendimiento anteriores solo están disponibles para cabin
 * Si utiliza AIUM 9.11 o anterior, las comprobaciones realizadas por la pestaña "Interoperability" de la página "Integrated Systems" no podrán distinguir con precisión los componentes de Cisco de IMM y UCSM. Para resolver este problema, actualice a AIQUM 9.12 para asegurarse de que todos los componentes están correctamente identificados.
 * Para garantizar que los datos de inventario de almacenamiento Intersight no se vean afectados durante el proceso de recopilación de datos, deben eliminarse de Active IQ Unified Manager todos los clústeres de ONTAP no admitidos (es decir, versiones inferiores a ONTAP 9.7P1).
 * Todos los destinos reclamados requieren una versión mínima de AIUM de 9.11 para que las consultas de interoperabilidad del sistema integrado de FlexPod se completen correctamente.
-* La página Comprobaciones de Inventario de Almacenamiento no se rellenará si el cluster ONTAP se agrega a AIQUM mediante un FQDN. Los usuarios deben agregar clústeres de ONTAP a AIQUM mediante una dirección IP.
+* La página Storage Inventory checks no se completa si el clúster de ONTAP se añade a AIQ mediante un FQDN. Los usuarios deben añadir clústeres de ONTAP a AIQ mediante una dirección IP.
 
