@@ -13,6 +13,7 @@ summary: Puede utilizarse una variedad de productos Cisco Nexus como componente 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Puede utilizarse una variedad de productos Cisco Nexus como componente de conmutación de una determinada puesta en marcha de FlexPod. La mayoría de estas opciones aprovechan el SO Cisco Nexus o el software NX-OS tradicional. La familia de switches Cisco Nexus ofrece distintas funcionalidades dentro de sus líneas de productos. Estas funcionalidades se detallan más adelante en este documento.
 
 La oferta de Cisco en el espacio de red definido por software se llama Application Centric Infrastructure (ACI). La línea de productos Cisco Nexus que admite el modo ACI, también llamado modo de estructura, es la serie Cisco Nexus 9300. Estos switches también se pueden poner en marcha en NX-OS o en modo independiente.

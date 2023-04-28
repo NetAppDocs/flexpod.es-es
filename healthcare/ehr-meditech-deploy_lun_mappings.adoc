@@ -13,4 +13,5 @@ summary: Las asignaciones de LUN para los hosts de MEDITECH se establecen cuando
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Las asignaciones de LUN para los hosts de MEDITECH se establecen cuando se crean las LUN.

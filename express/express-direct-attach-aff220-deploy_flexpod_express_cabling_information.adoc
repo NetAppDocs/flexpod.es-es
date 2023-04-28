@@ -13,6 +13,7 @@ summary: El cableado de validación de referencia se documenta en las siguientes
 :imagesdir: ./../media/
 
 
+[role="lead"]
 El cableado de validación de referencia se documenta en las siguientes tablas.
 
 La tabla siguiente enumera información de cableado para el switch Cisco Nexus 31108PCV A.

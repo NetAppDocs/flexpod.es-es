@@ -15,6 +15,7 @@ summary: El centro de datos FlexPod con SM-BC utiliza un diseño de centro de da
 
 link:sm-bcs-validated-scenarios.html["Anterior: Validación de la solución - escenarios validados."]
 
+[role="lead"]
 El centro de datos FlexPod con SM-BC utiliza un diseño de centro de datos activo-activo para proporcionar continuidad del negocio y recuperación ante desastres para cargas de trabajo vitales para el negocio. Por lo general, la solución interconecta dos centros de datos implementados en ubicaciones separadas y geográficamente dispersas en una zona metropolitana. La solución SM-BC de NetApp utiliza replicación síncrona para proteger los servicios de datos críticos para el negocio frente a un fallo de sitio. La solución requiere que los dos sitios de puesta en marcha de FlexPod tengan una latencia de red de ida y vuelta inferior a 10 milisegundos.
 
 El Mediador ONTAP de NetApp puesto en marcha en un tercer sitio supervisa la solución SM-BC y permite la conmutación por error automatizada cuando se detecta un desastre en el sitio. La instancia de VMware vCenter con VMware ha y la configuración ampliada de clústeres de almacenamiento Metro de VMware vSphere funcionan sin problemas con el SM-BC de NetApp para permitir que la solución cumpla los objetivos de objetivo de punto de recuperación cero deseados y de objetivo de tiempo de recuperación casi cero.

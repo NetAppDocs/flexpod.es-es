@@ -17,6 +17,7 @@ Chris Schmitt y Kamini Singh, NetApp
 
 En colaboración con:image:cisco logo.png["Error: Falta la imagen gráfica"]
 
+[role="lead"]
 El estándar de almacenamiento de datos NVMe, una tecnología central emergente, está transformando el acceso y el transporte al almacenamiento de datos empresariales ofreciendo un ancho de banda muy elevado y un acceso al almacenamiento de latencia muy baja para las tecnologías de memoria actuales y futuras. NVMe sustituye el conjunto de comandos SCSI por el conjunto de comandos NVMe.
 
 NVMe se diseñó para funcionar con unidades flash no volátiles, CPU de varios núcleos y gigabytes de memoria. También aprovecha los importantes avances en informática desde la década de 1970, permitiendo conjuntos de comandos optimizados que analizan y manipulan datos de manera más eficiente. Una arquitectura NVMe integral también permite que los administradores de centros de datos se replanteen el grado en que pueden extender sus entornos virtualizados y en contenedores, y la cantidad de escalabilidad que admiten sus bases de datos orientadas a transacciones.

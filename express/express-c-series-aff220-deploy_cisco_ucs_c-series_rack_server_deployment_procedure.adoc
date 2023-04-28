@@ -13,6 +13,7 @@ summary: En la siguiente sección, se proporciona un procedimiento detallado par
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En la siguiente sección, se proporciona un procedimiento detallado para configurar un servidor de montaje en rack independiente Cisco UCS C-Series para su uso en la configuración de FlexPod Express.
 
 

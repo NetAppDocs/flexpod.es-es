@@ -13,6 +13,7 @@ summary: Los autores recomiendan no pagar el rescate en caso de un ataque porque
 :imagesdir: ./../media/
 
 
+[role="lead"]
 El ransomware es un producto de la delincuencia organizada, y los atacantes no operan con la ética. Pueden abstenerse de proporcionar la clave para el descifrado incluso después de recibir el rescate. La víctima no solo pierde sus datos, sino también una cantidad importante de dinero, y se enfrenta a las consecuencias asociadas con la pérdida de datos de producción.
 
 Según a https://www.forbes.com/sites/leemathews/2018/03/09/why-you-should-never-pay-a-ransomware-ransom/["Artículo de Forbes"^], sólo el 19% de las víctimas de ransomware obtienen sus datos después de pagar el rescate. Por lo tanto, los autores recomiendan no pagar un rescate en caso de un ataque porque hacerlo refuerza la fe del atacante en su modelo de negocios.

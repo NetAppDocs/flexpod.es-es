@@ -13,6 +13,7 @@ summary: La arquitectura de FlexPod está diseñada para proporcionar alta dispo
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La arquitectura de FlexPod está diseñada para proporcionar alta disponibilidad si falla un componente o un enlace en toda su pila de almacenamiento, red e informática. Las múltiples rutas de red para el acceso de los clientes y el acceso al almacenamiento proporcionan un equilibrio de carga y una utilización óptima de los recursos.
 
 La siguiente figura ilustra la topología de Ethernet de 16 GB FC/40 GB (40 GbE) para la implementación de soluciones del sistema de imágenes médicas.

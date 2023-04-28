@@ -15,6 +15,7 @@ summary: Las amenazas a la salud son multidimensionales en la naturaleza y en el
 
 link:flexpod-fips-introduction.html["Anterior: Introducción."]
 
+[role="lead"]
 En cada uno de los problemas se presenta una nueva oportunidad, un ejemplo de esta oportunidad dado por la pandemia del COVID. Según a https://www.hhs.gov/sites/default/files/2020-hph-cybersecurty-retrospective-tlpwhite.pdf["informes"^] Por el Programa de ciberseguridad del Departamento de Salud y Servicios Humanos (HHS), la respuesta del COVID ha dado lugar a un mayor número de ataques de ransomware. Había 6,000 nuevos dominios de Internet registrados apenas en la tercera semana de marzo de 2020. Más del 50% de los dominios hospedados de malware. Los ataques de ransomware fueron responsables de casi el 50 % de todas las infracciones de datos en la atención sanitaria en 2020, lo que afectó a más de 630 organizaciones sanitarias y a aproximadamente 29 millones de registros sanitarios. Diecinueve leakers/sitios duplicaron la extorsión. Con un 24.5%, el sector sanitario registró el mayor número de infracciones de datos en 2020.
 
 Agentes malintencionados intentaron violar la seguridad y privacidad de la información médica protegida (PHI) vendiendo la información o amenazando con destruirla o exponerla. Con frecuencia se realizan intentos de difusión en masa y objetivo para obtener acceso no autorizado a ePHI. Aproximadamente el 75% de los registros de pacientes expuestos en el segundo semestre de 2020 se debieron a socios comerciales comprometidos.

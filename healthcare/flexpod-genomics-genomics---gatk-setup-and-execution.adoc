@@ -15,6 +15,7 @@ summary: En esta sección se describe la configuración de FlexPod y GATK y la e
 
 link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.html["Anterior: Componentes de hardware y software de la infraestructura de la solución."]
 
+[role="lead"]
 Según el Instituto Nacional de Investigación del Genoma humano ( https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics["NHGRI"^]), “la genómica es el estudio de todos los genes de una persona (el genoma), incluyendo las interacciones de estos genes entre sí y con el medio ambiente de una persona. ”
 
 Según la https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics["NHGRI"^], “El ácido Deoxirribonucleico (ADN) es el compuesto químico que contiene las instrucciones necesarias para desarrollar y dirigir las actividades de casi todos los organismos vivos. Las moléculas de ADN están hechas de dos filamentos de torsión, emparejados, a menudo llamados como una hélice doble". “El conjunto completo de ADN de un organismo se llama su genoma”.

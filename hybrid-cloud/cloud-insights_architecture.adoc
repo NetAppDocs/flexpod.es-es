@@ -13,6 +13,7 @@ summary: En esta sección, revisamos la arquitectura de una infraestructura conv
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En esta sección, revisamos la arquitectura de una infraestructura convergente de centro de datos FlexPod, incluido un sistema AFF A800 de NetApp supervisado por Cloud Insights.
 
 

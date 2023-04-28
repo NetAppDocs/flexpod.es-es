@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 De forma predeterminada, los volúmenes usan la política de organización en niveles None volume. Tras la creación del volumen, la política de organización en niveles del volumen se puede cambiar mediante el Administrador del sistema de OnCommand o la interfaz de línea de comandos de ONTAP.
 
 Cuando se utiliza con FlexPod, FabricPool proporciona tres políticas de organización en niveles de volúmenes, Auto, Snapshot-only y None.

@@ -15,6 +15,7 @@ summary: FIPS 140-2 especifica los requisitos de seguridad de un módulo criptog
 
 link:flexpod-fips-cybersecurity-threats-in-healthcare.html["Anterior: Amenazas de ciberseguridad en sanidad."]
 
+[role="lead"]
 https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf["FIPS 140-2"^] especifica los requisitos de seguridad de un módulo criptográfico utilizado en un sistema de seguridad que protege la información confidencial en los sistemas informáticos y de telecomunicaciones. Un módulo criptográfico debe ser un conjunto de hardware, software, firmware o una combinación. FIPS se aplica a los algoritmos criptográficos, la generación de claves y los gestores de claves contenidos en un ámbito criptográfico. Es importante entender que FIPS 140-2 se aplica específicamente al módulo criptográfico, no al producto, la arquitectura, los datos o el ecosistema. El módulo criptográfico, que se define en los términos clave más adelante en este documento, es el componente específico (ya sea hardware, software o firmware) que implementa funciones de seguridad aprobadas. Además, FIPS 140-2 especifica cuatro niveles. Los algoritmos criptográficos aprobados son comunes a todos los niveles. Algunos de los elementos clave y requisitos de cada nivel de seguridad son:
 
 * *Nivel de seguridad 1*

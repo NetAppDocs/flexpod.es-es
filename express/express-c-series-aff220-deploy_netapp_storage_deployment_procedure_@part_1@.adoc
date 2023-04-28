@@ -13,6 +13,7 @@ summary: Puede seguir los pasos que se indican a continuación para completar el
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En esta sección se describe el procedimiento de implementación del almacenamiento AFF de NetApp.
 
 

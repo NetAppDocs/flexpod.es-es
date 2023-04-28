@@ -13,6 +13,7 @@ summary: Puede consultar el sitio web de NetApp y la guía de diseño de FlexPod
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Para obtener más información sobre la información descrita en este documento, consulte los siguientes documentos y/o sitios web:
 
 * Documentación de productos de NetApp

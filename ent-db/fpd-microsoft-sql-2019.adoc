@@ -10,6 +10,7 @@ summary: Este documento describe una arquitectura de referencia de FlexPod utili
 
 Gopu Narasimha Reddy, Cisco Sanjeev Naldurgkar, Cisco Atul Bhalodia y NetApp
 
+[role="lead"]
 Este documento describe una arquitectura de referencia de FlexPod utilizando los productos de hardware y software más recientes, y ofrece recomendaciones de puesta en marcha para alojar bases de datos de Microsoft SQL Server 2019 en entornos virtualizados VMware ESXi. Esta solución también usa Cisco Workload Optimization Manager (CWOM), que proporciona recomendaciones automatizadas para un uso óptimo y eficiente de los recursos tanto para las cargas de trabajo de SQL como para la infraestructura.
 
 La solución se basa en Cisco Unified Computing System (Cisco UCS) utilizando la versión de software unificado 4,1.1c para admitir las plataformas de hardware Cisco UCS, incluidos servidores blade Cisco UCS serie B, interconexiones de estructura Cisco UCS 6400, switches de la serie Cisco Nexus 9000 y cabinas de almacenamiento serie AFF de NetApp.

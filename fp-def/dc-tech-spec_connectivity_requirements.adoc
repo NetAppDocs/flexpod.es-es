@@ -13,6 +13,7 @@ summary: A continuación se enumeran los requisitos de conectividad para la conf
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Una configuración FlexPod tiene los siguientes requisitos de conectividad:
 
 * Se requiere una red de gestión fuera de banda Ethernet de 100 Mbps y 1 GB independiente para todos los componentes.

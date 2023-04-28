@@ -13,6 +13,7 @@ summary: Cisco ha contribuido de forma sustancial al diseño y la arquitectura d
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cisco ha contribuido de forma sustancial al diseño y la arquitectura de FlexPod, que abarcan tanto las capas de computación como de red de la solución. En esta sección se describen las opciones de Cisco UCS y Cisco Nexus disponibles para FlexPod. FlexPod es compatible con los servidores Cisco UCS B-Series y C-Series.
 
 

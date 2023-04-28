@@ -13,6 +13,7 @@ summary: En esta sección se enumeran los destinatarios y los casos a los que se
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Esta solución se aplica a los siguientes casos de uso:
 
 * Organizaciones que desean supervisar diversos recursos y utilización de su sistema de almacenamiento de ONTAP puesto en marcha como parte de una solución de FlexPod.

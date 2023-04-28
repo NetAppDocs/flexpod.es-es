@@ -13,6 +13,7 @@ summary: El ajuste de días de organización en niveles, mínimo de refrigeraci�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La `tiering-minimum-cooling-days` La configuración determina cuántos días deben pasar antes de que los datos inactivos de un volumen con la política solo de copias Snapshot se consideren inactivos y sean aptos para la organización en niveles.
 
 

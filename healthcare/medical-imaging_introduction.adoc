@@ -15,6 +15,7 @@ summary: Con FlexPod, usted obtiene una plataforma única compatible con FC, FCo
 
 Jaya Kishore Esanakula y Atul Bhalodia, NetApp
 
+[role="lead"]
 Las imágenes médicas representan el 70% de todos los datos generados por las organizaciones sanitarias. A medida que las modalidades digitales sigan avanzando y surjan nuevas modalidades, la cantidad de datos seguirá aumentando. Por ejemplo, la transición de la patología analógica a la digital aumentará drásticamente el tamaño de las imágenes a un ritmo que desafiará cualquier estrategia de gestión de datos que esté actualmente en vigor.
 
 El COVID-19 ha reformulado claramente la transformación digital; según un informe reciente https://www.cfo.com/the-cloud/2020/06/three-ways-covid-19-is-accelerating-digital-transformation-in-professional-services/["informes"^], El COVID-19 ha acelerado el comercio digital en 5 años. La innovación tecnológica impulsada por los solucionadores de problemas está cambiando fundamentalmente la forma en que hacemos nuestra vida cotidiana. Este cambio impulsado por la tecnología modificará muchos aspectos críticos de nuestra vida, incluida la atención sanitaria.

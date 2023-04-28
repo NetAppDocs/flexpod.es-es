@@ -15,6 +15,7 @@ summary: Esta sección muestra la salida después de ejecutar el GATK utilizando
 
 
 
+[role="lead"]
 La ejecución de GATK con el motor Cromwell produjo la siguiente salida de muestra.
 
 ....

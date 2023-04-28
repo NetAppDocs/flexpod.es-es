@@ -13,6 +13,7 @@ summary: En esta sección se describe una lista de ejemplos de materiales para a
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En esta sección se describe una lista de ejemplos de materiales para arquitecturas de almacenamiento de diferentes tamaños.
 
 

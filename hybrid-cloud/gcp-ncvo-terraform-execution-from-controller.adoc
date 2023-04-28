@@ -15,6 +15,7 @@ summary: Podemos ejecutar el plan de Terraform con una controladora. Puede omiti
 
 link:gcp-ncvo-dr-workflow.html["Anterior: Flujo de trabajo de recuperación ante desastres."]
 
+[role="lead"]
 Podemos ejecutar el plan de Terraform con una controladora. Puede omitir esta sección si ya ha ejecutado su plan de Terraform mediante un flujo de trabajo ICO.
 
 

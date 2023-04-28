@@ -10,6 +10,7 @@ summary: Este documento describe una solución validada para poner en marcha tec
 
 John George, Cisco Scott Kovacs, NetApp
 
+[role="lead"]
 Este documento describe una solución validada para poner en marcha tecnologías de Cisco y NetApp como una infraestructura de cloud compartida. Este diseño validado proporciona un marco para poner en marcha VMware vSphere, la plataforma de virtualización más popular en centros de datos de clase empresarial en FlexPod.
 
 FlexPod es una infraestructura integrada líder que admite una amplia gama de cargas de trabajo empresariales y casos prácticos. Esta solución permite a los clientes poner en marcha de forma rápida y fiable un cloud privado basado en vSphere de VMware en una infraestructura integrada.

@@ -13,6 +13,7 @@ summary: En las tablas siguientes se enumeran los componentes de hardware y soft
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En las tablas siguientes se enumeran los componentes de hardware y software, respectivamente, de la infraestructura de FlexPod para el sistema de imágenes médicas.
 
 |===

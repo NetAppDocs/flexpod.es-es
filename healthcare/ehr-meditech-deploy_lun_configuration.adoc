@@ -13,6 +13,7 @@ summary: El número de hosts de MEDITECH en su entorno determina el número de L
 :imagesdir: ./../media/
 
 
+[role="lead"]
 El número de hosts de MEDITECH en su entorno determina el número de LUN que se crean en los sistemas FAS o AFF de NetApp. La propuesta de configuración de hardware especifica el tamaño de cada LUN.
 
 

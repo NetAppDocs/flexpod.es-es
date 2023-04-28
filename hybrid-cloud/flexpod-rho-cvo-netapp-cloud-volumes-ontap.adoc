@@ -15,6 +15,7 @@ summary: En esta sección se describe cómo poner en marcha Cloud Volumes ONTAP 
 
 link:flexpod-rho-cvo-red-hat-openshift-on-aws.html["Anterior: Red Hat OpenShift en AWS."]
 
+[role="lead"]
 La instancia de Cloud Volumes ONTAP de NetApp se pone en marcha en AWS y sirve como almacenamiento de back-end a Astra Trident. Antes de agregar un entorno de trabajo de Cloud Volumes ONTAP, se debe desplegar un conector. Cloud Manager le pregunta si intenta crear el primer entorno de trabajo de Cloud Volumes ONTAP sin un conector en su lugar. Para implementar un conector en AWS, consulte https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["Cree un conector"^].
 
 Para implementar Cloud Volumes ONTAP en AWS, consulte https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["Inicio rápido para AWS"^].

@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En esta sección se detalla la configuración del switch Cisco Nexus 331108PC-V utilizada en un entorno FlexPod Express.
 
 

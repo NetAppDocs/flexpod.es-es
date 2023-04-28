@@ -13,6 +13,7 @@ summary: En la siguiente información, se describen los requisitos mínimos de s
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Una configuración de FlexPod tiene los siguientes requisitos mínimos de software:
 
 * ONTAP de NetApp:

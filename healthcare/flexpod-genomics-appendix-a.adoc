@@ -15,6 +15,7 @@ summary: En esta sección se proporciona la salida del archivo JAR de GATK.
 
 link:flexpod-genomics-genomics---gatk-setup-and-execution.html["Anterior: Genómica - instalación y ejecución de GATK."]
 
+[role="lead"]
 La ejecución de GATK usando el archivo JAR produjo la siguiente salida de muestra.
 
 ....

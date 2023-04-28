@@ -13,6 +13,7 @@ summary: NetApp admite varios componentes opcionales para mejorar aún más las 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 NetApp admite varios componentes opcionales para mejorar aún más las arquitecturas de centros de datos de FlexPod. Los componentes opcionales se describen en las subsecciones siguientes.
 
 

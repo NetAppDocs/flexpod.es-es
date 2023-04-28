@@ -8,6 +8,7 @@ summary: Un sistema FlexPod Express requiere una combinación de componentes de 
 :allow-uri-read: 
 
 
+[role="lead"]
 Un sistema FlexPod Express requiere una combinación de componentes de hardware y software. FlexPod Express también describe los componentes de hardware necesarios para añadir nodos de hipervisor al sistema en unidades de dos.
 
 

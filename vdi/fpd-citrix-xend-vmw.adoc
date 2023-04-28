@@ -10,6 +10,7 @@ summary: 'Este documento proporciona una arquitectura de referencia para un dise
 
 Vadim Lebedev, Cisco Chris Rodriguez, NetApp
 
+[role="lead"]
 Este documento proporciona una arquitectura de referencia para un diseño de aplicaciones y puestos de trabajo virtuales utilizando Citrix XenApp/XenDesktop 7,15 integrado en Cisco UCS con un almacenamiento All Flash FAS (AFF) A300 de NetApp y la plataforma de hipervisor VMware vSphere ESXi 6,5.
 
 El panorama de la virtualización de puestos de trabajo y aplicaciones cambia constantemente. Los nuevos servidores blade M5 de alto rendimiento Cisco UCS y la estructura unificada Cisco UCS, combinados como parte de la infraestructura contrastada de FlexPod y el almacenamiento AFF de última generación, dan como resultado una plataforma más compacta, más potente, más fiable y más eficiente.

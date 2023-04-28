@@ -15,6 +15,7 @@ summary: Esta sección proporciona un resumen a grandes rasgos de las pruebas de
 
 link:nvme-vsphere-introduction.html["Anterior: Introducción."]
 
+[role="lead"]
 Esta sección proporciona un resumen a grandes rasgos de las pruebas de validación FC-NVMe en FlexPod. Incluye tanto el entorno de pruebas/configuración como el plan de pruebas adoptado para realizar las pruebas de la carga de trabajo con respecto a FC-NVMe para FlexPod con VMware vSphere 7.
 
 

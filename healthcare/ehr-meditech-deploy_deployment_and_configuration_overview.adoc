@@ -13,6 +13,7 @@ summary: En esta sección se detallan las directrices de almacenamiento para la 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Las directrices sobre almacenamiento de NetApp para la puesta en marcha de FlexPod que se ofrecen en este documento tratan:
 
 * Entornos que usan ONTAP

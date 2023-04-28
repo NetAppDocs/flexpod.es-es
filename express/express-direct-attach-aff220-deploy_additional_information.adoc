@@ -13,6 +13,7 @@ summary: Para obtener más información sobre la información descrita en este d
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Si quiere más información sobre el contenido de este documento, consulte los siguientes documentos o sitios web:
 
 * Arquitectura validada de NetApp: 1130 FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con IP directamente vinculada=basado en Diseño NVA de almacenamiento

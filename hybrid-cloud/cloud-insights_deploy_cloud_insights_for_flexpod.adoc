@@ -13,6 +13,7 @@ summary: Para implementar Cloud Insights para FlexPod, se deben completar las ta
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Para implementar la solución, debe completar las siguientes tareas:
 
 . Regístrese en el servicio Cloud Insights

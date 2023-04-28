@@ -15,6 +15,7 @@ summary: Muchas organizaciones sanitarias de todo el mundo se han estandarizado 
 
 link:flexpod-genomics-appendix-d-gpu-setup.html["Anterior: Configuración de GPU."]
 
+[role="lead"]
 Muchas organizaciones sanitarias de todo el mundo se han estandarizado en FlexPod como plataforma común. Con FlexPod, puede implementar capacidades en el sector sanitario con confianza. FlexPod con ONTAP de NetApp viene de serie con la capacidad de implementar un conjunto de protocolos líderes en el sector desde el primer momento. Con independencia del origen de la solicitud de ejecución de la genómica de un paciente dado, la interoperabilidad, la accesibilidad, la disponibilidad y la escalabilidad vienen de serie con una plataforma FlexPod. Una solución estandarizada con la plataforma FlexPod es que la cultura de la innovación llega a ser contagiosa.
 
 

@@ -15,6 +15,7 @@ summary: La plataforma de infraestructura convergente FlexPod permite a una orga
 
 JayaKishore Esanakula, NetApp
 
+[role="lead"]
 Hay pocos campos de la medicina que son más importantes que la genómica para la salud y las ciencias biológicas, y la genómica se está convirtiendo rápidamente en una herramienta clínica clave para los médicos y las enfermeras. La genómica, cuando se combina con imágenes médicas y patología digital, nos ayuda a entender cómo los genes de un paciente pueden verse afectados por los protocolos de tratamiento. El éxito de la genómica en el sector sanitario depende cada vez más de la interoperabilidad de datos a escala. El objetivo final es comprender los enormes volúmenes de datos genéticos e identificar correlaciones y variantes clínicamente relevantes que mejoran el diagnóstico y hacen realidad la medicina de precisión. La genómica nos ayuda a comprender el origen de los brotes de enfermedades, cómo evolucionan las enfermedades y qué tratamientos y estrategias podrían ser eficaces. Claramente, la genómica tiene muchos beneficios que abarcan la prevención, el diagnóstico y el tratamiento. Las organizaciones de atención médica se enfrentan a varios desafíos, entre ellos los siguientes:
 
 * Calidad de la atención mejorada

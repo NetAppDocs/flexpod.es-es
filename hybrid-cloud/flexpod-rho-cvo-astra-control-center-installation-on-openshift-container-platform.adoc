@@ -15,6 +15,7 @@ summary: Puede instalar Astra Control Center en un clúster OpenShift que se eje
 
 link:flexpod-rho-cvo-netapp-cloud-volumes-ontap.html["Anterior: Cloud Volumes ONTAP de NetApp."]
 
+[role="lead"]
 Puede instalar Astra Control Center en un clúster OpenShift que se ejecuta en FlexPod o en AWS con un back-end de almacenamiento de Cloud Volumes ONTAP. En esta solución, Astra Control Center se pone en marcha en el clúster de configuración básica OpenShift.
 
 Astra Control Center se puede instalar utilizando el proceso estándar descrito https://docs.netapp.com/us-en/astra-control-center/get-started/install_acc.html["aquí"^] O desde Red Hat OpenShift OperatorHub. Astra Control Operator es un operador certificado de Red Hat. En esta solución, Astra Control Center se instala mediante Red Hat OperatorHub.

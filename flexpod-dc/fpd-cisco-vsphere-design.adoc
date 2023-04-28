@@ -10,6 +10,7 @@ summary: Este documento describe la solución FlexPod de Cisco y NetApp, la cual
 
 John George, Cisco Sree Lakshmi Lanka, NetApp
 
+[role="lead"]
 Este documento describe la solución FlexPod de Cisco y NetApp, la cual es un enfoque validado para poner en marcha tecnologías de Cisco y NetApp como infraestructura de cloud compartida. Este diseño validado proporciona un marco para poner en marcha VMware vSphere, la plataforma de virtualización más popular en centros de datos de clase empresarial en FlexPod.
 
 FlexPod es una infraestructura integrada líder que admite una amplia gama de cargas de trabajo empresariales y casos prácticos. Esta solución permite a los clientes poner en marcha de forma rápida y fiable cloud privado basado en VMware vSphere en una infraestructura integrada.

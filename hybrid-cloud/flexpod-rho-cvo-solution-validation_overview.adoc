@@ -15,6 +15,7 @@ summary: En esta sección, revisamos la solución con varios casos de uso valida
 
 link:flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html["Anterior: Instalación de Astra Control Center en OpenShift Container Platform."]
 
+[role="lead"]
 En esta sección, vamos a revisar la solución con algunos casos de uso:
 
 * Restaurar una aplicación con estado desde una copia de seguridad remota a otro clúster de OpenShift que se ejecuta en la nube.

@@ -13,6 +13,7 @@ summary: Los sistemas operativos de almacenamiento enumerados en esta sección s
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod Express es compatible con sistemas de almacenamiento que ejecutan sistemas operativos ONTAP o SANtricity de NetApp.
 
 

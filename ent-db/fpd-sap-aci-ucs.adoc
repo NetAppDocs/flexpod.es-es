@@ -10,6 +10,7 @@ summary: Este documento describe los procedimientos de arquitectura y puesta en 
 
 Pramod Ramamurthy, Cisco Marco Schoen, NetApp
 
+[role="lead"]
 En este documento se describen los procedimientos de arquitectura y puesta en marcha para la opción de integración personalizada del centro de datos de SAP HANA en la infraestructura de FlexPod, la cual consta de:
 
 * Cisco UCS Computing System (Cisco UCS) compatible con procesadores escalables Intel Xeon de segunda generación.

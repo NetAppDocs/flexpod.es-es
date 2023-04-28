@@ -13,6 +13,7 @@ summary: Para la configuración del lado del host ESXi, configure los hosts VMwa
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Para la configuración del lado del host ESXi, configure los hosts VMware como si ejecutaría cualquier carga de trabajo de base de datos empresarial:
 
 * VSC para VMware vSphere comprueba y configura la configuración de accesos múltiples del host ESXi y de tiempo de espera de HBA que funcionan mejor con los sistemas de almacenamiento de NetApp. Los valores que conjuntos de VSC se basan en rigurosas pruebas internas realizadas por NetApp.

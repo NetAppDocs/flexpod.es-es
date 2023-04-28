@@ -15,6 +15,7 @@ summary: Esta página describe la topología lógica y la instalación de FlexPo
 
 link:flexpod-rho-cvo-solution-components.html["Anterior: Componentes de la solución."]
 
+[role="lead"]
 Para comprender el diseño de configuración básica, los detalles de la implementación y la instalación y la configuración de FlexPod para OpenShift Container Platform 4 de NetApp Astra Trident, consulte https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["FlexPod con OpenShift Guía de diseño y puesta en marcha validados de Cisco (CVD)"^]. Este CVD abarca la puesta en marcha de FlexPod y OpenShift Container Platform con Ansible. El CVD también proporciona información detallada sobre la preparación de nodos de trabajo, la instalación de Astra Trident, la configuración de back-end de almacenamiento y clase de almacenamiento, que son los pocos requisitos previos para poner en marcha y configurar Astra Control Center.
 
 En la siguiente figura se muestra OpenShift Container Platform 4 Bare Metal en FlexPod.

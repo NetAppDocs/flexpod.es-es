@@ -15,6 +15,7 @@ summary: En el momento de su publicación, la herramienta GATK no tiene soporte 
 
 link:flexpod-genomics-appendix-c.html["Anterior: Salida para la ejecución de GATK con el motor Cromwell."]
 
+[role="lead"]
 En el momento de su publicación, la herramienta GATK no tiene soporte nativo para la ejecución basada en GPU en las instalaciones. Se proporcionan las siguientes instrucciones y configuración para que los lectores puedan comprender lo sencillo que es utilizar FlexPod con una GPU NVIDIA Tesla P6 montada en la parte posterior utilizando una tarjeta intermedia PCIe para GATK.
 
 Utilizamos el siguiente diseño validado por Cisco (CVD) como arquitectura de referencia y guía de prácticas recomendadas para configurar el entorno FlexPod de modo que podamos ejecutar aplicaciones que utilizan GPU.

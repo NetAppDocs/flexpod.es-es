@@ -13,6 +13,7 @@ summary: 'Cuando se utiliza FC como protocolo de red de datos, se deben crear do
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cuando se utiliza FC como protocolo de red de datos, se deben crear dos iGroups en cada controladora de almacenamiento. El primer igroup contiene los WWPN de las tarjetas de interfaz de host FC en los servidores ESXi de VMware que alojan las máquinas virtuales del host de MEDITECH (igroup para MEDITECH).
 
 Debe establecer el tipo de sistema operativo MEDITECH igroup según la configuración del entorno. Por ejemplo:

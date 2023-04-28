@@ -8,9 +8,10 @@ summary:
 :allow-uri-read: 
 
 
+[role="lead"]
 Si quiere obtener más información sobre la información descrita en este documento, consulte los siguientes documentos y sitios web:
 
-* NVA- 1131-PUESTA en MARCHA: FlexPod Express con VMware vSphere 6.7UI y NetApp AFF A220 con puesta en marcha directa de almacenamiento basado en IP NVA
+* NVA-1131-DEPLOY: FlexPod Express con VMware vSphere 6,7UI y NetApp AFF A220 con puesta en marcha de NVA de almacenamiento basado en IP directamente conectado
 +
 https://www.netapp.com/us/media/nva-1131-deploy.pdf["https://www.netapp.com/us/media/nva-1131-deploy.pdf"^]
 

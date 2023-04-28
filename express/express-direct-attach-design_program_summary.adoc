@@ -8,6 +8,7 @@ summary: Las arquitecturas de referencia de FlexPod se ofrecen como diseños val
 :allow-uri-read: 
 
 
+[role="lead"]
 Esta solución FlexPod Express forma parte del programa de infraestructura convergente de FlexPod.
 
 

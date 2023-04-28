@@ -13,6 +13,7 @@ summary: En la siguiente sección se detalla la configuración del switch Cisco 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En la siguiente sección se detalla la configuración del switch Cisco Nexus 3172P utilizada en un entorno de FlexPod Express.
 
 

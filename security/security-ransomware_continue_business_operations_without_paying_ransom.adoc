@@ -13,6 +13,7 @@ summary: Las funcionalidades de NetApp descritas en este documento le ayudan a r
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Las funcionalidades de NetApp descritas en este documento le ayudan a restaurar los datos en cuestión de minutos después de un ataque y a evitar ataques en primer lugar, de tal modo que pueda continuar con sus operaciones empresariales sin impedimentos.
 
 Es posible establecer una programación de copias Snapshot para cumplir el objetivo de punto de recuperación (RPO) deseado. Las operaciones de restauración basadas en copias de Snapshot son muy rápidas; por lo tanto, se puede lograr un objetivo de tiempo de recuperación (RTO) muy bajo.

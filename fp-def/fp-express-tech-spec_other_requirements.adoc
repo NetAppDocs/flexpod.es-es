@@ -13,6 +13,7 @@ summary: A continuación, se enumeran los requisitos adicionales para FlexPod Ex
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Entre los requisitos adicionales de FlexPod Express se incluyen los siguientes:
 
 * Se requieren contratos de soporte válidos para todo el equipo, incluidos:

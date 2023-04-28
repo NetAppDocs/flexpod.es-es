@@ -13,6 +13,7 @@ summary: La aplicación MEDITECH cubre varios módulos y componentes.
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La aplicación MEDITECH cubre varios módulos y componentes. En la siguiente tabla se enumeran las funciones que están cubiertas por estos módulos. Para obtener más información sobre la configuración y la implementación de estos módulos, consulte la documentación de MEDITECH.
 
 |===

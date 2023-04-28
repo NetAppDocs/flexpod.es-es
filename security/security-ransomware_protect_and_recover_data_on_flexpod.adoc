@@ -13,6 +13,7 @@ summary: En esta sección se describe cómo se pueden recuperar los datos de un 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En esta sección se describe cómo se pueden recuperar los datos de un usuario final en caso de un ataque y cómo se pueden prevenir los ataques mediante un sistema FlexPod.
 
 

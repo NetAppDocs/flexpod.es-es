@@ -10,6 +10,7 @@ summary: Este documento contiene directrices detalladas de configuración e impl
 
 Haseeb Niazi, Cisco David Arnette, NetApp
 
+[role="lead"]
 Este documento contiene directrices detalladas de configuración e implementación para configurar el centro de datos FlexPod para el cloud híbrido. Los siguientes elementos de diseño distinguen esta versión de FlexPod de los modelos anteriores:
 
 * Integración de Cisco CloudCenter con FlexPod Datacenter con ACI como cloud privado

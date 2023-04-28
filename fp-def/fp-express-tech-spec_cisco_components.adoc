@@ -13,6 +13,7 @@ summary: Cisco contribuye de manera considerable al diseño y la arquitectura de
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cisco contribuye de manera considerable al diseño y la arquitectura de FlexPod Express; contribuye a las capas de red e informática de la solución. En esta sección se describen los componentes de Cisco UCS y Cisco Nexus disponibles para FlexPod Express.
 
 

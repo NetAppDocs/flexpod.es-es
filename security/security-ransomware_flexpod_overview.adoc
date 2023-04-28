@@ -13,6 +13,7 @@ summary: 'FlexPod es una arquitectura prediseñada, integrada y validada que com
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod es una arquitectura prediseñada, integrada y validada que combina servidores Cisco Unified Computing System (Cisco UCS), la familia de switches Cisco Nexus, switches estructurales Cisco MDS y cabinas de almacenamiento de NetApp en una sola arquitectura flexible. Las soluciones FlexPod están diseñadas para ofrecer alta disponibilidad sin puntos únicos de error, a la vez que mantienen la rentabilidad y la flexibilidad del diseño necesarias para acomodar una amplia variedad de cargas de trabajo. Un diseño de FlexPod puede admitir diferentes hipervisores y servidores con configuración básica, y también puede dimensionarse y optimizarse según los requisitos de carga de trabajo de los clientes.
 
 La siguiente figura muestra la arquitectura de FlexPod y destaca claramente la alta disponibilidad en todas las capas de la pila. Los componentes de la infraestructura de almacenamiento, red y computación se configuran de forma que las operaciones se pueden conmutar al respaldo instantáneamente al partner superviviente en caso de que uno de los componentes falle.

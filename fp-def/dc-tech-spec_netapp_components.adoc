@@ -13,6 +13,7 @@ summary: Las controladoras de almacenamiento de NetApp proporcionan la base sobr
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Las controladoras de almacenamiento de NetApp proporcionan la base sobre la que se basa la arquitectura FlexPod tanto para el almacenamiento de datos de arranque como de aplicaciones. Los componentes de NetApp incluyen controladoras de almacenamiento, switches de interconexión de clúster, bandejas de unidades y discos, y opciones de licencias.
 
 

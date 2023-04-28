@@ -8,6 +8,7 @@ summary: Para obtener más información acerca de la información descrita en es
 :allow-uri-read: 
 
 
+[role="lead"]
 Para obtener más información sobre la información descrita en este documento, consulte los siguientes documentos y sitios web:
 
 * Centro de documentación de los sistemas AFF y FAS

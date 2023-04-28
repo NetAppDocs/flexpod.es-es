@@ -13,6 +13,7 @@ summary: Antes de que un almacén de objetos se pueda asociar a un agregado, ONT
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Antes de que un almacén de objetos se pueda asociar a un agregado, ONTAP debe agregarlo e identificarlo. Esta tarea se puede completar tanto con OnCommand System Manager como con la interfaz de línea de comandos de ONTAP.
 
 FabricPool admite Amazon S3, IBM Object Cloud Storage y almacenes de objetos de almacenamiento blob de Microsoft Azure como niveles de cloud.

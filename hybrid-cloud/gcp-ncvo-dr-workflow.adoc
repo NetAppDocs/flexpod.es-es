@@ -15,6 +15,7 @@ summary: Esta página enumera los 11 procedimientos necesarios para implementar 
 
 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["Anterior: Puesta en marcha automatizada de almacenamiento de NetApp en cloud híbrido."]
 
+[role="lead"]
 La secuencia de pasos es la siguiente:
 
 . Defina el flujo de trabajo.

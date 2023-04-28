@@ -15,6 +15,7 @@ summary: La configuración informática de la solución FlexPod SM-BC sigue las 
 
 link:sm-bcs-solution-validation_overview.html["Preivous: Validación de la solución - Descripción general."]
 
+[role="lead"]
 La configuración informática de la solución FlexPod SM-BC sigue las prácticas recomendadas habituales de la solución FlexPod. En las siguientes secciones se destacan algunas de las configuraciones y conectividad utilizadas para la validación. También se destacan algunas de las consideraciones relacionadas con SM-BC para proporcionar referencias y orientación de implementación.
 
 

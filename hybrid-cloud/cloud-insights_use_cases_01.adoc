@@ -13,6 +13,7 @@ summary: Con la instalación y configuración de Cloud Insights para supervisar 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Con la instalación y configuración de Cloud Insights para supervisar su solución de centro de datos de FlexPod, podemos explorar algunas de las tareas que puede realizar en la consola para evaluar y supervisar su entorno. En esta sección, se destacan cinco casos de uso principales para Cloud Insights:
 
 * Integración con Active IQ

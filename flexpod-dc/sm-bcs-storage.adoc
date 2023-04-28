@@ -15,6 +15,7 @@ summary: La configuración del almacenamiento de la solución FlexPod SM-BC sigu
 
 link:sm-bcs-network.html["Anterior: Validación de la solución - Red."]
 
+[role="lead"]
 La configuración del almacenamiento de la solución FlexPod SM-BC sigue las prácticas recomendadas habituales de las soluciones FlexPod en cada site. Para los clústeres interpares y la replicación de datos de SM-BC, utilizan los enlaces entre sitios establecidos entre los switches FlexPod en ambos sitios. En las siguientes secciones se destacan algunas de las configuraciones y conectividad utilizadas para la validación.
 
 

@@ -13,6 +13,7 @@ summary: Puede configurar la agrupación en clústeres de VMware vCenter Server 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Para configurar la agrupación en clústeres de VMware vCenter Server 6.7 y vSphere, complete los pasos siguientes:
 
 . Desplácese hasta \https://\<<FQDN or IP of vCenter>>/vsphere-client/.

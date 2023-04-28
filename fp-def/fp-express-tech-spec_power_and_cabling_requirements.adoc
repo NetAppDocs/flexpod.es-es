@@ -13,6 +13,7 @@ summary: En esta sección se describen los requisitos mínimos de alimentación 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En esta sección se describen los requisitos mínimos de alimentación y cableado para un diseño de FlexPod Express.
 
 

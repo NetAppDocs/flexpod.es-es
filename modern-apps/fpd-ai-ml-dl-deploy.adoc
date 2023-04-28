@@ -10,6 +10,7 @@ summary: Este documento proporciona detalles sobre la implementación y directri
 
 Haseeb Niazi, Cisco Arvind Ramakrishnan, NetApp
 
+[role="lead"]
 Este documento proporciona detalles sobre la implementación y directrices sobre la integración de la plataforma Cisco UCS C480 ML M5 en la solución de centro de datos FlexPod para ofrecer un enfoque unificado para proporcionar funcionalidades de IA y ML en la infraestructura convergente. En este documento también se explica la configuración de las GPU de NVIDIA en las plataformas Cisco UCS C220 y C240. Si desea ver un debate detallado sobre el diseño de las plataformas y tecnologías utilizadas en esta solución, consulte la link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html["Centro de datos FlexPod para la combinación de IA y ML con Cisco UCS 480 ML para el diseño de aprendizaje profundo"^].
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_480ml_aiml_deployment.html["Centro de datos FlexPod para IA y ML combinados con Cisco UCS 480 ML para aprendizaje profundo y puesta en marcha"^]

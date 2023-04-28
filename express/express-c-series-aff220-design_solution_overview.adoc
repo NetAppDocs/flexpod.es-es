@@ -8,6 +8,7 @@ summary: FlexPod Express está diseñado para ejecutar cargas de trabajo de virt
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod Express está diseñado para ejecutar cargas de trabajo de virtualización mixtas. Está pensado para oficinas remotas, sucursales y para pequeñas y medianas empresas. También es perfecto para empresas grandes que deseen implementar una solución dedicada para un propósito. Esta nueva solución para FlexPod Express añade nuevas tecnologías como ONTAP 9.4, AFF A220 de NetApp y VMware vSphere 6.7.
 
 La siguiente figura muestra los componentes de hardware incluidos en la solución FlexPod Express.

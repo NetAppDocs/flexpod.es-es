@@ -8,6 +8,7 @@ summary: 'Este documento proporciona procedimientos paso a paso para poner en ma
 :allow-uri-read: 
 
 
+[role="lead"]
 Este documento proporciona procedimientos paso a paso para poner en marcha el complemento Trident Container Storage Interface (CSI) de NetApp en un clúster de inquilinos de Kubernetes de la plataforma de contenedores de Cisco en una solución FlexPod.
 
 link:https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/trident-on-container-platform-with-flexpod.pdf["Ponga en marcha el complemento Trident CSI de NetApp en Cisco Container Platform con FlexPod"^]

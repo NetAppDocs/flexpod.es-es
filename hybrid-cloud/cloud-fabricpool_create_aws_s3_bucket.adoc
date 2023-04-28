@@ -13,6 +13,7 @@ summary: Los bloques son contenedores de almacenamiento de objetos que contienen
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Los bloques son contenedores de almacenamiento de objetos que contienen datos. Debe proporcionar el nombre y la ubicación del bloque en el que se almacenan los datos antes de poder agregarse a un agregado como nivel de cloud.
 
 

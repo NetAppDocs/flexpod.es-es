@@ -13,6 +13,7 @@ summary: La arquitectura de FlexPod está definida por el conjunto de reglas que
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La arquitectura de FlexPod está definida por el conjunto de reglas que se describen en este documento. Los componentes de hardware y las configuraciones de software deben ser compatibles con https://ucshcltool.cloudapps.cisco.com/public/["Lista de compatibilidad de hardware y software de Cisco UCS"^] y la http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
 
 Cada Cisco Validated Design (CVD) o NetApp Verified Architecture (NVA) es una posible configuración de FlexPod. Cisco y NetApp documentan estas combinaciones de configuración y las validan mediante una exhaustiva prueba de extremo a extremo. Las instalaciones de FlexPod que no se puedan implementar con estas configuraciones son totalmente compatibles si siguen las directrices de este documento y si todos los componentes aparecen como compatibles en la lista de compatibilidad de hardware y software de Cisco UCS y NetApp http://mysupport.netapp.com/matrix["IMT"^].

@@ -13,6 +13,7 @@ summary: En esta sección se detalla una referencia para la información de cabl
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La siguiente figura muestra el cableado de validación de referencia.
 
 image:express-c-series-aff220-deploy_image5.png["Error: Falta la imagen gráfica"]

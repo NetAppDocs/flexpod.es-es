@@ -15,6 +15,7 @@ summary: En esta sección se proporciona una breve lista de ventajas para ejecut
 
 link:flexpod-genomics-introduction.html["Anterior: Introducción."]
 
+[role="lead"]
 En esta sección se proporciona una breve lista de ventajas para ejecutar una carga de trabajo genómica en una plataforma de infraestructura convergente FlexPod. Describiremos rápidamente las capacidades de un hospital. La siguiente vista de arquitectura empresarial muestra las capacidades de un hospital puestas en marcha en una plataforma de infraestructura convergente FlexPod preparada para cloud híbrido.
 
 * * Evitar silos en la salud.* los silos en la salud son una preocupación muy real. A menudo, los departamentos se encuentran organizados en silos en su propio conjunto de hardware y software, no por elección, sino de forma orgánica, por evolución. Por ejemplo, radiología, cardiología, EHR, genómica, análisis, ciclo de ingresos y otros departamentos terminan con su conjunto individual de software y hardware dedicados. Las organizaciones sanitarias mantienen un conjunto limitado de profesionales DE TI para gestionar sus activos de hardware y software. El punto de inflexión se produce cuando se espera que este conjunto de personas gestionen un conjunto de hardware y software muy diversificado. La heterogeneidad se ve agravada por un conjunto incongruente de procesos llevados a la organización sanitaria por los proveedores.

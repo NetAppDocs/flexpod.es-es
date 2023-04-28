@@ -13,6 +13,7 @@ summary: Esta validación de referencia se cablea como se muestra en las siguien
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Esta validación de referencia se cablea como se muestra en las siguientes figuras y tablas.
 
 En esta figura, se muestra el cableado de validación de referencia.

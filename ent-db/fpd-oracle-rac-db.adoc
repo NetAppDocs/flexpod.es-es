@@ -10,6 +10,7 @@ summary: Los diseños validados por Cisco incluyen sistemas y soluciones diseña
 
 Tushar Patel, Cisco Hardikkumar Vyas, Cisco
 
+[role="lead"]
 Los diseños validados por Cisco incluyen sistemas y soluciones diseñados, probados y documentados para facilitar y mejorar las puestas en marcha de los clientes. Estos diseños incorporan una amplia gama de tecnologías y productos en una cartera de soluciones que se han desarrollado para satisfacer las necesidades empresariales de los clientes. Cisco y NetApp se han asociado para ofrecer FlexPod, que sirve como base para una variedad de cargas de trabajo y permite diseñar arquitecturas eficientes que se basan en los requisitos del cliente. Una solución FlexPod es un enfoque validado para poner en marcha tecnologías de Cisco y NetApp como infraestructura de nube compartida.
 
 El centro de datos FlexPod con el sistema AFF all-flash de NetApp es una plataforma de infraestructura convergente que combina las mejores tecnologías de Cisco y NetApp en una potente plataforma convergente para aplicaciones empresariales. Cisco y NetApp trabajan estrechamente con Oracle para dar cabida a las bases de datos más exigentes en cuanto a tiempos de respuesta y transacciones que requieren las empresas actuales.

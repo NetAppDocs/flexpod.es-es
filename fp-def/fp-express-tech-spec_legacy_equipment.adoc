@@ -13,6 +13,7 @@ summary: En esta sección se enumeran las opciones de bandeja de discos heredada
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La siguiente tabla enumera las opciones de la controladora de almacenamiento heredada de NetApp.
 
 |===

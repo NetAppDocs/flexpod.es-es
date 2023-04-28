@@ -10,6 +10,7 @@ summary: Este documento describe la integración de las soluciones multipod de C
 
 Haseeb Niazi, Cisco Arvind Ramakrishnan, NetApp
 
+[role="lead"]
 Este documento describe la integración de las soluciones multipod de Cisco ACI y MetroCluster IP de NetApp en el centro de datos de FlexPod para ofrecer una solución de centro de datos múltiple de alta disponibilidad. La arquitectura de centro de datos múltiple ofrece la capacidad de equilibrar cargas de trabajo entre dos centros de datos que utilizan la movilidad de cargas de trabajo sin interrupciones, lo que permite la migración de servicios entre sitios sin necesidad de sostener un corte.
 
 La solución de FlexPod con ACI Multi-Pod y MetroCluster IP de NetApp ofrece los siguientes beneficios:

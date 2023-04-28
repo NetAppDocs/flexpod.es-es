@@ -13,6 +13,7 @@ summary: En la siguiente tabla se muestran las versiones validadas de hardware y
 :imagesdir: ./../media/
 
 
+[role="lead"]
 En la siguiente tabla se muestran las versiones validadas de software y hardware.
 
 |===

@@ -13,6 +13,7 @@ summary: Después de que ONTAP haya añadido e identificado un almacén de objet
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Después de que ONTAP haya añadido e identificado un almacén de objetos, se debe vincular a un agregado para crear una FabricPool. Esta tarea se puede completar mediante OnCommand System Manager o la interfaz de línea de comandos de ONTAP.
 
 Se puede conectar más de un tipo de almacén de objetos a un clúster, pero solo se puede asociar un tipo de almacén de objetos a cada agregado. Por ejemplo, un agregado puede usar Google Cloud y otro agregado puede usar Amazon S3, pero no se puede vincular un agregado a ambos.

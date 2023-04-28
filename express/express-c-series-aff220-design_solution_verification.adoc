@@ -8,6 +8,7 @@ summary: Desde la redundancia y la disponibilidad a cada funcionalidad individua
 :allow-uri-read: 
 
 
+[role="lead"]
 Cisco y NetApp diseñaron y crearon FlexPod Express para servir como una plataforma de infraestructura de primer nivel para sus clientes. Al ser diseñado con componentes líderes en el sector, los clientes pueden confiar en FlexPod Express como base de su infraestructura. De acuerdo con los principios fundamentales de la cartera de FlexPod, la arquitectura de FlexPod Express ha sido probada a conciencia por arquitectos e ingenieros de centros de datos de Cisco y NetApp. Desde la redundancia y la disponibilidad a cada funcionalidad individual, se valida toda la arquitectura FlexPod Express para infundir confianza en los clientes y fomentar la confianza en el proceso de diseño.
 
 VMware vSphere 6.7 se verificó en los componentes de la infraestructura de FlexPod Express. Esta validación incluye opciones de conectividad de enlace ascendente 10 GbE para el hipervisor.

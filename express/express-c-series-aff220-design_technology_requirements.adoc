@@ -13,6 +13,7 @@ summary: FlexPod Express requiere una combinación de componentes de hardware y 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod Express requiere una combinación de componentes de hardware y software que depende de la velocidad del hipervisor y de la red seleccionados. Además, FlexPod Express puede establecer los componentes de hardware necesarios para añadir nodos de hipervisor en unidades de dos.
 
 

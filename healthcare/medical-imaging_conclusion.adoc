@@ -13,6 +13,7 @@ summary: Al ejecutar un entorno de imágenes médicas en FlexPod, su organizaci�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Al ejecutar un entorno de imágenes médicas en FlexPod, su organización de atención médica puede esperar una mejora en la productividad del personal y una reducción en los gastos de capital y operativos. FlexPod proporciona una infraestructura convergente prevalidada y rigurosamente probada desde la alianza estratégica de Cisco y NetApp. Se ha diseñado y diseñado específicamente para proporcionar un sistema predecible de baja latencia y una alta disponibilidad. Este enfoque resulta en una experiencia de usuario superior y un tiempo de respuesta óptimo para los usuarios del sistema de imágenes médicas.
 
 Los diferentes componentes de un sistema de imágenes médicas requieren almacenamiento de datos en sistemas de archivos SMB/CIFS, NFS, Ext4 y NTFS. Por lo tanto, su infraestructura debe proporcionar acceso a datos mediante protocolos NFS, SMB/CIFS y SAN. Los sistemas de almacenamiento de NetApp admiten estos protocolos desde una única cabina de almacenamiento.

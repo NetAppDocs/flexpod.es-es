@@ -15,6 +15,7 @@ summary: En esta sección se describe la ejecución de la salida ./gatk.
 
 link:flexpod-genomics-appendix-a.html["Anterior: Salida para la ejecución de GATK usando el archivo JAR."]
 
+[role="lead"]
 La ejecución de GATK con el útil `./gatk` la secuencia de comandos produjo la siguiente salida de ejemplo.
 
 ....

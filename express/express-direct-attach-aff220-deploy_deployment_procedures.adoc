@@ -13,6 +13,7 @@ summary: Este documento proporciona detalles para configurar un sistema FlexPod 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Este documento proporciona detalles para configurar un sistema FlexPod Express completamente redundante y de alta disponibilidad. Para reflejar esta redundancia, los componentes que se configuran en cada paso se denominan componente A o componente B. Por ejemplo, la controladora A y la controladora B identifican las dos controladoras de almacenamiento de NetApp que se aprovisionan en este documento. El switch A y el switch B identifican un par de switches Cisco Nexus. La interconexión de estructura A y la interconexión de estructura B son las dos interconexiones de estructura Nexus integradas.
 
 Además, en este documento se describen los pasos para aprovisionar varios hosts de Cisco UCS, que se identifican secuencialmente como servidor A, servidor B, etc.

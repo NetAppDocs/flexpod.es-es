@@ -10,6 +10,7 @@ summary: 'Los diseños validados por Cisco (CVD) proporcionan sistemas y solucio
 
 Haseeb Niazi, Cisco David Arnette, NetApp
 
+[role="lead"]
 Los diseños validados por Cisco (CVD) proporcionan sistemas y soluciones diseñados, probados y documentados para facilitar y mejorar las puestas en marcha de los clientes. Estos diseños incorporan una amplia gama de tecnologías y productos en una cartera de soluciones que se han desarrollado para responder a las necesidades empresariales de los clientes y para guiarlos desde el diseño hasta la puesta en marcha.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html["FlexPod Datacenter para cloud híbrido con CloudCenter de Cisco y almacenamiento privado de NetApp - Diseño"^]

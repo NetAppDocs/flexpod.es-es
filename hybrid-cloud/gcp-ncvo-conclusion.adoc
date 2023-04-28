@@ -15,6 +15,7 @@ summary: En esta solución, el servicio de datos en el cloud de NetApp, la infra
 
 link:gcp-ncvo-solution-validation.html["Anterior: Validación de la solución."]
 
+[role="lead"]
 En esta solución, el servicio de datos en el cloud de NetApp, la infraestructura de Cloud Volumes ONTAP y el centro de datos de FlexPod se usaron para crear una solución de recuperación ante desastres con un cloud público con la tecnología de Cisco Intersight Cloud Orchestrator. La solución de FlexPod ha evolucionado constantemente para permitir a los clientes modernizar sus aplicaciones y procesos de entrega de negocio. Con esta solución, puede crear un plan BCDR con el cloud público mientras se utiliza la ubicación para un plan de recuperación ante desastres puntual o a tiempo completo, sin por ello dejar de mantener el coste de la solución de recuperación ante desastres bajo.
 
 La replicación de datos entre FlexPod en las instalaciones y Cloud Volumes ONTAP de NetApp se realizó mediante la tecnología SnapMirror contrastada, pero también puede seleccionar otras herramientas de transferencia y sincronización de datos de NetApp como Cloud Sync para sus requisitos de movilidad de datos. Seguridad de los datos en tránsito gracias a las tecnologías de cifrado integradas basadas en TLS/AES.

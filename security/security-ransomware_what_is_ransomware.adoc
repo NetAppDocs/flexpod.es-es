@@ -17,6 +17,7 @@ Arvind Ramakrishnan, NetApp
 
 En colaboración con:image:cisco logo.png["Error: Falta la imagen gráfica"]
 
+[role="lead"]
 Para comprender el ransomware, es necesario en primer lugar comprender algunos puntos clave sobre la criptografía. Los métodos criptográficos permiten el cifrado de datos con una clave secreta compartida (cifrado de clave simétrica) o un par de claves (cifrado de claves asimétrico). Una de estas claves es una clave pública ampliamente disponible y la otra es una clave privada no revelada.
 
 El ransomware es un tipo de malware basado en la criptovirología, que es el uso de criptografía para crear software malicioso. Este malware puede utilizar tanto el cifrado simétrico como el cifrado de claves asimétricas para bloquear los datos de una víctima y exigir un rescate para proporcionar la clave para descifrar los datos de la víctima.

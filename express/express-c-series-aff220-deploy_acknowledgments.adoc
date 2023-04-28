@@ -13,6 +13,7 @@ summary: Los autores desearían reconocer a ciertos individuos por su apoyo y co
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Los autores desean reconocer a las siguientes personas por su apoyo y contribución a este diseño:
 
 * Paul Onofrietti Onotranacy

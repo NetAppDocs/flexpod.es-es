@@ -15,6 +15,7 @@ summary: Un clúster independiente de OpenShift Container Platform 4 autogestion
 
 link:flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html["Anterior: Instalación básica de FlexPod para OpenShift Container Platform 4."]
 
+[role="lead"]
 Un clúster independiente de OpenShift Container Platform 4 autogestionado se pone en marcha en AWS como sitio de recuperación ante desastres. Los nodos maestro y trabajador abarcan tres zonas de disponibilidad para obtener alta disponibilidad.
 
 image:flexpod-rho-cvo-image10.png["Error: Falta la imagen gráfica"]

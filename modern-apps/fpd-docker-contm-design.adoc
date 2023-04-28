@@ -10,6 +10,7 @@ summary: Docker es la plataforma de contenedores de software líder en el mundo 
 
 Muhammad Afzal, Cisco John George, Cisco Amit Borulkar, NetApp Uday Shetty y Docker
 
+[role="lead"]
 Docker es la plataforma de contenedores de software líder en el mundo para que los desarrolladores y las operaciones TECNOLÓGICAS creen, distribuyan y ejecuten aplicaciones distribuidas en cualquier lugar. Con la arquitectura de microservicios que da forma a la próxima generación de TI, las empresas con grandes inversiones en aplicaciones monolíticas están encontrando formas de adoptar Docker como estrategia para modernizar sus arquitecturas de aplicaciones y mantener a la organización competitiva y rentable. La creación de contenedores proporciona la agilidad, el control y la portabilidad que los desarrolladores y las operaciones de TI necesitan para crear e implementar aplicaciones en cualquier infraestructura. La plataforma Docker permite que las aplicaciones distribuidas se compongan fácilmente en un contenedor de aplicaciones ligero que puede cambiar de forma dinámica pero sin interrupciones. Esta funcionalidad hace que las aplicaciones se transporten entre entornos de desarrollo, prueba y producción que se ejecutan en máquinas físicas o virtuales de forma local, en centros de datos y a través de las redes de distintos proveedores de servicios cloud.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_docker_deploy_design.html["FlexPod Datacenter con Docker Enterprise Edition para la gestión de contenedores"^]

@@ -10,6 +10,7 @@ summary: Cisco y NetApp se han asociado para ofrecer una serie de soluciones Fle
 
 Pramod Ramamurthy, Cisco Marco Schoen, NetApp
 
+[role="lead"]
 Cisco y NetApp se han asociado para ofrecer una serie de soluciones FlexPod que permiten crear plataformas estratégicas de centros de datos. La solución FlexPod proporciona una arquitectura integrada que incorpora prácticas recomendadas de diseño de red, informática y almacenamiento, por lo que minimiza los riesgos RELACIONADOS CON la TECNOLOGÍA mediante la validación de la arquitectura integrada para garantizar la compatibilidad entre los diferentes componentes. La solución también soluciona los problemas DE TI al proporcionar indicaciones de diseño documentadas, directrices para la puesta en marcha y soporte que puede utilizarse en varias etapas (planificación, diseño e implementación) de una implementación.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan_design.html["FlexPod Datacenter para la solución SAP mediante FibreChannel SAN con Cisco UCS Manager 4,0 y NetApp ONTAP 9,7: Diseño"^]

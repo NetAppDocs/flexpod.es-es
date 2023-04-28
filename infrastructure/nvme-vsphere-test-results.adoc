@@ -15,6 +15,7 @@ summary:
 
 link:nvme-vsphere-testing-approach.html["Anterior: Método de pruebas."]
 
+[role="lead"]
 Las pruebas consistieron en ejecutar las cargas de trabajo de fio para medir el rendimiento de FC-NVMe en términos de IOPS y latencia.
 
 En el siguiente gráfico se muestran nuestros resultados cuando se ejecuta una carga de trabajo de lectura aleatoria del 100 % utilizando bloques de 8 KB.

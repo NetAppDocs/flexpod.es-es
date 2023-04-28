@@ -15,6 +15,7 @@ summary: La configuración de red de la solución FlexPod SM-BC sigue las práct
 
 link:sm-bcs-compute.html["Anterior: Validación de la solución - Computación."]
 
+[role="lead"]
 La configuración de red de la solución FlexPod SM-BC sigue las prácticas recomendadas habituales de las soluciones FlexPod en cada site. Para la conectividad entre sitios, la configuración de validación de soluciones conecta los switches Nexus de FlexPod en los dos sitios juntos para proporcionar conectividad entre sitios que amplía las VLAN entre los dos sitios. En las siguientes secciones se destacan algunas de las configuraciones y conectividad utilizadas para la validación.
 
 

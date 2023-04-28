@@ -13,6 +13,7 @@ summary: El almacenamiento de NetApp que se pone en marcha para entornos de soft
 :imagesdir: ./../media/
 
 
+[role="lead"]
 El sistema de almacenamiento de NetApp que se pone en marcha para entornos de software de MEDITECH utiliza controladoras de almacenamiento en una configuración de parejas de alta disponibilidad. El almacenamiento debe presentarse desde ambas controladoras a los servidores de base de datos de MEDITECH a través del protocolo FC. La configuración presenta almacenamiento de ambas controladoras para equilibrar de forma uniforme la carga de las aplicaciones durante un funcionamiento normal.
 
 

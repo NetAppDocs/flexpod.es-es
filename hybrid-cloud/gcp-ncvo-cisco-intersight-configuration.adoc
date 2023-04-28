@@ -15,6 +15,7 @@ summary: Esta página enumera los recursos necesarios para configurar Cisco Inte
 
 link:gcp-ncvo-deploy-flexpod.html["Anterior: Implementar FlexPod."]
 
+[role="lead"]
 Para configurar Cisco Intersight e Intersight Assist, consulte la página de diseños validados por Cisco para FlexPod https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["aquí"^].
 
 link:gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html["Siguiente: Integración cloud Terraform con el requisito previo de la ICO."]

@@ -13,6 +13,7 @@ summary: Las especificaciones técnicas ofrecen detalles sobre los componentes d
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Las especificaciones técnicas ofrecen detalles sobre los componentes de hardware de una solución FlexPod, como chasis, FEXs, servidores, conmutadores, y las controladoras de almacenamiento.
 
 

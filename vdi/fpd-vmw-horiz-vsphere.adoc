@@ -10,6 +10,7 @@ summary: 'Este documento proporciona una arquitectura de referencia, una guía d
 
 Ramesh Guduru, Cisco David Arnette, NetApp
 
+[role="lead"]
 Este documento proporciona una arquitectura de referencia, una guía de diseño y una puesta en marcha para un entorno informático de usuario final de hasta 5000 puestos para cargas de trabajo mixtas en el centro de datos de FlexPod con Cisco UCS y almacenamiento All Flash FAS (AFF) A300 de NetApp. La solución incluye sesiones alojadas de Remote Desktop Server basadas en servidor de VMware Horizon, escritorios virtuales persistentes de Microsoft Windows 10 de VMware Horizon y puestos de trabajo virtuales virtuales de clonado instantáneo de Microsoft Windows 10 no persistentes de VMware Horizon en VMware vSphere 6,5.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_horizon_n9k_aff_ucsm32.html["FlexPod Datacenter con VMware Horizon View 7,3 y VMware vSphere 6,5 Update 1 con Cisco UCS Manager 3,2 para 5000 puestos"^]
