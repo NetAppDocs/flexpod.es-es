@@ -134,4 +134,4 @@ Una licencia de FabricPool basada en un término de 10 TB de capacidad gratuita 
 Una licencia de FabricPool solo se puede eliminar de un clúster que no contiene agregados de FabricPool.
 
 
-NOTE: Las licencias de FabricPool se aplican en todo el clúster. Debe tener el UUID disponible al comprar una licencia (`cluster identify show`). Si quiere información adicional sobre licencias, consulte https://kb.netapp.com/support/s/article/ka21A0000008qb3QAA/ONTAP-FabricPool-FP-Licensing-Overview["Base de conocimientos de NetApp"^].
+NOTE: Las licencias de FabricPool son para todo el clúster. Debe tener el UUID disponible al comprar una licencia (`cluster identify show`). Si quiere información adicional sobre licencias, consulte https://kb.netapp.com/onprem/ontap/dm/FabricPool/ONTAP_FabricPool_(FP)_Licensing_Overview["Base de conocimientos de NetApp"^].

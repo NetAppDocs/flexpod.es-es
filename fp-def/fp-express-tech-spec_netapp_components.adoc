@@ -226,7 +226,7 @@ En la siguiente tabla se enumeran las opciones de licencia de soporte de NetApp 
 | Licencias de soporte de NetApp | Número de pieza | Especificaciones técnicas 
 
 
-| SupportEdge Premium4 horas in situ; meses: 36 | CS-O2-4HR | link:www.netapp.com/us/support/supportedge.html["http://www.netapp.com/us/support/supportedge.html"] 
+| SupportEdge Premium4 horas in situ; meses: 36 | CS-O2-4HR | link:https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf["https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf"] 
 |===
 
 
@@ -238,7 +238,7 @@ En la siguiente tabla se enumeran las opciones de licencia de soporte de NetApp 
 | Licencias de soporte de NetApp | Número de pieza | Especificaciones técnicas 
 
 
-| Soporte de hardware Premium 4 horas en las instalaciones; meses: 36 | SVC-O2-4HR-E .3+| link:www.netapp.com/us/support/supportedge.html["http://www.netapp.com/us/support/supportedge.html"] 
+| Soporte de hardware Premium 4 horas en las instalaciones; meses: 36 | SVC-O2-4HR-E .3+| link:https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf["https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf"] 
 
 
 | Soporte de software | SW-SSP-O2-4HR-E 

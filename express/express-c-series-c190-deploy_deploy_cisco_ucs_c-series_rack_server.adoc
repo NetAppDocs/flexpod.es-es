@@ -399,4 +399,4 @@ NOTE: Este procedimiento debe repetirse para cada nodo de servidor Cisco UCS ini
 
 
 
-link:express-c-series-c190-design_netapp_aff_storage_deployment_procedure_@part_2@.html["Siguiente: Procedimiento de puesta en marcha del almacenamiento AFF de NetApp (parte 2)"]
+link:express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html["Siguiente: Procedimiento de implementación del almacenamiento AFF de NetApp (parte 2)."]

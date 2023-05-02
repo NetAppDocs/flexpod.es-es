@@ -443,8 +443,8 @@ image:gcp-ncvo-image56.png["Captura de pantalla"]
 
 . Proporcione los siguientes detalles del repositorio de GitHub:
 +
-.. En *Nombre del repositorio*, introduzca el nombre del repositorio detallado en la sección link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["“Configuración de requisitos previos del entorno”"].
-.. Proporcione el identificador de token de OAuth como se indica en la sección link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["“Configuración de requisitos previos del entorno”"].
+.. En *Nombre del repositorio*, introduzca el nombre del repositorio detallado en la sección link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["“Configuración de requisitos previos del entorno”"].
+.. Proporcione el identificador de token de OAuth como se indica en la sección link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["“Configuración de requisitos previos del entorno”"].
 .. Seleccione la opción *disparo automático*.
 +
 image:gcp-ncvo-image57.png["Captura de pantalla"]
@@ -624,7 +624,7 @@ image:gcp-ncvo-image66.png["Captura de pantalla"]
 ** *Descripción.* Actualizar token.
 +
 
-NOTE: Si quiere más información sobre cómo obtener un token de actualización para las operaciones de la API de Cloud Manager de NetApp, consulte la sección link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["“Configuración de requisitos previos del entorno”."]
+NOTE: Si quiere más información sobre cómo obtener un token de actualización para las operaciones de la API de Cloud Manager de NetApp, consulte la sección link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["“Configuración de requisitos previos del entorno”."]
 
 +
 image:gcp-ncvo-image67.png["Captura de pantalla"]

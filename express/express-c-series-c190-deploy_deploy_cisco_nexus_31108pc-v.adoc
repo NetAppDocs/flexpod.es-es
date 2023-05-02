@@ -440,4 +440,4 @@ NOTE: Para escalar la solución añadiendo servidores Cisco UCS adicionales, eje
 
 En función de la infraestructura de red disponible, se pueden utilizar varios métodos y funciones para elevar el entorno FlexPod. Si existe un entorno Cisco Nexus existente, NetApp recomienda utilizar PCs para elevar los switches Cisco Nexus 31108 incluidos en el entorno FlexPod a la infraestructura. Los enlaces ascendentes pueden ser enlaces de subida de 10 GbE para una solución de infraestructura de 10 GbE o 1 GbE para una solución de infraestructura de 1 GbE si fuera necesario. Los procedimientos descritos anteriormente se pueden utilizar para crear un VPC de enlace ascendente al entorno existente. Asegúrese de ejecutar Copy START para guardar la configuración en cada switch una vez completada la configuración.
 
-link:express-c-series-c190-design_netapp_storage_deployment_procedure_@part_1@.html["Siguiente: Procedimiento de puesta en marcha del almacenamiento de NetApp (parte 1)"]
+link:express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html["Siguiente: Procedimiento de implementación del almacenamiento de NetApp (parte 1)."]

@@ -421,4 +421,4 @@ image:express-c-series-c190-deploy_image33.png["Error: Falta la imagen gráfica"
 . Haga clic en Guardar.
 
 
-link:express-c-series-c190-design_vmware_vcenter_server_6.7u2_installation_procedure.html["Siguiente: Procedimiento de instalación de VMware vCenter Server 6.7U2"]
+link:express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html["Siguiente: Procedimiento de instalación de VMware vCenter Server 6.7U2."]

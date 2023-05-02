@@ -45,4 +45,4 @@ lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra-B –igrou
 
 NOTE: Este paso se debe completar cuando se añaden servidores Cisco UCS C-Series adicionales.
 
-link:express-c-series-c190-design_vmware_vsphere_6.7u2_deployment_procedure.html["Siguiente: Procedimiento de puesta en marcha de VMware vSphere 6.7U2"]
+link:express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html["Siguiente: Procedimiento de puesta en marcha de VMware vSphere 6.7U2."]
