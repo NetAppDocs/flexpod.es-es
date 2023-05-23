@@ -104,7 +104,7 @@ En la siguiente tabla se muestra un ejemplo de configuración pequeña (categor�
 | Servidores blade Cisco UCS | 4 x B200 M5 | Cada una con 2 x 14 núcleos, 2,6 GHz o una velocidad de reloj superior y 3.2 GB de BIOS (3#) 
 
 
-| Tarjetas de interfaz virtual Cisco UCS | 4 × UCS 1440 | Controlador VMware ESXi fnic FC: Controlador 1.6.0.47 VMware ESXi ENIC Ethernet: 1.0.27.0 (consulte la matriz de interoperabilidad: https://ucshcltool.cloudapps.cisco.com/public/)[] 
+| Tarjetas de interfaz virtual Cisco UCS | 4 × UCS 1440 | Controlador VMware ESXi fnic FC: Controlador 1.6.0.47 VMware ESXi ENIC Ethernet: 1.0.27.0 (consulte la matriz de interoperabilidad: 
 
 
 | 2 x interconexiones de estructura Cisco UCS (FI) | 2 X UCS 6454 FI | Interconexiones de estructura de cuarta generación que admiten Ethernet de 10/100/100 GB y FC de 25 GB 
@@ -180,7 +180,7 @@ En la siguiente tabla se muestra un ejemplo de configuración grande (categoría
 | Servidores blade Cisco UCS | 8 x B200 M5 | Cada uno con 2 x 24 núcleos, 2,7 GHz y 768 GB de BIOS 3.2(3#) 
 
 
-| Tarjeta de interfaz virtual (VIC) Cisco UCS | 8 × UCS 1440 VIC | Controlador VMware ESXi fnic FC: Controlador 1.6.0.47 VMware ESXi ENIC Ethernet: 1.0.27.0 (consulte la matriz de interoperabilidad: https://ucshcltool.cloudapps.cisco.com/public/)[] 
+| Tarjeta de interfaz virtual (VIC) Cisco UCS | 8 × UCS 1440 VIC | Controlador VMware ESXi fnic FC: Controlador 1.6.0.47 VMware ESXi ENIC Ethernet: 1.0.27.0 (consulte la matriz de interoperabilidad: 
 
 
 | 2 interconexiones de estructura Cisco UCS (FI) | 2 X UCS 6454 FI | Interconexiones de estructura de cuarta generación con Ethernet de 10 GB/25 GB/100 GB y FC de 32 GB 
