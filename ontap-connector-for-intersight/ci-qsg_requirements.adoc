@@ -29,7 +29,7 @@ Estos son los componentes mínimos de hardware y software necesarios para implem
 | ONTAP de NetApp | ONTAP 9.7P1 y posterior 
 
 
-| Active IQ Unified Manager de NetApp | Se requiere la última versión de Active IQ Unified Manager de NetApp (actualmente es 9.12 GA) 
+| Active IQ Unified Manager de NetApp | Se requiere la última versión de NetApp Active IQ Unified Manager (actualmente 9.13RC1) 
 
 
 | Cabina de almacenamiento NetApp | Se admiten todas las cabinas de almacenamiento ONTAP ASA, AFF y FAS para ONTAP 9.7P1 y posteriores 

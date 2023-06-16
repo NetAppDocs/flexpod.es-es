@@ -79,52 +79,51 @@ Cuando haya disponibles los entornos de almacenamiento de NetApp y vCenter en Ci
 Estas son las tareas de almacenamiento de NetApp que están disponibles en Cisco Intersight:
 
 +
-** Añada una política de exportación de almacenamiento al volumen
-** Conecte los iniciadores al host de almacenamiento
-** Desconecte la política de exportación de almacenamiento del volumen
-** Editar agregados para la máquina virtual de almacenamiento
-** Editar regla de política de exportación de almacenamiento
-** Editar política de snapshot de almacenamiento
-** Editar la programación de la política de snapshot de almacenamiento
-** Amplíe Storage LUN
-** Expanda Storage Volume
-** Busque el mapa de LUN de igroup de NetApp
-** Busque LUN de almacenamiento por ID
-** Busque volumen de almacenamiento por ID
-** Nueva Política de exportación de almacenamiento
-** Nueva regla de política de exportación de almacenamiento
-** Nueva interfaz Fibre Channel de almacenamiento de NetApp
-** Nuevo host de almacenamiento
-** Nueva interfaz de Storage IP
-** Nuevo LUN de almacenamiento
-** Nuevo ID de LUN de almacenamiento
-** Nuevo volumen inteligente NAS de almacenamiento de NetApp
-** Nuevo LUN inteligente de almacenamiento de NetApp
-** Nueva Política de Snapshot de almacenamiento
-** Nueva programación de políticas de snapshot de almacenamiento
-** Nuevo equipo virtual de almacenamiento
-** Nuevo volumen de almacenamiento
-** Nueva snapshot de volumen de almacenamiento
-** Quitar política de exportación de almacenamiento
-** Quitar regla de política de exportación de almacenamiento
-** Quite la interfaz de almacenamiento FC
-** Quite el host de almacenamiento
-** Quite la interfaz de IP de almacenamiento
-** Quitar LUN de almacenamiento
-** Quitar ID de LUN de almacenamiento
-** Eliminar la LUN inteligente de almacenamiento de NetApp
-** Quitar política de snapshot de almacenamiento
-** Quitar programación de política de snapshot de almacenamiento
-** Quite la máquina virtual de almacenamiento
-** Quitar volumen de almacenamiento
-** Quitar snapshot de volumen de almacenamiento
-** Cambie el nombre de la snapshot de volumen de almacenamiento
+** Añada una política de exportación a volumen NetApp
+** Agregue iniciadores al iGroup de NetApp
+** Agregar regla a la política de exportación de NetApp
+** Agregue programación a la política de snapshot de NetApp
+** Editar agregados de NetApp para la máquina virtual de almacenamiento
+** Editar regla de política de exportación de NetApp
+** Editar política de snapshot de NetApp
+** Editar la programación de política de snapshots de NetApp
+** Expanda NetApp LUN
+** Busque Mapa de LUN de iGroup de NetApp
+** Busque LUN de NetApp por ID
+** Busque Volumen NetApp por ID
+** Nueva política de exportación de NetApp
+** Nueva interfaz de datos de FC NetApp
+** Nuevo iGroup de NetApp
+** Nueva interfaz de datos de iSCSI de NetApp
+** Nuevo LUN de NetApp
+** Nuevo mapa de LUN de NetApp
+** Nueva interfaz de datos NAS de NetApp
+** Nuevo volumen inteligente NAS de NetApp
+** Nuevo Smart LUN de NetApp
+** Nueva política de copias Snapshot de NetApp
+** Nuevo equipo virtual de almacenamiento de NetApp
+** Nuevo volumen NetApp
+** Nueva snapshot de volúmenes de NetApp
+** Quite la política de exportación de volúmenes NetApp
+** Eliminar Política de exportación de NetApp
+** Quite la interfaz de datos de FC de NetApp
+** Quite el iGroup de NetApp
+** Elimine la interfaz IP de NetApp
+** Quite la LUN de NetApp
+** Quite Mapa de LUN de NetApp
+** Elimine el volumen inteligente del NAS de NetApp
+** Eliminar NetApp Smart LUN
+** Eliminar la política de snapshot de NetApp
+** Quitar la máquina virtual de almacenamiento de NetApp
+** Quite el volumen NetApp
+** Quite una snapshot de volumen NetApp
+** Eliminar regla de la política de exportación de NetApp
+** Quitar programación de la política de snapshots de NetApp
+** Cambie el nombre de NetApp Volume Snapshot
+** Actualice la capacidad del volumen NetApp
 +
-
-NOTE: Las nuevas tareas de volumen inteligente de NAS de almacenamiento y LUN inteligente de almacenamiento sólo funcionarán con ONTAP 9.8 y versiones posteriores. Actualmente, ONTAP 9.7P1 es la versión mínima admitida.
-
-
-
-
-
 Para obtener más información acerca de cómo personalizar flujos de trabajo con tareas de virtualización y almacenamiento de NetApp, vea el vídeo https://tv.netapp.com/detail/video/6228095945001["Orquestación de almacenamiento de NetApp ONTAP en Cisco Intersight"^].
+
+
+
+

@@ -18,6 +18,16 @@ En esta sección se enumeran las nuevas funciones y funcionalidades disponibles 
 
 
 
+== Junio de 2023
+
+
+NOTE: Se requiere una actualización a NetApp Active IQ Unified Manager 9.13RC1 para garantizar la compatibilidad y la funcionalidad completa con la última versión.
+
+* Nombres actualizados para las tareas de almacenamiento de NetApp. Consulte link:ci-qsg_use_cases.html["Caso de uso 3 flujos de trabajo personalizados utilizando un formulario sin diseñador"^] para obtener la lista completa de tareas renombradas.
+
+
+
+
 == Abril de 2023
 
 * Agregadas políticas de protección (SnapMirror) y políticas de Snapshot en la página Políticas de la sección Inventario de la interfaz de usuario.
@@ -90,7 +100,7 @@ NOTE: Para garantizar la compatibilidad y completar la funcionalidad con futuras
 * Se ha agregado AutoSupport al inventario de clústeres
 * Añadido `cdpd.enable` opción a nodo
 * Se ha agregado un objeto para el vecino de CDP
-* Se han agregado tareas de almacenamiento de flujos de trabajo de NetApp en Cisco Intersight. Consulte link:ci-qsg_use_cases.html["Caso de uso 3 flujos de trabajo personalizados utilizando un formulario sin diseñador"] Para obtener una lista completa de tareas de almacenamiento de NetApp.
+* Se han agregado tareas de almacenamiento de flujos de trabajo de NetApp en Cisco Intersight. Consulte link:ci-qsg_use_cases.html["Caso de uso 3 flujos de trabajo personalizados utilizando un formulario sin diseñador"^] Para obtener una lista completa de tareas de almacenamiento de NetApp.
 
 
 
@@ -117,7 +127,7 @@ NOTE: Para garantizar la compatibilidad y todas las funcionalidades con futuras 
 
 == Octubre de 2021
 
-* Lista actualizada de tareas de almacenamiento de NetApp disponibles en Cisco Intersight. Consulte link:ci-qsg_use_cases.html["Caso de uso 3 flujos de trabajo personalizados utilizando un formulario sin diseñador"] Para obtener una lista completa de tareas de almacenamiento de NetApp.
+* Lista actualizada de tareas de almacenamiento de NetApp disponibles en Cisco Intersight. Consulte link:ci-qsg_use_cases.html["Caso de uso 3 flujos de trabajo personalizados utilizando un formulario sin diseñador"^] Para obtener una lista completa de tareas de almacenamiento de NetApp.
 * Se ha agregado la columna Estado en la página de lista Cluster.
 * Ahora hay detalles ampliados disponibles en la página General de un clúster seleccionado.
 * Ahora se puede acceder a la tabla NTP Server a través del panel de navegación.
