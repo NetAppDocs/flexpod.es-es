@@ -79,15 +79,27 @@ Cuando haya disponibles los entornos de almacenamiento de NetApp y vCenter en Ci
 Estas son las tareas de almacenamiento de NetApp que están disponibles en Cisco Intersight:
 
 +
+** Añadir ACL a recurso compartido CIFS de NetApp
+** Agregar coincidencia de cliente a regla de política de exportación de NetApp
 ** Añada una política de exportación a volumen NetApp
 ** Agregue iniciadores al iGroup de NetApp
 ** Agregar regla a la política de exportación de NetApp
 ** Agregue programación a la política de snapshot de NetApp
+** Confirme el estado de la licencia de NetApp
+** Confirme el estado del protocolo FCP de la máquina virtual de almacenamiento NetApp
 ** Editar agregados de NetApp para la máquina virtual de almacenamiento
+** Editar Política de SnapMirror asíncrono de NetApp
+** Editar permiso de ACL de uso compartido de CIFS de NetApp
 ** Editar regla de política de exportación de NetApp
 ** Editar política de snapshot de NetApp
 ** Editar la programación de política de snapshots de NetApp
+** Editar el estilo de seguridad del volumen NetApp
+** Editar la política de snapshots de volumen NetApp
+** Habilite los servicios CIFS de NetApp
 ** Expanda NetApp LUN
+** Nueva Política de SnapMirror asíncrono de NetApp
+** Nuevo servidor CIFS de NetApp
+** Nuevo recurso compartido CIFS de NetApp
 ** Busque Mapa de LUN de iGroup de NetApp
 ** Busque LUN de NetApp por ID
 ** Busque Volumen NetApp por ID
@@ -95,24 +107,35 @@ Estas son las tareas de almacenamiento de NetApp que están disponibles en Cisco
 ** Nueva interfaz de datos de FC NetApp
 ** Nuevo iGroup de NetApp
 ** Nueva interfaz de datos de iSCSI de NetApp
+** Nuevos reflejos de uso compartido de carga de NetApp para el volumen raíz de SVM
 ** Nuevo LUN de NetApp
 ** Nuevo mapa de LUN de NetApp
 ** Nueva interfaz de datos NAS de NetApp
 ** Nuevo volumen inteligente NAS de NetApp
 ** Nuevo Smart LUN de NetApp
+** Nueva relación de SnapMirror de NetApp para volumen
 ** Nueva política de copias Snapshot de NetApp
 ** Nuevo equipo virtual de almacenamiento de NetApp
 ** Nuevo volumen NetApp
 ** Nueva snapshot de volúmenes de NetApp
+** Registrar DNS para la máquina virtual de almacenamiento de NetApp
+** Eliminar ACL del recurso compartido CIFS de NetApp
+** Eliminar coincidencia de cliente de regla de política de exportación de NetApp
 ** Quite la política de exportación de volúmenes NetApp
+** Quite el iniciador del iGroup de NetApp
+** Quite el servidor CIFS de NetApp
+** Eliminar el recurso compartido CIFS de NetApp
 ** Eliminar Política de exportación de NetApp
 ** Quite la interfaz de datos de FC de NetApp
 ** Quite el iGroup de NetApp
 ** Elimine la interfaz IP de NetApp
+** Elimine los reflejos de uso compartido de carga de NetApp para el volumen raíz de SVM
 ** Quite la LUN de NetApp
 ** Quite Mapa de LUN de NetApp
 ** Elimine el volumen inteligente del NAS de NetApp
 ** Eliminar NetApp Smart LUN
+** Quite la relación de SnapMirror de NetApp para volumen
+** Quitar la política de SnapMirror de NetApp
 ** Eliminar la política de snapshot de NetApp
 ** Quitar la máquina virtual de almacenamiento de NetApp
 ** Quite el volumen NetApp
@@ -120,6 +143,7 @@ Estas son las tareas de almacenamiento de NetApp que están disponibles en Cisco
 ** Eliminar regla de la política de exportación de NetApp
 ** Quitar programación de la política de snapshots de NetApp
 ** Cambie el nombre de NetApp Volume Snapshot
+** Actualice los reflejos de uso compartido de carga de NetApp para el volumen raíz de SVM
 ** Actualice la capacidad del volumen NetApp
 +
 Para obtener más información acerca de cómo personalizar flujos de trabajo con tareas de virtualización y almacenamiento de NetApp, vea el vídeo https://tv.netapp.com/detail/video/6228095945001["Orquestación de almacenamiento de NetApp ONTAP en Cisco Intersight"^].

@@ -18,6 +18,32 @@ En esta sección se enumeran las nuevas funciones y funcionalidades disponibles 
 
 
 
+== Julio de 2023
+
+
+NOTE: Es necesario actualizar a NetApp Active IQ Unified Manager 9,13GA para garantizar la compatibilidad y completa funcionalidad con la última versión.
+
+* Nombres actualizados para las tareas de almacenamiento de NetApp. Consulte Caso de uso 3 Flujos de trabajo personalizados utilizando un formulario sin diseñador para obtener la lista completa de tareas renombradas.
+* La dirección IP de la interfaz NFS se agregó como resultado de la nueva tarea de volumen inteligente NAS de NetApp.
+* Se agregó una comprobación de que el transporte ASUP es HTTPS a la pestaña Comprobaciones.
+* El tipo de nivel correcto para todos los niveles ahora se muestra correctamente en la interfaz de usuario de Niveles.
+* Todas las licencias compatibles ahora se muestran correctamente en la página Licencias.
+* El valor preciso para los recursos compartidos CIFS sin o sin un directorio inicial ahora aparece en la página Recursos compartidos.
+* Ahora el ordenación y el filtrado están habilitados para la columna Asignada en la página LUN.
+* La ordenación y el filtrado ahora han habilitado la columna Autenticación Activada en la página Servidores NTP.
+* Se han añadido nuevas comprobaciones y las siguientes categorías correspondientes a la ficha Comprobaciones.
++
+** Seguridad
+** Anti-ransomware
+** Disponibilidad
+** Otros
+
+
+* En la vista de detalle Inventario, el informe ahora se utiliza en lugar de la capacidad utilizada física.
+
+
+
+
 == Junio de 2023
 
 
