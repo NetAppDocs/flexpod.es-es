@@ -18,6 +18,18 @@ En esta sección se enumeran las nuevas funciones y funcionalidades disponibles 
 
 
 
+== Agosto de 2023
+
+
+NOTE: Es necesario actualizar a NetApp Active IQ Unified Manager 9,13GA para garantizar la compatibilidad y completa funcionalidad con la última versión.
+
+* Se ha mejorado la tarea de Nueva LUN inteligente de NetApp para indicar claramente la disponibilidad de las opciones de selección para crear un iGroup nuevo o seleccionar un iGroup existente. Cuando ahora los usuarios seleccionan la casilla para crear un iGroup nuevo, el parámetro para elegir un iGroup existente ya no está disponible. Si los usuarios deseleccionan el cuadro para crear un nuevo iGroup, el parámetro de iGroup existente queda disponible.
+* Se han mejorado las tareas de asignación de nueva LUN de NetApp y eliminación de asignación de LUN de NetApp. Se ha actualizado la nueva relación entre la LUN y el iGroup. El inventario de interfaz de usuario se actualiza de inmediato tanto para la LUN como para el iGroup tras la ejecución de la tarea.
+* La página Comprobaciones ahora carga correctamente los usuarios que inician sesión por primera vez y ya no necesita refrescarse.
+
+
+
+
 == Julio de 2023
 
 
