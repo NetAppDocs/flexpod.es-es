@@ -238,15 +238,6 @@
   <block id="f5c451f1cedf3e66c63549acb1998ee3" category="paragraph">En la capa informática, cuando las máquinas virtuales que se ejecutan en un sitio determinado sufren un fallo del host, las máquinas virtuales están diseñadas para reiniciarse automáticamente con la función de alta disponibilidad de VMware. Para que se produzca una interrupción completa de la tecnología del centro, las reglas de afinidad de VM/host permiten reiniciar los equipos virtuales en el sitio superviviente. Sin embargo, para que una aplicación vital para el negocio proporcione servicios sin interrupciones, se necesita clustering basado en aplicaciones como Microsoft Failover Cluster o la arquitectura de aplicaciones basadas en contenedores de Kubernetes para evitar tiempos de inactividad de las aplicaciones. Consulte el documento pertinente para la implementación de la agrupación en clústeres basada en aplicaciones, que está más allá del alcance de este informe técnico.</block>
   <block id="fc37581a93e14f865030ca55b7270290" category="paragraph"><block ref="fc37581a93e14f865030ca55b7270290" category="inline-link-macro-rx"></block></block>
   <block id="17cfc2f2b50e58c93aaf0a477ff54037" category="sidebar">Documentación de las soluciones FlexPod</block>
-  <block id="af0963a66759af7047416c9d85f32efe" category="sidebar">FlexPod: Comience aquí</block>
-  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Novedades</block>
-  <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">Vídeos y demostraciones</block>
-  <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">Blogs</block>
-  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">IA y análisis de datos modernos con FlexPod</block>
-  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">Aplicaciones empresariales y bases de datos empresariales de FlexPod</block>
-  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">Cloud híbrido con FlexPod</block>
-  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod para VDI</block>
-  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">Cuidado de la salud con FlexPod</block>
   <block id="bf8e2974cd692b57a29e42874b662b52" category="sidebar">Bases de datos empresariales</block>
   <block id="999bc6b18351bbe817d26f559ba408ae" category="sidebar">SAP</block>
   <block id="5b7e41bd189664acad4c873cf6e0c2df" category="sidebar">Introducción a SAP con FlexPod</block>
@@ -9688,7 +9679,6 @@
   <block id="4afd182647adde3ae53ba9636f8ecd85" category="list-text">Nombres actualizados para las tareas de almacenamiento de NetApp. Consulte <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> para obtener la lista completa de tareas renombradas.</block>
   <block id="2d24bfd4ad96e334ad70f500b56563c3" category="list-text">Se han agregado tareas de almacenamiento de flujos de trabajo de NetApp en Cisco Intersight. Consulte <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> Para obtener una lista completa de tareas de almacenamiento de NetApp.</block>
   <block id="c0d6fe9e8f745815653bfbc202c74e93" category="list-text">Lista actualizada de tareas de almacenamiento de NetApp disponibles en Cisco Intersight. Consulte <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> Para obtener una lista completa de tareas de almacenamiento de NetApp.</block>
-  <block id="cef4011c89ea914920838c57c1277b96" category="cell">Se requiere la última versión de NetApp Active IQ Unified Manager (actualmente 9,13GA)</block>
   <block id="fb5978407d362c06c4a1c8ab72f464f1" category="section-title">Julio de 2023</block>
   <block id="f6134ed465dbb55c3531c607933bd957" category="admonition">Es necesario actualizar a NetApp Active IQ Unified Manager 9,13GA para garantizar la compatibilidad y completa funcionalidad con la última versión.</block>
   <block id="4a743225a883b79a064e0fe794bed4bc" category="list-text">Nombres actualizados para las tareas de almacenamiento de NetApp. Consulte Caso de uso 3 Flujos de trabajo personalizados utilizando un formulario sin diseñador para obtener la lista completa de tareas renombradas.</block>
@@ -9704,7 +9694,6 @@
   <block id="faeaec9eda6bc4c8cb6e1a9156a858be" category="list-text">Disponibilidad</block>
   <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">Otros</block>
   <block id="ccc2c146b1c8e887b8cb561649b51add" category="list-text">En la vista de detalle Inventario, el informe ahora se utiliza en lugar de la capacidad utilizada física.</block>
-  <block id="a45b01faef5c490c90c647f2428032f0" category="paragraph">Instale o actualice a Active IQ Unified Manager (la última versión es necesaria, actualmente 9,13GA) si no lo ha hecho. Para obtener instrucciones, vaya a <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>.</block>
   <block id="d3b7d0dfd7a4c0712106720b7a263dcc" category="list-text">Añadir ACL a recurso compartido CIFS de NetApp</block>
   <block id="e38df0ad25eaed709eb4fc30b431f674" category="list-text">Agregar coincidencia de cliente a regla de política de exportación de NetApp</block>
   <block id="c8750c2c8ef4365e348e3f2d6f7e0a60" category="list-text">Confirme el estado de la licencia de NetApp</block>
@@ -9733,4 +9722,10 @@
   <block id="ee1a60bf8afd48f5c57ef8a62da497e2" category="list-text">Se ha mejorado la tarea de Nueva LUN inteligente de NetApp para indicar claramente la disponibilidad de las opciones de selección para crear un iGroup nuevo o seleccionar un iGroup existente. Cuando ahora los usuarios seleccionan la casilla para crear un iGroup nuevo, el parámetro para elegir un iGroup existente ya no está disponible. Si los usuarios deseleccionan el cuadro para crear un nuevo iGroup, el parámetro de iGroup existente queda disponible.</block>
   <block id="1223b61ead710c697d121bc4c8df6a60" category="list-text">Se han mejorado las tareas de asignación de nueva LUN de NetApp y eliminación de asignación de LUN de NetApp. Se ha actualizado la nueva relación entre la LUN y el iGroup. El inventario de interfaz de usuario se actualiza de inmediato tanto para la LUN como para el iGroup tras la ejecución de la tarea.</block>
   <block id="cda91d963199f150b4c27541606d0790" category="list-text">La página Comprobaciones ahora carga correctamente los usuarios que inician sesión por primera vez y ya no necesita refrescarse.</block>
+  <block id="b58b1adee5f08a2f37b40ee17c3097e8" category="cell">Se requiere la última versión de NetApp Active IQ Unified Manager (actualmente 9.14RC1)</block>
+  <block id="b225002f4ba131c321e0dc8d89d5a8ad" category="paragraph">Instale o actualice a Active IQ Unified Manager (se requiere la última versión, actualmente 9.14RC1) si no lo ha hecho. Para obtener instrucciones, vaya a <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>.</block>
+  <block id="e245b121672965eb5c120373beb6ebe2" category="image-alt">Captura de pantalla de la pantalla Desplegar plantilla de OVF</block>
+  <block id="fb784db76f57bc935639ba5340089d77" category="section-title">Noviembre de 2023</block>
+  <block id="0860efb25683aa716ffcd95186cf7353" category="admonition">Se requiere una actualización a NetApp Active IQ Unified Manager 9.14RC1 para garantizar la compatibilidad y la funcionalidad completa con la última versión.</block>
+  <block id="5c49c1696b71ecb277e29a00e385c986" category="list-text">Se agregó la página NVMe Namespaces en la sección Inventario de la interfaz de usuario.</block>
 </blocks>

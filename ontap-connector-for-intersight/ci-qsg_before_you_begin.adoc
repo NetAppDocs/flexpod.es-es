@@ -20,7 +20,7 @@ Para supervisar y orquestar el almacenamiento de NetApp desde Cisco Intersight, 
 
 == Instale o actualice Active IQ Unified Manager de NetApp
 
-Instale o actualice a Active IQ Unified Manager (la última versión es necesaria, actualmente 9,13GA) si no lo ha hecho. Para obtener instrucciones, vaya a link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentación de Active IQ Unified Manager de NetApp"].
+Instale o actualice a Active IQ Unified Manager (se requiere la última versión, actualmente 9.14RC1) si no lo ha hecho. Para obtener instrucciones, vaya a link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentación de Active IQ Unified Manager de NetApp"].
 
 
 
@@ -47,10 +47,10 @@ image::ci-qsg_image2.png[Captura de pantalla de la configuración del paso 5 de 
 
 .. En la página *Personalizar plantilla*, personalice las propiedades de implementación de la plantilla OVF. La contraseña de administrador se utiliza para los usuarios locales: Admin(`webUI/cli/ssh`).
 +
-image::ci-qsg_image3.png[Error: Falta la imagen gráfica]
+image::ci-qsg_image3.png[Captura de pantalla de la pantalla Desplegar plantilla de OVF]
 
 +
-image::ci-qsg_image4.png[Error: Falta la imagen gráfica]
+image::ci-qsg_image4.png[Captura de pantalla de la pantalla Desplegar plantilla de OVF]
 
 .. Haga clic en *Siguiente*.
 
