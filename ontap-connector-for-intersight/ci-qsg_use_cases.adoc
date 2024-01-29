@@ -33,34 +33,45 @@ Aquí está un https://tv.netapp.com/detail/video/6228096841001["enlace"^] Al v�
 
 
 
-== Caso de uso 2: Orquestación del almacenamiento de NetApp mediante flujos de trabajo de referencia
+== Caso de uso 2: Orquestación de almacenamiento de NetApp mediante flujos de trabajo de referencia
 
-Cuando hay disponibles entornos de almacenamiento de NetApp y vCenter en Cisco Intersight, puede ejecutar flujos de trabajo de referencia completos, disponibles de forma inmediata y que incluyan tareas de almacenamiento y virtualización.
+Cuando los entornos de almacenamiento de NetApp y vCenter están disponibles en Cisco Intersight, puede utilizar los flujos de trabajo de referencia integrales disponibles en GitHub a través del https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["Repositorio de flujo de trabajo Intersight de FlexPod"^].
+
+Los flujos de trabajo de referencia incluyen tareas de almacenamiento y virtualización. El archivo README del repositorio proporciona los requisitos previos necesarios para ejecutar flujos de trabajo, enlaces a recursos útiles (incluida la documentación sobre cómo importar un flujo de trabajo) y enlaces de documentación para cada flujo de trabajo de referencia.
+
+Cada flujo de trabajo tiene una carpeta en el repositorio que contiene dos archivos:
+
+* El archivo JSON para descargar e importar a Intersight,
+* Archivo de documentación que proporciona una vista de las tareas del flujo de trabajo, entradas del flujo de trabajo y un ejemplo de ejecución del flujo de trabajo.
+
+
+Realice lo siguiente para importar y utilizar un flujo de trabajo de referencia:
 
 . Implemente el OVA de Intersight Assist (tarea OnPrem en el entorno de vCenter).
 . Añada dispositivos de mensajería unificada AIQ de NetApp en Intersight Assist.
 . Añada el destino de vCenter a Intersight mediante Intersight Assist.
-. Ejecutar flujos de trabajo de referencia disponibles de forma inmediata.
-+
-Aquí tiene una lista de flujos de trabajo de referencia:
-
-+
-** Nuevo almacén de datos NAS
-** Nueva Política de exportación de almacenamiento
-** Nuevo host de almacenamiento
-** Nueva interfaz de almacenamiento
-** Nuevo equipo virtual de almacenamiento
-** Nueva máquina virtual
-** Nuevo almacén de datos VMFS
-** Eliminar el almacén de datos NAS
-** Quitar política de exportación de almacenamiento
-** Quitar host de almacenamiento
-** Quitar el almacén de datos VMFS
-** Actualizar el almacén de datos NAS
-** Actualice el host de almacenamiento
-** Actualizar el almacén de datos de VMFS
+. Descargue el archivo JSON para obtener un flujo de trabajo de referencia del repositorio de FlexPod-Intersight-Workflow.
+. Importe el flujo de trabajo a Intersight y, a continuación, ejecute el flujo de trabajo.
 
 
+La siguiente es una lista de flujos de trabajo disponibles en el repositorio de GitHub FlexPod-Intersight-Workflow:
+
+* Agregue iniciadores al iGroup de NetApp
+* Nueva política de exportación para volúmenes de NetApp
+* Nuevo almacén de datos NAS con el volumen inteligente de NetApp
+* Nueva interfaz de datos de FC NetApp
+* Nuevo iGroup de NetApp
+* Nueva interfaz de datos de iSCSI de NetApp
+* Nueva interfaz de datos NAS de NetApp
+* Nuevo equipo virtual de almacenamiento de NetApp
+* Nuevo almacén de datos de VMFS mediante la Smart LUN de NetApp
+* Quite los iniciadores del iGroup de NetApp
+* Elimine el almacén de datos NAS con el volumen inteligente de NetApp
+* Eliminar Política de exportación de NetApp
+* Quite el iGroup de NetApp
+* Elimine el almacén de datos de VMFS mediante la Smart LUN de NetApp
+* Actualice el almacén de datos NAS con el volumen inteligente de NetApp
+* Actualice el almacén de datos de VMFS mediante la Smart LUN de NetApp
 
 
 

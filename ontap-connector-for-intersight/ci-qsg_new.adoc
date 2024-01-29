@@ -18,10 +18,14 @@ En esta sección se enumeran las nuevas funciones y funcionalidades disponibles 
 
 
 
+== A enero de 2024
+
+* Orquestación de almacenamiento de NetApp mediante flujos de trabajo de referencia que ahora están disponibles para su descarga en GitHub mediante la https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["Repositorio de flujo de trabajo Intersight de FlexPod"^]. Para obtener más información sobre los nuevos flujos de trabajo de referencia en GitHub, consulte link:ci-qsg_use_cases.html["Caso de uso 2: Orquestación del almacenamiento de NetApp mediante flujos de trabajo de referencia"^].
+
+
+
+
 == Noviembre de 2023
-
-
-NOTE: Se requiere una actualización a NetApp Active IQ Unified Manager 9.14RC1 para garantizar la compatibilidad y la funcionalidad completa con la última versión.
 
 * Se agregó la página NVMe Namespaces en la sección Inventario de la interfaz de usuario.
 
