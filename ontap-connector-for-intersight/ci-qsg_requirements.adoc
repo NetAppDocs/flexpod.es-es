@@ -14,7 +14,7 @@ summary: Compruebe que cumple los requisitos de hardware, software y licencia de
 
 
 [role="lead"]
-Compruebe que cumple los requisitos de hardware, software y licencia de la integración del almacenamiento de ONTAP de NetApp con Cisco Intersight.
+Compruebe que cumple los requisitos de hardware, software y licencias para la integración del almacenamiento de NetApp ONTAP con Cisco Intersight.
 
 
 
@@ -32,25 +32,25 @@ Estos son los componentes mínimos de hardware y software necesarios para implem
 | Active IQ Unified Manager de NetApp | Se requiere la última versión de NetApp Active IQ Unified Manager (actualmente 9.14RC1) 
 
 
-| Cabina de almacenamiento NetApp | Se admiten todas las cabinas de almacenamiento ONTAP ASA, AFF y FAS para ONTAP 9.7P1 y posteriores 
+| Cabina de almacenamiento NetApp | Cabinas de almacenamiento All ONTAP ASA, AFF y FAS compatibles con ONTAP 9.7P1 y versiones posteriores 
 
 
-| Hipervisor de virtualización | VSphere 6.7 y posteriores 
+| Hipervisor de virtualización | VSphere 7,0 y versiones posteriores 
 |===
 
-NOTE: Consulte https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/flexpod/cisco-imm-for-flexpod.html["Cisco Intersight Managed Mode para FlexPod"^] Para ver los requisitos mínimos de los componentes de computación de Cisco UCS y la versión UCSM.
+NOTE: Consulte https://intersight.com/help/saas/supported_systems["Sistemas compatibles con Cisco Intersight"^] Para ver los requisitos mínimos de los componentes de computación de Cisco UCS y la versión UCSM.
 
 
 
 == Requisitos para la licencia de Cisco Intersight
 
-Cisco Intersight cuenta con una licencia basada en la suscripción con varias ediciones de licencias entre las que elegir. Las funcionalidades aumentan con los distintos tipos de licencia. Puede comprar una duración de suscripción de uno, tres o cinco años y elegir el nivel de volumen de Cisco UCS Server requerido durante la duración de la suscripción seleccionada. Cada punto final de Cisco incluye automáticamente una base Cisco Intersight sin coste adicional cuando accede al portal Cisco Intersight y solicita un dispositivo.
+Cisco Intersight ofrece servicios como el servicio de infraestructura y el servicio Cloud Orchestrator para gestionar, automatizar y optimizar el almacenamiento físico (almacenamiento de NetApp). Puede utilizar estos servicios para gestionar el servidor Cisco UCS y el sistema Cisco HyperFlex. El servicio Infrastructure Service y Cloud Orchestrator utilizan un modelo de licencias basado en suscripción con varios niveles. Puede seleccionar el nivel de volumen de Cisco UCS Server necesario para el período de suscripción seleccionado.
 
-Puede adquirir cualquiera de las siguientes licencias de Intersight de nivel superior mediante la herramienta de pedido de Cisco:
+.Modelo de licencia
+Se ha simplificado el modelo de licencias de Cisco Intersight Infrastructure Services y ahora ofrece los siguientes dos niveles:
 
-* *Cisco Intersight Essentials.* Essentials incluye todas las funciones del nivel base con las características adicionales incluyendo el derecho de Cisco UCS Central y del supervisor Cisco IMC, la configuración basada en políticas con perfiles de servicios, la administración de firmware y la evaluación de la compatibilidad con la Lista de compatibilidad de hardware (HCL).
-* *Cisco Intersight Advantage.* Advantage ofrece todas las características y funciones de los niveles base y Essentials. Incluye widgets de almacenamiento, inventario de almacenamiento, capacidad de almacenamiento y uso del almacenamiento, así como correlación entre dominios en recursos informáticos físicos, de almacenamiento físico y entornos virtuales (VMware ESXi).
-* * Cisco Intersight Premier.* Además de las funcionalidades proporcionadas en el nivel Advantage, Cisco Intersight Premier ofrece coordinación de infraestructura como servicio (IaaS) de cloud privado en Cisco UCS y sistemas de terceros, incluidos equipos virtuales (VM) (VMware vCenter) y almacenamiento físico (almacenamiento de NetApp).
+* *Cisco Intersight Infrastructure Services Essentials* - El nivel de licencia Essentials ofrece gestión de servidores, incluida la funcionalidad de monitoreo de estado global, inventario, soporte proactivo a través de la integración de Cisco TAC, autenticación multifactor, además de proporcionar acceso a SDK y API.
+* * Cisco Intersight Infrastructure Services Advantage* - El nivel de licencia Advantage ofrece una gestión avanzada de servidores con visibilidad extendida, integración de ecosistemas, automatización de Cisco y hardware y software de terceros, además de proporcionar soluciones multidominio.
 
 
-Para obtener más información acerca de las funciones cubiertas por los distintos niveles de licencia, vaya a. https://intersight.com/help/getting_started#intersight_licensing["Licencias de Cisco"].
+Para obtener más información acerca de las funciones cubiertas por los distintos niveles de licencia, vaya a. https://intersight.com/help/saas/getting_started/licensing_requirements/lic_infra#licensing_model["Licencia de servicios de infraestructura"^].
