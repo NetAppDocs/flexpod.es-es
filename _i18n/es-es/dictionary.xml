@@ -6781,7 +6781,6 @@
   <block id="be7f4d9bccf9b5176e35417d1ae376ee" category="paragraph">NetApp y Cisco se han asociado para proporcionar Cisco Intersight, una visión única del ecosistema de FlexPod. Esta integración simplificada crea una plataforma de gestión unificada para todos los componentes de la infraestructura de FlexPod y la solución de FlexPod. Cisco Intersight le permite supervisar el almacenamiento de NetApp, la informática de Cisco y el inventario de VMware. También permite orquestar o automatizar flujos de trabajo para cumplir con las tareas de almacenamiento y virtualización en tándem.</block>
   <block id="3a45f44b03660232082dc152068990fd" category="inline-link">TR 4883: Centro de datos de FlexPod con ONTAP 9.8, el conector de almacenamiento de ONTAP para Cisco Intersight y el modo gestionado de Cisco Intersight</block>
   <block id="69d7ba5974ce4e202ff6a3283926751f" category="paragraph">Para obtener más información, consulte<block ref="7233dd15fab01808b5955c7429b5aebc" category="inline-link-rx"></block>.</block>
-  <block id="d95867deadfe690e40f42068d6b59df8" category="doc">Referencias</block>
   <block id="937072d3e0f7b646b7f3f24a312489f8" category="paragraph">Para obtener más información, consulte los siguientes documentos y sitios web:</block>
   <block id="4c797a8e70e93514000fabd2051b5ddb" category="paragraph"><block ref="4c797a8e70e93514000fabd2051b5ddb" category="inline-link-rx"></block></block>
   <block id="0580772620331f949057ed6afbb098ea" category="inline-link">Introducción a Cisco Intersight Descripción general</block>
@@ -9733,4 +9732,26 @@
   <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">Información relacionada</block>
   <block id="cb2f26cdcb58be1d59a4186132027351" category="inline-link">Centro de ayuda de Cisco Intersight</block>
   <block id="cbdd42cc134bfbfb08861472ec705bb4" category="paragraph"><block ref="cbdd42cc134bfbfb08861472ec705bb4" category="inline-link-rx"></block></block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">Los avisos legales proporcionan acceso a las declaraciones de copyright, marcas comerciales, patentes y mucho más.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Avisos legales</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Derechos de autor</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marcas comerciales</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, el logotipo de NETAPP y las marcas enumeradas en la página de marcas comerciales de NetApp son marcas comerciales de NetApp, Inc. Los demás nombres de empresas y productos son marcas comerciales de sus respectivos propietarios.</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Estadounidenses</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Puede encontrar una lista actual de las patentes propiedad de NetApp en:</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Política de privacidad</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="6c5a2d8729b8ce5ae6b035791d668adb" category="sidebar">Integrada en una tecnología pionera de NetApp y Cisco y con la confianza de miles de clientes en todo el mundo, la plataforma FlexPod satisface y supera los retos de simplificación de las implementaciones para conseguir la mejor infraestructura de centros de datos de su clase. FlexPod, compuesto de tecnologías de servidores, redes y almacenamiento prevalidados, está diseñado para aumentar la capacidad de respuesta TECNOLÓGICA para las necesidades organizativas, reducir el coste de la computación y ofrecer un tiempo activo máximo con riesgo mínimo. Al simplificar la entrega de datos y aplicaciones, su empresa se beneficia de la posibilidad de ejecutar nuevos servicios y cargas de trabajo en el edge, el core o el cloud.</block>
+  <block id="af0963a66759af7047416c9d85f32efe" category="sidebar">FlexPod: Comience aquí</block>
+  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Novedades</block>
+  <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">Vídeos y demostraciones</block>
+  <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">Blogs</block>
+  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">IA y análisis de datos modernos con FlexPod</block>
+  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">Aplicaciones empresariales y bases de datos empresariales de FlexPod</block>
+  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">Cloud híbrido con FlexPod</block>
+  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod para VDI</block>
+  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">Cuidado de la salud con FlexPod</block>
 </blocks>

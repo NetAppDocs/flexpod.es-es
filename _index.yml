@@ -1,0 +1,63 @@
+---
+indexpage:
+  title: Soluciones FlexPod
+  summary: Las soluciones de FlexPod constituyen un conjunto de capacidades estratégicas
+    y tecnológicas que hacen hincapié en la cartera de productos y servicios de NetApp
+    para satisfacer las necesidades empresariales más importantes de nuestros clientes.
+  keywords: flexpod, solutions, netapp, cisco, deployments, portfolio, cloud, ontap
+  lead: Integrada en una tecnología pionera de NetApp y Cisco y con la confianza de
+    miles de clientes en todo el mundo, la plataforma FlexPod satisface y supera los
+    retos de simplificación de las implementaciones para conseguir la mejor infraestructura
+    de centros de datos de su clase. FlexPod, compuesto de tecnologías de servidores,
+    redes y almacenamiento prevalidados, está diseñado para aumentar la capacidad
+    de respuesta TECNOLÓGICA para las necesidades organizativas, reducir el coste
+    de la computación y ofrecer un tiempo activo máximo con riesgo mínimo. Al simplificar
+    la entrega de datos y aplicaciones, su empresa se beneficia de la posibilidad
+    de ejecutar nuevos servicios y cargas de trabajo en el edge, el core o el cloud.
+  tiles:
+  - title: 'FlexPod: Comience aquí'
+    links:
+    - title: Novedades
+      url: https://fieldportal.netapp.com/content/1668183
+    - title: Vídeos y demostraciones
+      url: https://tv.netapp.com/search?q=FlexPod
+    - title: Blogs
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: IA y análisis de datos modernos con FlexPod
+    links:
+    - title: Novedades
+      url: https://www.flexpod.com/solutions/use-cases/machine-learning/
+    - title: Vídeos y demostraciones
+      url: https://tv.netapp.com/search?q=FlexPod%20AI
+    - title: Blogs
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: Aplicaciones empresariales y bases de datos empresariales de FlexPod
+    links:
+    - title: Vídeos y demostraciones
+      url: https://tv.netapp.com/search?q=FlexPod%20SAP
+    - title: Blogs
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: Cloud híbrido con FlexPod
+    links:
+    - title: Novedades
+      url: https://flexpod.com/solutions/use-cases/hybrid-cloud/
+    - title: Vídeos y demostraciones
+      url: https://tv.netapp.com/search?q=FlexPod%20Hybrid%20Cloud
+    - title: Blogs
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod para VDI
+    links:
+    - title: Novedades
+      url: https://www.flexpod.com/solutions/use-cases/virtual-desktop-infrastructure/
+    - title: Vídeos y demostraciones
+      url: https://tv.netapp.com/search?q=FlexPod%20VDI
+    - title: Blogs
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: Cuidado de la salud con FlexPod
+    links:
+    - title: Novedades
+      url: https://flexpod.com/solutions/verticals/healthcare/
+    - title: Vídeos y demostraciones
+      url: https://tv.netapp.com/search?q=FlexPod%20Healthcare
+    - title: Blogs
+      url: https://blog.netapp.com/tag/Healthcare/
