@@ -26,9 +26,6 @@ Si el entorno de almacenamiento de NetApp está disponible en Cisco Interview, p
 . Añada dispositivos de mensajería unificada AIQ de NetApp en Intersight Assist.
 . Vaya a *Storage* y desplácese por el inventario de almacenamiento de NetApp.
 . Añada *Widgets* para almacenamiento de NetApp a su *Panel de monitores*.
-+
-Aquí está un https://tv.netapp.com/detail/video/6228096841001["enlace"^] Al vídeo que muestra las funciones de supervisión del almacenamiento de ONTAP de NetApp de Cisco Intersight.
-
 
 
 
@@ -156,9 +153,6 @@ Estas son las tareas de almacenamiento de NetApp que están disponibles en Cisco
 ** Cambie el nombre de NetApp Volume Snapshot
 ** Actualice los reflejos de uso compartido de carga de NetApp para el volumen raíz de SVM
 ** Actualice la capacidad del volumen NetApp
-+
-Para obtener más información acerca de cómo personalizar flujos de trabajo con tareas de virtualización y almacenamiento de NetApp, vea el vídeo https://tv.netapp.com/detail/video/6228095945001["Orquestación de almacenamiento de NetApp ONTAP en Cisco Intersight"^].
-
 
 
 

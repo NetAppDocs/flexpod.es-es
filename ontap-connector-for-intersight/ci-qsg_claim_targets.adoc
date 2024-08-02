@@ -14,7 +14,7 @@ summary: Una vez instalado Cisco Intersight Assist, puede solicitar los disposit
 
 
 [role="lead"]
-Una vez instalado Cisco Intersight Assist, puede solicitar los dispositivos de almacenamiento y virtualización de NetApp. Vuelva a la página *Intersight Targets* y añada sus destinos de Active IQ Unified Manager de vCenter y NetApp. Para obtener más información sobre el proceso de reclamación, vea el vídeo https://tv.netapp.com/detail/video/6228080442001["Reclamar un destino a través de Cisco Intersight Assist."^]
+Una vez instalado Cisco Intersight Assist, puede solicitar los dispositivos de almacenamiento y virtualización de NetApp. Vuelva a la página *Intersight Targets* y añada sus destinos de Active IQ Unified Manager de vCenter y NetApp.
 
 
 NOTE: Asegúrese de que la puerta de enlace API de Active IQ Unified Manager (AIQ) de NetApp esté habilitada.
