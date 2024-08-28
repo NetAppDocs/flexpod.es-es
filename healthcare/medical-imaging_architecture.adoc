@@ -49,7 +49,7 @@ SnapMirror de NetApp ofrece funcionalidades de replicación de datos líderes de
 * Ofrezca otras eficiencias inline adicionales con la compresión de red.
 
 
-Se puede encontrar más información https://www.netapp.com/us/media/ds-3820.pdf["aquí"^].
+Se puede encontrar más información https://www.netapp.com/pdf.html?item=/media/8327-ds-3820.pdf["aquí"^] .
 
 La tabla siguiente enumera cada nivel que un sistema de exploraciones médicas típico requiere para una latencia específica y las características de rendimiento.
 
@@ -224,7 +224,7 @@ Un sistema típico de imágenes médicas utiliza una arquitectura de N niveles. 
 
 Un sistema típico de imágenes médicas proporciona acceso a imágenes para dos grupos distintos de usuarios: El usuario/radiólogo de diagnóstico, o el médico o el médico que ordenó la adquisición de imágenes.
 
-Los radiólogos suelen utilizar visores de diagnósticos de gama alta habilitados para gráficos que se ejecutan en estaciones de trabajo gráficas e informáticas de gama alta que son físicas o parte de una infraestructura de escritorios virtuales. Si está a punto de iniciar el recorrido hacia la infraestructura de puestos de trabajo virtuales, puede encontrar más información https://www.netapp.com/us/media/na-flexpod-vdi.pdf["aquí"^].
+Los radiólogos suelen utilizar visores de diagnósticos de gama alta habilitados para gráficos que se ejecutan en estaciones de trabajo gráficas e informáticas de gama alta que son físicas o parte de una infraestructura de escritorios virtuales. Si está a punto de iniciar su viaje hacia la infraestructura de puestos de trabajo virtuales, encontrará más información https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["aquí"^].
 
 Cuando el huracán Katrina destruyó dos de los principales hospitales docentes de Luisiana, se reunieron los líderes para construir un sistema de registros sanitarios electrónicos resistente que incluía más de 3000 equipos virtuales en un tiempo récord. Se puede encontrar más información sobre la arquitectura de referencia de casos de uso y los paquetes de referencia de FlexPod https://blog.netapp.com/virtual-desktop-infrastructure-bundles["aquí"^].
 
@@ -238,7 +238,7 @@ El sistema de imágenes médicas puede proporcionar acceso a imágenes a una com
 
 Los sistemas de exploración médica también pueden admitir centros médicos académicos que necesitan sistemas PACS o de exploración para su uso en clases. Para apoyar las actividades académicas, un sistema típico de exploración médica puede tener las capacidades de un sistema PACS en una huella menor o en un entorno de exploración de solo enseñanza. Los sistemas de archivado típicos de proveedores y algunos sistemas de imágenes médicas de clase empresarial ofrecen funciones de morfología de etiquetas de imagen DICOM para anonimizar las imágenes que se utilizan con fines didácticos. Tag morfing permite a las organizaciones sanitarias intercambiar imágenes DICOM entre distintos sistemas de imágenes médicas de distintos proveedores de forma neutral con respecto a los proveedores. Además, TAG morfing permite que los sistemas de imágenes médicas implementen una capacidad de archivado para todas las empresas, neutral con respecto a los proveedores, para las imágenes médicas.
 
-Los sistemas de imágenes médicas están empezando a usarse https://www.netapp.com/us/media/sb-flexpod-datacenter-ai.pdf["Funcionalidades de computación basadas en GPU"^] mejorar los flujos de trabajo humanos preprocesando las imágenes y mejorando así la eficiencia. Los sistemas típicos de exploración médica empresarial aprovechan las funcionalidades de eficiencia del almacenamiento de NetApp, líderes del sector. Los sistemas de imágenes médicas empresariales suelen utilizar RMAN para realizar actividades de copia de seguridad, recuperación y restauración. Para mejorar el rendimiento y reducir el tiempo que se tarda en crear backups, la tecnología Snapshot está disponible para las operaciones de backup y la tecnología SnapMirror está disponible para la replicación.
+Los sistemas de imágenes médicas están empezando a utilizarse https://www.netapp.com/pdf.html?item=/media/7398-sb-flexpod-datacenter-aipdf.pdf["Funcionalidades de computación basadas en GPU"^] para mejorar los flujos de trabajo humanos mediante el preprocesamiento de las imágenes y, por lo tanto, la eficiencia. Los sistemas típicos de exploración médica empresarial aprovechan las funcionalidades de eficiencia del almacenamiento de NetApp, líderes del sector. Los sistemas de imágenes médicas empresariales suelen utilizar RMAN para realizar actividades de copia de seguridad, recuperación y restauración. Para mejorar el rendimiento y reducir el tiempo que se tarda en crear backups, la tecnología Snapshot está disponible para las operaciones de backup y la tecnología SnapMirror está disponible para la replicación.
 
 En la siguiente figura se muestran los componentes lógicos de la aplicación en una vista arquitectónica por capas.
 

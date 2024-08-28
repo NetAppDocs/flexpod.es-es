@@ -18,7 +18,7 @@ Si quiere más información sobre el contenido de este documento, consulte los s
 
 * Arquitectura validada de NetApp: 1130 FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con IP directamente vinculada=basado en Diseño NVA de almacenamiento
 +
-https://www.netapp.com/us/media/nva-1130-design.pdf["https://www.netapp.com/us/media/nva-1130-design.pdf"^]
+https://docs.netapp.com/us-en/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html["https://www.netapp.com/us/media/nva-1130-design.pdf"^]
 
 * Centro de documentación para sistemas AFF y FAS
 +

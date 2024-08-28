@@ -51,4 +51,4 @@ La siguiente figura muestra la configuración gestionada de FlexPod Express con 
 
 image:fp-express-tech-spec_image3.png["Error: Falta la imagen gráfica"]
 
-Para obtener más información sobre esta configuración, consulte https://www.netapp.com/us/media/nva-1131-deploy.pdf["FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento basado en IP incluido directamente"^].
+Para obtener más información sobre esta configuración, consulte https://docs.netapp.com/us-en/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html["FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento basado en IP incluido directamente"^].

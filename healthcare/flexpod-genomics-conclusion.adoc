@@ -42,7 +42,7 @@ https://www.flexpod.com/idc-white-paper/["https://www.flexpod.com/idc-white-pape
 
 * IA en la sanidad
 +
-https://www.netapp.com/us/media/na-369.pdf["https://www.netapp.com/us/media/na-369.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/7393-na-369pdf.pdf["https://www.netapp.com/us/media/na-369.pdf"^]
 
 * FlexPod para el sector sanitario facilita su transformación
 +

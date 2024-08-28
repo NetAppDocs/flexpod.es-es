@@ -26,7 +26,7 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_dat
 
 * Breve descripción de la solución: Backup de bases de datos de Oracle en centros de datos FlexPod con SnapCenter
 +
-https://www.netapp.com/us/media/sb-3999.pdf["https://www.netapp.com/us/media/sb-3999.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/16973-sb-3999pdf.pdf["https://www.netapp.com/us/media/sb-3999.pdf"^]
 
 * Centro de datos FlexPod con bases de datos RAC de Oracle en Cisco UCS y AFF A-Series de NetApp
 +
@@ -50,7 +50,7 @@ https://fieldportal.netapp.com/content/734702["https://fieldportal.netapp.com/co
 
 * TR-4700: Complemento de SnapCenter para base de datos de Oracle
 +
-https://www.netapp.com/us/media/tr-4700.pdf["https://www.netapp.com/us/media/tr-4700.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/12403-tr4700pdf.pdf["https://www.netapp.com/us/media/tr-4700.pdf"^]
 
 * Documentación de productos de NetApp
 +

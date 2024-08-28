@@ -366,25 +366,25 @@ Todos los modelos disponibles de controladoras de almacenamiento de FAS se admit
 | Componente | Documentación de la plataforma de la controladora FAS Series 
 
 
-| Serie FAS9000 | https://www.netapp.com/us/media/ds-3810.pdf["Especificaciones técnicas de la serie FAS9000"] 
+| Serie FAS9000 | https://www.netapp.com/pdf.html?item=/media/8939-ds-3810.pdf["Especificaciones técnicas de la serie FAS9000"^] 
 
 
-| Serie FAS8700 | https://www.netapp.com/us/media/ds-4020.pdf["Hoja de datos de la serie FAS8700"] 
+| Serie FAS8700 | https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Hoja de datos de la serie FAS8700"^] 
 
 
-| Serie FAS8300 | https://www.netapp.com/us/media/ds-4020.pdf["Especificaciones técnicas de la serie FAS8300"] 
+| Serie FAS8300 | https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Especificaciones técnicas de la serie FAS8300"^] 
 
 
 | Serie FAS500f | https://docs.netapp.com/us-en/ontap-systems/fas500f/index.html["Hoja de datos de la serie FAS500f"] 
 
 
-| Serie FAS2700 | https://www.netapp.com/us/media/ds-3929.pdf["Especificaciones técnicas de la serie FAS2700"] 
+| Serie FAS2700 | https://www.netapp.com/pdf.html?item=/media/8937-ds-3929.pdf["Especificaciones técnicas de la serie FAS2700"^] 
 |===
 
 
 === AFF a-Series
 
-Todos los modelos actuales de las controladoras de almacenamiento AFF a-Series de NetApp son compatibles para su uso en FlexPod. Puede encontrar información adicional en la https://www.netapp.com/us/media/ds-3582.pdf["Especificaciones técnicas de AFF"^] datasheet y en https://hwu.netapp.com/["Hardware Universe de NetApp"^]. Consulte la documentación específica de la plataforma que se muestra en la tabla siguiente para obtener información detallada acerca de un modelo AFF específico.
+Todos los modelos actuales de las controladoras de almacenamiento AFF a-Series de NetApp son compatibles para su uso en FlexPod. Puede encontrar información adicional en https://www.netapp.com/media/7828-DS-3582-AFF-A-Series.pdf["Especificaciones técnicas de AFF"^] la hoja de datos y en la https://hwu.netapp.com/["Hardware Universe de NetApp"^]. Consulte la documentación específica de la plataforma que se muestra en la tabla siguiente para obtener información detallada acerca de un modelo AFF específico.
 
 |===
 | Componente | Documentación de la plataforma de controladoras AFF a-Series 

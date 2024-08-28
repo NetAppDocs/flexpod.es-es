@@ -49,7 +49,7 @@ image:flexpod-fips-image3.png["Error: Falta la imagen gráfica"]
 
 NOTE: NVE utiliza un módulo criptográfico de software validado por FIPS 140-2 nivel 1.
 
-Para obtener más información sobre NVE, consulte https://www.netapp.com/us/media/ds-3899.pdf["Especificaciones técnicas de NVE"^].
+Para obtener más información sobre NVE, consulte la https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["Especificaciones técnicas de NVE"^].
 
 NVE protege los datos en el cloud. Cloud Volumes ONTAP y Azure NetApp Files pueden proporcionar cifrado de datos en reposo conforme a la normativa FIPS 140-2-2.
 
@@ -110,7 +110,7 @@ image:flexpod-fips-image4.png["Error: Falta la imagen gráfica"]
 
 NOTE: NSe utiliza el cifrado de hardware en cada unidad, que se valida con FIPS 140-2 nivel 2.
 
-Para obtener más información sobre NSE, consulte https://www.netapp.com/us/media/ds-3213-en.pdf["Especificaciones técnicas de NSE"^].
+Para obtener más información sobre NSE, consulte la https://www.netapp.com/pdf.html?item=/media/7563-ds-3213-en.pdf["Especificaciones técnicas de NSE"^].
 
 
 

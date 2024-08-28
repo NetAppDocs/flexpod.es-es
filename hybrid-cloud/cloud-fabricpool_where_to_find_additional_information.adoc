@@ -18,7 +18,7 @@ Si quiere más información sobre el contenido de este documento, consulte los s
 
 * Prácticas recomendadas de FabricPool
 +
-http://www.netapp.com/us/media/tr-4598.pdf["www.netapp.com/us/media/tr-4598.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["www.netapp.com/us/media/tr-4598.pdf"^]
 
 * Documentación de productos de NetApp
 +
@@ -26,6 +26,6 @@ https://docs.netapp.com["https://docs.netapp.com"^]
 
 * TR-4036: Especificaciones técnicas del centro de datos de FlexPod
 +
-https://www.netapp.com/us/media/tr-4036.pdf["https://www.netapp.com/us/media/tr-4036.pdf"^]
+https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_solution_overview.html["https://www.netapp.com/us/media/tr-4036.pdf"^]
 
 
