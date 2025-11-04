@@ -72,7 +72,7 @@ singlecvoaws::> snapmirror update -destination-path svm_singlecvoaws:hc_iscsi_vo
 Operation is queued: snapmirror update of destination “svm_singlecvoaws:hc_iscsi_vol_copy”.
 ....
 +
-También se puede realizar una actualización de SnapMirror a través de la GUI de BlueXP en la pestaña *replicación*.
+También se puede realizar una actualización de SnapMirror a través de la interfaz gráfica de usuario (GUI) de la NetApp Console, en la pestaña *Replicación*.
 
 . Crear una instancia de FlexClone basada en la instantánea de la aplicación que se realizó anteriormente.
 +
@@ -87,7 +87,7 @@ Para la tarea anterior, también se puede crear una nueva instantánea, pero deb
 . Activar un volumen FlexClone para que la instancia de EHR en el cloud.
 +
 ....
-singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/kamini_clone/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+singlecvoaws::> lun mapping create -vserver svm_singlecvoaws -path /vol/kamini_clone/iscsi_lun1 -igroup ehr-igroup -lun-id 0
 
 singlecvoaws::> lun mapping show
 Vserver     Path                                  Igroup    LUN ID  Protocol
@@ -162,17 +162,11 @@ image:fhc-cvoe-image21.png["Esta captura de pantalla muestra la opción de deten
 Asegúrese de que la replicación de SnapMirror ya esté configurada entre la ONTAP local en la instancia de FlexPod y Cloud Volumes ONTAP en AWS, para que pueda crear copias de Snapshot de aplicaciones frecuentes.
 
 +
-Una vez detenida la SVM, el `hc_iscsi_vol` El volumen no es visible en BlueXP.
-
-+
-image:fhc-cvoe-image22.png["El volumen ya está visible en la pantalla de resumen de volumen."]
+Una vez que se ha detenido el SVM, `hc_iscsi_vol` El volumen no se muestra en la consola.
 
 . Activar DR en CVO.
 +
 .. Rompa la relación de replicación de SnapMirror entre ONTAP en las instalaciones y Cloud Volumes ONTAP y promocione el volumen de destino de CVO (`hc_iscsi_vol_copy`) a la producción.
-+
-image:fhc-cvoe-image23.png["Se muestra la pantalla de opciones de relación de rotura."]
-
 +
 Tras romper la relación de SnapMirror, el tipo de volumen de destino cambia de protección de datos (DP) a lectura/escritura (RW).
 
@@ -186,7 +180,7 @@ svm_singlecvoaws hc_iscsi_vol_copy RW
 .. Active el volumen de destino en Cloud Volumes ONTAP para abrir la instancia de EHR en una instancia de EC2 en el cloud.
 +
 ....
-singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/hc_iscsi_vol_copy/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+singlecvoaws::> lun mapping create -vserver svm_singlecvoaws -path /vol/hc_iscsi_vol_copy/iscsi_lun1 -igroup ehr-igroup -lun-id 0
 
 singlecvoaws::> lun mapping show
 Vserver     Path                                Igroup   LUN ID  Protocol
@@ -237,16 +231,10 @@ Este resultado muestra que los usuarios pueden acceder a los datos replicados a 
 
 .. Invierta la relación de SnapMirror. Esta operación revierte los roles de los volúmenes de origen y destino.
 +
-image:fhc-cvoe-image24.png["Esta captura de pantalla muestra el cuadro de opción invertir relación."]
-
-+
 Cuando se realiza esta operación, el contenido del volumen de origen original se sobrescribe con el contenido del volumen de destino. Esto es útil cuando se desea reactivar un volumen de origen que se desconectó.
 
 +
 Ahora volumen CVO (`hc_iscsi_vol_copy`) se convierte en el volumen de origen y el volumen en las instalaciones (`hc_iscsi_vol`) se convierte en el volumen de destino.
-
-+
-image:fhc-cvoe-image25.png["Esta captura de pantalla muestra la relación de replicación de volumen creada en BlueXP."]
 
 +
 No se conservan todos los datos escritos en el volumen de origen original entre la última replicación de datos y la hora en la que se deshabilitó el volumen de origen.
@@ -283,9 +271,6 @@ image:fhc-cvoe-image26.png["Esta captura de pantalla muestra cómo iniciar un eq
 
 . Rompa la relación de replicación de SnapMirror entre Cloud Volumes ONTAP y ONTAP en las instalaciones y promocione el volumen en las instalaciones (`hc_iscsi_vol`) volver a la producción.
 +
-image:fhc-cvoe-image27.png["Esta captura de pantalla muestra cómo romper una relación."]
-
-+
 Después de romper la relación de SnapMirror, el tipo de volumen en las instalaciones cambia de la protección de datos (DP) a la de lectura/escritura (RW).
 
 +
@@ -296,9 +281,6 @@ vserver        volume       type
 Healthcare_SVM hc_iscsi_vol RW
 ....
 . Invierta la relación de SnapMirror. Ahora, el volumen de ONTAP en las instalaciones (`hc_iscsi_vol`) Se convierte en el volumen de origen como lo era antes y el volumen Cloud Volumes ONTAP (`hc_iscsi_vol_copy`) se convierte en el volumen de destino.
-+
-image:fhc-cvoe-image28.png["Esta captura de pantalla muestra cómo invertir una relación."]
-
 +
 Siguiendo estos pasos, hemos restaurado correctamente la configuración original.
 

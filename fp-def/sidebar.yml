@@ -48,8 +48,6 @@ entries:
     url: "/fp-def/dc-tech-spec_flexpod_platforms.html"
   - title: Reglas de FlexPod
     url: "/fp-def/dc-tech-spec_flexpod_rules.html"
-  - title: Compatible con configuraciones de FlexPod validadas frente a las validadas
-    url: "/fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html"
   - title: ONTAP de NetApp
     url: "/fp-def/dc-tech-spec_netapp_ontap.html"
   - title: Modos de funcionamiento de switches de Cisco Nexus
