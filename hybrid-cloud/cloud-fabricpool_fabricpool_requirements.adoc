@@ -32,9 +32,13 @@ FabricPool es compatible con las siguientes plataformas:
 
 
 
-NOTE: Consulta el https://hwu.netapp.com/DetailViews/Home.aspx[] [NetApp Hardware Universe^] para obtener la información más reciente sobre las plataformas compatibles con FabricPool.
+NOTE: Consulta el  https://hwu.netapp.com/DetailViews/Home.aspx["Hardware Universe de NetApp"^] para obtener la información más reciente sobre las plataformas compatibles con FabricPool.
 
-* NetApp ONTAP Select [NOTA] NetApp recomienda usar niveles locales all-SSD FabricPool.
+* NetApp ONTAP Select
++
+
+NOTE: NetApp recomienda usar niveles locales all-SSD FabricPool.
+
 * Niveles de cloud
 +
 ** Servicio de almacenamiento de objetos en cloud de Alibaba (estándar, acceso poco frecuente)

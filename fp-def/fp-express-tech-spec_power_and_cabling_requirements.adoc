@@ -102,7 +102,7 @@ En la siguiente tabla se enumeran los puertos de alimentación necesarios para c
 | DS224C | 2 C13/C14 
 
 
-| DS460C | 2 C13/C14 
+| DS460C | 2 x C19/C20 o 2 x C14/C19 
 
 
 | DS2246 | 2 C13/C14 
@@ -114,7 +114,7 @@ En la siguiente tabla se enumeran los puertos de alimentación necesarios para c
 | Bandejas de discos E-Series | Puertos de alimentación necesarios 
 
 
-| DE460C | 2 C14/C20 
+| DE460C | 2 x C19/C20 o 2 x C14/C19 
 
 
 | DE224C | 2 C14/C20 
