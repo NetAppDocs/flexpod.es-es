@@ -13,9 +13,9 @@ summary: NetApp ofrece una solución de gestión de datos única para las aplica
 :imagesdir: ./../media/
 
 
-En colaboración con:image:cisco logo.png["logotipo de cisco"]
-
 Kamini Singh, NetApp
+
+En colaboración con:image:cisco logo.png["logotipo de cisco"]
 
 [role="lead"]
 La clave para llevar a cabo una transformación digital simplemente consiste en hacer más con los datos. Los hospitales generan y requieren grandes cantidades de datos para dirigir su organización y prestar servicio a sus pacientes con eficacia. La información se recopila y procesa cuando se trata a los pacientes y se gestionan los horarios del personal y los recursos médicos.
