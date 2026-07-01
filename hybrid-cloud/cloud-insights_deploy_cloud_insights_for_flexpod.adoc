@@ -29,7 +29,7 @@ Para implementar la solución, debe completar las siguientes tareas:
 
 Para registrarse en el servicio Cloud Insights de NetApp, complete los siguientes pasos:
 
-. Vaya a. https://cloud.netapp.com/cloud-insights["https://cloud.netapp.com/cloud-insights"^]
+. Ir a https://www.netapp.com/data-infrastructure-insights/["https://www.netapp.com/data-infrastructure-insights/"^]
 . Haga clic en el botón en el centro de la pantalla para iniciar la prueba gratuita de 14 días o en el enlace de la esquina superior derecha para registrarse o iniciar sesión con una cuenta existente de Cloud Central de NetApp.
 
 

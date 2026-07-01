@@ -27,16 +27,4 @@ Los requisitos de software para el FlexPod Express con NetApp FAS incluyen:
 * En la configuración gestionada por Cisco UCS, Cisco UCS Manager UCS 4.0(1b)
 
 
-Todo el software debe aparecer y ser compatible con la http://support.netapp.com/matrix/["IMT de NetApp"^]. Algunas funciones de software pueden requerir versiones de código más recientes que los mínimos indicados en arquitecturas anteriores.
-
-
-
-== Requisitos de software para FlexPod Express con E-Series
-
-Los requisitos de software para FlexPod Express con E-Series incluyen:
-
-* Software SANtricity E-Series 11.30 o superior
-* Cisco UCS Manager 4.0(1b).
-
-
-Todo el software debe figurar en la lista y ser compatible con http://support.netapp.com/matrix/["IMT de NetApp"^].
+Todo el software debe figurar en la lista y ser compatible en el http://mysupport.netapp.com/matrix["IMT de NetApp"^]. Es posible que algunas funciones del software requieran versiones de código más recientes que los requisitos mínimos indicados en las arquitecturas anteriores.

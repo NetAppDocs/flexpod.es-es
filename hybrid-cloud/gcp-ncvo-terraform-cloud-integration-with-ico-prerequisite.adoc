@@ -22,7 +22,7 @@ link:gcp-ncvo-cisco-intersight-configuration.html["Anterior: Configuración de C
 . Reclame o cree un destino cloud de Terraform mediante los detalles pertinentes de la cuenta de Terraform Cloud.
 . Cree un destino de agente de cloud Terraform para clouds privados, de modo que los clientes puedan instalar el agente en el centro de datos y habilitar la comunicación con Terraform Cloud.
 +
-Si desea obtener más información, siga este https://intersight.com/help/saas/features/terraform_cloud/admin["este enlace"^].
+Para obtener más información, sigue https://community.cisco.com/t5/data-center-and-cloud-knowledge-base/intersight-service-for-terraform/ta-p/4301093["este enlace"^].
 
 
 

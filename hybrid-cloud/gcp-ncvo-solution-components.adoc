@@ -65,7 +65,7 @@ Los niveles de licencias de Cisco Intersight son los siguientes:
 
 
 
-Puede encontrar más información sobre Intersight Licensing y las funciones compatibles con cada licencia https://intersight.com/help/saas/getting_started/licensing_requirements["aquí"^].
+Para obtener más información sobre las licencias de Intersight y las funciones incluidas en cada tipo de licencia, consulta https://intersight.com/help/saas/getting_started/licensing_requirements/lic_infra["aquí"^].
 
 
 NOTE: En esta solución utilizamos Intersight Cloud Orchestrator e Intersight Service para HashiCorp Terraform. Estas funciones están disponibles para los usuarios con la licencia Intersight Premier, por lo que este nivel de licencia debe estar activado.
@@ -84,7 +84,7 @@ Cisco Intersight Assist le ayuda a agregar dispositivos de punto final a Cisco I
 
 Cisco Intersight Assist está disponible en Cisco Intersight Virtual Appliance, que se distribuye como una máquina virtual de implantación que se encuentra en un formato de archivo de Open Virtual Appliance (OVA). Puede instalar el dispositivo en un servidor ESXi. Para obtener más información, consulte https://www.cisco.com/c/en/us/support/servers-unified-computing/intersight/products-installation-guides-list.html["Guía de inicio de Cisco Intersight Virtual Appliance"^].
 
-Después de solicitar Intersight Assist a Intersight, puede reclamar dispositivos de punto final mediante la opción Claim a través de Intersight Assist. Para obtener más información, consulte https://intersight.com/help/getting_started["Primeros pasos"^].
+Una vez que hayas registrado Intersight Assist en Intersight, puedes registrar dispositivos endpoint usando la opción «Registrar a través de Intersight Assist». Para más información, consulta https://intersight.com/help/saas/getting_started/overview["Primeros pasos"^].
 
 
 
@@ -157,7 +157,7 @@ La solución de FlexPod que se utiliza como plataforma de referencia en nuestro 
 La red dentro de este entorno se basa en ACI. Para obtener más información, consulte https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9k_aci.html["aquí"^].
 
 * Consulte los siguientes enlaces para obtener más información:
-* http://support.netapp.com/matrix/["Herramienta de matriz de interoperabilidad de NetApp"^]
+* http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^]
 * http://www.vmware.com/resources/compatibility/search.php["Guía de compatibilidad de VMware"^]
 * https://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["Herramienta de interoperabilidad de hardware y software Cisco UCS"^]
 

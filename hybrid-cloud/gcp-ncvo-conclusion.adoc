@@ -36,7 +36,7 @@ Si quiere más información sobre el contenido de este documento, consulte los s
 
 * Todas las configuraciones de Terraform utilizadas
 +
-https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO"^]
+https://github.com/ucs-compute-solutions/cvo_snapmirror["https://github.com/ucs-compute-solutions/cvo_snapmirror"^]
 
 * Archivos JSON para la importación de flujos de trabajo
 +
@@ -54,11 +54,11 @@ https://intersight.com/help/saas/home["https://intersight.com/help/saas/home"^]
 
 * Documentación de Cisco Intersight Cloud Orchestrator:
 +
-https://intersight.com/help/saas/features/orchestration/configure["https://intersight.com/help/saas/features/orchestration/configure#intersight_cloud_orchestrator"^]
+https://intersight.com/help/appliance/orchestration/configure["https://intersight.com/help/appliance/orchestration/configure"^]
 
 * Cisco Intersight Service para la Documentación de Terraform de HashiCorp
 +
-https://intersight.com/help/saas/features/terraform_cloud/admin["https://intersight.com/help/saas/features/terraform_cloud/admin"^]
+https://community.cisco.com/t5/data-center-and-cloud-knowledge-base/intersight-service-for-terraform/ta-p/4301093["https://community.cisco.com/t5/data-center-and-cloud-knowledge-base/intersight-service-for-terraform/ta-p/4301093"^]
 
 * Hoja de datos de Cisco Intersight
 +
@@ -98,7 +98,7 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xse
 
 * Herramienta de matriz de interoperabilidad de NetApp
 +
-http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+http://mysupport.netapp.com/matrix["http://mysupport.netapp.com/matrix"^]
 
 * Herramienta de interoperabilidad de hardware y software Cisco UCS
 +
@@ -114,29 +114,29 @@ http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/
 
 === Documentos de referencia Cloud Volumes ONTAP de NetApp
 
-* Cloud Manager de NetApp
+* NetApp Console Documentación:
 +
-https://docs.netapp.com/us-en/occm/concept_overview.html["https://docs.netapp.com/us-en/occm/concept_overview.html"^]
+https://docs.netapp.com/us-en/console-family/index.html["https://docs.netapp.com/us-en/console-family/index.html"^]
 
 * Cloud Volumes ONTAP
 +
 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html[]
 
-* Calculadora del coste total de propiedad de Cloud Volumes ONTAP
+* Calculadora TCO de Google Cloud con NetApp Cloud Volumes ONTAP
 +
-https://cloud.netapp.com/google-cloud-calculator[]
+https://www.netapp.com/google-cloud/google-cloud-calculator/[]
 
-* Dimensionador Cloud Volumes ONTAP
+* Dimensionamiento y estimación de costes de Cloud Volumes ONTAP:
 +
-https://cloud.netapp.com/cvo-sizer["https://cloud.netapp.com/cvo-sizer"^]
+https://www.netapp.com/ontap-cloud/pricing/["https://www.netapp.com/ontap-cloud/pricing/"^]
 
-* Herramienta de evaluación de cloud
+* Evaluación de la nube y análisis de la infraestructura:
 +
-https://cloud.netapp.com/assessments[]
+https://docs.netapp.com/us-en/data-infrastructure-insights/[]
 
-* Cloud híbrido de NetApp
+* NetApp Soluciones de nube híbrida:
 +
-https://cloud.netapp.com/hybrid-cloud[]
+https://www.netapp.com/hybrid-cloud/[]
 
 * Documentación sobre API de Cloud Manager
 +
@@ -148,7 +148,7 @@ https://docs.netapp.com/us-en/occm/reference_infrastructure_as_code.html["https:
 
 === Resolución de problemas
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)["https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)"^]
+https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs["https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs"^]
 
 
 
@@ -174,7 +174,7 @@ https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/lates["https:
 
 * Alta disponibilidad de ONTAP para GCP
 +
-https://cloud.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick["https://cloud.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick"^]
+https://bluexp.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick["https://bluexp.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick"^]
 
 * GCP perisite
 +

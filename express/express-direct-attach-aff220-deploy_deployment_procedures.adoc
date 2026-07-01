@@ -450,7 +450,7 @@ Confirme que los componentes de hardware y software que desea utilizar son compa
 
 ==== Controladoras de almacenamiento
 
-Siga los procedimientos de instalación física de los controladores de la https://library-clnt.dmz.netapp.com/documentation/docweb/index.html?productID=62331&language=en-US["Documentación de AFF A220"^].
+Sigue los procedimientos de instalación física de los controladores en el https://docs.netapp.com/us-en/ontap-systems/a220/install-setup.html["Documentación de AFF A220"^].
 
 
 
@@ -2392,7 +2392,7 @@ NOTE: Las IP del servidor DNS no se han introducido anteriormente en la IP del K
 
 . Introduzca `VMware-VMvisor-Installer-6.7.0.update01-10302608.x86_64.iso` Como nombre de archivo remoto.
 +
-Este VMware ESXi 6.7U1 ISO se puede descargar desde https://my.vmware.com/group/vmware/details?downloadGroup=ESXI650A&productId=614["Descargas de VMware"^].
+Esta imagen ISO de VMware ESXi 6.7U1 se puede descargar desde https://support.broadcom.com/group/ecx/downloads["Portal de soporte de Broadcom"^].
 
 . Introduzca la ruta del servidor web al archivo ISO en el campo Remote Path.
 . Haga clic en Aceptar para crear el montaje vMedia.
@@ -2726,9 +2726,9 @@ Existen varios métodos para instalar ESXi en un entorno VMware. Estos procedimi
 
 Si no se ha descargado la imagen personalizada de VMware ESXi, complete los siguientes pasos para completar la descarga:
 
-. Haga clic en el siguiente enlace: https://my.vmware.com/group/vmware/details?downloadGroup=OEM-ESXI67U1-CISCO&productId=742[VMware vSphere Hypervisor (ESXi) 6.7U1.]
-. Necesita un ID de usuario y una contraseña en https://www.vmware.com/["vmware.com"^] para descargar este software.
-. Descargue el .`iso` archivo.
+. Inicia sesión en el portal de soporte de Broadcom download site: https://support.broadcom.com/group/ecx/downloads["https://support.broadcom.com/group/ecx/downloads"^].
+. Necesitarás un nombre de usuario y una contraseña de Broadcom. Busca VMware vSphere Hypervisor (ESXi) Custom ISOs.
+. Descarga la imagen personalizada de Cisco para el CD de instalación de ESXi 6.7U1.
 
 
 

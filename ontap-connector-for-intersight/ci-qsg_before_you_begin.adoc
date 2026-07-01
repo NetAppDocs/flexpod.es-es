@@ -31,7 +31,7 @@ Asegúrese de cumplir con la https://www.cisco.com/c/en/us/td/docs/unified_compu
 * Pasos*
 
 . Cree una cuenta de Cisco Intersight. Visite https://intersight.com/["https://intersight.com/"^] Para crear su cuenta de Intersight. Debe tener un ID de Cisco válido para crear una cuenta de Cisco Intersight.
-. Descargue el dispositivo virtual de Intersight en https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]. Para obtener más información, vaya a la https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["Guía de instalación y actualización de Intersight Appliance"^].
+. Descarga el dispositivo virtual Cisco Intersight en https://software.cisco.com/download/home/286319499/type/286323047/release/1.1.7-0.a["software.cisco.com"^]. Para obtener más información, visita https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["Guía de instalación y actualización de Intersight Appliance"^].
 . Implemente el OVA. Se requiere DNS y NTP para implementar el OVA.
 +
 .. Configurar DNS con registros de alias A/PTR y CNAME antes de implementar el OVA. Vea el ejemplo siguiente.
@@ -57,7 +57,7 @@ image::ci-qsg_image4.png[Captura de pantalla de la pantalla Desplegar plantilla 
 
 . Después de la implementación del dispositivo Intersight Assist.
 +
-.. Vaya a. https://FQDN-of-your-appliance[] para completar la configuración posterior a la instalación del dispositivo.
+.. Accede a `https://<FQDN-of-your-appliance>` para completar la configuración posterior a la instalación de tu dispositivo.
 +
 El proceso de instalación se inicia automáticamente. La instalación puede tardar hasta una hora dependiendo del ancho de banda hasta Intersight.com. También puede tardar varios segundos en que el sitio seguro esté operativo una vez que se encienda el equipo virtual.
 

@@ -135,7 +135,7 @@ Para obtener información detallada, consultelink:https://www.vmware.com/product
 
 == Revisiones de hardware y software
 
-Esta solución de nube híbrida se puede extender a cualquier entorno FlexPod que ejecute versiones compatibles de software, firmware y hardware, tal como se define en el documento.link:http://support.netapp.com/matrix/["Herramienta de matriz de interoperabilidad de NetApp"^] ,link:https://ucshcltool.cloudapps.cisco.com/public/["Compatibilidad de hardware y software de UCS"^] , ylink:https://www.vmware.com/resources/compatibility/search.php["Guía de compatibilidad de VMware"^] .
+Esta solución de nube híbrida puede ampliarse a cualquier entorno de FlexPod que ejecute versiones compatibles de software, firmware y hardware, como se define en link:http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^], link:https://ucshcltool.cloudapps.cisco.com/public/["Compatibilidad de hardware y software de UCS"^] y link:https://www.vmware.com/resources/compatibility/search.php["Guía de compatibilidad de VMware"^].
 
 La siguiente tabla muestra las revisiones de software y hardware de FlexPod en las instalaciones.
 

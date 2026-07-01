@@ -26,7 +26,7 @@ https://www.flexpod.com["https://www.flexpod.com"^]
 
 * Cloud Insights de NetApp
 +
-https://cloud.netapp.com/cloud-insights["https://cloud.netapp.com/cloud-insights"^]
+https://www.netapp.com/data-infrastructure-insights/["https://www.netapp.com/data-infrastructure-insights/"^]
 
 * Documentación de productos de NetApp
 +
