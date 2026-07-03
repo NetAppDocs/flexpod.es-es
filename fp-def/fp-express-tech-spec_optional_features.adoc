@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_optional_features.html 
-keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas 
+keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas, asa, x-series-direct, direct-attached, topology, ip-based, fc-based, san 
 summary: En esta sección se describen las funciones opcionales de FlexPod Express. 
 ---
 = Funciones opcionales
@@ -17,10 +17,13 @@ summary: En esta sección se describen las funciones opcionales de FlexPod Expre
 En esta sección se describen las funciones opcionales de FlexPod Express.
 
 
+NOTE: El arranque SAN es opcional, pero se recomienda encarecidamente, ya que permite trasladar el perfil del servidor durante las actualizaciones o reemplazos de hardware.
+
+
 
 == Opción de arranque iSCSI
 
-La arquitectura FlexPod Express utiliza un arranque iSCSI. Los requisitos mínimos para la opción de arranque iSCSI son los siguientes:
+Los requisitos mínimos para la opción de arranque iSCSI incluyen:
 
 * Una función o licencia de iSCSI activada en la controladora de almacenamiento de NetApp
 * Un adaptador Ethernet de dos puertos 10 Gbps en cada nodo del par de alta disponibilidad de la controladora de almacenamiento de NetApp
@@ -29,26 +32,38 @@ La arquitectura FlexPod Express utiliza un arranque iSCSI. Los requisitos mínim
 
 
 
-== Opciones de configuración
+== Opción de Cisco UCS X-Series Direct y conexión directa a AFF/ASA/FAS
 
-En esta sección, se proporciona más información acerca de la configuración que se necesita y que se valida en la arquitectura FlexPod Express.
+Los controladores de almacenamiento NetApp pueden conectarse directamente a las interconexiones de estructura Cisco UCS sin ningún conmutador SAN ascendente. FlexPod Express admite tanto el arranque por FC como por iSCSI con UCS X-Series Direct.
 
+Los requisitos de licencia y hardware son los siguientes:
 
-
-=== FlexPod Express con Cisco UCS C-Series y AFF C190 Series
-
-La siguiente figura muestra la solución FlexPod Express con Cisco UCS C-Series y AFF C190. Esta solución admite tanto enlaces ascendentes de 10 GbE.
-
-image:fp-express-tech-spec_image2.png["Error: Falta la imagen gráfica"]
-
-Para obtener más información sobre esta configuración, consulte el documento Express de FlexPod con VMware vSphere 6.7 y la Guía de puesta en marcha de NVA para AFF C190 de NetApp (en curso).
+* Se requiere una licencia de protocolo en la controladora de almacenamiento de NetApp.
+* Se requiere un adaptador (iniciador) de Cisco UCS en el servidor. Para obtener una lista de adaptadores de Cisco UCS compatibles, consulte NetApp http://mysupport.netapp.com/matrix["IMT"^].
+* Se requiere un adaptador de destino en la controladora de almacenamiento de NetApp.
 
 
+La siguiente figura muestra una topología de UCS X-Series Direct y ASA de conexión directa para una SAN basada en IP.
 
-=== FlexPod Express con Cisco UCS Mini y AFF A220 y FAS 2750/2720
+image:fp-express-tech-spec_image10.png["Topología ASA de conexión directa y conexión directa de UCS X-Series para SAN basada en IP"]
 
-La siguiente figura muestra la configuración gestionada de FlexPod Express con Cisco UCS.
+*Notas:*
 
-image:fp-express-tech-spec_image3.png["Error: Falta la imagen gráfica"]
+* Cisco UCS se configura en el modo de conmutación Ethernet.
+* Los puertos iSCSI del destino a las interconexiones de estructura se configuran como puertos de almacenamiento Ethernet para datos iSCSI.
 
-Para obtener más información sobre esta configuración, consulte https://docs.netapp.com/us-en/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html["FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento basado en IP incluido directamente"^].
+
+La siguiente figura muestra una topología de UCS X-Series Direct y ASA de conexión directa para redes SAN basadas en IP y en FC.
+
+image:fp-express-tech-spec_image11.png["Topología UCS X-Series Direct y ASA de conexión directa para SAN basadas en IP y FC"]
+
+*Notas:*
+
+* Cisco UCS se configura en modo de conmutación FC.
+* Los puertos FC del destino a las interconexiones de estructura se configuran como puertos de almacenamiento FC.
+
+
+Para obtener más información sobre esta configuración, consulta https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf["FlexPod Solución SAN con Cisco UCS X-Series Direct y NetApp ASA"^].
+
+
+NOTE: En los ejemplos anteriores se utiliza el controlador de almacenamiento ASA de NetApp, pero la misma configuración es compatible con los controladores de almacenamiento AFF y FAS de NetApp.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_minimum_hardware_requirements.html 
-keywords: minimum, hardware, requirements, fas, cimc, configuration, rack, servers, ucs 
+keywords: minimum, hardware, requirements, aff, asa, fas, cimc, configuration, rack, servers, ucs 
 summary: En esta sección se describen los requisitos mínimos de hardware para las distintas versiones de FlexPod Express. 
 ---
 = Requisitos mínimos de hardware
@@ -18,45 +18,13 @@ En esta sección se describen los requisitos mínimos de hardware para las disti
 
 
 
-== FlexPod Express con NetApp FAS
+== FlexPod Express con NetApp AFF/ ASA/ FAS
 
-Los requisitos de hardware para las soluciones FlexPod Express que usan controladoras NetApp FAS para el almacenamiento subyacente incluyen las configuraciones que se describen en esta sección.
+Los requisitos de hardware para las soluciones FlexPod Express que utilizan controladoras AFF, ASA o FAS de NetApp para el almacenamiento subyacente incluyen las configuraciones descritas en esta sección.
 
+A continuación se indica el requisito mínimo de hardware para FlexPod Express:
 
+* Dos conmutadores Ethernet estándar de 10Gbps en configuración redundante (modelos Cisco Nexus 9200 y 9300)
+* Servidores de rack independientes Cisco UCS C-Series con configuración de servidor de rack independiente basada en CIMC o configuración independiente de Intersight, o Cisco UCS X-Series Direct con configuración gestionada por Cisco Intersight (IMM).
+* Dos controladoras básicas de las series NetApp AFF (A20, A30 o C30), NetApp ASA (A20, A30 o C30) o NetApp FAS (2750 o 2820) en una configuración de par de alta disponibilidad (HA) desplegada como un clúster de dos nodos
 
-=== Configuración basada en CIMC (servidores en bastidor independientes)
-
-La configuración del controlador de gestión integrado de Cisco (CIMC) incluye los siguientes componentes de hardware:
-
-* Dos conmutadores Ethernet estándar de 10Gbps en configuración redundante (se recomienda Cisco Nexus 31108, y se admiten los modelos Cisco Nexus 3000 y 9000)
-* Servidores en rack independientes Cisco UCS C-Series
-* Dos controladoras de las series AFF C190, AFF A250, FAS2600 o FAS 2700 en una configuración de par de alta disponibilidad (HA) desplegadas como un clúster de dos nodos
-
-
-
-
-=== Configuración gestionada por Cisco UCS
-
-La confirmación gestionada por Cisco UCS incluye los siguientes componentes de hardware:
-
-* Dos conmutadores Ethernet estándar de 10Gbps en configuración redundante (se recomienda Cisco Nexus 3524)
-* Un chasis de servidor blade de corriente alterna (CA) Cisco UCS 5108
-* Dos interconexiones de fabric Cisco UCS 6324
-* Servidores Cisco UCS B-Series (al menos cuatro servidores blade Cisco UCS B200 M5)
-* Dos controladores AFF C190, AFF A250, FAS2750 o FAS2720 en una configuración de par de HA (requiere dos puertos de adaptador objetivo unificado 2 [UTA2] disponibles por controlador)
-
-
-
-
-== FlexPod Express con E-Series
-
-Los requisitos de hardware para la configuración inicial de FlexPod Express con E-Series incluyen:
-
-* Dos interconexiones de fabric Cisco UCS 6324
-* Un chasis Cisco UCS Mini 5108 AC2 o DC2 (los fabric interconnects Cisco UCS 6324 solo son compatibles con los chasis AC2 y DC2)
-* Servidores Cisco UCS B-Series (al menos dos servidores blade Cisco UCS B200 M4)
-* Una configuración de un par de alta disponibilidad de un sistema de almacenamiento E-Series E2824 cargado con un mínimo de 12 unidades de disco
-* Dos conmutadores Ethernet estándar de 10Gbps en configuración redundante (se pueden utilizar los conmutadores existentes en el centro de datos)
-
-
-Estos componentes de hardware son necesarios para crear una configuración inicial de la solución; se pueden añadir servidores blade y unidades de disco adicionales según sea necesario. El sistema de almacenamiento E-Series E2824 se puede sustituir por una plataforma superior y también se puede ejecutar como un sistema all-flash.

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_software_recommendation.html 
+keywords: software, requirements, flexpod, express, aff, fas, asa, cisco, nx-os, ontap 
+summary: Esta sección describe los requisitos de software recomendados para las diferentes versiones de FlexPod Express. 
+---
+= Recomendaciones sobre la versión del software
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Esta sección describe las recomendaciones sobre las versiones de software para FlexPod Express.
+
+* Versión de ONTAP: se recomienda utilizar la última versión de ONTAP para todas las configuraciones de FlexPod Express. Consulta link:https://docs.netapp.com/us-en/ontap/release-notes/index.html["Notas de la versión de ONTAP"^] para conocer la última versión de ONTAP.
+* Versión de Cisco NX-OS: para la recomendación general de la versión de Cisco NX-OS para los switches de la serie 9000 de Cisco, consulta link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/recommended_release/b_Minimum_and_Recommended_Cisco_NX-OS_Releases_for_Cisco_Nexus_9000_Series_Switches.html["Versiones recomendadas de Cisco NX-OS para los switches Cisco Nexus 9000 Series"^]
+* Versión del firmware de Cisco UCS:
++
+** Consulta este enlace para ver las últimas versiones de link:https://www.cisco.com/c/en/us/support/servers-unified-computing/intersight/products-release-notes-list.html["Infraestructura en modo gestionado de Cisco Intersight y firmware de servidor, firmware de chasis y firmware de nodo PCIe"^]
+** Consulta este enlace para ver las últimas versiones de link:https://intersight.com/help/saas/supported_systems/Intersight_Standalone_Mode["Modo autónomo de Cisco Intersight y firmware de CIMC"^]
+
+
+
+
+
+NOTE: Todos los componentes de software deben figurar y ser compatibles en http://support.netapp.com/matrix/["IMT de NetApp"^], todos los componentes de hardware de NetApp y las versiones de ONTAP deben figurar y ser compatibles en https://hwu.netapp.com/Home/Index["Hardware Universe de NetApp"^] y todos los componentes de hardware de Cisco deben figurar y ser compatibles en https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].
