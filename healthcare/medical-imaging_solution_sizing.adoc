@@ -15,6 +15,7 @@ summary: En esta sección se describe el número de estudios y los requisitos de
 
 
 
+[[storage-sizing]]
 == Ajuste de tamaño del almacenamiento
 
 En esta sección se describe el número de estudios y los requisitos de infraestructura correspondientes.
@@ -62,6 +63,7 @@ Los requisitos de almacenamiento que se enumeran en la siguiente tabla suponen q
 |===
 
 
+[[compute-sizing]]
 == Ajuste de tamaño de computación
 
 En la siguiente tabla se enumeran los requisitos informáticos para sistemas de imágenes médicas pequeños, medianos y grandes.
@@ -104,6 +106,7 @@ En la siguiente tabla se enumeran los requisitos informáticos para sistemas de 
 |===
 
 
+[[networking-and-cisco-ucs-infrastructure-sizing]]
 == Ajuste de tamaño de la infraestructura de redes y Cisco UCS
 
 En la siguiente tabla se enumeran los requisitos de la infraestructura de red y Cisco UCS para sistemas de imágenes médicas pequeños, medianos y grandes.

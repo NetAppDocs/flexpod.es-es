@@ -30,6 +30,7 @@ image:sm-bcs-image39.png["Error: Falta la imagen gráfica"]
 
 
 
+[[end-to-end-network-connectivity]]
 == Conectividad de red completa
 
 La solución FlexPod SM-BC incluye infraestructuras FlexPod en cada sitio, conectividad de red entre sitios y el mediador de ONTAP puesto en marcha en un tercer sitio para satisfacer los objetivos de punto de recuperación y de tiempo de recuperación necesarios. En la siguiente figura se muestra la conectividad de red completa entre los servidores Cisco UCS B200M5 de cada sitio y el almacenamiento de NetApp con capacidad SM-BC dentro de un sitio y entre diferentes ubicaciones.
@@ -42,6 +43,7 @@ La arquitectura ampliada de capa 2 se utiliza para una estructura de datos multi
 
 
 
+[[virtual-networking]]
 == Redes virtuales
 
 Cada host del clúster se pone en marcha utilizando redes virtuales idénticas independientemente de su ubicación. El diseño separa los diferentes tipos de tráfico mediante los switches virtuales de VMware (vSwitch) y los switches virtuales distribuidos (VDS) de VMware. El vSwitch de VMware se utiliza principalmente para las redes de infraestructura FlexPod y VDS para las redes de aplicaciones, pero no es necesario.
@@ -58,6 +60,7 @@ En este diseño se utilizan dos vSwitch de arranque iSCSI. El arranque iSCSI de 
 
 
 
+[[vm-host-affinity-groups-and-rules]]
 == Reglas y grupos de afinidad de VM-Host
 
 Para permitir que las máquinas virtuales se ejecuten en cualquier host ESXi en ambos sitios de SM-BC, todos los hosts ESXi deben montar los almacenes de datos iSCSI desde ambos sitios. Si los almacenes de datos de ambos sitios están correctamente montados por todos los hosts ESXi, puede migrar una máquina virtual entre cualquier host con vMotion y la máquina virtual aún mantiene el acceso a todos sus discos virtuales creados a partir de esos almacenes de datos.
@@ -78,6 +81,7 @@ image:sm-bcs-image44.png["Error: Falta la imagen gráfica"]
 
 
 
+[[vsphere-ha-heartbeat]]
 == Corazón de vSphere ha
 
 VMware vSphere ha cuenta con un mecanismo de corazón para la validación del estado del host. El mecanismo primario de latidos se realiza mediante redes, mientras que el mecanismo de latidos del corazón secundarios se realiza a través del almacén de datos. Si no se reciben latidos, entonces decide si están aislados de la red haciendo ping a la puerta de enlace predeterminada o a las direcciones de aislamiento configuradas manualmente. Para los latidos del corazón de los almacenes de datos, VMware recomienda aumentar el número de almacenes de datos Heartbeat desde el mínimo de dos a cuatro en un clúster extendido.

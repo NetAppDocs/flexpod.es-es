@@ -25,12 +25,14 @@ Este procedimiento debe completarse para los nodos adicionales que se añadan al
 
 
 
+[[log-in-to-cimc-interface-for-cisco-ucs-c-series-standalone-servers]]
 == Inicie sesión en la interfaz de CIMC para servidores independientes de Cisco UCS C-Series
 
 Los siguientes pasos detallan el método para iniciar sesión en la interfaz de CIMC para servidores independientes Cisco UCS C-Series. Debe iniciar sesión en la interfaz de CIMC para ejecutar el KVM virtual, que permite al administrador iniciar la instalación del sistema operativo a través de medios remotos.
 
 
 
+[[all-hosts]]
 === Todos los hosts
 
 . Desplácese hasta un explorador web e introduzca la dirección IP para la interfaz de CIMC para Cisco UCS C-Series. Este paso inicia la aplicación GUI de CIMC.
@@ -52,12 +54,14 @@ NOTE: Es posible que primero tenga que hacer clic en Activar dispositivos virtua
 
 
 
+[[install-vmware-esxi]]
 == Instale VMware ESXi
 
 Los siguientes pasos describen cómo instalar VMware ESXi en cada host.
 
 
 
+[[download-esxi-6-7-cisco-custom-image]]
 === Descarga la imagen personalizada de ESXi 6.7 de Cisco
 
 . Navega a la  https://support.broadcom.com/group/ecx/downloads["Sitio de descargas del portal de soporte de Broadcom"^] para ISOs personalizadas.
@@ -67,6 +71,7 @@ Los siguientes pasos describen cómo instalar VMware ESXi en cada host.
 
 
 
+[[all-hosts]]
 === Todos los hosts
 
 . Cuando el sistema arranca, la máquina detecta la presencia del medio de instalación de VMware ESXi.
@@ -87,12 +92,14 @@ image:express-c-series-aff220-deploy_image22.png["Error: Falta la imagen gráfic
 
 
 
+[[set-up-vmware-esxi-host-management-networking]]
 == Configure la red de gestión del host VMware ESXi
 
 Los siguientes pasos describen cómo añadir la red de gestión de cada host VMware ESXi.
 
 
 
+[[all-hosts]]
 === Todos los hosts
 
 . Una vez que el servidor haya terminado de reiniciarse, introduzca la opción de personalizar el sistema pulsando F2.
@@ -130,6 +137,7 @@ image:express-c-series-aff220-deploy_image23.png["Error: Falta la imagen gráfic
 
 
 
+[[configure-esxi-host]]
 == Configure el host ESXi
 
 Necesita la información de la siguiente tabla para configurar cada host ESXi.
@@ -187,6 +195,7 @@ Necesita la información de la siguiente tabla para configurar cada host ESXi.
 |===
 
 
+[[log-in-to-esxi-host]]
 === Inicie sesión en el host ESXi
 
 . Abra la dirección IP de administración del host en un explorador Web.
@@ -196,6 +205,7 @@ Necesita la información de la siguiente tabla para configurar cada host ESXi.
 
 
 
+[[configure-iscsi-boot]]
 === Configurar el arranque iSCSI
 
 . Seleccione Networking a la izquierda.
@@ -244,6 +254,7 @@ NOTE: Establezca la MTU en 9000 on `iScsiBootPG- A.`
 
 
 
+[[configure-iscsi-multipathing]]
 === Configuración de accesos múltiples iSCSI
 
 Para configurar la multivía iSCSI en los hosts ESXi, complete los pasos siguientes:
@@ -273,6 +284,7 @@ NOTE: Para encontrar las direcciones IP de LIF iSCSI, ejecute el comando "networ
 
 
 
+[[configure-esxi-host]]
 === Configure el host ESXi
 
 . En el panel de navegación de la izquierda, seleccione Networking.
@@ -287,6 +299,7 @@ image:express-c-series-aff220-deploy_image29.png["Error: Falta la imagen gráfic
 
 
 
+[[configure-port-groups-and-vmkernel-nics]]
 === Configurar grupos de puertos y NIC de VMkernel
 
 . En el panel de navegación de la izquierda, seleccione Networking.
@@ -381,6 +394,7 @@ image:express-c-series-aff220-deploy_image35.png["Error: Falta la imagen gráfic
 
 
 
+[[configure-ntp]]
 === Configure NTP
 
 Para configurar NTP para un host ESXi, complete los siguientes pasos:
@@ -400,6 +414,7 @@ image:express-c-series-aff220-deploy_image37.png["Error: Falta la imagen gráfic
 
 
 
+[[move-the-virtual-machine-swap-file-location]]
 === Mueva la ubicación del archivo de intercambio de la máquina virtual
 
 Estos pasos proporcionan detalles para mover la ubicación del archivo de intercambio de la máquina virtual.
@@ -417,6 +432,7 @@ image:express-c-series-aff220-deploy_image39.png["Error: Falta la imagen gráfic
 
 
 
+[[install-the-netapp-nfs-plug-in-1-0-20-for-vmware-vaai]]
 === Instale el plugin de NetApp NFS 1.0.20 para VMware VAAI
 
 Para instalar el complemento NFS de NetApp 1.0.20 para VMware VAAI, complete los pasos siguientes.

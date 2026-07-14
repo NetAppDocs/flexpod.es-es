@@ -18,6 +18,7 @@ Un diseño de FlexPod tiene requisitos mínimos de alimentación y cableado.
 
 
 
+[[power-requirements]]
 == Requisitos de alimentación
 
 Los requisitos de alimentación del centro de datos de FlexPod difieren en función de la ubicación en la que se ha instalado la configuración del centro de datos de FlexPod.
@@ -30,6 +31,7 @@ Para ver los datos de alimentación de la controladora de almacenamiento de NetA
 
 
 
+[[minimum-cable-requirements]]
 == Requisitos mínimos de cable
 
 La cantidad y el tipo de cables y adaptadores necesarios varían en función de la puesta en marcha del centro de datos de FlexPod. El tipo de cable, el tipo de transceptor y el número se determinan durante el proceso de diseño en función de sus necesidades. En la tabla siguiente se indica el número mínimo de cables necesarios.

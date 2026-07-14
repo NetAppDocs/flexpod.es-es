@@ -34,12 +34,14 @@ NetApp ONTAP 9.5 y versiones posteriores ofrecen una solución FC-NVMe completa.
 
 
 
+[[objective]]
 == Objetivo
 
 Esta solución proporciona un resumen general del rendimiento de FC-NVMe con VMware vSphere 7 en FlexPod. Se verificó que la solución traspase correctamente el tráfico FC-NVMe, y se capturaron las metricas de rendimiento para FC-NVMe con distintos tamaños de bloques de datos.
 
 
 
+[[solution-benefits]]
 == Ventajas de la solución
 
 NVMe integral para FlexPod ofrece un valor excepcional a los clientes gracias a las siguientes ventajas soluciones:

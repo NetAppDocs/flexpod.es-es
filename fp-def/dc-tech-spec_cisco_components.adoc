@@ -18,6 +18,7 @@ Cisco ha contribuido de forma sustancial al diseño y la arquitectura de FlexPod
 
 
 
+[[cisco-ucs-fabric-interconnect-options]]
 == Opciones de interconexión de estructura Cisco UCS
 
 Se necesitan interconexiones de estructura redundantes en la arquitectura de FlexPod. Cuando se añaden varios chasis Cisco UCS a un par de interconexiones de estructura, recuerde que el número máximo de chasis de un entorno está determinado por el límite de arquitectura y de puerto.
@@ -35,6 +36,7 @@ Los números de pieza que se muestran en la siguiente tabla son para las interco
 |===
 
 
+[[cisco-ucs-6454]]
 === Cisco UCS 6454
 
 Cisco UCS 6454 Series ofrece conectividad Ethernet y FCoE de 10/25/40 GbE sin pérdidas, con velocidad de línea y baja latencia, así como puertos unificados capaces de funcionar Ethernet o FC. Los puertos de 44 10 Gbps pueden funcionar como Ethernet convergente de 10 Gbps o 25 Gbps, de los cuales ocho son puertos unificados que pueden funcionar a 8/16 Gbps para FC. Cuatro puertos operan a 1/10 Gbps para la conectividad anterior, y seis puertos QSFP sirven como puertos de enlace ascendente 40/100 Gbps o puertos de arranque. Puede establecer una conectividad de red integral de 100 Gbps con controladoras de almacenamiento de NetApp que admitan adaptadores de 100 Gbps. Para conocer los adaptadores y el soporte de la plataforma, consulte https://hwu.netapp.com/Adapter/Index["Hardware Universe de NetApp"^].
@@ -45,6 +47,7 @@ Para obtener especificaciones técnicas sobre los módulos de datos QSFP de 100 
 
 
 
+[[cisco-ucs-b-series-chassis-option]]
 == Opción de chasis Cisco UCS B-Series
 
 Para usar blades Cisco UCS B-Series, debe tener un chasis Cisco UCS B-Series. La tabla siguiente describe la opción de chasis Cisco UCS BSeries.
@@ -59,6 +62,7 @@ Cada chasis blade Cisco UCS 5108 debe tener dos IOM de la serie Cisco UCS 2200/2
 
 
 
+[[cisco-ucs-b-series-blade-server-options]]
 == Opciones del servidor blade Cisco UCS serie B
 
 Los servidores blade Cisco UCS B-Series están disponibles en variedades de ancho medio y ancho total con diversas opciones de CPU, memoria e I/O. Los números de pieza que se enumeran en la tabla siguiente son para el servidor base. No incluyen la CPU, la memoria, las unidades ni las tarjetas adaptadoras mezzanine. La arquitectura FlexPod admite varias opciones de configuración.
@@ -73,6 +77,7 @@ Las generaciones anteriores de blades Cisco UCS B-Series pueden utilizarse en la
 
 
 
+[[cisco-ucs-x-series-chassis-option]]
 == Opción de chasis Cisco UCS X-Series
 
 Para usar nodos de computación Cisco UCS X-Series, debe tener un chasis Cisco UCS X-Series. En la siguiente tabla se describe la opción del chasis Cisco UCS X-Series.
@@ -87,6 +92,7 @@ Cada chasis Cisco UCS 9508 debe tener dos módulos de estructura inteligente (IF
 
 
 
+[[cisco-ucs-x-series-device-options]]
 == Opciones de dispositivos Cisco UCS X-Series
 
 Los nodos de computación Cisco UCS X-Series están disponibles con diversas opciones de CPU, memoria e I/O. Los números de pieza enumerados en la siguiente tabla son para el nodo base. No incluyen la CPU, la memoria, las unidades ni las tarjetas adaptadoras mezzanine. La arquitectura FlexPod admite varias opciones de configuración.
@@ -99,6 +105,7 @@ Los nodos de computación Cisco UCS X-Series están disponibles con diversas opc
 |===
 
 
+[[cisco-ucs-c-series-rack-server-options]]
 == Opciones del servidor de montaje en rack Cisco UCS C-Series
 
 Los servidores en rack Cisco UCS C-Series están disponibles en una y dos variedades de unidad de rack (RU) con varias opciones de CPU, memoria e I/O. Los números de pieza que se enumeran en la segunda tabla siguiente son para el servidor base. No incluyen CPU, memoria, unidades, tarjetas Peripheral Component Interconnect Express (PCIe) ni Cisco Fabric extender. La arquitectura FlexPod admite varias opciones de configuración.
@@ -124,6 +131,7 @@ Las generaciones anteriores de servidores Cisco UCS C-Series pueden utilizarse e
 
 
 
+[[cisco-nexus-5000-series-switch-options]]
 == Opciones del switch Cisco Nexus serie 5000
 
 Se necesitan switches redundantes de la serie Cisco Nexus 5000, 7000 o 9000 en la arquitectura FlexPod. Los números de pieza que se enumeran en la tabla siguiente son para el chasis de la serie Cisco Nexus 5000; no incluyen módulos SFP, módulos FC adicionales o módulos Ethernet.
@@ -145,6 +153,7 @@ Se necesitan switches redundantes de la serie Cisco Nexus 5000, 7000 o 9000 en l
 |===
 
 
+[[cisco-nexus-7000-series-switch-options]]
 == Opciones de switch Cisco Nexus serie 7000
 
 Se necesitan switches redundantes de la serie Cisco Nexus 5000, 7000 o 9000 en la arquitectura FlexPod. Los números de pieza que se enumeran en la siguiente tabla son para el chasis Cisco Nexus serie 7000; no incluyen módulos SFP, tarjetas de línea ni suministros de alimentación, pero incluyen bandejas de ventiladores.
@@ -166,6 +175,7 @@ Se necesitan switches redundantes de la serie Cisco Nexus 5000, 7000 o 9000 en l
 |===
 
 
+[[cisco-nexus-9000-series-switch-options]]
 == Opciones de switch Cisco Nexus serie 9000
 
 Se necesitan switches redundantes de la serie Cisco Nexus 5000, 7000 o 9000 en la arquitectura FlexPod. Los números de pieza que se enumeran en la tabla siguiente son para el chasis de la serie Cisco Nexus 9000; no incluyen módulos SFP ni módulos Ethernet.
@@ -199,6 +209,7 @@ NOTE: Algunos switches de la serie Cisco Nexus 9000 tienen variantes adicionales
 
 
 
+[[cisco-apic-options]]
 == Opciones APIC de Cisco
 
 Al implementar Cisco ACI, debe configurar los tres APIC de Cisco además de los elementos de la sección link:dc-tech-spec_technical_specifications_and_references.html#cisco-nexus-9000-series-switches["Switches Cisco Nexus serie 9000"]. Para obtener más información sobre los tamaños de la APIC de Cisco, consulte http://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-732414.html["Especificaciones técnicas de Cisco Application Centric Infrastructure."^]
@@ -207,6 +218,7 @@ Si quiere más información sobre las especificaciones de producto de la APIC, c
 
 
 
+[[cisco-nexus-fabric-extender-options]]
 == Opciones del extensor de estructura de Cisco Nexus
 
 Se recomiendan las FEXs redundantes de montaje en rack de la serie Cisco Nexus 2000 para las arquitecturas FlexPod de gran tamaño que utilizan servidores C-Series. La siguiente tabla describe algunas opciones de Cisco Nexus FEX. También se admiten modelos FEX alternativos. Para obtener más información, consulte https://ucshcltool.cloudapps.cisco.com/public/["Lista de compatibilidad de hardware y software de Cisco UCS"^].
@@ -228,6 +240,7 @@ Se recomiendan las FEXs redundantes de montaje en rack de la serie Cisco Nexus 2
 |===
 
 
+[[cisco-mds-options]]
 == Opciones de Cisco MDS
 
 Los switches Cisco MDS son un componente opcional de la arquitectura FlexPod. Se necesitan estructuras de switch SAN redundantes cuando se implementa el switch Cisco MDS para FC SAN. En la siguiente tabla se enumeran los números de pieza y los detalles de un subconjunto de los switches Cisco MDS admitidos. Consulte https://mysupport.netapp.com/matrix/["IMT de NetApp"^] y.. https://ucshcltool.cloudapps.cisco.com/public/["Lista de compatibilidad de hardware y software de Cisco"^] Si quiere obtener una lista completa de los switches SAN compatibles.
@@ -246,6 +259,7 @@ Los switches Cisco MDS son un componente opcional de la arquitectura FlexPod. Se
 |===
 
 
+[[cisco-software-licensing-options]]
 == Opciones de licencias de software de Cisco
 
 Se necesitan licencias para habilitar protocolos de almacenamiento en los switches Cisco Nexus. Todas las series de switches Nexus 5000 y 7000 de Cisco requieren una licencia de servicios de almacenamiento para habilitar el protocolo FC o FCoE para implementaciones DE arranque SAN. Los switches de la serie Nexus 9000 de Cisco actualmente no son compatibles con FC o FCoE.
@@ -272,6 +286,7 @@ Las licencias necesarias y los números de pieza de estas licencias varían en f
 |===
 
 
+[[cisco-support-licensing-options]]
 == Opciones de licencias de soporte de Cisco
 
 Se requieren contratos de soporte de SmartNet válidos en todos los equipos de Cisco de la arquitectura FlexPod.

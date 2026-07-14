@@ -18,6 +18,7 @@ FlexPod Express es compatible con los sistemas de almacenamiento que ejecutan el
 
 
 
+[[netapp-ontap]]
 == ONTAP de NetApp
 
 El software ONTAP de NetApp es el sistema operativo que se ejecuta en los sistemas de almacenamiento AFF, ASA y FAS. ONTAP ofrece una arquitectura de almacenamiento altamente escalable que permite un funcionamiento sin interrupciones, actualizaciones sin interrupciones y una infraestructura de datos ágil. Con el modelo de licencia ONTAP One, todos los servicios de datos empresariales se incluyen en un único paquete, lo que simplifica la implementación y la gestión al tiempo que proporciona acceso completo a funciones avanzadas. ONTAP ofrece una sólida protección de datos mediante tecnologías como SnapMirror para la replicación y la recuperación ante desastres, así como SnapCenter para la copia de seguridad y la restauración consistente con las aplicaciones. También incorpora funciones de seguridad integradas, entre las que se incluyen la protección autónoma contra el ransomware y el cifrado, para proteger los datos frente a las amenazas actuales. Además, ONTAP permite una integración perfecta en la nube híbrida con capacidades como SnapMirror Cloud y la replicación basada en S3, lo que permite la movilidad de datos entre entornos locales y en la nube, al tiempo que se mantiene la coherencia y el control.

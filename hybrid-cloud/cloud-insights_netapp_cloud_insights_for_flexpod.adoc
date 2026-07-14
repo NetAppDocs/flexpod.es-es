@@ -22,6 +22,7 @@ La solución que se detalla en este informe técnico es la configuración del se
 
 
 
+[[customer-value]]
 == Valor para el cliente
 
 La solución indicada en este documento proporciona valor a los clientes interesados en una solución de supervisión totalmente equipada para sus entornos de cloud híbrido, donde ONTAP se pone en marcha como sistema de almacenamiento principal. Esto incluye entornos FlexPod que usan los sistemas de almacenamiento AFF y FAS de NetApp.

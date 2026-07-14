@@ -24,6 +24,7 @@ El ransomware es un tipo de malware basado en la criptovirología, que es el uso
 
 
 
+[[how-does-ransomware-work]]
 == ¿Cómo funciona el ransomware?
 
 Los siguientes pasos describen cómo el ransomware utiliza la criptografía para cifrar los datos de la víctima sin ningún ámbito para su descifrado o recuperación por parte de la víctima:
@@ -39,6 +40,7 @@ Los siguientes pasos describen cómo el ransomware utiliza la criptografía para
 
 
 
+[[challenges]]
 == Retos
 
 Individuos y organizaciones se enfrentan a los siguientes retos cuando son atacados por ransomware:
@@ -53,6 +55,7 @@ Individuos y organizaciones se enfrentan a los siguientes retos cuando son ataca
 
 
 
+[[who-is-at-risk]]
 == ¿Quién está en riesgo?
 
 Cualquiera puede ser atacado por ransomware, incluidos individuos y organizaciones grandes. Las organizaciones que no aplican medidas y prácticas de seguridad bien definidas son aún más vulnerables a esos ataques. El efecto del ataque en una organización grande puede ser varias veces mayor de lo que un individuo podría soportar.
@@ -71,6 +74,7 @@ Esta no es una lista exhaustiva de objetivos. Usted no puede considerarse seguro
 
 
 
+[[how-does-ransomware-enter-a-system-or-spread]]
 == ¿Cómo se introduce el ransomware en un sistema o se distribuye?
 
 Existen varias formas en las que el ransomware puede entrar en un sistema o propagarse a otros sistemas. En el mundo actual, casi todos los sistemas están conectados entre sí a través de Internet, LAN, WAN, etc. La cantidad de datos que se generan e intercambian entre estos sistemas no hace más que aumentar.
@@ -88,6 +92,7 @@ Algunos de los métodos más comunes mediante los que se puede distribuir el ran
 
 
 
+[[consequences-of-data-loss]]
 == Consecuencias de la pérdida de datos
 
 Las consecuencias o los efectos de la pérdida de datos pueden ser más amplios de lo que las organizaciones podrían anticipar. Los efectos pueden variar en función de la duración del tiempo de inactividad o del período de tiempo durante el cual una organización no tiene acceso a sus datos. Cuanto más dure el ataque, mayor será el efecto sobre los ingresos, la Marca y la reputación de la organización. Una organización también puede enfrentarse a problemas legales y a una fuerte disminución de la productividad.
@@ -96,6 +101,7 @@ A medida que estas cuestiones continúan persistiéndose con el tiempo, comienza
 
 
 
+[[financial-effects]]
 == Efectos financieros
 
 Según un informe reciente https://www.mcafee.com/enterprise/en-us/assets/executive-summaries/es-economic-impact-cybercrime.pdf["Informe de McAfee"^], Los costos globales incurridos por el crimen cibernético son aproximadamente 600 mil millones de dólares, lo que representa aproximadamente el 0.8% del PIB global. Cuando esta cantidad se compara con la creciente economía mundial de internet de 4.2 billones de dólares, equivale a un impuesto del 14% sobre el crecimiento.
@@ -104,6 +110,7 @@ El ransomware asume una parte importante de este coste financiero. En 2018, los 
 
 
 
+[[what-is-the-solution]]
 == ¿Cuál es la solución?
 
 La recuperación a partir de un ataque de ransomware con un tiempo de inactividad mínimo solo es posible gracias a la implementación de un plan de recuperación ante desastres proactivo. Tener la capacidad para recuperarse de un ataque es bueno, pero evitar un ataque es ideal.

@@ -21,6 +21,7 @@ Jyh-shing Chen, NetApp
 
 
 
+[[flexpod-solution]]
 == Solución de FlexPod
 
 FlexPod es una arquitectura de centro de datos de infraestructura convergente que incluye los siguientes componentes de Cisco y NetApp:
@@ -42,6 +43,7 @@ Cada una de las familias de componentes de FlexPod mostradas (Cisco UCS, switche
 
 
 
+[[disaster-recovery-and-business-continuity]]
 == Continuidad del negocio y recuperación tras desastres
 
 Las empresas pueden adoptar varios métodos para asegurarse de que pueden recuperar rápidamente sus servicios de datos y aplicaciones tras un desastre. Tener un plan de recuperación ante desastres (DR) y continuidad del negocio (BC), implementar una solución que cumpla con los objetivos empresariales y realizar pruebas regulares de los escenarios de desastre permite a las empresas recuperarse de un desastre y continuar con servicios empresariales críticos después de que se produzca una situación de desastre.
@@ -54,6 +56,7 @@ Para las empresas que dependen de los servicios de datos para la generación de 
 
 
 
+[[recovery-point-objective-and-recovery-time-objective]]
 == Objetivo de punto de recuperación y objetivo de tiempo de recuperación
 
 El objetivo de punto de recuperación (RPO) mide cuántos datos, en términos de tiempo, se pueden permitir perder o el punto hasta el que se pueden recuperar los datos. Con un plan de backup diario, una empresa puede perder un día de datos, ya que los cambios realizados en los datos desde el último backup podrían perderse en caso de desastre. En el caso de servicios de datos vitales para el negocio, puede que necesite un objetivo de punto de recuperación cero, así como una planificación e infraestructuras asociadas para proteger los datos sin pérdida alguna.
@@ -62,6 +65,7 @@ El objetivo de tiempo de recuperación (RTO) mide cuánto tiempo se puede permit
 
 
 
+[[sm-bc]]
 == SM-BC
 
 A partir de ONTAP 9.8, puede proteger las cargas DE trabajo SAN para una conmutación por error de aplicaciones transparente con SM-BC de NetApp. Puede crear relaciones de grupos de consistencia entre dos clústeres de AFF o dos clústeres de ASA para que la replicación de datos logre un objetivo de punto de recuperación cero y un objetivo de tiempo de recuperación casi cero.

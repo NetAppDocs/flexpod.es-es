@@ -18,6 +18,7 @@ Las controladoras de almacenamiento de NetApp proporcionan la base sobre la que 
 
 
 
+[[netapp-storage-controller-options]]
 == Opciones de la controladora de almacenamiento de NetApp
 
 Se necesitan controladoras redundantes FAS, AFF o AFF ASA de NetApp en la arquitectura de FlexPod. Las controladoras ejecutan el software ONTAP. Cuando se solicitan las controladoras de almacenamiento, es posible precargar la versión de software preferida en las controladoras. Para ONTAP, se solicita un clúster completo. Un clúster completo incluye un par de controladoras de almacenamiento y una interconexión de clúster (switch o sin switch).
@@ -40,6 +41,7 @@ Las familias de controladoras enumeradas en la siguiente tabla son adecuadas par
 |===
 
 
+[[cluster-interconnect-switch-options]]
 == Opciones del switch de interconexión de clúster
 
 La siguiente tabla enumera los switches de interconexión de clústeres Nexus disponibles para las arquitecturas FlexPod. Además, FlexPod admite todos los switches de clúster compatibles con ONTAP, incluidos los switches que no sean de Cisco, siempre y cuando la versión de ONTAP que se esté poniendo en marcha sea compatible. Consulte https://hwu.netapp.com/["Hardware Universe de NetApp"^] para obtener detalles de compatibilidad adicionales para modelos de switch específicos.
@@ -57,6 +59,7 @@ La siguiente tabla enumera los switches de interconexión de clústeres Nexus di
 |===
 
 
+[[netapp-disk-shelf-and-drive-options]]
 == Opciones de unidades y bandeja de discos de NetApp
 
 Se requiere un mínimo de una bandeja de discos NetApp para todas las controladoras de almacenamiento.
@@ -85,6 +88,7 @@ Si desea más información sobre las unidades compatibles, haga clic en el enlac
 |===
 
 
+[[netapp-software-licensing-options]]
 == Opciones de licencias de software de NetApp
 
 La siguiente tabla enumera las opciones de licencias del software de NetApp que están disponibles para la arquitectura del centro de datos de FlexPod. El software de NetApp cuenta con la licencia a nivel de controladora FAS y AFF.
@@ -100,6 +104,7 @@ La siguiente tabla enumera las opciones de licencias del software de NetApp que 
 |===
 
 
+[[netapp-support-licensing-options]]
 == Opciones de licencias de soporte de NetApp
 
 Las licencias de NetApp SupportEdge Premium son necesarias para la arquitectura de FlexPod, pero los números de pieza de dichas licencias varían en función de las opciones seleccionadas en el diseño de FlexPod. Por ejemplo, los números de referencia de la licencia del software varían en función de la controladora de FAS que elija. Consulte a su representante de ventas para obtener información acerca de los números de pieza exactos de las licencias de soporte individuales. La siguiente tabla muestra un ejemplo de una licencia de SupportEdge.

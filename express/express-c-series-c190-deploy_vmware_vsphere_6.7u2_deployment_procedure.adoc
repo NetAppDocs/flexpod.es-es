@@ -26,12 +26,14 @@ NOTE: Este procedimiento debe completarse para los nodos adicionales que se aña
 
 
 
+[[log-in-to-cimc-interface-for-cisco-ucs-c-series-standalone-servers]]
 == Inicie sesión en la interfaz de CIMC para servidores independientes de Cisco UCS C-Series
 
 Los siguientes pasos detallan el método para iniciar sesión en la interfaz de CIMC para servidores independientes Cisco UCS C-Series. Debe iniciar sesión en la interfaz de CIMC para ejecutar el KVM virtual, que permite al administrador iniciar la instalación del sistema operativo a través de medios remotos.
 
 
 
+[[all-hosts]]
 === Todos los hosts
 
 . Desplácese hasta un explorador web e introduzca la dirección IP para la interfaz de CIMC para Cisco UCS C-Series. Este paso inicia la aplicación GUI de CIMC.
@@ -53,12 +55,14 @@ NOTE: Es posible que primero tenga que hacer clic en Activar dispositivos virtua
 
 
 
+[[install-vmware-esxi]]
 == Instale VMware ESXi
 
 Los siguientes pasos describen cómo instalar VMware ESXi en cada host.
 
 
 
+[[download-esxi-6-7u2-cisco-custom-image]]
 === Descarga la imagen personalizada de Cisco para ESXi 6.7U2
 
 . Navega a la  https://support.broadcom.com/group/ecx/downloads["Sitio de descargas del portal de soporte de Broadcom"^] para ISOs personalizadas.
@@ -79,12 +83,14 @@ image:express-c-series-c190-deploy_image18.png["Error: Falta la imagen gráfica"
 
 
 
+[[set-up-vmware-esxi-host-management-networking]]
 == Configure la red de gestión del host VMware ESXi
 
 Los siguientes pasos describen cómo añadir la red de gestión de cada host VMware ESXi.
 
 
 
+[[all-hosts]]
 === Todos los hosts
 
 . Una vez que el servidor haya terminado de reiniciarse, introduzca la opción de personalizar el sistema pulsando F2.
@@ -131,6 +137,7 @@ esxcli network vswitch standard policy failover set -v vSwitch0 -a vmnic2,vmnic4
 
 
 
+[[configure-esxi-host]]
 == Configure el host ESXi
 
 Utilice la información de la siguiente tabla para configurar cada host ESXi.
@@ -188,6 +195,7 @@ Utilice la información de la siguiente tabla para configurar cada host ESXi.
 |===
 
 
+[[log-in-to-the-esxi-host]]
 === Inicie sesión en el host ESXi
 
 Para iniciar sesión en el host ESXi, complete los siguientes pasos:
@@ -199,6 +207,7 @@ Para iniciar sesión en el host ESXi, complete los siguientes pasos:
 
 
 
+[[configure-iscsi-boot]]
 === Configurar el arranque iSCSI
 
 Para configurar el arranque iSCSI, lleve a cabo los siguientes pasos:
@@ -247,6 +256,7 @@ image:express-c-series-c190-deploy_image21.png["Error: Falta la imagen gráfica"
 
 
 
+[[configure-iscsi-multipathing]]
 === Configuración de accesos múltiples iSCSI
 
 Para configurar la multivía iSCSI en los hosts ESXi, complete los pasos siguientes:
@@ -277,6 +287,7 @@ NOTE: Puede encontrar las direcciones IP de LIF de iSCSI ejecutando el comando n
 
 
 
+[[configure-the-esxi-host]]
 === Configure el host ESXi
 
 Para configurar el arranque ESXi, complete los pasos siguientes:
@@ -297,6 +308,7 @@ NOTE: El método hash IP del equilibrio de carga requiere que el conmutador fís
 
 
 
+[[configure-the-port-groups-and-vmkernel-nics]]
 === Configure los grupos de puertos y las NIC de VMkernel
 
 Para configurar los grupos de puertos y las NIC de VMkernel, lleve a cabo los siguientes pasos:
@@ -357,6 +369,7 @@ NOTE: Hay muchas formas de configurar redes ESXi, por ejemplo, mediante el switc
 
 
 
+[[mount-the-first-datastores]]
 === Monte los primeros almacenes de datos
 
 Los primeros almacenes de datos que se van a montar son el `infra_datastore` Almacén de datos para las máquinas virtuales y para `infra_swap` Almacén de datos para archivos de intercambio de equipos virtuales.
@@ -390,6 +403,7 @@ image:express-c-series-c190-deploy_image30.png["Error: Falta la imagen gráfica"
 
 
 
+[[configure-ntp]]
 === Configure NTP
 
 Para configurar NTP para un host ESXi, complete los siguientes pasos:
@@ -406,6 +420,7 @@ image:express-c-series-c190-deploy_image31.png["Error: Falta la imagen gráfica"
 
 
 
+[[move-the-vm-swap-file-location]]
 === Mueva la ubicación del archivo de intercambio de la máquina virtual
 
 Estos pasos proporcionan detalles para mover la ubicación del archivo de intercambio de la máquina virtual.

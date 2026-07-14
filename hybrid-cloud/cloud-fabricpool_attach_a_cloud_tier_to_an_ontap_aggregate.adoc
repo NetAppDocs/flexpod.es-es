@@ -23,6 +23,7 @@ NOTE: Añadir un nivel de cloud a un agregado es una acción permanente. Un nive
 
 
 
+[[oncommand-system-manager]]
 == System Manager de OnCommand
 
 Para adjuntar un nivel de cloud a un agregado mediante System Manager de OnCommand, realice los siguientes pasos:
@@ -45,6 +46,7 @@ image:cloud-fabricpool_image15.png["Error: Falta la imagen gráfica"]
 
 
 
+[[ontap-cli]]
 == CLI de ONTAP
 
 Para adjuntar un nivel de cloud a un agregado mediante la interfaz de línea de comandos de ONTAP, ejecute los siguientes comandos:

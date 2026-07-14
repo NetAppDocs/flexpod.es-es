@@ -28,6 +28,7 @@ Cabe destacar que los relativamente pocos casos de uso validados en esta soluci�
 
 
 
+[[application-development-and-testing-devtest]]
 == Desarrollo y pruebas de aplicaciones (prueba/desarrollo)
 
 Para acelerar el desarrollo de aplicaciones, puede clonar rápidamente los datos replicados en el centro de recuperación ante desastres y utilizarlos para aplicaciones de desarrollo y pruebas. La ubicación de los entornos de recuperación ante desastres y de desarrollo y pruebas en el mismo lugar puede mejorar considerablemente la utilización de las instalaciones de recuperación ante desastres. Además, los clones de desarrollo y pruebas bajo demanda pueden proporcionar tantas copias de datos como sea necesario para iniciar la producción con mayor rapidez.
@@ -146,6 +147,7 @@ Esto valida que puede utilizar el entorno de recuperación ante desastres para d
 
 
 
+[[disaster-recovery]]
 == Recuperación tras siniestros
 
 La tecnología SnapMirror también se usa como parte de los planes de recuperación tras desastres. Si los datos clave se replican en una ubicación física diferente, un desastre grave no tendrá que provocar períodos prolongados de falta de disponibilidad de datos para aplicaciones vitales para el negocio. Los clientes pueden acceder a los datos replicados por toda la red hasta que el sitio de producción se recupere de una corrupción, una eliminación accidental o un desastre natural, etc.
@@ -257,6 +259,7 @@ En esta sección se ilustra la correcta resolución de una situación de recuper
 
 
 
+[[verification-of-data-on-the-production-site]]
 == Verificación de los datos en el lugar de producción
 
 Una vez restaurado el sitio de producción, debe asegurarse de que la configuración original se haya restaurado y que los clientes puedan acceder a los datos desde el sitio de origen.

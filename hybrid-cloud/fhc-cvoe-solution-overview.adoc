@@ -34,6 +34,7 @@ image:fhc-cvoe-image1.jpeg["Cloud Volumes ONTAP proporciona la tecnología SnapM
 
 
 
+[[audience]]
 == Destinatarios
 
 Este documento está dirigido a ingenieros de soluciones (se) de NetApp y de partners y personal de servicios profesionales. NetApp asume que el lector tiene los siguientes conocimientos generales:
@@ -45,6 +46,7 @@ Este documento está dirigido a ingenieros de soluciones (se) de NetApp y de par
 
 
 
+[[solution-benefits]]
 == Ventajas de la solución
 
 El centro de datos FlexPod integrado con Cloud Volumes ONTAP de NetApp ofrece las siguientes ventajas con las cargas de trabajo del sector sanitario:
@@ -57,6 +59,7 @@ El centro de datos FlexPod integrado con Cloud Volumes ONTAP de NetApp ofrece la
 
 
 
+[[solution-topology]]
 == Topología de la solución
 
 Esta sección describe la topología lógica de la solución.  La siguiente figura representa la topología de la solución compuesta por el entorno local de FlexPod , NetApp Cloud Volumes ONTAP (CVO) que se ejecuta en Amazon Web Services (AWS) y la plataforma SaaS NetApp Console .

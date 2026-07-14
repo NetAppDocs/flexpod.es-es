@@ -17,6 +17,7 @@ Ruchika Lahoti, NetApp
 
 
 
+[[introduction]]
 == Introducción
 
 La protección de datos con recuperación ante desastres es un objetivo crucial para la continuidad del negocio. La recuperación ante desastres permite a las organizaciones conmutar por error sus operaciones empresariales a una ubicación secundaria y, después, recuperar y recuperar la conmutación tras recuperación en el sitio principal de forma eficiente y fiable. Debido a la existencia de múltiples preocupaciones, como desastres naturales, fallos de red, vulnerabilidades de software y errores humanos, el desarrollo de una estrategia de recuperación ante desastres constituye la principal prioridad EN MATERIA DE TECNOLOGÍA.
@@ -42,12 +43,14 @@ Esta solución ofrece varias ventajas, como:
 
 
 
+[[audience]]
 == Destinatarios
 
 El público de este documento incluye, sin limitarse a ellos, ingenieros de ventas, consultores de campo, servicios profesionales, gestores DE TECNOLOGÍA, Ingenieros de los partners, ingenieros de fiabilidad del sitio, arquitectos de cloud, ingenieros de cloud y clientes que quieran aprovechar una infraestructura creada para proporcionar eficiencia TECNOLÓGICA y propiciar la innovación TECNOLÓGICA.
 
 
 
+[[solution-topology]]
 == Topología de la solución
 
 En esta sección se describe la topología lógica de la solución. La siguiente figura representa la topología de la solución del entorno local de FlexPod, la ejecución de Cloud Volumes ONTAP de NetApp en Google Cloud, Cisco Intersight y Cloud Manager de NetApp.

@@ -18,6 +18,7 @@ En esta sección se describen las funciones clave del software de gestión de da
 
 
 
+[[storage-netapp-ontap]]
 == Almacenamiento: ONTAP de NetApp
 
 El software ONTAP ofrece muchas funciones útiles para la protección de datos, la mayoría de las cuales son gratuitas para los clientes que tienen un sistema ONTAP. Puede utilizar las siguientes funciones en todo momento para proteger los datos de los ataques:
@@ -31,6 +32,7 @@ El software ONTAP ofrece muchas funciones útiles para la protección de datos, 
 
 
 
+[[network-cisco-nexus]]
 == Red: Cisco Nexus
 
 El software Cisco NX OS admite la función NetFlow que permite una detección mejorada de anomalías y seguridad de la red. NetFlow captura los metadatos de cada conversación de la red, las partes implicadas en la comunicación, el protocolo utilizado y la duración de la transacción. Una vez agregada y analizado la información, puede proporcionar una visión del comportamiento normal.
@@ -41,6 +43,7 @@ NetFlow utiliza flujos para proporcionar estadísticas para la supervisión de l
 
 
 
+[[compute-cisco-ucs]]
 == Computación: Cisco UCS
 
 Cisco UCS es el extremo de computación en una arquitectura de FlexPod. Puede usar varios productos de Cisco que pueden ayudar a proteger esta capa de la pila en el nivel del sistema operativo.

@@ -18,6 +18,7 @@ En esta sección, revisamos la arquitectura de una infraestructura convergente d
 
 
 
+[[solution-technology]]
 == Tecnología de soluciones
 
 Una solución de centro de datos de FlexPod consta de los siguientes componentes mínimos para proporcionar un entorno de infraestructura convergente compatible, validado, escalable y de alta disponibilidad.
@@ -62,6 +63,7 @@ Para que Cloud Insights recopile datos, una organización debe poner en marcha u
 |===
 
 
+[[architectural-diagram]]
 == Diagrama arquitectónico
 
 La siguiente figura muestra la arquitectura de la solución.
@@ -70,6 +72,7 @@ image:cloud-insights_image2.png["Error: Falta la imagen gráfica"]
 
 
 
+[[hardware-requirements]]
 == Requisitos de hardware
 
 En la siguiente tabla se enumeran los componentes de hardware necesarios para implementar la solución. Los componentes de hardware que se usan en cualquier implementación particular de la solución pueden variar en función de las necesidades del cliente.
@@ -97,6 +100,7 @@ En la siguiente tabla se enumeran los componentes de hardware necesarios para im
 |===
 
 
+[[software-requirements]]
 == Requisitos de software
 
 En la siguiente tabla se enumeran los componentes de software necesarios para implementar la solución. Los componentes que se usan en cualquier implementación particular de la solución pueden variar en función de las necesidades del cliente.
@@ -124,6 +128,7 @@ En la siguiente tabla se enumeran los componentes de software necesarios para im
 |===
 
 
+[[use-case-details]]
 == Detalles de casos de uso
 
 Esta solución se aplica a los siguientes casos de uso:

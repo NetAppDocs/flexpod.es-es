@@ -18,6 +18,7 @@ Compruebe que cumple los requisitos de hardware, software y licencias para la in
 
 
 
+[[hardware-and-software-requirements]]
 == Requisitos de hardware y software
 
 Estos son los componentes mínimos de hardware y software necesarios para implementar la solución. Los componentes que se usan en cualquier implementación particular de la solución pueden variar en función de las necesidades del cliente.
@@ -42,6 +43,7 @@ NOTE: Consulta https://intersight.com/help/saas/supported_systems/overview["Sist
 
 
 
+[[cisco-intersight-licensing-requirements]]
 == Requisitos para la licencia de Cisco Intersight
 
 Cisco Intersight ofrece servicios como el servicio de infraestructura y el servicio Cloud Orchestrator para gestionar, automatizar y optimizar el almacenamiento físico (almacenamiento de NetApp). Puede utilizar estos servicios para gestionar el servidor Cisco UCS y el sistema Cisco HyperFlex. El servicio Infrastructure Service y Cloud Orchestrator utilizan un modelo de licencias basado en suscripción con varios niveles. Puede seleccionar el nivel de volumen de Cisco UCS Server necesario para el período de suscripción seleccionado.

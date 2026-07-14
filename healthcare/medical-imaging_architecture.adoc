@@ -22,12 +22,14 @@ image:medical-imaging_image3.png["Error: Falta la imagen gráfica"]
 
 
 
+[[storage-architecture]]
 == Arquitectura de almacenamiento
 
 Utilice las directrices de arquitectura de almacenamiento de esta sección para configurar la infraestructura de almacenamiento para un sistema de exploración médica empresarial.
 
 
 
+[[storage-tiers]]
 === Niveles de almacenamiento
 
 Un entorno típico de exploración médica empresarial consta de varios niveles de almacenamiento distintos. Cada nivel tiene requisitos específicos de protocolo de almacenamiento y rendimiento. El almacenamiento de NetApp admite diversas tecnologías de RAID; puede encontrar más información https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-psmg%2FGUID-488B0EC4-3B03-4566-8321-5B8E568F34E4.html["aquí"^]. A continuación, se explica cómo los sistemas de almacenamiento AFF de NetApp satisfacen las necesidades de los distintos niveles de almacenamiento para el sistema de imagen:
@@ -67,6 +69,7 @@ La tabla siguiente enumera cada nivel que un sistema de exploraciones médicas t
 |===
 
 
+[[storage-network-connectivity]]
 === Conectividad de la red de almacenamiento
 
 
@@ -108,6 +111,7 @@ La tabla siguiente enumera cada nivel que un sistema de exploraciones médicas t
 
 
 
+[[backup-and-recovery]]
 === Backup y recuperación
 
 FlexPod Datacenter se crea en una cabina de almacenamiento gestionada por el software para la gestión de datos ONTAP de NetApp. El software ONTAP ha evolucionado a lo largo de 20 años para ofrecer muchas funciones de gestión de datos para máquinas virtuales, bases de datos de Oracle, archivos compartidos SMB/CIFS y NFS. También proporciona tecnologías de protección como la tecnología Snapshot de NetApp, la tecnología SnapMirror y la tecnología de replicación de datos FlexClone de NetApp. El software SnapCenter de NetApp cuenta con un servidor y un cliente GUI para utilizar las funciones Snapshot, SnapRestore y FlexClone de ONTAP para VM, recursos compartidos de archivos SMB/CIFS, backup y recuperación de datos de Oracle y NFS.
@@ -139,6 +143,7 @@ NetApp MetroCluster se utiliza por miles de empresas en todo el mundo para alta 
 
 
 
+[[networking]]
 == Redes
 
 Un par de switches Cisco Nexus proporcionan rutas redundantes para el tráfico IP de computación a almacenamiento, y para clientes externos del visor de imágenes del sistema de imágenes médicas:
@@ -157,6 +162,7 @@ Un par de switches Cisco Nexus proporcionan rutas redundantes para el tráfico I
 
 
 
+[[computecisco-unified-computing-system]]
 == Informática: Cisco Unified Computing System
 
 Dos estructuras de Cisco UCS mediante diferentes interconexiones de estructura proporcionan dos dominios de fallo. Cada estructura está conectada tanto a switches de red IP como a distintos switches de red de FC.
@@ -172,6 +178,7 @@ Para ejecutar VMware ESXi, se crean perfiles de servicio idénticos para cada bl
 
 
 
+[[virtualization]]
 == Virtualización
 
 El clúster de hosts VMware ESXi ejecuta máquinas virtuales de carga de trabajo. El clúster incluye instancias ESXi que se ejecutan en servidores blade Cisco UCS.
@@ -194,6 +201,7 @@ Cada host ESXi incluye los siguientes componentes de red:
 
 
 
+[[medical-imaging-system-architecture]]
 == Arquitectura de sistemas de imágenes médicas
 
 En las organizaciones sanitarias, los sistemas de imágenes médicas son aplicaciones cruciales y están bien integrados en los flujos de trabajo clínicos que empiezan desde el registro de los pacientes y finalizan con las actividades relacionadas con la facturación en el ciclo de ingresos.

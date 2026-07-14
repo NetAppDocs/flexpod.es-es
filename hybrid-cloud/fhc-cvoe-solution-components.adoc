@@ -17,6 +17,7 @@ link:fhc-cvoe-solution-overview.html["Anterior: Descripción general de la soluc
 
 
 
+[[flexpod]]
 == FlexPod
 
 FlexPod es un conjunto definido de elementos de hardware y software que forma una base integrada para soluciones virtualizadas y no virtualizadas. FlexPod incluye el almacenamiento ONTAP de NetApp, las redes de Cisco Nexus, la red de almacenamiento de Cisco MDS y Cisco Unified Computing System (Cisco UCS).
@@ -32,6 +33,7 @@ FlexPod es la plataforma ideal para las necesidades de cargas de trabajo del sec
 
 
 
+[[ehr]]
 == EHR
 
 Electronic Health Records (EHR) fabrica software para grupos médicos de tamaño medio y grande, hospitales y organizaciones sanitarias integradas. Los clientes también incluyen hospitales comunitarios, instalaciones académicas, organizaciones infantiles, proveedores de redes de seguridad y sistemas multihospitalarios. El software integrado en EHR incluye funciones clínicas, de acceso y de ingresos, y se extiende hasta el hogar.
@@ -51,12 +53,14 @@ FlexPod cuenta con la certificación EHR y es compatible con una plataforma que 
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 NetApp Console es una plataforma de gestión empresarial basada en SaaS que permite a los expertos en TI y a los arquitectos de la nube gestionar de forma centralizada su infraestructura híbrida multi-nube utilizando las soluciones en la nube de NetApp .  Proporciona un sistema centralizado para visualizar y gestionar su almacenamiento local y en la nube, compatible con entornos híbridos, múltiples proveedores de nube y cuentas. Para obtener más información, consulte link:https://docs.netapp.com/us-en/console-family/index.html["Documentación de la NetApp Console"^].
 
 
 
+[[console-agent]]
 == Agente de consola
 
 Una instancia de agente de consola permite a la consola gestionar recursos y procesos dentro de un entorno de nube pública.  Para muchas de las funciones que ofrece la consola se requiere un agente de consola, que puede implementarse en la nube o en la red local.
@@ -73,6 +77,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["
 
 
 
+[[netapp-cloud-volumes-ontap]]
 == Cloud Volumes ONTAP de NetApp
 
 Cloud Volumes ONTAP de NetApp es una oferta de almacenamiento definido por software que ejecuta el software de gestión de datos ONTAP en el cloud para proporcionar gestión de datos avanzada para cargas de trabajo de archivos y bloques. Con Cloud Volumes ONTAP, puede optimizar los costes de almacenamiento en cloud y aumentar el rendimiento de las aplicaciones a la vez que mejora la protección de datos, la seguridad y el cumplimiento de normativas.
@@ -92,6 +97,7 @@ Para obtener información más detallada, consultelink:https://docs.netapp.com/u
 
 
 
+[[netapp-active-iq-unified-manager]]
 == Active IQ Unified Manager de NetApp
 
 Active IQ Unified Manager de NetApp permite supervisar sus clústeres de almacenamiento de ONTAP desde una única interfaz intuitiva, rediseñada que proporciona inteligencia a partir de los conocimientos de la comunidad y los análisis de IA. Proporciona información exhaustiva sobre operaciones, rendimiento y proactiva del entorno de almacenamiento y las máquinas virtuales que se ejecutan en él. Cuando se produce un problema en la infraestructura de almacenamiento, Unified Manager puede informarle de los detalles del problema para ayudar a identificar la causa raíz. La consola de equipos virtuales le ofrece una vista de las estadísticas de rendimiento de la máquina virtual de manera que puede investigar toda la ruta de I/o desde el host vSphere hasta la red y, finalmente, hasta el almacenamiento.
@@ -102,6 +108,7 @@ Para obtener más información, consulte link:https://docs.netapp.com/us-en/acti
 
 
 
+[[cisco-intersight]]
 == Cisco Intersight
 
 Cisco Intersight es una plataforma SaaS que proporciona automatización inteligente, capacidad de observación y optimización para aplicaciones e infraestructuras tradicionales y nativas del cloud. La plataforma ayuda a impulsar el cambio con los equipos DE TECNOLOGÍA y ofrece un modelo operativo diseñado para el cloud híbrido. Cisco Intersight proporciona las siguientes ventajas:
@@ -117,6 +124,7 @@ image:fhc-cvoe-image3.png["Esta captura de pantalla muestra la página servidore
 
 
 
+[[vmware-vsphere-7-0]]
 == VMware vSphere 7.0
 
 VMware vSphere es una plataforma de virtualización para gestionar de forma integral grandes conjuntos de infraestructuras (incluidas CPU, almacenamiento y redes) como un entorno operativo fluido, versátil y dinámico. A diferencia de los sistemas operativos tradicionales que gestionan una máquina individual, VMware vSphere agrega la infraestructura de todo un centro de datos para crear un único centro de datos con recursos que se pueden asignar de forma rápida y dinámica a cualquier aplicación que lo necesite.
@@ -125,6 +133,7 @@ Para obtener más información sobre VMware vSphere y sus componentes, consultel
 
 
 
+[[vmware-vcenter-server]]
 == Servidor VMware vCenter
 
 VMware vCenter Server proporciona una gestión unificada de todos los hosts y equipos virtuales desde una única consola y agrega la supervisión del rendimiento de clústeres, hosts y equipos virtuales. VMware vCenter Server proporciona a los administradores una información exhaustiva sobre el estado y la configuración de clústeres de computación, hosts, máquinas virtuales, almacenamiento, el sistema operativo invitado, y otros componentes críticos de una infraestructura virtual. VMware vCenter gestiona el conjunto completo de funciones disponibles en un entorno VMware vSphere.
@@ -133,6 +142,7 @@ Para obtener información detallada, consultelink:https://www.vmware.com/product
 
 
 
+[[hardware-and-software-revisions]]
 == Revisiones de hardware y software
 
 Esta solución de nube híbrida puede ampliarse a cualquier entorno de FlexPod que ejecute versiones compatibles de software, firmware y hardware, como se define en link:http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^], link:https://ucshcltool.cloudapps.cisco.com/public/["Compatibilidad de hardware y software de UCS"^] y link:https://www.vmware.com/resources/compatibility/search.php["Guía de compatibilidad de VMware"^].

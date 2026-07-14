@@ -21,6 +21,7 @@ NOTE: FlexPod Express utiliza el dispositivo de VMware vCenter Server (VCSA).
 
 
 
+[[download-the-vmware-vcenter-server-appliance]]
 == Descargue el dispositivo VMware vCenter Server
 
 . Descargue el VCSA. Acceda al enlace de descarga haciendo clic en el icono Get vCenter Server cuando gestione el host ESXi.

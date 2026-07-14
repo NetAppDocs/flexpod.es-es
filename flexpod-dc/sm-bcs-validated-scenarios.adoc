@@ -20,6 +20,7 @@ La solución SM-BC de FlexPod Datacenter protege los servicios de datos para num
 
 
 
+[[solution-functions-validation]]
 == Validación de las funciones de la solución
 
 Se utilizan diversos casos de prueba para verificar las funciones de la solución y simular escenarios de fallo de sitio completos y parciales. Para minimizar la duplicación con las pruebas ya realizadas en las soluciones de centros de datos FlexPod existentes en el programa Cisco Validated Design, este informe se centra en los aspectos relacionados con el SM-BC de la solución. Se incluyen algunas validaciones generales de FlexPod para que los profesionales puedan realizar sus validaciones de implementación.
@@ -30,6 +31,7 @@ Dado que SM-BC es fundamental para aplicaciones empresariales como servidores de
 
 
 
+[[esxi-host-iscsi-san-boot-test]]
 == Prueba de arranque SAN iSCSI del host ESXi
 
 Los hosts ESXi de la solución están configurados para arrancar desde SAN iSCSI. El uso de arranque SAN simplifica la gestión de servidores al sustituir un servidor, ya que el perfil de servicio del servidor puede estar asociado con un nuevo servidor para que arranque sin realizar ningún cambio de configuración adicional.
@@ -54,6 +56,7 @@ Si se produce una conmutación por error del grupo de consistencia en el clúste
 
 
 
+[[vmware-vmotion-and-vmhost-affinity-test]]
 == Prueba de afinidad de VMware vMotion y VM/host
 
 Aunque una solución genérica VMware Datacenter de FlexPod admite varios protocolos, como FC, iSCSI, NVMe y NFS, la función de solución FlexPod SM-BC admite los protocolos SAN FC e iSCSI que se suelen utilizar para soluciones vitales para el negocio. Esta validación solo utiliza almacenes de datos basados en protocolo iSCSI y arranque SAN iSCSI.
@@ -74,6 +77,7 @@ Se llevaron a cabo pruebas de vMotion de máquinas virtuales en un diferente hos
 
 
 
+[[planned-storage-failover]]
 == Recuperación tras fallos planificada de almacenamiento
 
 Las operaciones planificadas de conmutación por error del almacenamiento se deben realizar en la solución después de la configuración inicial para determinar si la solución funciona correctamente después de la conmutación por error del almacenamiento. Las pruebas pueden ayudar a identificar cualquier problema de conectividad o configuración que pueda provocar interrupciones de I/O. Probar y solucionar con regularidad cualquier problema de conectividad o configuración ayuda a proporcionar servicios de datos sin interrupciones cuando se produce un desastre en el sitio real. La conmutación por error planificada de almacenamiento también se puede utilizar antes de llevar a cabo una actividad de mantenimiento de almacenamiento programada, de modo que los servicios de datos puedan ofrecerse del sitio no afectado.
@@ -105,6 +109,7 @@ image:sm-bcs-image55.png["Error: Falta la imagen gráfica"]
 
 
 
+[[unplanned-storage-failover]]
 == Recuperación no planificada tras fallos de almacenamiento
 
 Se puede producir una conmutación al nodo de respaldo no planificada del almacenamiento cuando se produce un desastre real o durante una simulación de desastre. Por ejemplo, consulte la siguiente figura en la que el sistema de almacenamiento del sitio A experimenta una interrupción del suministro eléctrico, se activa una conmutación por error del almacenamiento no planificada y los servicios de datos de las LUN del sitio A, que están protegidas por las relaciones de SM-BC, continúan en el sitio B.
@@ -137,6 +142,7 @@ image:sm-bcs-image61.png["Error: Falta la imagen gráfica"]
 
 
 
+[[complete-site-maintenance-or-site-failure]]
 == Mantenimiento de sitio completo o errores en el sitio
 
 Un sitio podría necesitar mantenimiento del sitio, experimentar pérdida de energía, o podría ser afectado por un desastre natural como un huracán o un terremoto. Por lo tanto, es crucial que ejercite escenarios de fallos del sitio planificados y no planificados para ayudar a garantizar que su solución FlexPod SM-BC esté correctamente configurada para sobrevivir a estos fallos en todas sus aplicaciones y servicios de datos vitales para el negocio. Se validaron los siguientes escenarios relacionados con el sitio.
@@ -167,6 +173,7 @@ image:sm-bcs-image65.png["Error: Falta la imagen gráfica"]
 
 
 
+[[microsoft-sql-server]]
 == Microsoft SQL Server
 
 Microsoft SQL Server es una plataforma de bases de datos ampliamente adoptada e implementada para LOS departamentos DE TI de las empresas. La versión de Microsoft SQL Server 2019 aporta muchas características y mejoras nuevas a sus motores relacionales y analíticos. Admite cargas de trabajo con aplicaciones que se ejecutan en las instalaciones, en el cloud y en entornos híbridos usando una combinación de ambos. Además, se puede poner en marcha en múltiples plataformas, como Windows, Linux y contenedores.

@@ -18,6 +18,7 @@ La `tiering-minimum-cooling-days` La configuración determina cuántos días deb
 
 
 
+[[auto]]
 == Automático
 
 El valor predeterminado `tiering-minimum-cooling-days` La configuración de la política de organización automática en niveles es de 31 días.
@@ -31,12 +32,14 @@ NOTE: El almacenamiento de objetos no es transaccional, como el almacenamiento d
 
 
 
+[[snapshot-only]]
 == Solo Snapshot
 
 El valor predeterminado `tiering-minimum-cooling-days` La configuración de la política de organización en niveles solo de Snapshot es de 2 días. Un mínimo de 2 días da tiempo adicional a los procesos en segundo plano para proporcionar la máxima eficiencia del almacenamiento y evita que los procesos diarios de protección de datos tengan que leer datos del nivel de cloud.
 
 
 
+[[ontap-cli]]
 == CLI de ONTAP
 
 Para cambiar el volumen `tiering-minimum-cooling-days` Si configura mediante la CLI de ONTAP, ejecute el siguiente comando:

@@ -27,6 +27,7 @@ image:cloud-fabricpool_image10.png["Error: Falta la imagen gráfica"]
 
 
 
+[[create-an-s3-bucket]]
 == Cree un bloque de S3
 
 . En la consola de gestión de AWS desde la página de inicio, introduzca S3 en la barra de búsqueda.

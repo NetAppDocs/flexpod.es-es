@@ -15,10 +15,12 @@ summary: Para crear iGroups, se necesitan los IQN de iniciadores iSCSI y se debe
 
 
 
+[[ontap-san-boot-storage-setup]]
 == Configuración del almacenamiento DE arranque SAN de ONTAP
 
 
 
+[[create-iscsi-igroups]]
 === Cree iGroups iSCSI
 
 Para crear iGroups, complete el paso siguiente:
@@ -39,6 +41,7 @@ NOTE: Este paso se debe completar cuando se añaden servidores Cisco UCS C- Seri
 
 
 
+[[map-boot-luns-to-igroups]]
 == Asigne LUN de arranque a iGroups
 
 Para asignar LUN de arranque a iGroups, ejecute los siguientes comandos desde la conexión SSH de administración del clúster:

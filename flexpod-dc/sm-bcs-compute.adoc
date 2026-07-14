@@ -20,6 +20,7 @@ La configuración informática de la solución FlexPod SM-BC sigue las práctica
 
 
 
+[[connectivity]]
 == Conectividad
 
 La conectividad entre los servidores blade UCS B200 y los IOM es proporcionada por la tarjeta UCS VIC a través de las conexiones de plano posterior del chasis UCS 5108. Los extensores de estructura UCS 2204XP utilizados para la validación tienen dieciséis puertos 10 G cada uno para conectarse con los ocho servidores blade de media anchura, por ejemplo, dos para cada servidor. Para aumentar el ancho de banda de la conectividad del servidor, se puede agregar un VIC basado en mezzanine para conectar el servidor a la IOM de UCS 2408 alternativa, que proporciona cuatro conexiones de 10 G a cada servidor.
@@ -104,6 +105,7 @@ NOTE: Se puede lograr un ancho de banda adicional usando componentes que admitan
 
 
 
+[[service-profiles]]
 == Perfiles de servicio
 
 Un chasis de servidor blade con interconexiones de estructura gestionadas por UCS Manager (UCSM) o Cisco Intersight pueden abstraer los servidores utilizando los perfiles de servicio disponibles en UCSM y los perfiles de servidor de Intersight. Esta validación emplea perfiles UCSM y de servicio para simplificar la gestión de servidores. Con los perfiles de servicio, la sustitución o actualización de un servidor se puede realizar simplemente asociando el perfil de servicio original con el nuevo hardware.
@@ -123,6 +125,7 @@ Los perfiles de servicio creados admiten lo siguiente para los hosts VMware ESXi
 
 
 
+[[san-boot]]
 == Arranque SAN
 
 Para la configuración de arranque SAN iSCSI, los parámetros de arranque iSCSI se establecen para permitir el arranque iSCSI desde ambas estructuras iSCSI. Para acomodar la situación de conmutación por error SM-BC en la que un LUN de arranque SAN iSCSI se sirve desde el clúster secundario cuando el clúster primario no está disponible, la configuración de destino estático iSCSI debe incluir destinos tanto del sitio A como del sitio B. Además, para maximizar la disponibilidad del LUN de arranque, configure los parámetros de arranque iSCSI para arrancar desde todas las controladoras de almacenamiento.

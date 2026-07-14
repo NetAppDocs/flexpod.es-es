@@ -26,12 +26,14 @@ La solución permite la gestión de FlexPod en las instalaciones y la replicaci�
 
 
 
+[[where-to-find-additional-information]]
 == Dónde encontrar información adicional
 
 Si quiere más información sobre el contenido de este documento, consulte los siguientes documentos o sitios web:
 
 
 
+[[github]]
 === GitHub
 
 * Todas las configuraciones de Terraform utilizadas
@@ -46,6 +48,7 @@ https://github.com/ucs-compute-solutions/FlexPod_DR_Workflows["https://github.co
 
 
 
+[[cisco-intersight]]
 === Cisco Intersight
 
 * Centro de ayuda de Cisco Intersight
@@ -76,6 +79,7 @@ https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/inter
 
 
 
+[[flexpod]]
 === FlexPod
 
 * Página de inicio de FlexPod
@@ -94,6 +98,7 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xse
 
 
 
+[[interoperability]]
 === Interoperabilidad
 
 * Herramienta de matriz de interoperabilidad de NetApp
@@ -112,6 +117,7 @@ http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/
 
 
 
+[[netapp-cloud-volumes-ontap-reference-documents]]
 === Documentos de referencia Cloud Volumes ONTAP de NetApp
 
 * NetApp Console Documentación:
@@ -146,12 +152,14 @@ https://docs.netapp.com/us-en/occm/reference_infrastructure_as_code.html["https:
 
 
 
+[[troubleshooting-issues]]
 === Resolución de problemas
 
 https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs["https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs"^]
 
 
 
+[[terraform]]
 === Terraform
 
 * Cloud Terraform
@@ -170,6 +178,7 @@ https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/lates["https:
 
 
 
+[[gcp]]
 === GCP
 
 * Alta disponibilidad de ONTAP para GCP

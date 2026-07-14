@@ -15,10 +15,12 @@ summary: En esta sección se tratan las mejores prácticas para el diseño de cl
 
 
 
+[[storage-best-practices]]
 == Mejores prácticas de almacenamiento
 
 
 
+[[high-availability]]
 === Alta disponibilidad
 
 El diseño del clúster de almacenamiento de NetApp proporciona alta disponibilidad en todos los niveles:
@@ -33,12 +35,14 @@ El diseño del clúster de almacenamiento de NetApp proporciona alta disponibili
 
 
 
+[[secure-multitenancy]]
 === Multi-tenancy seguro
 
 Las máquinas virtuales de almacenamiento (SVM) de NetApp proporcionan una estructura de cabina de almacenamiento virtual para separar el dominio de seguridad, las políticas y las redes virtuales. NetApp le recomienda crear SVM independientes para cada organización tenant que aloje los datos en el clúster de almacenamiento de.
 
 
 
+[[netapp-storage-best-practices]]
 === Mejores prácticas de almacenamiento de NetApp
 
 Considere las siguientes prácticas recomendadas de almacenamiento de NetApp:
@@ -51,6 +55,7 @@ Considere las siguientes prácticas recomendadas de almacenamiento de NetApp:
 
 
 
+[[san-boot]]
 === Arranque SAN
 
 NetApp recomienda que implemente el arranque SAN para servidores Cisco UCS en la solución de centro de datos FlexPod. Este paso permite proteger el sistema operativo de forma segura mediante el sistema de almacenamiento AFF de NetApp, lo que mejora el rendimiento. El diseño descrito en esta solución utiliza arranque SAN iSCSI.
@@ -63,6 +68,7 @@ A diferencia de las interfaces de red NAS, las interfaces DE red SAN no están c
 
 
 
+[[storage-efficiency-and-thin-provisioning]]
 === Eficiencia del almacenamiento y thin provisioning
 
 NetApp ha sido el líder del sector en innovación en eficiencia del almacenamiento, como, por ejemplo, la primera deduplicación para cargas de trabajo principales y con la compactación de datos inline, que mejora la compresión y almacena archivos pequeños e I/o de forma eficiente. ONTAP admite deduplicación en línea y en segundo plano, así como compresión en línea y en segundo plano.
@@ -73,6 +79,7 @@ Para obtener el máximo ahorro de la deduplicación, considere la posibilidad de
 
 
 
+[[quality-of-service]]
 === Calidad de servicio
 
 Los sistemas que ejecutan el software ONTAP pueden utilizar la función de calidad de servicio del almacenamiento ONTAP para limitar el rendimiento en megabits por segundo (Mbps) y limitar la IOPS de objetos de almacenamiento diferentes como archivos, LUN, volúmenes o SVM completas. La calidad de servicio adaptativa se utiliza para establecer una Suelo de IOPS (calidad de servicio mínima) y un techo (calidad de servicio máxima), que se ajustan de forma dinámica según la capacidad del almacén de datos y el espacio utilizado.
@@ -87,6 +94,7 @@ Es posible establecer el límite máximo de rendimiento de calidad de servicio e
 
 
 
+[[storage-layout]]
 === Distribución de almacenamiento
 
 En esta sección se proporcionan prácticas recomendadas para el diseño de LUN, volúmenes y agregados en el almacenamiento.
@@ -143,6 +151,7 @@ Las directrices sobre la distribución de agregados de almacenamiento para siste
 
 
 
+[[backup-best-practices]]
 == Mejores prácticas para backups
 
 SnapCenter de NetApp se usa para backups de máquinas virtuales y bases de datos. NetApp recomienda las siguientes prácticas recomendadas de backup:
@@ -158,10 +167,12 @@ SnapCenter de NetApp se usa para backups de máquinas virtuales y bases de datos
 
 
 
+[[infrastructure-best-practices]]
 == Mejores prácticas de infraestructura
 
 
 
+[[networking-best-practices]]
 === Mejores prácticas en red
 
 NetApp recomienda las siguientes prácticas recomendadas de red:
@@ -175,6 +186,7 @@ Encontrará prácticas recomendadas adicionales para la conexión a redes en las
 
 
 
+[[compute-best-practices]]
 == Prácticas recomendadas de computación
 
 NetApp recomienda las siguientes prácticas recomendadas de computación:
@@ -184,6 +196,7 @@ NetApp recomienda las siguientes prácticas recomendadas de computación:
 
 
 
+[[virtualization-best-practices]]
 == Mejores prácticas de virtualización
 
 NetApp recomienda las siguientes prácticas recomendadas de virtualización:
@@ -195,6 +208,7 @@ NetApp recomienda las siguientes prácticas recomendadas de virtualización:
 
 
 
+[[medical-imaging-system-best-practices]]
 == Mejores prácticas del sistema de imágenes médicas
 
 Consulte las siguientes prácticas recomendadas y algunos requisitos de un sistema típico de imágenes médicas:

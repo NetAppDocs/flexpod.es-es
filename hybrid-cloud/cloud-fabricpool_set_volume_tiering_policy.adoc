@@ -42,6 +42,7 @@ Cuando se utiliza con FlexPod, FabricPool proporciona tres políticas de organiz
 
 
 
+[[oncommand-system-manager]]
 == System Manager de OnCommand
 
 Para cambiar la política de organización en niveles de un volumen mediante el Administrador del sistema de OnCommand, lleve a cabo los siguientes pasos:
@@ -58,6 +59,7 @@ image:cloud-fabricpool_image16.png["Error: Falta la imagen gráfica"]
 
 
 
+[[ontap-cli]]
 == CLI de ONTAP
 
 Para cambiar la política de organización en niveles de un volumen mediante la interfaz de línea de comandos de ONTAP, ejecute el siguiente comando:

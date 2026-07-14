@@ -20,6 +20,7 @@ Muchas organizaciones sanitarias de todo el mundo se han estandarizado en FlexPo
 
 
 
+[[where-to-find-additional-information]]
 == Dónde encontrar información adicional
 
 Si quiere obtener más información sobre el contenido de este documento, consulte los siguientes documentos y sitios web:
@@ -72,6 +73,7 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ope
 
 
 
+[[version-history]]
 == Historial de versiones
 
 |===

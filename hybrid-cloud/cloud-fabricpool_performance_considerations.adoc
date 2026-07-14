@@ -15,6 +15,7 @@ summary: Al considerar el dimensionamiento, se deben evaluar las siguientes cosa
 
 
 
+[[size-the-performance-tier]]
 == Configure el nivel de rendimiento
 
 Al realizar un dimensionamiento, tenga en cuenta que el nivel de rendimiento debe ser capaz de realizar las siguientes tareas:
@@ -32,6 +33,7 @@ NOTE: Las escrituras del nivel de cloud al nivel de rendimiento se deshabilitan 
 
 
 
+[[size-the-cloud-tier]]
 == Configure el nivel de cloud
 
 A la hora de ajustar el tamaño, el almacén de objetos que actúe como nivel de cloud debe poder realizar las siguientes tareas:

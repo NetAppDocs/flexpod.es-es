@@ -122,6 +122,7 @@ https://flexpod.com/[]
 
 
 
+[[acknowledgements]]
 == Reconocimientos
 
 * Abhinav Singh, Ingeniero Técnico de Marketing de NetApp
@@ -133,6 +134,7 @@ https://flexpod.com/[]
 
 
 
+[[version-history]]
 == Historial de versiones
 
 |===

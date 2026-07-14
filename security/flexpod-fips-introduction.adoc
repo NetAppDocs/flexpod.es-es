@@ -22,12 +22,14 @@ FIPS 140-2 es un territorio estadounidense estándar gubernamental que establece
 
 
 
+[[scope]]
 == Ámbito
 
 Este documento es una descripción general técnica de un sistema Cisco Unified Computing System (Cisco UCS), Cisco Nexus, Cisco MDS y la infraestructura FlexPod basada en ONTAP de NetApp para alojar una o más aplicaciones o soluciones DE TI para el sector sanitario que requieren cumplimiento de normativas de seguridad FIPS 140-2-2.
 
 
 
+[[audience]]
 == Destinatarios
 
 Este documento está dirigido a líderes técnicos del sector sanitario y a ingenieros de soluciones de partners de Cisco y NetApp y personal de servicios profesionales. NetApp asume que el lector tiene un buen conocimiento de los conceptos de configuración de la computación y el almacenamiento, así como una familiaridad técnica con las amenazas para la salud, la seguridad sanitaria, los sistemas TECNOLÓGICOS para el sector sanitario, Cisco UCS y los sistemas de almacenamiento de NetApp.

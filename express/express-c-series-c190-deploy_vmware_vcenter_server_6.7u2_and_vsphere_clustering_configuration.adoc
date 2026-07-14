@@ -25,6 +25,7 @@ Para configurar la agrupación en clústeres de VMware vCenter Server 6.7 y vSph
 
 
 
+[[create-a-vsphere-cluster]]
 == Cree un clúster de vSphere
 
 Para crear un clúster de vSphere, complete los siguientes pasos:
@@ -40,6 +41,7 @@ image:express-c-series-c190-deploy_image45.png["Error: Falta la imagen gráfica"
 
 
 
+[[add-the-esxi-hosts-to-the-cluster]]
 == Añada los hosts ESXi al clúster
 
 Para añadir los hosts ESXi al clúster, complete los siguientes pasos:
@@ -73,6 +75,7 @@ NOTE: Debe completar este proceso para los hosts adicionales que se agreguen a l
 
 
 
+[[configure-coredump-on-the-esxi-hosts]]
 == Configure coredump en hosts ESXi
 
 Para configurar coredump en hosts ESXi, complete los siguientes pasos:

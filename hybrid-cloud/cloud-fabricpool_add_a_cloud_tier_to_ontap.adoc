@@ -28,6 +28,7 @@ Necesita la siguiente información:
 
 
 
+[[oncommand-system-manager]]
 == System Manager de OnCommand
 
 Para añadir un nivel de cloud con System Manager de OnCommand, complete los siguientes pasos:
@@ -48,6 +49,7 @@ image:cloud-fabricpool_image13.png["Error: Falta la imagen gráfica"]
 
 
 
+[[ontap-cli]]
 == CLI de ONTAP
 
 Para añadir un nivel de cloud con la interfaz de línea de comandos de ONTAP, escriba los siguientes comandos:

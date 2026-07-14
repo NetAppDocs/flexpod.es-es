@@ -23,6 +23,7 @@ NOTE: Los siguientes pasos de configuración son específicos del host CentOS 8 
 
 
 
+[[netapp-host-utility-kit]]
 == Kit de utilidades de host de NetApp
 
 NetApp recomienda instalar el kit de utilidades de host (Host Utilities) de NetApp en los sistemas operativos de hosts que están conectados a los sistemas de almacenamiento de NetApp y acceden a ellos. Se admite la función de I/o multivía nativa de Microsoft (MPIO). El sistema operativo debe ser compatible con ALUA (acceso asimétrico de unidad lógica) para multivía. La instalación de las utilidades de host configura los ajustes del adaptador de bus de host (HBA) para el almacenamiento de NetApp.
@@ -34,6 +35,7 @@ Puede descargar NetApp Host Utilities https://mysupport.netapp.com/site/products
 ....
 
 
+[[discover-ontap-storage]]
 == Descubra el almacenamiento de ONTAP
 
 Asegúrese de que el servicio iSCSI esté en ejecución cuando se supone que se producen los registros. Para establecer el modo de inicio de sesión para un portal específico en un destino o para todos los portales de un destino, utilice `iscsiadm` comando.
@@ -59,6 +61,7 @@ Healthcare_SVM                       /dev/sdc host34  iSCSI    200g    cDOT
 ....
 
 
+[[configure-multipathing]]
 == Configure el acceso multivía
 
 Device Mapper Multipathing (DM-Multipath) es una utilidad multivía nativa en Linux. Se puede utilizar para la redundancia y para mejorar el rendimiento. Agrega o combina las múltiples rutas de I/o entre los servidores y el almacenamiento, por lo que crea un único dispositivo a nivel de SO.
@@ -116,6 +119,7 @@ NOTE: Para obtener información detallada sobre estos pasos, consulte https://do
 
 
 
+[[create-physical-volume]]
 == Cree el volumen físico
 
 Utilice la `pvcreate` comando para inicializar un dispositivo de bloques que se usará como volumen físico. La inicialización es análoga al formato de un sistema de archivos.
@@ -126,6 +130,7 @@ Physical volume "/dev/sdb" successfully created.
 ....
 
 
+[[create-volume-group]]
 == Crear un grupo de volúmenes
 
 Para crear un grupo de volúmenes a partir de uno o más volúmenes físicos, use el `vgcreate` comando. Este comando crea un nuevo grupo de volúmenes por nombre y añade al menos un volumen físico.
@@ -161,6 +166,7 @@ La `vgdisplay` el comando se puede usar para mostrar las propiedades del grupo d
 ....
 
 
+[[create-logical-volume]]
 == Crear un volumen lógico
 
 Cuando se crea un volumen lógico, se obtiene dicho volumen a partir de un grupo de volúmenes mediante las extensiones libres de los volúmenes físicos que conforman el grupo de volúmenes.
@@ -173,6 +179,7 @@ Este comando crea un volumen lógico llamado `datalv` que utiliza todo el espaci
 
 
 
+[[create-file-system]]
 == Crear sistema de archivos
 
 ....
@@ -190,6 +197,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ....
 
 
+[[make-folder-to-mount]]
 == Crear carpeta para montar
 
 ....
@@ -197,6 +205,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ....
 
 
+[[mount-the-file-system]]
 == Monte el sistema de archivos
 
 ....
@@ -219,6 +228,7 @@ Para obtener información detallada sobre estas tareas, consulte la página link
 
 
 
+[[data-generation]]
 == Generación de datos
 
  `Dgen.pl`Es un generador de datos mediante scripts Perl para el simulador de E/S de EHR (GenerateIO).  Los datos dentro de las LUN se generan con el EHR. `Dgen.pl` guion.  El script está diseñado para crear datos similares a los de una base de datos EHR.
@@ -240,6 +250,7 @@ Mientras se ejecuta, la `Dgen.pl` script utiliza el 85% del sistema de archivos 
 
 
 
+[[configure-snapmirror-replication-between-on-premises-ontap-and-cloud-volumes-ontap]]
 == Configurar la replicación de SnapMirror entre ONTAP en las instalaciones y Cloud Volumes ONTAP
 
 SnapMirror de NetApp replica los datos a alta velocidad a través de LAN o WAN, de forma que usted obtiene una alta disponibilidad de datos y una rápida replicación de datos tanto en entornos virtuales como tradicionales. Al replicar datos en sistemas de almacenamiento de NetApp y actualizar continuamente los datos secundarios, estos están siempre al día y disponibles cuando los necesite. No se requieren servidores de replicación externos.

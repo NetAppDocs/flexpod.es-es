@@ -18,6 +18,7 @@ Esta sección describe los requisitos de alimentación y las directrices de cabl
 
 
 
+[[power-requirements]]
 == Requisitos de alimentación
 
 Los requisitos de alimentación para FlexPod Express varían según la ubicación donde se instale la configuración de FlexPod Express.
@@ -30,6 +31,7 @@ Para los datos de alimentación del controlador de almacenamiento NetApp, consul
 
 
 
+[[cabling-guidelines]]
 == Directrices de cableado
 
 Esta sección te da pautas generales de cableado para un diseño de FlexPod Express.

@@ -18,6 +18,7 @@ Después de reclamar los destinos, los widgets de almacenamiento de NetApp, el i
 
 
 
+[[storage-inventory-overview]]
 == Información general del inventario de almacenamiento
 
 La siguiente captura de pantalla muestra la pantalla *operar > almacenamiento*.
@@ -33,6 +34,7 @@ image:ci-qsg_image10.png["la captura de pantalla muestra la descripción general
 
 
 
+[[storage-widgets]]
 == Widgets de almacenamiento
 
 Para ver los widgets de almacenamiento, vaya a *Supervisión > Paneles > Ver widgets de almacenamiento de NetApp*.

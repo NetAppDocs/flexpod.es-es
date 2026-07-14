@@ -18,6 +18,7 @@ Un sistema FlexPod Express requiere una combinación de componentes de hardware 
 
 
 
+[[hardware-requirements]]
 == Requisitos de hardware
 
 Independientemente del hipervisor elegido, todas las configuraciones exprés de FlexPod utilizan el mismo hardware. Por lo tanto, aunque cambien los requisitos del negocio, puede utilizar un hipervisor diferente en el mismo hardware de FlexPod Express.
@@ -52,6 +53,7 @@ Esta tabla enumera el hardware necesario además de la configuración base para 
 |===
 
 
+[[software-requirements]]
 == Requisitos de software
 
 En la siguiente tabla se enumeran los componentes de software necesarios para implementar las arquitecturas de las soluciones Express de FlexPod.

@@ -64,12 +64,14 @@ La siguiente tabla enumera las máquinas virtuales de VMware creadas.
 |===
 
 
+[[cisco-nexus-31108pcv-deployment-procedure]]
 == Procedimiento de puesta en marcha de Cisco Nexus 31108PCV
 
 En esta sección se detalla la configuración del switch Cisco Nexus 31308PCV utilizada en un entorno FlexPod Express.
 
 
 
+[[initial-setup-of-cisco-nexus-31108pcv-switch]]
 === Configuración inicial del switch Cisco Nexus 31108PCV
 
 Este procedimiento describe cómo configurar los switches Cisco Nexus para su uso en un entorno FlexPod Express básico.
@@ -128,6 +130,7 @@ Use this configuration and save it? (yes/no) [y]: Enter
 
 
 
+[[enable-advanced-features]]
 === Habilite funciones avanzadas
 
 Determinadas características avanzadas deben estar habilitadas en Cisco NX-OS para proporcionar opciones de configuración adicionales.
@@ -152,6 +155,7 @@ port-channel load-balance src-dst ip-l4port
 
 
 
+[[perform-global-spanning-tree-configuration]]
 === Realizar la configuración de árbol de expansión global
 
 La plataforma Cisco Nexus utiliza una nueva función de protección llamada garantía de puente. La garantía de puente ayuda a proteger contra un enlace unidireccional u otro error de software con un dispositivo que continúa redirectando el tráfico de datos cuando ya no ejecuta el algoritmo de árbol expansivo. Los puertos se pueden colocar en uno de varios estados, incluyendo la red o el borde, dependiendo de la plataforma.
@@ -170,6 +174,7 @@ spanning-tree port type edge bpduguard default
 ....
 
 
+[[define-vlans]]
 === Defina las VLAN
 
 Antes de configurar puertos individuales con VLAN diferentes, se deben definir las VLAN de capa 2 en el switch. También se recomienda nombrar las VLAN para que la solución de problemas sea sencilla en el futuro.
@@ -195,6 +200,7 @@ exit
 ....
 
 
+[[configure-access-and-management-port-descriptions]]
 === Configurar el acceso y las descripciones de los puertos de gestión
 
 Como es el caso, la asignación de nombres a las VLAN de capa 2, las descripciones de configuración de todas las interfaces pueden ayudar tanto al aprovisionamiento como a la solución de problemas.
@@ -239,6 +245,7 @@ int eth1/14
 ....
 
 
+[[configure-server-and-storage-management-interfaces]]
 === Configurar las interfaces de gestión de almacenamiento y servidores
 
 Las interfaces de gestión para el servidor y el almacenamiento suelen utilizar una sola VLAN. Por lo tanto, configure los puertos de la interfaz de gestión como puertos de acceso. Defina la VLAN de administración para cada switch y cambie el tipo de puerto de árbol expansivo a EDGE.
@@ -271,6 +278,7 @@ exit
 ....
 
 
+[[add-ntp-distribution-interface]]
 === Añada la interfaz de distribución de NTP
 
 
@@ -299,6 +307,7 @@ exitntp peer <switch-a-ntp-ip> use-vrf default
 ....
 
 
+[[perform-virtual-port-channel-global-configuration]]
 === Llevar a cabo la configuración global del canal de puertos virtuales
 
 Un canal de puerto virtual (VPC) permite que los enlaces que están conectados físicamente a dos switches de Cisco Nexus diferentes aparezcan como un único canal de puerto a un tercer dispositivo. El tercer dispositivo puede ser un conmutador, un servidor o cualquier otro dispositivo de red. Un VPC puede proporcionar una multivía de nivel 2, que le permite crear redundancia aumentando el ancho de banda, permitiendo múltiples rutas paralelas entre los nodos y tráfico de equilibrio de carga donde haya rutas alternativas.
@@ -414,18 +423,21 @@ NOTE: En esta validación de solución se utilizó una unidad de transmisión m�
 
 
 
+[[uplink-into-existing-network-infrastructure]]
 === Enlace ascendente a la infraestructura de red existente
 
 En función de la infraestructura de red disponible, se pueden utilizar varios métodos y funciones para elevar el entorno FlexPod. Si existe un entorno Cisco Nexus existente, NetApp recomienda utilizar VPC para conectar los switches Cisco Nexus 31108PVC incluidos en el entorno FlexPod a la infraestructura. Los enlaces ascendentes pueden ser enlaces de subida de 10 GbE para una solución de infraestructura de 10 GbE o 1 GbE para una solución de infraestructura de 1 GbE si fuera necesario. Los procedimientos descritos anteriormente se pueden utilizar para crear un VPC de enlace ascendente al entorno existente. Asegúrese de ejecutar Copy RUN START para guardar la configuración en cada switch una vez completada la configuración.
 
 
 
+[[netapp-storage-deployment-procedure-part-1]]
 == Procedimiento de instalación de almacenamiento NetApp (parte 1)
 
 En esta sección se describe el procedimiento de implementación del almacenamiento AFF de NetApp.
 
 
 
+[[netapp-storage-controller-aff2xx-series-installation]]
 === Instalación de la controladora de almacenamiento de NetApp serie AFF2xx
 
 
@@ -454,6 +466,7 @@ Sigue los procedimientos de instalación física de los controladores en el http
 
 
 
+[[netapp-ontap-9-5]]
 === ONTAP 9.5 de NetApp
 
 
@@ -624,6 +637,7 @@ La inicialización y creación del agregado raíz puede tardar 90 minutos o más
 
 
 
+[[continuation-node-a-configuration-and-cluster-configuration]]
 === Continuación de la configuración Del nodo a y de la configuración del clúster
 
 Desde un programa de puertos de consola conectado al puerto de la consola De la controladora De almacenamiento A (nodo A), ejecute el script de configuración del nodo. Este script se muestra cuando ONTAP 9.5 arranca en el nodo por primera vez.
@@ -694,6 +708,7 @@ Debe, como mínimo, configurar el método de notificación de eventos antes de c
 
 
 
+[[continuation-of-storage-cluster-configuration]]
 === Continuación de la configuración del clúster de almacenamiento
 
 Después de configurar los nodos de almacenamiento y el clúster base, puede continuar con la configuración del clúster de almacenamiento.
@@ -1413,10 +1428,12 @@ security login unlock –username vsadmin –vserver
 
 
 
+[[cisco-ucs-server-configuration]]
 == Configuración de servidor Cisco UCS
 
 
 
+[[flexpod-cisco-ucs-base]]
 === Base de Cisco UCS de FlexPod
 
 Realice la configuración inicial de la interconexión de estructura Cisco UCS 6324 para entornos FlexPod.
@@ -1425,6 +1442,7 @@ En esta sección se proporcionan procedimientos detallados para configurar Cisco
 
 
 
+[[cisco-ucs-fabric-interconnect-6324-a]]
 === Cisco UCS Fabric Interconnect 6324 A
 
 Cisco UCS utiliza servidores y redes de capa de acceso. Este sistema de servidores de última generación de alto rendimiento proporciona un centro de datos con un alto grado de escalabilidad y agilidad de las cargas de trabajo.
@@ -1435,6 +1453,7 @@ Los componentes de hardware y software son compatibles con la estructura unifica
 
 
 
+[[initial-system-setup]]
 === Configuración inicial del sistema
 
 La primera vez que accede a una interconexión de estructura en un dominio de Cisco UCS, el asistente de configuración le solicita la siguiente información necesaria para configurar el sistema:
@@ -1587,6 +1606,7 @@ La siguiente tabla enumera la información necesaria para completar la configura
 
 
 
+[[log-into-cisco-ucs-manager]]
 === Inicie sesión en Cisco UCS Manager
 
 Para iniciar sesión en el entorno de Cisco Unified Computing System (UCS), complete los siguientes pasos:
@@ -1603,12 +1623,14 @@ Puede que tenga que esperar al menos 5 minutos tras configurar la segunda interc
 
 
 
+[[cisco-ucs-manager-software-version-4-01b]]
 === Software Cisco UCS Manager, versión 4.0(1b)
 
 En este documento se asume el uso del software Cisco UCS Manager, versión 4.0(1b). Para actualizar el software Cisco UCS Manager y el software Cisco UCS 6324 Fabric Interconnect, consulte  https://www.cisco.com/c/en/us/support/servers-unified-computing/ucs-manager/products-installation-and-configuration-guides-list.html["Guías de instalación y actualización de Cisco UCS Manager."^]
 
 
 
+[[configure-cisco-ucs-call-home]]
 === Configure Cisco UCS Call Home
 
 Cisco recomienda encarecidamente que configure Call Home en Cisco UCS Manager. La configuración de Call Home acelera la resolución de los casos de soporte. Para configurar Call Home, lleve a cabo los siguientes pasos:
@@ -1621,6 +1643,7 @@ Cisco recomienda encarecidamente que configure Call Home en Cisco UCS Manager. 
 
 
 
+[[add-block-of-ip-addresses-for-keyboard-video-mouse-access]]
 === Agregue bloque de direcciones IP para el acceso al teclado, vídeo y ratón
 
 Para crear un bloque de direcciones IP para el acceso de teclado, vídeo y ratón en banda en el entorno Cisco UCS, lleve a cabo los siguientes pasos:
@@ -1638,6 +1661,7 @@ image:express-direct-attach-aff220-deploy_image7.png["Error: Falta la imagen gr�
 
 
 
+[[synchronize-cisco-ucs-to-ntp]]
 === Sincronice Cisco UCS con NTP
 
 Para sincronizar el entorno Cisco UCS con los servidores NTP en los switches Nexus, realice los siguientes pasos:
@@ -1661,6 +1685,7 @@ image:express-direct-attach-aff220-deploy_image9.png["Error: Falta la imagen gr�
 
 
 
+[[edit-chassis-discovery-policy]]
 === Edite la política de detección del chasis
 
 La configuración de la política de detección simplifica la adición de chasis Cisco UCS B-Series y de extensores de estructura adicionales para ampliar la conectividad de Cisco UCS C-Series. Para modificar la política de detección del chasis, complete los siguientes pasos:
@@ -1675,6 +1700,7 @@ La configuración de la política de detección simplifica la adición de chasis
 
 
 
+[[enable-server-uplink-and-storage-ports]]
 === Habilite puertos de servidor, enlace ascendente y almacenamiento
 
 Para habilitar los puertos de servidor y enlace ascendente, lleve a cabo los siguientes pasos:
@@ -1710,6 +1736,7 @@ image:express-direct-attach-aff220-deploy_image11.png["Error: Falta la imagen gr
 
 
 
+[[create-uplink-port-channels-to-cisco-nexus-31108-switches]]
 === Cree canales de puertos de enlace ascendente con switches Cisco Nexus 31108
 
 Para configurar los canales de puerto necesarios en el entorno Cisco UCS, complete los siguientes pasos:
@@ -1759,6 +1786,7 @@ El canal del puerto debe tener un estado general de subida.
 
 
 
+[[create-an-organization-optional]]
 === Crear una organización (opcional)
 
 Las organizaciones se utilizan para organizar los recursos y restringir el acceso a varios grupos dentro de la organización DE TI, con lo que permiten el multi-tenancy de los recursos informáticos.
@@ -1776,6 +1804,7 @@ Para configurar una organización en el entorno Cisco UCS, complete los pasos si
 
 
 
+[[configure-storage-appliance-ports-and-storage-vlans]]
 === Configure los puertos del dispositivo de almacenamiento y las VLAN de almacenamiento
 
 Para configurar los puertos del dispositivo de almacenamiento y las VLAN de almacenamiento, siga estos pasos:
@@ -1857,6 +1886,7 @@ image:express-direct-attach-aff220-deploy_image17.png["Error: Falta la imagen gr
 
 
 
+[[set-jumbo-frames-in-cisco-ucs-fabric]]
 === Establezca las tramas gigantes en la estructura de Cisco UCS
 
 Para configurar tramas gigantes y permitir la calidad de servicio en la estructura Cisco UCS, realice los siguientes pasos:
@@ -1874,6 +1904,7 @@ image:express-direct-attach-aff220-deploy_image18.png["Error: Falta la imagen gr
 
 
 
+[[acknowledge-cisco-ucs-chassis]]
 === Reconozca el chasis de Cisco UCS
 
 Para reconocer todos los chasis Cisco UCS, lleve a cabo los siguientes pasos:
@@ -1887,12 +1918,14 @@ Para reconocer todos los chasis Cisco UCS, lleve a cabo los siguientes pasos:
 
 
 
+[[load-cisco-ucs-4-01b-firmware-images]]
 === Cargar imágenes de firmware de Cisco UCS 4.0(1b)
 
 Para actualizar el software Cisco UCS Manager y el software Cisco UCS Fabric Interconnect a la versión 4.0(1b), consulte https://www.cisco.com/en/US/products/ps10281/prod_installation_guides_list.html["Guías de instalación y actualización de Cisco UCS Manager"^].
 
 
 
+[[create-host-firmware-package]]
 === Cree un paquete de firmware del host
 
 Las directivas de administración de firmware permiten al administrador seleccionar los paquetes correspondientes para una configuración de servidor determinada. Estas políticas suelen incluir paquetes para adaptadores, BIOS, controlador de placa, adaptadores de FC, ROM de opción del adaptador de bus de host (HBA) y propiedades de la controladora de almacenamiento.
@@ -1913,6 +1946,7 @@ image:express-direct-attach-aff220-deploy_image19.png["Error: Falta la imagen gr
 
 
 
+[[create-mac-address-pools]]
 === Crear pools de direcciones MAC
 
 Para configurar los pools de direcciones MAC necesarios para el entorno Cisco UCS, realice los siguientes pasos:
@@ -1957,6 +1991,7 @@ NOTE: Para la solución FlexPod, se recomienda colocar 0B en el siguiente al úl
 
 
 
+[[create-iscsi-iqn-pool]]
 === Cree un pool IQN de iSCSI
 
 Para configurar los pools IQN necesarios para el entorno Cisco UCS, complete los siguientes pasos:
@@ -1985,6 +2020,7 @@ image:express-direct-attach-aff220-deploy_image21.png["Error: Falta la imagen gr
 
 
 
+[[create-iscsi-initiator-ip-address-pools]]
 === Cree pools de direcciones IP del iniciador de iSCSI
 
 Para configurar el arranque iSCSI de los pools IP necesarios para el entorno Cisco UCS, realice los pasos siguientes:
@@ -2015,6 +2051,7 @@ Para configurar el arranque iSCSI de los pools IP necesarios para el entorno Cis
 
 
 
+[[create-uuid-suffix-pool]]
 === Cree un pool de sufijos UUID
 
 Para configurar el pool de sufijos de identificador único universal (UUID) necesario para el entorno de Cisco UCS, complete los siguientes pasos:
@@ -2037,6 +2074,7 @@ Para configurar el pool de sufijos de identificador único universal (UUID) nece
 
 
 
+[[create-server-pool]]
 === Cree un pool de servidores
 
 Para configurar el pool de servidores necesario para el entorno Cisco UCS, lleve a cabo los pasos siguientes:
@@ -2057,6 +2095,7 @@ NOTE: Considere la posibilidad de crear pools de servidores únicos para lograr 
 
 
 
+[[create-network-control-policy-for-cisco-discovery-protocol-and-link-layer-discovery-protocol]]
 === Cree una política de control de red para el protocolo de descubrimiento de Cisco y el protocolo de detección de la capa de enlace
 
 Para crear una política de control de red para el protocolo de descubrimiento de Cisco (CDP) y el protocolo de detección de capas de vínculo (LLDP), lleve a cabo los siguientes pasos:
@@ -2076,6 +2115,7 @@ image:express-direct-attach-aff220-deploy_image22.png["Error: Falta la imagen gr
 
 
 
+[[create-power-control-policy]]
 === Crear política de control de potencia
 
 Para crear una política de control de alimentación para el entorno Cisco UCS, lleve a cabo los pasos siguientes:
@@ -2094,6 +2134,7 @@ image:express-direct-attach-aff220-deploy_image23.png["Error: Falta la imagen gr
 
 
 
+[[create-server-pool-qualification-policy-optional]]
 === Crear política de calificación de pool de servidores (opcional)
 
 Para crear una política de cualificación de pool de servidores opcional para el entorno Cisco UCS, realice los pasos siguientes:
@@ -2118,6 +2159,7 @@ image:express-direct-attach-aff220-deploy_image24.png["Error: Falta la imagen gr
 
 
 
+[[create-server-bios-policy]]
 === Crear directiva de BIOS del servidor
 
 Para crear una política de BIOS de servidor para el entorno Cisco UCS, complete los pasos siguientes:
@@ -2167,6 +2209,7 @@ image:express-direct-attach-aff220-deploy_image28.png["Error: Falta la imagen gr
 
 
 
+[[update-the-default-maintenance-policy]]
 === Actualice la directiva de mantenimiento predeterminada
 
 Para actualizar la directiva de mantenimiento predeterminada, lleve a cabo los siguientes pasos:
@@ -2185,6 +2228,7 @@ image:express-direct-attach-aff220-deploy_image29.png["Error: Falta la imagen gr
 
 
 
+[[create-vnic-templates]]
 === Cree plantillas VNIC
 
 Para crear varias plantillas de tarjeta de interfaz de red virtual (VNIC) para el entorno de Cisco UCS, complete los procedimientos descritos en esta sección.
@@ -2306,6 +2350,7 @@ image:express-direct-attach-aff220-deploy_image33.png["Error: Falta la imagen gr
 
 
 
+[[create-lan-connectivity-policy-for-iscsi-boot]]
 === Cree una política de conectividad LAN para el arranque iSCSI
 
 Este procedimiento se aplica a un entorno de Cisco UCS en el que hay dos LIF iSCSI en el nodo de clúster 1 (`iscsi_lif01a` y.. `iscsi_lif01b`) Y dos LIF iSCSI están en el nodo de cluster 2 (`iscsi_lif02a` y.. `iscsi_lif02b`). Asimismo, se supone que los LIF A están conectados al tejido A (Cisco UCS 6324 A) y que los LIF B están conectados al tejido B (Cisco UCS 6324 B).
@@ -2407,6 +2452,7 @@ image:express-direct-attach-aff220-deploy_image37.png["Error: Falta la imagen gr
 
 
 
+[[create-iscsi-boot-policy]]
 === Crear política de arranque iSCSI
 
 El procedimiento de esta sección se aplica a un entorno Cisco UCS en el que hay dos interfaces lógicas iSCSI (LIF) en el nodo de clúster 1 (`iscsi_lif01a` y.. `iscsi_lif01b`) Y dos LIF iSCSI están en el nodo de cluster 2 (`iscsi_lif02a` y.. `iscsi_lif02b`). Además, se supone que las LIF A están conectadas a la estructura A (Cisco UCS Fabric Interconnect A) y que los LIF B están conectados a la estructura B (Cisco UCS Fabric Interconnect B).
@@ -2437,6 +2483,7 @@ image:express-direct-attach-aff220-deploy_image38.png["Error: Falta la imagen gr
 
 
 
+[[create-service-profile-template]]
 === Crear plantilla de perfil de servicio
 
 En este procedimiento, se crea una plantilla de perfil de servicio para los hosts ESXi de infraestructura para el arranque de Fabric A.
@@ -2630,6 +2677,7 @@ image:express-direct-attach-aff220-deploy_image51.png["Error: Falta la imagen gr
 
 
 
+[[create-vmedia-enabled-service-profile-template]]
 === Crear una plantilla de perfil de servicio habilitada para vMedia
 
 Para crear una plantilla de perfil de servicio con vMedia activado, lleve a cabo los siguientes pasos:
@@ -2646,6 +2694,7 @@ Para crear una plantilla de perfil de servicio con vMedia activado, lleve a cabo
 
 
 
+[[create-service-profiles]]
 === Crear perfiles de servicio
 
 Para crear perfiles de servicio a partir de la plantilla de perfil de servicio, lleve a cabo los siguientes pasos:
@@ -2673,10 +2722,12 @@ NOTE: Los perfiles de servicio se asocian automáticamente con los servidores de
 
 
 
+[[storage-configuration-part-2-boot-luns-and-initiator-groups]]
 == Parte de configuración del almacenamiento 2: Arranque de las LUN y los iGroups
 
 
 
+[[ontap-boot-storage-setup]]
 === Configuración del almacenamiento de arranque de ONTAP
 
 
@@ -2714,6 +2765,7 @@ lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- A –igro
 
 
 
+[[vmware-vsphere-6-7u1-deployment-procedure]]
 == Procedimiento de implementación de VMware vSphere 6.7U1
 
 En esta sección, se proporcionan los procedimientos detallados para la instalación de VMware ESXi 6.7U1 en una configuración FlexPod Express. Una vez finalizados los procedimientos, se aprovisionan dos hosts ESXi arrancados.
@@ -2722,6 +2774,7 @@ Existen varios métodos para instalar ESXi en un entorno VMware. Estos procedimi
 
 
 
+[[download-cisco-custom-image-for-esxi-6-7u1]]
 === Descargue la imagen personalizada de Cisco para ESXi 6.7U1
 
 Si no se ha descargado la imagen personalizada de VMware ESXi, complete los siguientes pasos para completar la descarga:
@@ -3151,6 +3204,7 @@ Para instalar el complemento NFS de NetApp 1. 1.2 para VMware VAAI, realice los 
 
 
 
+[[install-vmware-vcenter-server-6-7]]
 == Instale VMware vCenter Server 6.7
 
 En esta sección, se proporcionan los procedimientos detallados para instalar VMware vCenter Server 6.7 en una configuración exprés de FlexPod.
@@ -3160,6 +3214,7 @@ NOTE: FlexPod Express utiliza el dispositivo de VMware vCenter Server (VCSA).
 
 
 
+[[install-vmware-vcenter-server-appliance]]
 === Instale el dispositivo VMware vCenter Server
 
 Para instalar VCSA, lleve a cabo los siguientes pasos:

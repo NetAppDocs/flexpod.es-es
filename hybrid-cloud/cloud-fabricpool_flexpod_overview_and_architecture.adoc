@@ -15,6 +15,7 @@ summary: FlexPod es un conjunto definido de elementos de hardware y software que
 
 
 
+[[flexpod-overview]]
 == Información general de FlexPod
 
 FlexPod es un conjunto definido de elementos de hardware y software que forma una base integrada para soluciones virtualizadas y no virtualizadas. FlexPod incluye el almacenamiento AFF de NetApp, la conexión a redes Cisco Nexus, la red de almacenamiento de Cisco MDS, Cisco Unified Computing System (Cisco UCS) y el software VMware vSphere en un único paquete. El diseño es lo suficientemente flexible como para que las redes, los recursos informáticos y el almacenamiento puedan encajar en un rack de centro de datos o bien se puede poner en marcha según el diseño de centro de datos del cliente. La densidad de puertos permite que los componentes de las redes acomoden varias configuraciones.
@@ -25,6 +26,7 @@ image:cloud-fabricpool_image2.png["Error: Falta la imagen gráfica"]
 
 
 
+[[flexpod-architecture]]
 == Arquitectura FlexPod
 
 La siguiente figura muestra los componentes de una solución VMware vSphere y FlexPod y las conexiones de red necesarias para las interconexiones de estructura Cisco UCS 6454. Este diseño consta de los siguientes componentes:

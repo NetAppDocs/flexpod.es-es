@@ -17,6 +17,7 @@ link:gcp-ncvo-cisco-intersight-configuration.html["Anterior: Configuración de C
 
 
 
+[[procedure-1-connect-cisco-intersight-and-terraform-cloud]]
 == Procedimiento 1: Conectar Cisco Intersight y Terraform Cloud
 
 . Reclame o cree un destino cloud de Terraform mediante los detalles pertinentes de la cuenta de Terraform Cloud.
@@ -28,6 +29,7 @@ Para obtener más información, sigue https://community.cisco.com/t5/data-center
 
 
 
+[[procedure-2-generate-user-token]]
 == Procedimiento 2: Generar token de usuario
 
 Como parte de la adición de un destino para Terraform Cloud, debe proporcionar el nombre de usuario y el token de API desde la página de configuración de Terraform Cloud.
@@ -39,6 +41,7 @@ Como parte de la adición de un destino para Terraform Cloud, debe proporcionar 
 
 
 
+[[procedure-3-claim-terraform-cloud-target]]
 == Procedimiento 3: Objetivo de cloud de Terraform de reclamación
 
 . Inicie sesión en Intersight con privilegios de Administrador de cuentas, Administrador de dispositivos o Técnico de dispositivos.
@@ -64,6 +67,7 @@ Si todo se introduce correctamente, verá el destino de Terraform Cloud mostrado
 
 
 
+[[procedure-4-add-terraform-cloud-agents]]
 == Procedimiento 4: Agregar agentes de Terraform Cloud
 
 Requisitos previos:

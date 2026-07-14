@@ -18,6 +18,7 @@ En esta sección se detalla la configuración del switch Cisco Nexus 331108PC-V 
 
 
 
+[[initial-setup-of-cisco-nexus-31108pc-v-switch]]
 == Configuración inicial del switch Cisco Nexus 31108PC-V.
 
 Los siguientes procedimientos describen cómo configurar los switches Cisco Nexus para su uso en un entorno FlexPod Express básico.
@@ -80,6 +81,7 @@ Use this configuration and save it? (yes/no) [y]: Enter
 
 
 
+[[enable-the-advanced-features]]
 == Habilite las funciones avanzadas
 
 Determinadas características avanzadas deben estar habilitadas en Cisco NX-OS para proporcionar opciones de configuración adicionales. Para activar las funciones adecuadas en los switches a y B de Cisco Nexus, entre en el modo de configuración mediante el comando (config t) y ejecute los siguientes comandos:
@@ -99,6 +101,7 @@ port-channel load-balance src-dst ip-l4port
 ....
 
 
+[[configure-global-spanning-tree]]
 == Configurar árbol de expansión global
 
 La plataforma Cisco Nexus utiliza una nueva función de protección llamada garantía de puente. La garantía de puente ayuda a proteger contra un enlace unidireccional u otro error de software con un dispositivo que continúa redirectando el tráfico de datos cuando ya no ejecuta el algoritmo de árbol expansivo. Los puertos se pueden colocar en uno de varios estados, incluyendo la red o el borde, dependiendo de la plataforma.
@@ -120,6 +123,7 @@ ntp master 3
 ....
 
 
+[[define-the-vlans]]
 == Defina las VLAN
 
 Antes de configurar puertos individuales con VLAN diferentes, se deben definir las VLAN de capa 2 en el switch. También se recomienda nombrar las VLAN para que la solución de problemas sea sencilla en el futuro.
@@ -145,6 +149,7 @@ exit
 ....
 
 
+[[configure-access-and-management-port-descriptions]]
 == Configurar el acceso y las descripciones de los puertos de gestión
 
 Como es el caso con la asignación de nombres a las VLAN de capa 2, las descripciones de configuración de todas las interfaces pueden ayudar tanto al aprovisionamiento como a la resolución de problemas.
@@ -153,6 +158,7 @@ Desde el modo de configuración (config t) de cada uno de los switches, introduz
 
 
 
+[[cisco-nexus-switch-a]]
 === Switch Cisco Nexus a
 
 ....
@@ -179,6 +185,7 @@ int eth1/34
 ....
 
 
+[[cisco-nexus-switch-b]]
 === Switch Cisco Nexus B
 
 ....
@@ -205,6 +212,7 @@ int eth1/34
 ....
 
 
+[[configure-server-and-storage-management-interfaces]]
 == Configurar las interfaces de gestión de almacenamiento y servidores
 
 Las interfaces de gestión para el servidor y el almacenamiento suelen utilizar una sola VLAN. Por lo tanto, configure los puertos de la interfaz de gestión como puertos de acceso. Defina la VLAN de administración para cada switch y cambie el tipo de puerto de árbol expansivo a EDGE.
@@ -213,6 +221,7 @@ En el modo de configuración (config t), introduzca los siguientes comandos para
 
 
 
+[[cisco-nexus-switch-a]]
 === Switch Cisco Nexus a
 
 ....
@@ -225,6 +234,7 @@ exit
 ....
 
 
+[[cisco-nexus-switch-b]]
 === Switch Cisco Nexus B
 
 ....
@@ -237,6 +247,7 @@ exit
 ....
 
 
+[[perform-the-virtual-port-channel-global-configuration]]
 == Realizar la configuración global del canal de puerto virtual
 
 Un canal de puerto virtual (VPC) permite que los enlaces que están conectados físicamente a dos switches de Cisco Nexus diferentes aparezcan como un único canal de puerto a un tercer dispositivo. El tercer dispositivo puede ser un conmutador, un servidor o cualquier otro dispositivo de red. Un VPC puede proporcionar una multivía de nivel 2, que le permite crear redundancia aumentando el ancho de banda, habilitando varias rutas paralelas entre los nodos y el tráfico de equilibrio de carga donde haya rutas alternativas.
@@ -258,6 +269,7 @@ En el modo de configuración (config t), ejecute los siguientes comandos para co
 
 
 
+[[cisco-nexus-switch-a]]
 === Switch Cisco Nexus a
 
 ....
@@ -286,6 +298,7 @@ copy run start
 ....
 
 
+[[cisco-nexus-switch-b]]
 === Switch Cisco Nexus B
 
 ....
@@ -312,6 +325,7 @@ copy run start
 ....
 
 
+[[configure-the-storage-port-channels]]
 == Configure los canales del puerto de almacenamiento
 
 Las controladoras de almacenamiento de NetApp permiten una conexión activa-activa a la red mediante el protocolo de control de agregación de enlaces (LACP). El uso de LACP es preferido porque añade negociación y registro entre los switches. Debido a que la red está configurada para VPC, este enfoque permite disponer de conexiones activo-activo del almacenamiento para separar los switches físicos. Cada controladora tiene dos enlaces a cada uno de los switches. Sin embargo, los cuatro enlaces forman parte del mismo VPC y grupo de interfaces (ifgrp).
@@ -356,6 +370,7 @@ copy run start
 
 
 
+[[configure-the-server-connections]]
 == Configure las conexiones del servidor
 
 Los servidores Cisco UCS tienen una tarjeta de interfaz virtual de cuatro puertos, VIC1457, que se utiliza para el tráfico de datos y el arranque del sistema operativo ESXi mediante iSCSI. Estas interfaces se configuran para que se conmutan al nodo de respaldo entre sí, lo que proporciona redundancia adicional más allá de un solo enlace. Al distribuir estos enlaces a través de varios switches, el servidor puede sobrevivir incluso a un fallo completo del switch.
@@ -364,6 +379,7 @@ Desde el modo de configuración (config t), ejecute los siguientes comandos para
 
 
 
+[[cisco-nexus-switch-a-cisco-ucs-server-a-and-cisco-ucs-server-b-configuration]]
 === Switch Cisco Nexus A: Configuración de Cisco UCS Server-A y Cisco UCS Server-B.
 
 ....
@@ -379,6 +395,7 @@ copy run start
 ....
 
 
+[[cisco-nexus-switch-b-cisco-ucs-server-a-and-cisco-ucs-server-b-configuration]]
 === Cisco Nexus Switch B: Configuración de Cisco UCS Server-A y Cisco UCS Server-B.
 
 ....
@@ -394,6 +411,7 @@ copy run start
 ....
 
 
+[[configure-the-server-port-channels]]
 == Configure los canales del puerto del servidor
 
 Ejecute los siguientes comandos en el switch A y el switch B para configurar los canales de puertos para el servidor A:
@@ -436,6 +454,7 @@ NOTE: Para escalar la solución añadiendo servidores Cisco UCS adicionales, eje
 
 
 
+[[uplink-into-an-existing-network-infrastructure]]
 == Enlace ascendente a una infraestructura de red existente
 
 En función de la infraestructura de red disponible, se pueden utilizar varios métodos y funciones para elevar el entorno FlexPod. Si existe un entorno Cisco Nexus existente, NetApp recomienda utilizar PCs para elevar los switches Cisco Nexus 31108 incluidos en el entorno FlexPod a la infraestructura. Los enlaces ascendentes pueden ser enlaces de subida de 10 GbE para una solución de infraestructura de 10 GbE o 1 GbE para una solución de infraestructura de 1 GbE si fuera necesario. Los procedimientos descritos anteriormente se pueden utilizar para crear un VPC de enlace ascendente al entorno existente. Asegúrese de ejecutar Copy START para guardar la configuración en cada switch una vez completada la configuración.
