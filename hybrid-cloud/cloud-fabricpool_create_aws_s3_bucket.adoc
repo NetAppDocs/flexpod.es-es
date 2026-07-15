@@ -23,7 +23,7 @@ FabricPool admite la conexión de un bloque por agregado, como se muestra en la 
 
 Al planificar una arquitectura de almacenamiento, tenga en cuenta cómo la relación entre bloques y agregados puede afectar al rendimiento. Muchos proveedores de almacenes de objetos establecen un número máximo de IOPS admitidas a nivel de bloque o contenedor. Los entornos que requieren el máximo rendimiento deben utilizar varios bloques para reducir la posibilidad de que las limitaciones de IOPS del almacén de objetos puedan afectar al rendimiento en varios agregados de FabricPool. Añadir un único bloque o contenedor a todos los agregados de FabricPool de un clúster puede ser más beneficioso para los entornos que valoran la capacidad de gestión por el rendimiento en el nivel cloud.
 
-image:cloud-fabricpool_image10.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image10.png[""]
 
 
 
@@ -33,12 +33,12 @@ image:cloud-fabricpool_image10.png["Error: Falta la imagen gráfica"]
 . En la consola de gestión de AWS desde la página de inicio, introduzca S3 en la barra de búsqueda.
 . Seleccione el almacenamiento escalable S3 en el cloud.
 +
-image:cloud-fabricpool_image11.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image11.png[""]
 
 . En la página de inicio de S3, seleccione Create Bucket.
 . Introduzca un nombre compatible con DNS y elija la región para crear el bloque.
 +
-image:cloud-fabricpool_image12.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image12.png[""]
 
 . Haga clic en Create para crear el bloque de almacenamiento de objetos.
 

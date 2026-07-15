@@ -44,7 +44,7 @@ NVE es una solución de cifrado de datos en reposo basada en software disponible
 
 Aquí está cómo funciona el proceso: Cuando se cifran los datos, se envían al módulo criptográfico que está validado FIPS 140-2 nivel 1. El módulo criptográfico cifra los datos y los envía de nuevo a la capa RAID. A continuación, los datos cifrados se envían al disco. Por lo tanto, con la combinación de NVE y NAE, los datos ya se cifran en el camino al disco. Las lecturas siguen la ruta inversa. En otras palabras, los datos salen del disco cifrado, se envían a RAID, se descifran por el módulo criptográfico y, a continuación, se envían por el resto de la pila, como se muestra en la siguiente figura.
 
-image:flexpod-fips-image3.png["Error: Falta la imagen gráfica"]
+image:flexpod-fips-image3.png[""]
 
 
 NOTE: NVE utiliza un módulo criptográfico de software validado por FIPS 140-2 nivel 1.
@@ -108,7 +108,7 @@ NSe utiliza SED para realizar el cifrado de datos a través de un mecanismo acel
 
 NSe está configurado para utilizar unidades de autocifrado FIPS 140-2 de nivel 2 para facilitar el cumplimiento de normativas y el retorno de reserva al permitir la protección de los datos en reposo mediante el cifrado de disco transparente AES de 256 bits. Las unidades realizan todas las operaciones de cifrado de datos internamente, como se muestra en la siguiente figura, incluida la generación de claves de cifrado. Para evitar el acceso no autorizado a los datos, el sistema de almacenamiento debe autenticarse con la unidad mediante una clave de autenticación que se establezca la primera vez que se utilice la unidad.
 
-image:flexpod-fips-image4.png["Error: Falta la imagen gráfica"]
+image:flexpod-fips-image4.png[""]
 
 
 NOTE: NSe utiliza el cifrado de hardware en cada unidad, que se valida con FIPS 140-2 nivel 2.
@@ -122,7 +122,7 @@ Para obtener más información sobre NSE, consulte la https://www.netapp.com/pdf
 
 El estándar FIPS 140-2 se aplica al módulo criptográfico según lo definido por el límite, como se muestra en la siguiente figura.
 
-image:flexpod-fips-image5.png["Error: Falta la imagen gráfica"]
+image:flexpod-fips-image5.png[""]
 
 Key Manager realiza un seguimiento de todas las claves de cifrado utilizadas por ONTAP. NSe SED utiliza el gestor de claves para establecer las claves de autenticación de NSE SED. Cuando se utiliza el gestor de claves, la solución combinada NVE y NAE está compuesta por un módulo criptográfico de software, claves de cifrado y un gestor de claves. Para cada volumen, NVE utiliza una clave de cifrado de datos XTS-AES 256 única que almacena el gestor de claves. La clave utilizada para un volumen de datos es única para el volumen de datos de ese clúster y se genera cuando se crea el volumen cifrado. De forma similar, un volumen NAE utiliza claves de cifrado de datos XTS-AES 256 exclusivas por agregado, que también almacena el gestor de claves. Las claves NAE se generan cuando se crea el agregado cifrado. ONTAP no pregenera claves, las reutiliza o las muestra en texto sin formato; el administrador de claves las almacena y protege.
 

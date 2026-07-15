@@ -33,7 +33,7 @@ FlexPod es una arquitectura de centro de datos de infraestructura convergente qu
 
 En la siguiente figura, se describen algunos de los componentes utilizados para crear soluciones de FlexPod. Estos componentes están conectados y configurados según las prácticas recomendadas de Cisco y NetApp, a fin de proporcionar una plataforma ideal para ejecutar diversas cargas de trabajo empresariales con total confianza.
 
-image:sm-bcs-image2.png["Error: Falta la imagen gráfica"]
+image:sm-bcs-image2.png[""]
 
 Hay disponible una amplia cartera de diseños validados por Cisco (CVD) y arquitecturas verificadas por NetApp (NVA). Estos CVD y NVA cubren todas las principales cargas de trabajo de los centros de datos y son el resultado de colaboraciones e innovaciones continuas entre NetApp y Cisco en soluciones FlexPod.
 
@@ -76,6 +76,6 @@ Un grupo de consistencia (CG) es una colección de volúmenes de FlexVol que pro
 
 Como se muestra en la siguiente figura, los datos del grupo de consistencia se replican en un segundo clúster de ONTAP para recuperación ante desastres y continuidad del negocio. Las aplicaciones tienen conectividad con las LUN en ambos clústeres de ONTAP. El clúster principal proporciona I/o y se reanuda automáticamente desde el clúster secundario si se produce un desastre en el principal. Al diseñar una solución SM-BC, se deben observar los números de objetos admitidos para las relaciones de CG (por ejemplo, un máximo de 20 CG y un máximo de 200 extremos) para evitar que se superen los límites admitidos.
 
-image:sm-bcs-image3.png["Error: Falta la imagen gráfica"]
+image:sm-bcs-image3.png[""]
 
 link:sm-bcs-flexpod-sm-bc-solution.html["Siguiente: Solución FlexPod SM-BC."]

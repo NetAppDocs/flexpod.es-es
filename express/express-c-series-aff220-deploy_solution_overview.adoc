@@ -30,7 +30,7 @@ Como se muestra en la siguiente figura, el programa FlexPod incluye tres solucio
 * *FlexPod Select.* incorpora los mejores aspectos del centro de datos FlexPod y adapta la infraestructura a una aplicación determinada.
 
 
-image:express-c-series-aff220-deploy_image3.png["Error: Falta la imagen gráfica"]
+image:express-c-series-aff220-deploy_image3.png[""]
 
 
 
@@ -56,7 +56,7 @@ Esta solución aprovecha las últimas tecnologías de NetApp, Cisco y VMware. Es
 
 La figura siguiente muestra FlexPod Express con arquitectura 10 GbE de VMware vSphere.
 
-image:express-c-series-aff220-deploy_image4.png["Error: Falta la imagen gráfica"]
+image:express-c-series-aff220-deploy_image4.png[""]
 
 
 NOTE: Esta validación utiliza conectividad de 10 GbE y un Cisco UCS VIC 1387, que es 40 GbE. Para lograr conectividad de 10 GbE, se utiliza el adaptador CVR-QSFP-SFP10G.

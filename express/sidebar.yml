@@ -4,7 +4,6 @@ title: FlexPod Express
 entries:
 - title: Guía de diseño de FlexPod Express con Cisco UCS C-Series y la serie AFF C190
     de NetApp
-  type: solutions
   entries:
   - title: Descripción general
     url: "/express/express-c-series-c190-design_executive_summary.html"
@@ -20,7 +19,6 @@ entries:
     url: "/express/express-c-series-c190-design_where_to_find_additional_information.html"
 - title: Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y la serie
     AFF C190 de NetApp
-  type: solutions
   entries:
   - title: Descripción general
     url: "/express/express-c-series-c190-deploy_program_summary_overview.html"
@@ -61,7 +59,6 @@ entries:
   - title: Historial de versiones
     url: "/express/express-c-series-c190-deploy_version_history.html"
 - title: Guía de diseño de FlexPod Express con Cisco UCS C-Series y AFF A220 Series
-  type: solutions
   entries:
   - title: Descripción general
     url: "/express/express-c-series-aff220-design_executive_summary.html"
@@ -81,7 +78,6 @@ entries:
     url: "/express/express-c-series-aff220-design_where_to_find_additional_information.html"
 - title: Guía de puesta en marcha de FlexPod Express con Cisco UCS C-Series y AFF
     A220 Series
-  type: solutions
   entries:
   - title: Descripción general
     url: "/express/express-c-series-aff220-deploy_program_summary.html"
@@ -115,7 +111,6 @@ entries:
     url: "/express/express-c-series-aff220-deploy_where_to_find_additional_information.html"
 - title: FlexPod Express con VMware vSphere 6.7U1 y NetApp AFF A220 con almacenamiento
     basado en IP directamente incluido
-  type: solutions
   entries:
   - title: Descripción general
     url: "/express/express-direct-attach-aff220-deploy_program_summary.html"

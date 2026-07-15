@@ -315,7 +315,7 @@ NOTE: También puede introducir un servidor NTP alternativo. La dirección IP `1
 NOTE: Debe, como mínimo, configurar el método de notificación de eventos antes de continuar. Puede seleccionar cualquiera de los métodos.
 
 +
-image:express-c-series-c190-deploy_image4.png["Error: Falta la imagen gráfica"]
+image:express-c-series-c190-deploy_image4.png[""]
 
 +
 Una vez que el sistema indica que ha finalizado la configuración del clúster, haga clic en Manage your Cluster para configurar el almacenamiento.

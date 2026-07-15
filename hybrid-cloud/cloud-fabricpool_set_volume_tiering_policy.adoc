@@ -53,7 +53,7 @@ Para cambiar la política de organización en niveles de un volumen mediante el 
 . Seleccione la política de organización en niveles que se aplicará al volumen.
 . Haga clic en Guardar.
 +
-image:cloud-fabricpool_image16.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image16.png[""]
 
 
 

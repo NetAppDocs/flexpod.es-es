@@ -35,7 +35,7 @@ Complete los siguientes pasos para crear un clúster de vSphere:
 . Active la recuperación ante desastres y vSphere ha seleccionando las casillas de verificación.
 . Haga clic en Aceptar.
 +
-image:express-c-series-aff220-deploy_image49.png["Error: Falta la imagen gráfica"]
+image:express-c-series-aff220-deploy_image49.png[""]
 
 
 
@@ -46,7 +46,7 @@ image:express-c-series-aff220-deploy_image49.png["Error: Falta la imagen gráfic
 
 . Haga clic con el botón derecho en el clúster y seleccione Add Host.
 +
-image:express-c-series-aff220-deploy_image50.png["Error: Falta la imagen gráfica"]
+image:express-c-series-aff220-deploy_image50.png[""]
 
 . Para añadir un host ESXi al clúster, complete los siguientes pasos:
 +

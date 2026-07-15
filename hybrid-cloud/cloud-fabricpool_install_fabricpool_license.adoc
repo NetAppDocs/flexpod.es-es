@@ -24,7 +24,7 @@ Después de adquirir un archivo de licencia de NetApp, puede instalarlo con OnCo
 . Haga clic en Añadir.
 
 
-image:cloud-fabricpool_image8.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image8.png[""]
 
 
 
@@ -43,7 +43,7 @@ En OnCommand System Manager, complete los siguientes pasos:
 . Haga clic en la pestaña Details.
 
 
-image:cloud-fabricpool_image9.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image9.png[""]
 
 La capacidad máxima y la capacidad actual se enumeran en la fila Licencia de FabricPool.
 

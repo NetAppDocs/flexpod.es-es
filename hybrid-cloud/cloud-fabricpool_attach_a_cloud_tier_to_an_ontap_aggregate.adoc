@@ -31,13 +31,13 @@ Para adjuntar un nivel de cloud a un agregado mediante System Manager de OnComma
 . Inicie OnCommand System Manager.
 . Haga clic en aplicaciones y niveles.
 +
-image:cloud-fabricpool_image14.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image14.png[""]
 
 . Haga clic en Storage Tiers.
 . Haga clic en un agregado.
 . Haga clic en Actions y seleccione Attach Cloud Tier.
 +
-image:cloud-fabricpool_image15.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image15.png[""]
 
 . Seleccione un nivel de cloud.
 . Consulte y actualice las políticas de organización en niveles de los volúmenes en el agregado (opcional). De forma predeterminada, la política de organización en niveles del volumen se establece como solo Snapshot.

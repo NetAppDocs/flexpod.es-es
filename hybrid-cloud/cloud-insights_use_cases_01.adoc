@@ -16,7 +16,7 @@ summary: Con la instalación y configuración de Cloud Insights para supervisar 
 [role="lead"]
 Con la instalación y configuración de Cloud Insights para supervisar su solución de centro de datos de FlexPod, podemos explorar algunas de las tareas que puede realizar en la consola para evaluar y supervisar su entorno. En esta sección, se destacan cinco casos de uso principales para Cloud Insights:
 
-* Integración con Active IQ
+* Integración de Digital Advisor
 * Exploración de paneles en tiempo real
 * Creación de paneles personalizados
 * Resolución avanzada de problemas
@@ -25,29 +25,29 @@ Con la instalación y configuración de Cloud Insights para supervisar su soluci
 
 
 
-[[active-iq-integration]]
-== Integración con Active IQ
+[[digital-advisor-integration]]
+== Integración de Digital Advisor
 
-Cloud Insights está totalmente integrado en la plataforma de supervisión del almacenamiento de Active IQ. Un sistema ONTAP, puesto en marcha como parte de una solución de centro de datos de FlexPod, se configura automáticamente para enviar información de vuelta a NetApp a través de la función AutoSupport, que está integrada en cada sistema. Estos informes se generan de forma programada o dinámica siempre que se detecte un fallo en el sistema. La información que se comunica mediante AutoSupport se agrega y se muestra en consolas con un fácil acceso, en el menú Active IQ de Cloud Insights.
+Cloud Insights está totalmente integrado en la plataforma de supervisión de almacenamiento Digital Advisor. Un sistema ONTAP, implementado como parte de una solución FlexPod Datacenter, se configura automáticamente para enviar información a NetApp a través de la función AutoSupport, que viene integrada en cada sistema. Estos informes se generan de forma programada o de manera dinámica cada vez que se detecta un fallo en el sistema. Los datos comunicados a través de AutoSupport se agregan y se muestran en paneles de control de fácil acceso dentro del menú Digital Advisor en Cloud Insights.
 
 
 
-[[access-active-iq-information-through-the-cloud-insights-dashboard]]
-=== Acceda a la información de Active IQ a través de la consola de Cloud Insights
+[[access-digital-advisor-information-through-the-cloud-insights-dashboard]]
+=== Accede a la información de Digital Advisor a través del panel de control de Cloud Insights
 
-Para acceder a la información de Active IQ a través de la consola de Cloud Insights, complete los siguientes pasos:
+Para acceder a la información de Digital Advisor a través del panel de control de Cloud Insights, sigue estos pasos:
 
 . Haga clic en la opción colector de datos bajo el menú Admin de la izquierda.
 +
-image:cloud-insights_image13.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image13.png[""]
 
 . Filtro para el recopilador de datos específico de su entorno. En este ejemplo, vamos a filtrar por el término FlexPod.
 +
-image:cloud-insights_image23.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image23.png[""]
 
 . Haga clic en el recopilador de datos para obtener un resumen del entorno y los dispositivos que está supervisando el recopilador.
 +
-image:cloud-insights_image24.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image24.png[""]
 
 +
 En la lista de dispositivos situada cerca de la parte inferior, haga clic en el nombre del sistema de almacenamiento de ONTAP que se va a supervisar. Esto muestra un tablero de información recopilada sobre el sistema, incluidos los siguientes detalles:
@@ -61,19 +61,19 @@ En la lista de dispositivos situada cerca de la parte inferior, haga clic en el 
 ** Latencia media
 ** Rendimiento promedio
 +
-image:cloud-insights_image25.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image25.png[""]
 
 +
-Además, en esta página de la sección Performance Policies, puede encontrar un enlace a Active IQ de NetApp.
+Además, en esta página, en la sección de Políticas de rendimiento, puedes encontrar un enlace a NetApp Digital Advisor.
 
 +
-image:cloud-insights_image26.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image26.png[""]
 
 
 
-. Para abrir una nueva pestaña del navegador y llevarle a la página de reducción de riesgos, en la que se muestran los nodos afectados, qué críticos son los riesgos y cuál es la acción adecuada que se debe realizar para corregir los problemas identificados, haga clic en el enlace de Active IQ.
+. Para abrir una nueva pestaña del navegador y llevarte a la página de mitigación de riesgos, donde se muestra qué nodos están afectados, cuán críticos son los riesgos y cuál es la acción adecuada que debes tomar para corregir los problemas identificados, haz clic en el enlace de Digital Advisor.
 +
-image:cloud-insights_image27.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image27.png[""]
 
 
 
@@ -90,15 +90,15 @@ Cloud Insights puede mostrar consolas en tiempo real de la información que se o
 
 Desde el panel del sistema de almacenamiento, puede ver la última vez que el recopilador de datos actualizó la información. Un ejemplo de esto se muestra en la siguiente figura.
 
-image:cloud-insights_image28.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image28.png[""]
 
 De forma predeterminada, la consola del sistema de almacenamiento muestra varios gráficos interactivos donde se muestran métricas en todo el sistema desde el sistema de almacenamiento en el que se está sondeando o desde cada nodo individual, incluidos: Latencia, IOPS y rendimiento, en la sección Expert View. En la siguiente figura se muestran ejemplos de estos gráficos predeterminados.
 
-image:cloud-insights_image29.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image29.png[""]
 
 De forma predeterminada, los gráficos muestran información de las últimas tres horas, pero puede establecerlos en un número de valores distintos o en un valor personalizado de la lista desplegable, situada cerca de la parte superior derecha del panel del sistema de almacenamiento. Esto se muestra en la siguiente figura.
 
-image:cloud-insights_image30.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image30.png[""]
 
 
 
@@ -115,21 +115,21 @@ Para crear una consola personalizada para evaluar los recursos de almacenamiento
 
 . Para crear un panel personalizado, pase el ratón sobre Paneles en el menú principal de Cloud Insights y haga clic en + Nuevo panel en la lista desplegable.
 +
-image:cloud-insights_image31.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image31.png[""]
 
 +
 Se abrirá la ventana Nueva consola.
 
 . Asigne un nombre al panel y seleccione el tipo de widget utilizado para mostrar los datos. Puede seleccionar entre varios tipos de gráficos, incluso notas o tipos de tablas para presentar los datos recopilados.
 +
-image:cloud-insights_image32.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image32.png[""]
 
 . Elija variables personalizadas en el menú Agregar variable.
 +
 Esto permite que los datos presentados se centren en mostrar factores más específicos o especializados.
 
 +
-image:cloud-insights_image33.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image33.png[""]
 
 . Para crear una consola personalizada, seleccione el tipo de widget que desea utilizar, por ejemplo, un gráfico circular para mostrar la utilización del almacenamiento por volumen:
 +
@@ -140,13 +140,13 @@ image:cloud-insights_image33.png["Error: Falta la imagen gráfica"]
 .. Personalice la información que se mostrará. De forma predeterminada, esta selección muestra los volúmenes de datos ONTAP y enumera los 10 primeros.
 .. Para guardar el panel personalizado, haga clic en Guardar.
 +
-image:cloud-insights_image34.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image34.png[""]
 
 +
 Después de guardar el widget personalizado, el explorador vuelve a la página New Dashboard donde se muestra el widget recién creado y permite realizar acciones interactivas, como modificar el período de sondeo de datos.
 
 +
-image:cloud-insights_image35.png["Error: Falta la imagen gráfica"]
+image:cloud-insights_image35.png[""]
 
 
 
@@ -157,11 +157,11 @@ image:cloud-insights_image35.png["Error: Falta la imagen gráfica"]
 [[advanced-troubleshooting]]
 === Resolución avanzada de problemas
 
-Cloud Insights permite aplicar métodos avanzados de solución de problemas a cualquier entorno de almacenamiento en una infraestructura convergente de FlexPod Datacenter. Utilizando componentes de cada una de las funciones mencionadas anteriormente: Integración de Active IQ, paneles predeterminados con estadísticas en tiempo real y paneles personalizados, los problemas que pueden surgir se detectan pronto y se resuelven rápidamente. Con la lista de riesgos de Active IQ, un cliente puede encontrar errores de configuración notificados que podrían provocar problemas o detectar errores que se han notificado y parches de versiones de código que pueden remediarlos. Observar los paneles en tiempo real de la página de inicio de Cloud Insights puede ayudar a descubrir patrones en el rendimiento del sistema que podrían ser un indicador temprano de un problema en aumento y ayudar a resolverlo rápidamente. Por último, la posibilidad de crear paneles personalizados permite a los clientes centrarse en los activos más importantes de su infraestructura y supervisar los activos directamente para garantizar que pueden cumplir sus objetivos de continuidad de negocio.
+Cloud Insights permite aplicar métodos avanzados de resolución de problemas a cualquier entorno de almacenamiento en una infraestructura convergente de FlexPod Datacenter. Usando los componentes de cada una de las funciones mencionadas arriba: integración con Digital Advisor, paneles predeterminados con estadísticas en tiempo real y paneles personalizados, los problemas que puedan surgir se detectan temprano y se resuelven rápidamente. Usando la lista de riesgos en Digital Advisor, un cliente puede encontrar errores de configuración reportados que podrían causar problemas, así como bugs reportados y versiones parcheadas del código que pueden solucionarlos. Observar los paneles en tiempo real en la página principal de Cloud Insights puede ayudar a descubrir patrones en el rendimiento del sistema que podrían ser un indicador temprano de un problema en aumento y ayudar a resolverlo rápidamente. Por último, poder crear paneles personalizados permite a los clientes enfocarse en los activos más importantes de su infraestructura y monitorearlos directamente para asegurarse de que puedan cumplir sus objetivos de continuidad del negocio.
 
 
 
 [[storage-optimization]]
 === Optimización del almacenamiento
 
-Además de la solución de problemas, es posible usar los datos recopilados por Cloud Insights para optimizar el sistema de almacenamiento de ONTAP puesto en marcha en una solución de infraestructura convergente de FlexPod Datacenter. Si un volumen muestra una alta latencia, quizás porque varias máquinas virtuales con altas demandas de rendimiento comparten el mismo almacén de datos, esa información se muestra en la consola de Cloud Insights. Con esta información, un administrador de almacenamiento puede optar por migrar una o varias máquinas virtuales a otros volúmenes, migrar volúmenes de almacenamiento entre niveles de agregados o entre nodos del sistema de almacenamiento ONTAP, con lo que se obtiene un entorno de rendimiento optimizado. La información obtenida de la integración de Active IQ con Cloud Insights puede destacar los problemas de configuración que provocan un rendimiento más deficiente de lo esperado y ofrecer las acciones correctivas recomendadas que, si se implementan, pueden resolver cualquier problema y garantizar un sistema de almacenamiento perfectamente adaptado.
+Además de la resolución de problemas, es posible utilizar los datos recopilados por Cloud Insights para optimizar el sistema de almacenamiento ONTAP implementado en una solución de infraestructura convergente FlexPod Datacenter. Si un volumen presenta una latencia elevada, tal vez porque varias máquinas virtuales con demandas de alto rendimiento comparten el mismo datastore, esa información se muestra en el panel de Cloud Insights. Con esta información, un administrador de almacenamiento puede elegir migrar una o más máquinas virtuales a otros volúmenes, migrar volúmenes de almacenamiento entre niveles de agregados o entre nodos en el sistema de almacenamiento ONTAP, lo que da como resultado un entorno con el rendimiento optimizado. La información obtenida de la integración de Digital Advisor con Cloud Insights puede resaltar problemas de configuración que llevan a un rendimiento inferior al esperado y proporcionar la acción correctiva recomendada que, si se implementa, puede solucionar cualquier problema y asegurar un sistema de almacenamiento ajustado de forma óptima.

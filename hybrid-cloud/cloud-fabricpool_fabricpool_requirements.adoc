@@ -90,7 +90,7 @@ La latencia de lectura de FabricPool es una función de conectividad con el nive
 
 NOTE: Al utilizar FabricPool en entornos de bajo rendimiento, es necesario seguir cumpliendo los requisitos mínimos de rendimiento para las aplicaciones del cliente y ajustar los objetivos de tiempo de recuperación según corresponda.
 
-image:cloud-fabricpool_image6.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image6.png[""]
 
 
 
@@ -114,7 +114,7 @@ storage aggregate object-store profiler show
 ....
 Los niveles de cloud no ofrecen un rendimiento similar al del nivel de rendimiento (normalmente GB por segundo). Aunque los agregados FabricPool pueden ofrecer un rendimiento similar al de SATA, también pueden tolerar latencias de hasta 10 segundos y un bajo rendimiento para soluciones de organización en niveles que no requieren un rendimiento similar al de SATA.
 
-image:cloud-fabricpool_image7.png["Error: Falta la imagen gráfica"]
+image:cloud-fabricpool_image7.png[""]
 
 
 
@@ -142,7 +142,7 @@ Las licencias de FabricPool están disponibles en formato perpetuo o basado en p
 
 La organización en niveles en el nivel de cloud se detiene cuando la cantidad de datos (capacidad utilizada) almacenados en el nivel de cloud alcanza la capacidad con la licencia. Los datos adicionales, incluidas las copias SnapMirror en los volúmenes que utilizan la política de toda la organización en niveles, no se pueden organizar en niveles hasta que se aumente la capacidad de la licencia. Aunque la organización en niveles se detiene, aún se puede acceder a los datos desde el nivel de cloud. Los datos inactivos adicionales permanecen en las unidades SSD hasta que la capacidad con licencia aumenta.
 
-Una licencia de FabricPool basada en un término de 10 TB de capacidad gratuita viene con la compra de un clúster nuevo de ONTAP 9.5 o posterior, si bien puede aplicarse un coste de soporte adicional. Las licencias FabricPool (incluida la capacidad adicional de las licencias existentes) se pueden adquirir en incrementos de 1 TB.
+FabricPool licenses (incluida la capacidad adicional para las licencias existentes) se pueden adquirir en incrementos de 1TB.
 
 Una licencia de FabricPool solo se puede eliminar de un clúster que no contiene agregados de FabricPool.
 

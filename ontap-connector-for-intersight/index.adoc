@@ -13,7 +13,7 @@ summary: NetApp y Cisco se han asociado para proporcionar Cisco Intersight, una 
 :imagesdir: ./../media/
 
 
-En colaboración con:image:cisco logo.png["Error: Falta la imagen gráfica"]
+En colaboración con: image:cisco logo.png[""]
 
 
 

@@ -271,7 +271,7 @@ La configuración del clúster también se puede realizar mediante la CLI. Este 
 . Haga clic en Guided Setup para configurar el clúster.
 . Introduzca `\<<var_clustername>>` del nombre del clúster y. `\<<var_nodeA>>` y.. `\<<var_nodeB>>` para cada uno de los nodos que va a configurar. Introduzca la contraseña que desea usar para el sistema de almacenamiento. Seleccione Switchless Cluster para el tipo de clúster. Introduzca la licencia base del clúster.
 +
-image:express-c-series-aff220-deploy_image6.png["Error: Falta la imagen gráfica"]
+image:express-c-series-aff220-deploy_image6.png[""]
 
 . También es posible introducir licencias de funciones para Cluster, NFS e iSCSI.
 . Ve un mensaje de estado que indica que el clúster se está creando. Este mensaje de estado cambia por varios Estados. Este proceso tarda varios minutos.
@@ -298,7 +298,7 @@ También puede introducir un servidor NTP alternativo.
 Debe, como mínimo, configurar el método de notificación de eventos antes de continuar. Puede seleccionar cualquiera de los métodos.
 
 +
-image:express-c-series-aff220-deploy_image7.png["Error: Falta la imagen gráfica"]
+image:express-c-series-aff220-deploy_image7.png[""]
 
 
 

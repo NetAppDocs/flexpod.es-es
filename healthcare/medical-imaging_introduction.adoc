@@ -103,7 +103,7 @@ El soporte conjunto de FlexPod resulta especialmente valioso si su organización
 
 
 
-image:medical-imaging_image2.png["Error: Falta la imagen gráfica"]
+image:medical-imaging_image2.png[""]
 
 
 

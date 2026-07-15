@@ -25,29 +25,29 @@ FlexPod es compatible con ambas variantes del software MetroCluster de NetApp pa
 
 La figura siguiente muestra el centro de datos FlexPod con la arquitectura MetroCluster de NetApp.
 
-image:dc-tech-spec_image1.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image1.png[""]
 
 La siguiente figura muestra el centro de datos FlexPod con la arquitectura IP de MetroCluster de NetApp.
 
-image:dc-tech-spec_image2.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image2.png[""]
 
 A partir de ONTAP 9.8, ONTAP Mediator se puede instalar en un tercer sitio para supervisar la solución IP de MetroCluster y facilitar una conmutación de sitios no planificada automática cuando se produce un desastre en el sitio.
 
 Para la puesta en marcha de una solución IP de FlexPod MetroCluster con conectividad de sitio a sitio de capa 2 ampliada, se puede lograr una reducción de costes al compartir ISL y utilizar switches FlexPod como switches IP de MetroCluster compatibles si el ancho de banda y los switches de red cumplen los requisitos tal y como se muestra en la siguiente figura. Que muestra la solución IP de FlexPod MetroCluster con el uso compartido de ISL y switches conformes con la normativa.
 
-image:dc-tech-spec_image10.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image10.png[""]
 
 Las dos figuras siguientes muestran la estructura multisitio VXLAN y la estructura de almacenamiento IP MetroCluster para una solución IP FlexPod MetroCluster con implementación de estructura multisitio VXLAN.
 
 * Solución de estructura multisitio VXLAN para FlexPod MetroCluster IP
 
 
-image:dc-tech-spec_image11.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image11.png[""]
 
 * Estructura de almacenamiento IP de MetroCluster para solución FlexPod MetroCluster IP
 
 
-image:dc-tech-spec_image12.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image12.png[""]
 
 
 
@@ -64,7 +64,7 @@ Si desea obtener más información sobre las configuraciones de FlexPod y las ve
 
 Para obtener más información sobre la implantación de ONTAP, consulte https://www.netapp.com/pdf.html?item=/media/10681-tr4684pdf.pdf["TR-4684: Implementación y configuración de San modernas con NVMe"^].
 
-image:dc-tech-spec_image3.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image3.png[""]
 
 
 
@@ -82,9 +82,9 @@ Para obtener más información sobre un diseño basado en MDS, consulte el CVD h
 
 Las siguientes figuras muestran un ejemplo de centro de datos FlexPod para FC con conectividad MDS y de centro de datos FlexPod para FC con Cisco Nexus 93180YC-FX, respectivamente.
 
-image:dc-tech-spec_image4.jpg["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image4.jpg[""]
 
-image:dc-tech-spec_image5.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image5.png[""]
 
 
 
@@ -107,7 +107,7 @@ NOTE: El uso de la familia de switches Cisco Nexus 7000 o 9000 impide el uso de 
 
 La siguiente figura muestra una configuración de conectividad de FC.
 
-image:dc-tech-spec_image6.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image6.png[""]
 
 
 
@@ -129,7 +129,7 @@ NOTE: El uso de switches de la serie Cisco Nexus 9000 excluye el uso de FCoE, a 
 
 En la siguiente figura se muestra un escenario de arranque FCoE.
 
-image:dc-tech-spec_image7.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image7.png[""]
 
 
 
@@ -145,7 +145,7 @@ La opción de arranque iSCSI tiene los siguientes requisitos de licencia y hardw
 
 La siguiente figura muestra una configuración solo Ethernet que se inicia utilizando iSCSI.
 
-image:dc-tech-spec_image8.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image8.png[""]
 
 
 
@@ -171,7 +171,7 @@ Los requisitos de licencia y hardware son los siguientes:
 
 En la siguiente figura se muestra una configuración de conexión directa FC.
 
-image:dc-tech-spec_image9.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image9.png[""]
 
 *Notas:*
 
@@ -182,7 +182,7 @@ image:dc-tech-spec_image9.png["Error: Falta la imagen gráfica"]
 
 En la siguiente figura se muestra una configuración de conexión directa iSCSI/Unified IP.
 
-image:dc-tech-spec_image10.png["Error: Falta la imagen gráfica"]
+image:dc-tech-spec_image10.png[""]
 
 *Notas:*
 

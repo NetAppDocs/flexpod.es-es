@@ -16,7 +16,7 @@ summary: En esta sección se detalla una referencia para la información de cabl
 [role="lead"]
 La siguiente figura muestra el cableado de validación de referencia.
 
-image:express-c-series-aff220-deploy_image5.png["Error: Falta la imagen gráfica"]
+image:express-c-series-aff220-deploy_image5.png[""]
 
 En la siguiente tabla se muestra información sobre el cableado del switch Cisco Nexus 3172P A.
 
