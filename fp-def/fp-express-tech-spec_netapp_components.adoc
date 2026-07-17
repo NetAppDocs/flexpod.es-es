@@ -24,7 +24,7 @@ Las controladoras de almacenamiento de NetApp proporcionan la base sobre la que 
 Los controladores redundantes de las series AFF, ASA o FAS son necesarios en la arquitectura FlexPod Express. Los controladores ejecutan el software ONTAP. Al realizar el pedido de los controladores de almacenamiento, se puede precargar la versión de software preferida en los controladores. Para ONTAP, el clúster se puede implementar con un par de switches de interconexión de clúster o en una configuración de clúster sin switches.
 
 
-NOTE: Sólo se admite una configuración de clúster sin switches para una configuración de dos nodos. Los switches de interconexión de clúster son necesarios para configuraciones con más de 4 nodos y opcionales para una configuración de dos nodos.
+NOTE: La configuración de clúster sin switches solo es compatible con una configuración de dos nodos. Los switches de interconexión de clúster son obligatorios para configuraciones de cuatro o más nodos y son opcionales para una configuración de dos nodos.
 
 Existen diferentes opciones y configuraciones en función de la plataforma de almacenamiento seleccionada. Consulta a tu representante de ventas para obtener información sobre estos componentes adicionales.
 
