@@ -27,4 +27,4 @@ Esta sección describe las recomendaciones sobre las versiones de software para 
 
 
 
-NOTE: Todos los componentes de software deben figurar y ser compatibles en http://support.netapp.com/matrix/["IMT de NetApp"^], todos los componentes de hardware de NetApp y las versiones de ONTAP deben figurar y ser compatibles en https://hwu.netapp.com/Home/Index["Hardware Universe de NetApp"^] y todos los componentes de hardware de Cisco deben figurar y ser compatibles en https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].
+NOTE: Todos los componentes de software deben figurar y ser compatibles en https://imt.netapp.com/imt/#welcome["IMT de NetApp"^], todos los componentes de hardware de NetApp y las versiones de ONTAP deben figurar y ser compatibles en https://hwu.netapp.com/Home/Index["Hardware Universe de NetApp"^] y todos los componentes de hardware de Cisco deben figurar y ser compatibles en https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].

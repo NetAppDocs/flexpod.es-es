@@ -128,7 +128,7 @@ En las tablas siguientes se enumeran las opciones de chasis y nodos de computaci
 [[cisco-ucs-c-series-rack-server-options]]
 == Opciones del servidor de montaje en rack Cisco UCS C-Series
 
-Los servidores en bastidor Cisco UCS serie C están disponibles en variedades de una y dos unidades de bastidor (RU), con diversas opciones de CPU, memoria y E/S. Los números de pieza que aparecen en la siguiente tabla corresponden a los servidores base. No incluyen CPU, memoria, unidades ni tarjetas Peripheral Component Interconnect Express (PCIe). Existen múltiples opciones de configuración disponibles y compatibles en la arquitectura FlexPod.
+Los servidores en rack Cisco UCS de la serie C están disponibles en versiones de una, dos y cuatro unidades rack (RU), con diversas opciones de CPU, memoria y E/S. Los números de pieza que figuran en la siguiente tabla corresponden a los servidores base. No incluyen CPU, memoria, unidades de disco ni tarjetas Peripheral Component Interconnect Express (PCIe). Hay disponibles múltiples opciones de configuración y son compatibles con la arquitectura FlexPod.
 
 En la siguiente tabla se enumeran las opciones del servidor en rack Cisco UCS C-Series.
 
