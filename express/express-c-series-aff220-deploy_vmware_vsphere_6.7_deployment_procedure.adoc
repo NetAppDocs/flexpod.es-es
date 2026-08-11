@@ -126,9 +126,9 @@ image:express-c-series-aff220-deploy_image23.png[""]
 . Utilice la barra de espacio para desactivar IPv6 deseleccionando la opción Habilitar IPv6 (reiniciar requerido). Pulse Intro.
 . Abra el menú para configurar los ajustes de DNS.
 . Dado que la dirección IP se asigna manualmente, la información DNS también debe introducirse manualmente.
-. Introduzca la dirección IP del servidor DNS primario<<nameserver_ip>>.
+. Introduzca la dirección IP del servidor DNS primario `\<<nameserver_ip>>`.
 . (Opcional) Introduzca la dirección IP del servidor DNS secundario.
-. Introduzca el FQDN para el nombre de host VMware ESXi:<<esxi_host_fqdn>>.
+. Introduzca el FQDN para el nombre de host VMware ESXi: `\<<esxi_host_fqdn>>`.
 . Pulse Intro para aceptar los cambios en la configuración de DNS.
 . Salga del submenú Configurar red de administración pulsando Esc.
 . Pulse y para confirmar los cambios y reiniciar el servidor.

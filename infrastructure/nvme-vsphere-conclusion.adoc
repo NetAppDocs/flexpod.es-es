@@ -71,11 +71,11 @@ https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9100-se
 
 * ONTAP 9 de NetApp
 +
-http://www.netapp.com/us/products/platform-os/ontap/index.aspx["http://www.netapp.com/us/products/platform-os/ontap/index.aspx"^]
+https://www.netapp.com/ontap-data-management-software/["https://www.netapp.com/ontap-data-management-software/"^]
 
 * AFF A-Series de NetApp
 +
-http://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["http://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx"^]
+https://www.netapp.com/aff-a-series/["https://www.netapp.com/aff-a-series/"^]
 
 * VSphere de VMware
 +
@@ -87,7 +87,7 @@ https://www.vmware.com/products/cloud-infrastructure/vcenter/future-overview["ht
 
 * Prácticas recomendadas para SAN modernas
 +
-https://www.netapp.com/pdf.html?item=/media/10680-tr4080pdf.pdf["https://www.netapp.com/us/media/tr-4080.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/10680-tr4080.pdf["https://www.netapp.com/us/media/tr-4080.pdf"^]
 
 * Presentamos NVMe integral para FlexPod
 +

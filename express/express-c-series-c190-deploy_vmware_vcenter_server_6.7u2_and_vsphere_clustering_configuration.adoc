@@ -16,7 +16,7 @@ summary: Para configurar VMware vCenter Server 6.7 y el clustering de vSphere, c
 [role="lead"]
 Para configurar la agrupación en clústeres de VMware vCenter Server 6.7 y vSphere, complete los pasos siguientes:
 
-. Accede a `https://<<FQDN or IP of vCenter>>/vsphere-client/`.
+. Accede a `+https://<<FQDN or IP of vCenter>>/vsphere-client/+`.
 . Haga clic en Launch vSphere Client.
 . Inicie sesión con el nombre de usuario mailto:administrator@vspehre.loc/ tl[Administrator]@vsphere.local y la contraseña SSO que introdujo durante el proceso de configuración de VCSA.
 . Haga clic con el botón derecho en el nombre de vCenter y seleccione New Datacenter.

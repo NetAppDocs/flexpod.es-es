@@ -50,7 +50,7 @@ Cisco facilita las fechas de fin de venta y fin de soporte en las páginas de so
 
 
 
-==== Información sobre el fin de venta y fin de soporte de los servidores Cisco UCS
+==== Información sobre el fin de la venta y el fin del soporte de los servidores Cisco UCS
 
 * Accede a link:https://www.cisco.com/c/en/us/support/eol/index.html["Página de soporte de productos de Cisco"].
 * En *Categorías de productos* selecciona *Servidores - UCS y HCI* y haz clic en tu tipo de servidor (por ejemplo: *UCS C-Series Rack Servers*). Busca tu modelo específico (por ejemplo: *UCS C220 M5*) y fíjate en las fechas de fin de venta y fin de soporte.
@@ -58,7 +58,7 @@ Cisco facilita las fechas de fin de venta y fin de soporte en las páginas de so
 
 
 
-==== Información sobre el fin de venta y fin de soporte de los switches Cisco Nexus
+==== Información sobre el fin de la comercialización y el fin del soporte técnico de los switches Cisco Nexus
 
 * Accede a link:https://www.cisco.com/c/en/us/support/eol/index.html["Página de soporte de productos de Cisco"].
 * En *Categorías de productos* selecciona *Conmutadores* y haz clic en tu tipo de conmutador (por ejemplo: *Nexus 9000*). Busca tu modelo específico (por ejemplo: *9236C*) y busca las fechas de fin de venta y fin de soporte.

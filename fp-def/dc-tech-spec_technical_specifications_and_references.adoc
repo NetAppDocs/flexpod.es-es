@@ -451,7 +451,7 @@ Todos los modelos actuales de las controladoras de almacenamiento AFF ASA a-Seri
 [[netapp-disk-shelves]]
 === Bandejas de discos de NetApp
 
-Las especificaciones técnicas de las bandejas de discos de NetApp incluyen el tamaño del factor de forma, el número de unidades por compartimento y los módulos de I/o de la bandeja; esta documentación se puede encontrar en la siguiente tabla. Para obtener más información, consulte http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Especificaciones técnicas de bandejas de discos y medios de almacenamiento de NetApp"^] y la https://hwu.netapp.com/["Hardware Universe de NetApp"^].
+Las especificaciones técnicas de las bandejas de discos NetApp incluyen el tamaño del formato, el número de unidades por carcasa y los módulos de E/S de la bandeja; esta documentación se puede consultar en la siguiente tabla. Para obtener más información, consulta https://www.netapp.com/data-storage/disk-shelves-storage-media/["Especificaciones técnicas de bandejas de discos y medios de almacenamiento de NetApp"^] y https://hwu.netapp.com/["Hardware Universe de NetApp"^].
 
 |===
 | Componente | Documentación de la bandeja de discos FAS/AFF de NetApp 

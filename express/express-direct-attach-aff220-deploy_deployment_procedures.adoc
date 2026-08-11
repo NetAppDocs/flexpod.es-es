@@ -527,10 +527,10 @@ NOTE: Este sistema se establece en una configuración de clúster de dos nodos s
 | IP del servidor DNS (puede introducir más de uno) | \<<var_dns_server_ip>> 
 
 
-| SERVIDOR NTP: UNA IP | << switch-a-ntp-ip >> 
+| SERVIDOR NTP: UNA IP | +<< switch-a-ntp-ip >>+ 
 
 
-| IP DEL SERVIDOR NTP B. | << switch-b-ntp-ip >> 
+| IP DEL SERVIDOR NTP B. | +<< switch-b-ntp-ip >>+ 
 |===
 
 

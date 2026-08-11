@@ -69,6 +69,6 @@ Los requisitos de conectividad para esta topología incluyen:
 La serie C de Cisco UCS se puede gestionar a través de CIMC o de Cisco Intersight standalone management.
 
 
-NOTE: La topología de ejemplo anterior se refiere a una solución de almacenamiento de conexión directa que utiliza NetApp AFF. Sin embargo, la misma topología se puede usar también para NetApp ASA y FAS.
+NOTE: La topología de ejemplo anterior corresponde a una solución de almacenamiento que utiliza NetApp AFF. Sin embargo, la misma topología puede usarse también para NetApp ASA y FAS.
 
 Para obtener más información sobre esta configuración, consulta https://www.netapp.com/pdf.html?item=/media/88340-NVA-FlexpodExpress_C220_A250_NexusFinal.pdf["FlexPod express para VMware vSphere 8.0 con Cisco UCS C-Series Standalone y NetApp AFF"^].
