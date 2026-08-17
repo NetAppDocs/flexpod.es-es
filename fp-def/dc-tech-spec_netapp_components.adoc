@@ -69,13 +69,13 @@ El tipo de bandeja de NetApp seleccionado determina los tipos de unidad disponib
 
 NOTE: Para obtener todos los números de pieza de disco y bandejas de discos, consulte a su representante de ventas.
 
-Si desea más información sobre las unidades compatibles, haga clic en el enlace NetApp Hardware Universe de la siguiente tabla y, a continuación, seleccione unidades admitidas.
+Para obtener más información sobre las bandejas de discos y los medios de almacenamiento, consulta el enlace Disk Shelves and Storage Media Technical Specifications que aparece en la siguiente tabla.
 
 |===
 | Bandeja de discos | Especificaciones técnicas 
 
 
-| DS224C .4+| http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Unidades compatibles con bandejas de discos y medios de almacenamiento en Hardware Universe de NetApp"] 
+| DS224C .4+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["Especificaciones técnicas de las bandejas de discos y medios de almacenamiento"] 
 
 
 | DS212C 

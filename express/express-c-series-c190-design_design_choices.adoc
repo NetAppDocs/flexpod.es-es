@@ -57,7 +57,7 @@ El sistema C190 de AFF se ofrece exclusivamente con SSD de 960 GB. Puede elegir 
 * 24x 960 GB
 
 
-Para obtener toda la información sobre el sistema de hardware C190 de AFF, consulte https://www.netapp.com/us/products/entry-level-aff.aspx["Página de la cabina all-flash C190 de AFF de NetApp"^].
+Para obtener información completa sobre el sistema de hardware AFF C190, consulta https://docs.netapp.com/us-en/ontap-systems/c190/install-setup.html["NetApp documentación de AFF C190"^].
 
 
 
