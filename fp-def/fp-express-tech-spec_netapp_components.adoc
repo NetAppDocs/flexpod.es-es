@@ -72,7 +72,7 @@ NOTE: Para obtener todos los números de pieza de disco y bandejas de discos, co
 
 La siguiente tabla muestra las opciones de bandejas de discos NetApp para FlexPod Express, junto con enlaces a sus especificaciones técnicas.
 
-Para obtener la lista de unidades compatibles con tu shelf de discos, ve a link:https://hwu.netapp.com/DetailViews/Home.aspx["Hardware Universe de NetApp"^], en *Products > Storage > Shelves* selecciona *ONTAP (AFF, ASA, FAS)*, selecciona la versión de ONTAP que estás usando, luego selecciona el tipo de shelf (ejemplo: *DS212C*) y haz clic en *Show Results*. Haz clic en *Supported Drives* para ver las unidades compatibles con versiones específicas de ONTAP y los shelves de discos.
+Para obtener la lista de unidades compatibles con tu shelf de discos, ve a link:https://hwu.netapp.com["Hardware Universe de NetApp"^], en *Products > Storage > Shelves* selecciona *ONTAP (AFF, ASA, FAS)*, selecciona la versión de ONTAP que estás usando, luego selecciona el tipo de shelf (ejemplo: *DS212C*) y haz clic en *Show Results*. Haz clic en *Supported Drives* para ver las unidades compatibles con versiones específicas de ONTAP y los shelves de discos.
 
 |===
 | Bandeja de discos | Especificaciones técnicas 

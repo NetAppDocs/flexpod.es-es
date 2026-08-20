@@ -38,11 +38,11 @@ https://docs.netapp.com/us-en/ontap-systems-family/index.html["https://docs.neta
 
 * Herramienta de matriz de interoperabilidad de NetApp (IMT)
 +
-https://imt.netapp.com/imt/#welcome["https://imt.netapp.com/imt/#welcome"^]
+https://imt.netapp.com["https://imt.netapp.com"^]
 
 * Hardware Universe de NetApp
 +
-https://hwu.netapp.com/["https://hwu.netapp.com/"^]
+https://hwu.netapp.com["https://hwu.netapp.com"^]
 
 * Cisco HCL
 +

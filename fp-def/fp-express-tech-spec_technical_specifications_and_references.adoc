@@ -153,7 +153,7 @@ Consulta link:https://www.cisco.com/c/en/us/products/servers-unified-computing/u
 [[cisco-ucs-c-series-rack-servers]]
 == Servidores de montaje en rack Cisco UCS C-Series
 
-Las especificaciones técnicas de los servidores en rack de la serie C de Cisco UCS incluyen la compatibilidad con procesadores, la capacidad máxima de memoria, el número de ranuras PCIe y el formato. Para obtener más detalles sobre los modelos de servidores UCS compatibles, consulta la  https://ucshcltool.cloudapps.cisco.com/public/["Compatibilidad con hardware de Cisco"^] lista.
+Las especificaciones técnicas de los servidores en rack de la serie C de Cisco UCS incluyen la compatibilidad con procesadores, la capacidad máxima de memoria, el número de ranuras PCIe y el formato. Para obtener más detalles sobre los modelos de servidores UCS compatibles, consulta la  https://ucshcltool.cloudapps.cisco.com/public["Compatibilidad con hardware de Cisco"^] lista.
 
 Consulta la tabla siguiente para ver las especificaciones técnicas de los servidores en rack Cisco UCS C-Series.
 
@@ -298,4 +298,4 @@ Las especificaciones técnicas de las bandejas de disco NetApp incluyen el tama�
 [[netapp-drives]]
 === Unidades de NetApp
 
-Las especificaciones técnicas de las unidades de NetApp incluyen el tamaño del factor de forma, la capacidad de disco, los RPM del disco, las controladoras compatibles y los requisitos de versión de ONTAP. Estas especificaciones se pueden encontrar en la sección Drives de la http://hwu.netapp.com/Drives/Index?queryId=1581392["Hardware Universe de NetApp"^].
+Las especificaciones técnicas de las unidades de NetApp incluyen el factor de forma de la unidad, la capacidad del disco, las revoluciones por minuto (RPM) del disco, los controladores compatibles y los requisitos de versión de ONTAP. Estas especificaciones se pueden consultar en la sección Unidades de http://hwu.netapp.com["Hardware Universe de NetApp"^].
