@@ -10,7 +10,7 @@ summary: Después de que ONTAP haya añadido e identificado un almacén de objet
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

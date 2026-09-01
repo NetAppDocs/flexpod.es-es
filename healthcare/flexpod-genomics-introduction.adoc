@@ -10,7 +10,7 @@ summary: La plataforma de infraestructura convergente FlexPod permite a una orga
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 JayaKishore Esanakula, NetApp

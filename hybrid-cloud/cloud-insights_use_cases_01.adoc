@@ -10,7 +10,7 @@ summary: Con la instalación y configuración de Cloud Insights para supervisar 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

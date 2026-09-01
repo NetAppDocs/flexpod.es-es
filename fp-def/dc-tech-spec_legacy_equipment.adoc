@@ -10,7 +10,7 @@ summary: 'FlexPod es una solución flexible que le permite utilizar su equipo ex
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

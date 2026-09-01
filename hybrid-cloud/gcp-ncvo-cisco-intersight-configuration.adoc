@@ -10,7 +10,7 @@ summary: Esta página enumera los recursos necesarios para configurar Cisco Inte
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-deploy-flexpod.html["Anterior: Implementar FlexPod."]

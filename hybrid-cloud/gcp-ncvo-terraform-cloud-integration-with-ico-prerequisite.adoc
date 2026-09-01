@@ -10,7 +10,7 @@ summary: Esta página describe cómo conectar Cisco Intersight y Terraform Cloud
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-cisco-intersight-configuration.html["Anterior: Configuración de Cisco Intersight."]

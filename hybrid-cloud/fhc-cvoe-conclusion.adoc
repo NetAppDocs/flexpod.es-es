@@ -10,7 +10,7 @@ summary: Crear un cloud híbrido es un objetivo para la mayoría de las organiza
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-validation.html["Anterior: Validación de la solución."]

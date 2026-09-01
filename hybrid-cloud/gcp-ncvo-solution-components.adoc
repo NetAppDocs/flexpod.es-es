@@ -10,7 +10,7 @@ summary: En esta sección se describen todos los componentes de la solución nec
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-overview.html["Anterior: Descripción general de la solución."]

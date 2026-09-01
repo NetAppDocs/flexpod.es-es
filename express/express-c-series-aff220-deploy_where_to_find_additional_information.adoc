@@ -10,7 +10,7 @@ summary: Puede consultar el sitio web de NetApp y la guía de diseño de FlexPod
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

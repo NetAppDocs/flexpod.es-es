@@ -10,7 +10,7 @@ summary: En las tablas siguientes se enumeran los componentes de hardware y soft
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

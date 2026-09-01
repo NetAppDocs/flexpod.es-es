@@ -10,7 +10,7 @@ summary: Esta sección describe la puesta en marcha automatizada de almacenamien
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-configure-public-cloud-service-provider.html["Anterior: Configure el proveedor de servicios de cloud público."]

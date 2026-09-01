@@ -10,7 +10,7 @@ summary: Un diseño de FlexPod tiene requisitos mínimos de alimentación y cabl
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

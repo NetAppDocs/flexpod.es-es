@@ -10,7 +10,7 @@ summary: 'En esta sección se describen los procedimientos de puesta en marcha d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

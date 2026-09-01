@@ -10,7 +10,7 @@ summary: En esta solución, el servicio de datos en el cloud de NetApp, la infra
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-validation.html["Anterior: Validación de la solución."]

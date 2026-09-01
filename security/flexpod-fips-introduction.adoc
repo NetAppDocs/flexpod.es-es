@@ -10,7 +10,7 @@ summary: 'Este documento es una descripción general técnica de un sistema Cisc
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 JayaKishore Esanakula, NetApp John McAbel, Cisco

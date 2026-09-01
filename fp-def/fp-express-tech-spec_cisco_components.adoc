@@ -10,7 +10,7 @@ summary: Cisco contribuye de manera considerable al diseño y la arquitectura de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

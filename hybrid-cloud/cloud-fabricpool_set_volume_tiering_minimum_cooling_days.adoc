@@ -10,7 +10,7 @@ summary: El ajuste de días de organización en niveles, mínimo de refrigeraci�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Esta sección muestra la salida después de ejecutar el GATK utilizando
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

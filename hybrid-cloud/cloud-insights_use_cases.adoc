@@ -10,7 +10,7 @@ summary: En esta sección se enumeran los destinatarios y los casos a los que se
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

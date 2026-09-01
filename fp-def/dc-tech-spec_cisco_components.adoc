@@ -10,7 +10,7 @@ summary: Cisco ha contribuido de forma sustancial al diseño y la arquitectura d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

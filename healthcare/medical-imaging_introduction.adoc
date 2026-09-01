@@ -10,7 +10,7 @@ summary: Con FlexPod, usted obtiene una plataforma única compatible con FC, FCo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Jaya Kishore Esanakula y Atul Bhalodia, NetApp

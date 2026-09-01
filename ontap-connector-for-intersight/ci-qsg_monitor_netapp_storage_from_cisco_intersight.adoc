@@ -10,7 +10,7 @@ summary: Después de reclamar los destinos, los widgets de almacenamiento de Net
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'Al ejecutar su aplicación de atención médica en una plataforma Flex
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-additional-flexpod-security-consideration.html["Anterior: Consideraciones adicionales sobre seguridad de FlexPod."]

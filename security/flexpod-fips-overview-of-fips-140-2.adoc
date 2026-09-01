@@ -10,7 +10,7 @@ summary: FIPS 140-2 especifica los requisitos de seguridad de un módulo criptog
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-cybersecurity-threats-in-healthcare.html["Anterior: Amenazas de ciberseguridad en sanidad."]

@@ -10,7 +10,7 @@ summary: El cableado de validación de referencia se documenta en las siguientes
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

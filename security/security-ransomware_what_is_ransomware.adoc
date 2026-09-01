@@ -10,7 +10,7 @@ summary: El ransomware es un tipo de malware basado en la criptovirología, que 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Arvind Ramakrishnan, NetApp

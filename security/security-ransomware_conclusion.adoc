@@ -10,7 +10,7 @@ summary: Los autores recomiendan no pagar el rescate en caso de un ataque porque
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

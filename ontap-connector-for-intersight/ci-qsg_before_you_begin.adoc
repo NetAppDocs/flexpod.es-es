@@ -10,7 +10,7 @@ summary: Antes de empezar, instale o actualice AIQ UM, cree una cuenta de Cisco 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

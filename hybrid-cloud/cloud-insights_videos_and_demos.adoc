@@ -10,7 +10,7 @@ summary: Puede ver una demostración en vídeo de cómo usar Cloud Insights de N
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

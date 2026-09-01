@@ -10,7 +10,7 @@ summary: En esta sección se tratan las mejores prácticas para el diseño de cl
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

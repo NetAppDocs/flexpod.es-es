@@ -10,7 +10,7 @@ summary: Esta sección proporciona un resumen a grandes rasgos de las pruebas de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:nvme-vsphere-introduction.html["Anterior: Introducción."]

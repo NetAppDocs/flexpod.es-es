@@ -10,7 +10,7 @@ summary: Podemos ejecutar el plan de Terraform con una controladora. Puede omiti
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-dr-workflow.html["Anterior: Flujo de trabajo de recuperación ante desastres."]

@@ -10,7 +10,7 @@ summary: El autor desea agradecer a las siguientes personas sus contribuciones a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

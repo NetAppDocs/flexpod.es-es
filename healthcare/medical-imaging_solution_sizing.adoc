@@ -10,7 +10,7 @@ summary: En esta sección se describe el número de estudios y los requisitos de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

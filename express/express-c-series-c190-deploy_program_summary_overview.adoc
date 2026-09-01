@@ -10,7 +10,7 @@ summary: El centro de datos de FlexPod y FlexPod Express proporcionan una config
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Savita Kumari, NetApp

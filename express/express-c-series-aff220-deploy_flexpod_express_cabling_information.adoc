@@ -10,7 +10,7 @@ summary: En esta sección se detalla una referencia para la información de cabl
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

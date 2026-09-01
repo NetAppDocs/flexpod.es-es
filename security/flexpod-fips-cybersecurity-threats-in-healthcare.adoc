@@ -10,7 +10,7 @@ summary: Las amenazas a la salud son multidimensionales en la naturaleza y en el
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-introduction.html["Anterior: Introducción."]

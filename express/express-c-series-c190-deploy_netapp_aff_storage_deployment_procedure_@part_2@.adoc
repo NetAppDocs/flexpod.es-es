@@ -10,7 +10,7 @@ summary: Para crear iGroups, ejecute los siguientes comandos desde la conexión 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

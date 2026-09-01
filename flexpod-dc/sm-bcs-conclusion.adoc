@@ -10,7 +10,7 @@ summary: El centro de datos FlexPod con SM-BC utiliza un diseño de centro de da
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-validated-scenarios.html["Anterior: Validación de la solución - escenarios validados."]

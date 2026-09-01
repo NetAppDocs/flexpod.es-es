@@ -10,7 +10,7 @@ summary: Muchas organizaciones sanitarias de todo el mundo se han estandarizado 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-appendix-d-gpu-setup.html["Anterior: Configuración de GPU."]

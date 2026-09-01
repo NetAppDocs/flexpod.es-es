@@ -10,7 +10,7 @@ summary: La arquitectura de FlexPod está diseñada para proporcionar alta dispo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: En esta sección se describen las funciones opcionales de FlexPod Expre
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Las controladoras de almacenamiento de NetApp proporcionan la base sobr
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

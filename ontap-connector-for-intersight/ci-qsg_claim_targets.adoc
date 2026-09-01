@@ -10,7 +10,7 @@ summary: Una vez instalado Cisco Intersight Assist, puede solicitar los disposit
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

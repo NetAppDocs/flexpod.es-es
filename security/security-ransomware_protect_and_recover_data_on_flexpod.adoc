@@ -10,7 +10,7 @@ summary: En esta sección se describe cómo se pueden recuperar los datos de un 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: FabricPool requiere ONTAP 9.2 o posterior y el uso de agregados SSD en 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Esta validación de referencia se cablea como se muestra en las siguien
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

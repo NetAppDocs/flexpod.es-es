@@ -10,7 +10,7 @@ summary: Una configuración de FlexPod Datacenter tiene requisitos mínimos de h
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

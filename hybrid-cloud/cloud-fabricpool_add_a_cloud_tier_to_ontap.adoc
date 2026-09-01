@@ -10,7 +10,7 @@ summary: Antes de que un almacén de objetos se pueda asociar a un agregado, ONT
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

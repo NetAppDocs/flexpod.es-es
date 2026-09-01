@@ -10,7 +10,7 @@ summary: Puede seguir los pasos que se indican a continuación para completar el
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

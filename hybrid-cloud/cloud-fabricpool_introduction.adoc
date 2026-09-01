@@ -10,7 +10,7 @@ summary: Este informe técnico revisa la función de organización en niveles de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Scott Kovacs, NetApp

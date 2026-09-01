@@ -10,7 +10,7 @@ summary: En esta sección se proporciona la salida del archivo JAR de GATK.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-genomics---gatk-setup-and-execution.html["Anterior: Genómica - instalación y ejecución de GATK."]

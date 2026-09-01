@@ -10,7 +10,7 @@ summary: Esta sección describe cómo instalar y configurar Cloud Volumes ONTAP,
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-components.html["Anterior: Componentes de la solución."]

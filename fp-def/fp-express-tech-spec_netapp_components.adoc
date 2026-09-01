@@ -10,7 +10,7 @@ summary: Los controladores de almacenamiento NetApp proporcionan la base de alma
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

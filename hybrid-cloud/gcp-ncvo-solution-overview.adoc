@@ -10,7 +10,7 @@ summary: Este informe técnico reúne la solución de infraestructura convergent
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Ruchika Lahoti, NetApp

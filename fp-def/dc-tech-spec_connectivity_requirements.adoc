@@ -10,7 +10,7 @@ summary: A continuación se enumeran los requisitos de conectividad para la conf
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

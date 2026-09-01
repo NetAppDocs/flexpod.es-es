@@ -10,7 +10,7 @@ summary: Esta página ofrece una introducción a la solución FlexPod Datacenter
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Jyh-shing Chen, NetApp

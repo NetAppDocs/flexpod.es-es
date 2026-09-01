@@ -10,7 +10,7 @@ summary: La solución FlexPod Datacenter es una infraestructura convergente dise
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

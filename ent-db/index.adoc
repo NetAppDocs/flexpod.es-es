@@ -10,7 +10,7 @@ summary: Esta página proporciona una introducción al uso de FlexPod con SAP HA
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 La plataforma FlexPod es una arquitectura de centro de datos prediseñada con las mejores prácticas que se basa en Cisco Unified Computing System (Cisco UCS), la familia de switches Cisco Nexus y las controladoras de almacenamiento de NetApp.

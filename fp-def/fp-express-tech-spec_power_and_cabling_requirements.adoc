@@ -10,7 +10,7 @@ summary: Esta sección describe los requisitos de alimentación y las directrice
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

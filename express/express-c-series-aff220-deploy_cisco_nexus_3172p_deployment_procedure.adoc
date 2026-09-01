@@ -10,7 +10,7 @@ summary: En la siguiente sección se detalla la configuración del switch Cisco 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

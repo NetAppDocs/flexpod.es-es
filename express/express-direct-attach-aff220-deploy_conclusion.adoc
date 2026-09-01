@@ -10,7 +10,7 @@ summary: FlexPod Express proporciona una solución sencilla y efectiva, ya que p
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

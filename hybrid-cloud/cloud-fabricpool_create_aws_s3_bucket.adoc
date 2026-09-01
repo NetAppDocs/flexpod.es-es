@@ -10,7 +10,7 @@ summary: Los bloques son contenedores de almacenamiento de objetos que contienen
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

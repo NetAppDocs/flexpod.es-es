@@ -10,7 +10,7 @@ summary: Esta sección te explica cómo comprobar el estado de compatibilidad de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

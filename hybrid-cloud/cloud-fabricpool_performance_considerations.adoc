@@ -10,7 +10,7 @@ summary: Al considerar el dimensionamiento, se deben evaluar las siguientes cosa
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

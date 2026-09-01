@@ -10,7 +10,7 @@ summary: Estos son algunos ejemplos de casos de uso para la supervisión y la or
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

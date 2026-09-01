@@ -10,7 +10,7 @@ summary: 'Para realizar una demostración de la configuración de FIPS en un sis
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["Anterior: Almacenamiento ONTAP de FlexPod y FIPS 140-2."]

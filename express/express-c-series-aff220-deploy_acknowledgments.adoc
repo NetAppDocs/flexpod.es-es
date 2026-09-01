@@ -10,7 +10,7 @@ summary: Los autores desearían reconocer a ciertos individuos por su apoyo y co
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

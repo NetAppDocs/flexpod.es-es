@@ -10,7 +10,7 @@ summary: Esta página enumera los 11 procedimientos necesarios para implementar 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["Anterior: Puesta en marcha automatizada de almacenamiento de NetApp en cloud híbrido."]

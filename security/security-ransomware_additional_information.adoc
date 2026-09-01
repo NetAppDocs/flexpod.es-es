@@ -10,7 +10,7 @@ summary: Para obtener más información sobre la información descrita en este d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Si quiere más información sobre el contenido de este documento, consulte los siguientes documentos o sitios web:

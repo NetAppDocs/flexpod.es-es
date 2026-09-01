@@ -10,7 +10,7 @@ summary: Los sistemas operativos de almacenamiento enumerados en esta sección s
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

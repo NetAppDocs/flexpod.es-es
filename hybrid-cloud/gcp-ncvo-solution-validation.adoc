@@ -10,7 +10,7 @@ summary: En esta página, vamos a revisar la solución con un flujo de trabajo d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-terraform-execution-from-controller.html["Anterior: Ejecución de Terraform desde la controladora."]

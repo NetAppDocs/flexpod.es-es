@@ -10,7 +10,7 @@ summary: En esta sección, se proporcionan los procedimientos detallados para in
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

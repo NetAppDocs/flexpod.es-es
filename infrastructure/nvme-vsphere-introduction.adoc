@@ -10,7 +10,7 @@ summary: Esta solución proporciona un resumen general del rendimiento de FC-NVM
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Chris Schmitt y Kamini Singh, NetApp

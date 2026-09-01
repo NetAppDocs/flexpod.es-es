@@ -10,7 +10,7 @@ summary: La transición a la infraestructura en nube varía entre organizaciones
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

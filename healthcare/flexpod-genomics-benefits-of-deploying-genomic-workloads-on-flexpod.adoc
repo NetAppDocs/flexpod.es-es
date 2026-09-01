@@ -10,7 +10,7 @@ summary: En esta sección se proporciona una breve lista de ventajas para ejecut
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-introduction.html["Anterior: Introducción."]

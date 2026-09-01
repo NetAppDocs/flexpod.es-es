@@ -10,7 +10,7 @@ summary: En esta sección se describe la validación de la solución utilizando 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-san-configuration.html["Anterior: Configuración DE SAN."]

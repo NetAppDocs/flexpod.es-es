@@ -10,7 +10,7 @@ summary: Este documento proporciona las especificaciones técnicas de la platafo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]
