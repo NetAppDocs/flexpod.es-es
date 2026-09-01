@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_topologies.html 
+keywords: topologies, iSCSI boot, x-series-direct,x-series-modular, ucs-c-series,ip-based san, fc-based san 
+summary: Esta sección describe las topologías de ejemplo para FlexPod Datacenter. 
+---
+= FlexPod Datacenter topologías
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Esta sección describe las topologías de ejemplo para FlexPod Datacenter.
+
+
+
+[[cisco-ucs-x-series-modular-system-and-c-series-rack-servers-with-fc-and-ip-based-san]]
+== Sistema modular Cisco UCS X-Series y servidores en rack Cisco UCS C-Series con SAN basada en FC e IP
+
+Las siguientes figuras muestran un ejemplo de FlexPod Datacenter con el sistema modular X-Series y servidores en rack C-Series para la configuración iSCSI basada en IP. La topología también es compatible con NFS y NVMe-TCP.
+
+image:dc-tech-spec_image15.png["FlexPod Datacenter para conectividad iSCSI basada en IP"]
+
+La siguiente figura muestra un ejemplo de FlexPod Datacenter con el sistema modular X-Series y servidores en rack C-Series para una configuración SAN basada en FC con conmutadores MDS. La topología anterior también es compatible con NFS y FC-NVMe.
+
+image:dc-tech-spec_image16.png["FlexPod Datacenter para conectividad SAN basada en FC"]
+
+Los requisitos de conectividad para las topologías mencionadas anteriormente incluyen:
+
+* Conectividad del clúster AFF: en un clúster AFF de dos nodos, los controladores pueden conectarse directamente entre sí mediante cables sin necesidad de utilizar conmutadores de clúster.
+* Conectividad Ethernet de almacenamiento: los controladores de almacenamiento NetApp deben conectarse directamente a los conmutadores Cisco Nexus.
+* El chasis Cisco UCS X9508 se conecta a los fabric interconnects usando los Cisco UCSX-I-9108-100G IFMs. Los Cisco UCSX-I-9108-25G IFMs también se pueden usar con cables breakout de 4x25G para conectar el chasis a los fabric interconnects.
+* Los nodos de cómputo modulares Cisco UCS X-Series contienen Cisco VICs y pueden usarse con cualquiera de los IFMs.
+* Los servidores en rack de la serie C de Cisco UCS incorporan tarjetas Cisco VIC y se conectan a los fabric interconnects.
+* Se necesitan canales de puerto virtuales (vPC) para conectar los conmutadores Cisco Nexus a los controladores de almacenamiento NetApp y para conectar los Cisco UCS Fabric Interconnects a los conmutadores Cisco Nexus.
+* Requisitos de conectividad de FC:
++
+** Los controladores de almacenamiento NetApp se conectan a los conmutadores Cisco MDS mediante conexiones FC de 32 Gbps para la conectividad SAN.
+** Las interconexiones de estructura Cisco UCS se conectan a los conmutadores Cisco MDS mediante conexiones FC de 32 Gbps configuradas como un único canal de puerto para la conectividad SAN.
+
+
+
+
+Puedes optar por implementar únicamente una SAN basada en IP, únicamente una SAN basada en FC, o implementar ambas para adoptar diferentes protocolos según los requisitos de latencia y requisitos de rendimiento de las cargas de trabajo. Los protocolos NVMe over fabric ofrecen una menor latencia y un mayor número de operaciones de entrada/salida por segundo (IOPs) gracias a conexiones de dispositivos más eficientes, conjuntos de comandos y una menor utilización de CPU.
+
+
+NOTE: La topología de ejemplo anterior se refiere a una configuración de solución con servidores modulares de la serie X y servidores en rack de la serie C que utilizan NetApp AFF. Sin embargo, esta misma topología también puede usarse para NetApp ASA y FAS.
+
+Para obtener más información sobre esta configuración, consulta link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m7_imm_vmware_design.html#PhysicalTopology["FlexPod Datacenter con Cisco UCS M7 IMM, VMware vSphere 8.0 y NetApp ONTAP 9.12 Guía de diseño"^].
+
+
+
+[[cisco-ucs-x-series-direct-with-direct-attached-fc-and-ip-based-san]]
+== Cisco UCS X-Series Direct con SAN de conexión directa FC y basado en IP
+
+La siguiente figura muestra un ejemplo de topología de UCS X-Series Direct y ASA con conexión directa para FlexPod Datacenter SAN basada en IP y en FC.
+
+image:dc-tech-spec_image14.png["Topología UCS X-Series Direct y ASA de conexión directa para SAN basadas en IP y FC"]
+
+Los requisitos de conectividad para esta topología incluyen:
+
+* Conectividad del clúster ASA: Para un clúster ASA de 2 nodos, los controladores pueden conectarse directamente entre sí con cables sin usar conmutadores de clúster.
+* Conectividad Ethernet de almacenamiento: Los controladores de almacenamiento NetApp pueden conectarse directamente a los Fabric Interconnects integrados. Los dos controladores de almacenamiento en ASA tienen conectividad a dos estructuras SAN de IP independientes proporcionadas por FI A y FI B.
+* Conectividad de enlace ascendente de la red FI: para la conectividad SAN basada en IP, los conmutadores Nexus de enlace ascendente no intervienen en las rutas de datos de la SAN. La E/S de la SAN va directamente desde los nodos de computación UCS al almacenamiento ASA usando sus conexiones a FI A o FI B. Como resultado, los conmutadores top-of-rack existentes que admiten VLAN y vPC pueden utilizarse para proporcionar acceso de red externo al entorno de la solución SAN FlexPod.
+* Para la conectividad SAN basada en FC, los puertos UCS FI (FC) deben configurarse como puertos breakout.
+* Cisco UCS debe configurarse en modo de conmutación FC cuando se utilice para una solución SAN basada en FC.
+
+
+El Cisco UCS X-Series Direct también puede utilizar un almacenamiento conectado al conmutador similar al de la X-Series normal, pero usando las interconexiones de estructura integradas en vez de las interconexiones de estructura externas.
+
+Para obtener más información sobre esta configuración, consulta https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf["FlexPod Solución SAN con Cisco UCS X-Series Direct y NetApp ASA"^].
+
+[NOTE]
+====
+La topología de ejemplo anterior corresponde a una solución de almacenamiento de conexión directa que utiliza NetApp ASA. Sin embargo, la misma topología puede usarse también para NetApp AFF y FAS.
+
+Para una configuración de almacenamiento NAS de conexión directa basada en IP que utilice NetApp AFF o FAS, los switches Nexus de uplink deben estar correctamente configurados para soportar ciertos escenarios de fallo. Consulta el siguiente enlace para obtener información adicional sobre la configuración.
+
+https://www.netapp.com/pdf.html?item=/media/22621-nva-1154-DESIGN.pdf[]
+
+https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf[]
+
+====

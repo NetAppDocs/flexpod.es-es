@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_equipment_support_status.html 
+keywords: equipment, support status, end of life, end of support, verification 
+summary: Esta sección te explica cómo comprobar el estado de compatibilidad de los equipos para los componentes de Cisco y NetApp. 
+---
+= Estado del soporte técnico para los equipos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+FlexPod es una solución flexible que permite a los clientes utilizar actualmente tanto equipos nuevos como existentes a la venta por parte de Cisco y NetApp. En ocasiones, ciertos modelos de equipos tanto de Cisco como de NetApp son designados al final de su vida útil.
+
+Aunque estos modelos de equipo ya no están disponibles, los clientes que compraron uno de estos modelos antes de la fecha de finalización de la venta pueden usar dicho equipo en una configuración FlexPod.
+
+Además, las arquitecturas de FlexPod Datacenter se actualizan periódicamente para incorporar el hardware y el software más recientes de Cisco y NetApp a la solución FlexPod Datacenter.
+
+Antes de implementar o realizar el mantenimiento de equipos de FlexPod Datacenter, verifica que todos los componentes sigan siendo compatibles con el proveedor. Esta sección explica cómo consultar la información sobre el fin de la comercialización y el fin del soporte para los componentes de Cisco y NetApp.
+
+
+
+[[checking-netapp-equipment-support]]
+== Comprobando la compatibilidad del equipo con NetApp
+
+NetApp ofrece información de asistencia a través de Hardware Universe (HWU).
+
+Ve a link:https://hwu.netapp.com["Hardware Universe de NetApp"^].
+
+* Selecciona *Productos > Plataformas*, luego elige tu plataforma (por ejemplo: *AFF A-Series*) y el modelo (por ejemplo: *AFF A800*).
+
+
+
+NOTE: Para ver todas las plataformas, cambia el filtro *Ciclo de vida de la plataforma* a *Mostrar todo*. De forma predeterminada, la opción *Ocultar EOA* está seleccionada.
+
+* Selecciona la versión *ONTAP* y haz clic en *Mostrar resultados*.
+* Consulta las fechas de fin de soporte técnico de tus equipos en la sección *Disponibilidad y soporte técnico del sistema*.
+
+
+
+
+[[checking-cisco-equipment-support]]
+== Comprobando la compatibilidad del equipo Cisco
+
+Cisco facilita las fechas de fin de venta y fin de soporte en las páginas de soporte de productos de Cisco.
+
+
+
+==== Información sobre el fin de la venta y el fin del soporte de los servidores Cisco UCS
+
+* Accede a link:https://www.cisco.com/c/en/us/support/eol/index.html["Página de soporte de productos de Cisco"].
+* En *Categorías de productos*, selecciona *Servidores - UCS y HCI* y haz clic en tu tipo de servidor (por ejemplo: *UCS C-Series Rack Servers*). Busca tu modelo específico (por ejemplo: *UCS C220 M5*) y fíjate en las fechas de fin de venta y fin de soporte.
+
+
+
+
+==== Información sobre el fin de la comercialización y el fin del soporte técnico de los switches Cisco Nexus
+
+* Accede a link:https://www.cisco.com/c/en/us/support/eol/index.html["Página de soporte de productos de Cisco"].
+* En *Categorías de productos*, selecciona *Conmutadores* y haz clic en tu tipo de conmutador (por ejemplo: *Nexus 9000*). Busca tu modelo específico (por ejemplo: *9236C*) y busca las fechas de fin de venta y fin de soporte.
+

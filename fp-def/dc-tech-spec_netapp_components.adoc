@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_netapp_components.html 
-keywords: storage, controllers, cluster, interconnect, switches, drives, disk, shelves, licensing, options 
+keywords: storage, controllers, cluster, aff, asa, fas, afx, ontap, interconnect switches, drives, disk, shelves, licensing, options 
 summary: Las controladoras de almacenamiento de NetApp proporcionan la base sobre la que se basa la arquitectura FlexPod tanto para el almacenamiento de datos de arranque como de aplicaciones. Los componentes de NetApp incluyen controladoras de almacenamiento, switches de interconexión de clúster, bandejas de unidades y discos, y opciones de licencias. 
 ---
 = Componentes de NetApp
@@ -21,38 +21,100 @@ Las controladoras de almacenamiento de NetApp proporcionan la base sobre la que 
 [[netapp-storage-controller-options]]
 == Opciones de la controladora de almacenamiento de NetApp
 
-Se necesitan controladoras redundantes FAS, AFF o AFF ASA de NetApp en la arquitectura de FlexPod. Las controladoras ejecutan el software ONTAP. Cuando se solicitan las controladoras de almacenamiento, es posible precargar la versión de software preferida en las controladoras. Para ONTAP, se solicita un clúster completo. Un clúster completo incluye un par de controladoras de almacenamiento y una interconexión de clúster (switch o sin switch).
+Se requieren controladoras redundantes NetApp FAS, AFF, ASA o AFX en la arquitectura FlexPod. Los controladores ejecutan el software ONTAP. Cuando se solicitan los controladores de almacenamiento, se puede preinstalar en ellos la versión de software que prefieras. Para ONTAP, se solicita un clúster completo. Un clúster completo incluye un par de controladoras de almacenamiento y una interconexión de clúster (con switches o clúster sin switches).
+
+
+NOTE: La configuración de clúster sin switches solo es compatible con una configuración de dos nodos. Los conmutadores de interconexión de clúster son obligatorios para configuraciones de cuatro o más nodos y son opcionales para una configuración de dos nodos.
 
 Existen diferentes opciones y configuraciones disponibles, según la plataforma de almacenamiento seleccionada. Consulte a su representante de ventas para obtener información sobre estos componentes adicionales.
 
 Las familias de controladoras enumeradas en la siguiente tabla son adecuadas para usar en una solución de centros de datos de FlexPod porque su conexión con los switches Cisco Nexus es fluida. Consulte https://hwu.netapp.com/["Hardware Universe de NetApp"^] para obtener detalles específicos de compatibilidad de cada modelo de controladora.
 
 |===
-| Familia de controladoras de almacenamiento | Especificaciones técnicas 
+| Familia de almacenamiento NetApp para FlexPod Datacenter | Modelo | Especificaciones técnicas 
 
 
-| AFF a-Series | https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62247["Documentación de AFF a-Series"] 
+.6+| AFF a-Series | AFF A20 .6+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["Ficha técnica de AFF A-Series"] 
 
 
-| AFF ASA a-Series | https://www.netapp.com/data-storage/san-storage-area-network/documentation/["Documentación de AFF ASA a-Series"] 
+| AFF A30 
 
 
-| Serie FAS | https://mysupport.netapp.com/documentation/productsatoz/index.html#F["Documentación de la serie FAS"] 
+| AFF A50 
+
+
+| AFF A70 
+
+
+| AFF A90 
+
+
+| AFF A1K 
+
+
+.3+| AFF C-Series | AFF C30 .3+| https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["Ficha técnica de AFF C-Series"] 
+
+
+| AFF C60 
+
+
+| AFF C80 
+
+
+.7+| ASA | ASA A20 .7+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["Ficha técnica de ASA"] 
+
+
+| ASA A30 
+
+
+| ASA C30 
+
+
+| ASA A50 
+
+
+| ASA A70 
+
+
+| ASA A90 
+
+
+| ASA A1K 
+
+
+.5+| FAS | FAS2750 .5+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Ficha técnica de FAS"] 
+
+
+| FAS2820 
+
+
+| FAS50 
+
+
+| FAS70 
+
+
+| FAS90 
+
+
+.2+| AFX | AFX 1K .2+| https://www.netapp.com/pdf.html?item=/media/142853-ds-3466-netapp-afx-datasheet.pdf["Ficha técnica de AFX"] 
+
+
+| AFX 2K 
 |===
 
 
 [[cluster-interconnect-switch-options]]
 == Opciones del switch de interconexión de clúster
 
-La siguiente tabla enumera los switches de interconexión de clústeres Nexus disponibles para las arquitecturas FlexPod. Además, FlexPod admite todos los switches de clúster compatibles con ONTAP, incluidos los switches que no sean de Cisco, siempre y cuando la versión de ONTAP que se esté poniendo en marcha sea compatible. Consulte https://hwu.netapp.com/["Hardware Universe de NetApp"^] para obtener detalles de compatibilidad adicionales para modelos de switch específicos.
+En la siguiente tabla se enumeran los switches de interconexión de clúster Nexus disponibles para las arquitecturas FlexPod. FlexPod es compatible con todos los switches de clúster compatibles con ONTAP, incluidos los que no son de Cisco, siempre que sean compatibles con la versión de ONTAP que se esté implementando.
+
+Para consultar una lista de los switches de interconexión de clúster compatibles, ve a https://hwu.netapp.com/["Hardware Universe de NetApp"^], haz clic en *Products > Networking > Switches* y luego selecciona *Cluster InterConnect Switch*. Puedes filtrar por tipo de proveedor, seleccionar un switch y hacer clic en *Show results* para ver información detallada sobre el switch.
+
+En la tabla siguiente se enumeran los switches de Cisco que pueden usarse como switches de interconexión de clúster.
 
 |===
-
-
 | Switch de interconexión de clúster | Especificaciones técnicas 
-
-
-| Cisco Nexus 3132Q-V | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62377&language=en-US["Documentación de NetApp: Switches Cisco Nexus 3132Q-V."] 
 
 
 | Cisco Nexus 9336C-FX2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html["Documentación de NetApp: Switches Cisco Nexus 9336C-FX2"^] 
@@ -62,56 +124,66 @@ La siguiente tabla enumera los switches de interconexión de clústeres Nexus di
 [[netapp-disk-shelf-and-drive-options]]
 == Opciones de unidades y bandeja de discos de NetApp
 
-Se requiere un mínimo de una bandeja de discos NetApp para todas las controladoras de almacenamiento.
-
-El tipo de bandeja de NetApp seleccionado determina los tipos de unidad disponibles en esa bandeja.
+Se requiere como mínimo un bastidor de discos NetApp para los controladores de almacenamiento que no tienen un bastidor de discos integrado. El tipo de bastidor NetApp seleccionado determina qué tipos de unidades están disponibles en ese bastidor.
 
 
 NOTE: Para obtener todos los números de pieza de disco y bandejas de discos, consulte a su representante de ventas.
 
-Para obtener más información sobre las bandejas de discos y los medios de almacenamiento, consulta el enlace Disk Shelves and Storage Media Technical Specifications que aparece en la siguiente tabla.
+La siguiente tabla muestra las opciones de bandejas de discos de NetApp para FlexPod Datacenter junto con enlaces a sus especificaciones técnicas.
+
+Para obtener la lista de unidades compatibles con tu shelf de discos, ve a link:https://hwu.netapp.com/["Hardware Universe de NetApp"^], en *Products > Storage > Shelves* selecciona *ONTAP (AFF, ASA, FAS) o ONTAP (AFX)*, selecciona la versión de ONTAP que estás usando, luego selecciona el tipo de shelf (ejemplo: *DS212C*) y haz clic en *Show Results*. Haz clic en *Supported Drives* para ver las unidades compatibles con versiones específicas de ONTAP y los shelves de discos.
 
 |===
 | Bandeja de discos | Especificaciones técnicas 
 
 
-| DS224C .4+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["Especificaciones técnicas de las bandejas de discos y medios de almacenamiento"] 
+| DS212C .6+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["Estantes para discos y medios de almacenamiento"] 
 
 
-| DS212C 
+| DS224C 
 
 
 | DS460C 
 
 
 | NS224 
+
+
+| NS224 con NSM100B 
+
+
+| NX224 
 |===
 
 
 [[netapp-software-licensing-options]]
 == Opciones de licencias de software de NetApp
 
-La siguiente tabla enumera las opciones de licencias del software de NetApp que están disponibles para la arquitectura del centro de datos de FlexPod. El software de NetApp cuenta con la licencia a nivel de controladora FAS y AFF.
+La siguiente tabla muestra las opciones de licencia del software NetApp.
 
 |===
-| Licencias de software de NetApp | Número de pieza | Especificaciones técnicas 
+| Licencias de software de NetApp | Especificaciones técnicas 
 
 
-| SW, PAQUETE completo (controlador), -C. | SW-8XXX-COMP-BDL-C. .2+| http://mysupport.netapp.com/documentation/productsatoz/index.html["Biblioteca de productos A–Z"] 
+| ONTAP One para AFF, FAS y AFX .2+| Consulte a su equipo de ventas de NetApp si desea obtener más información sobre licencias. 
 
 
-| SW, ONTAP Essentials (controlador), -C. | SW-8XXX-ONTAP9-C 
+| ONTAP One para SAN para ASA 
 |===
+Consulta el siguiente enlace para obtener más información sobre las licencias de software de NetApp: https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["Licencias de software de NetApp"^].
+
 
 
 [[netapp-support-licensing-options]]
 == Opciones de licencias de soporte de NetApp
 
-Las licencias de NetApp SupportEdge Premium son necesarias para la arquitectura de FlexPod, pero los números de pieza de dichas licencias varían en función de las opciones seleccionadas en el diseño de FlexPod. Por ejemplo, los números de referencia de la licencia del software varían en función de la controladora de FAS que elija. Consulte a su representante de ventas para obtener información acerca de los números de pieza exactos de las licencias de soporte individuales. La siguiente tabla muestra un ejemplo de una licencia de SupportEdge.
+SupportEdge Premium requiere licencias, y los números de parte de esas licencias varían según las opciones seleccionadas en el diseño de FlexPod Datacenter.
+
+La siguiente tabla muestra las opciones de licencia de soporte de NetApp para los sistemas de almacenamiento NetApp AFF, ASA, FAS y AFX.
 
 |===
-| Licencias de soporte de NetApp | Número de pieza | Especificaciones técnicas 
+| Licencias de soporte de NetApp | Especificaciones técnicas 
 
 
-| SupportEdge Premium 4 horas in situ—meses: 36 | CS-O2-4HR | https://www.netapp.com/pdf.html?item=/media/8745-supportedge-premium-product-description.pdf["SupportEdge Premium de NetApp"^] 
+| NetApp SupportEdge | https://www.netapp.com/netapp-services/[] 
 |===
