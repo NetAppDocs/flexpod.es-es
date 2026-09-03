@@ -32,7 +32,7 @@ Como se muestra en la siguiente figura, el programa FlexPod incluye tres solucio
 
 En la siguiente figura se muestran los componentes técnicos de la solución.
 
-image:express-direct-attach-aff220-deploy_image2.png[""]
+image:express-direct-attach-aff220-deploy_image2.png["Un diagrama que compara las soluciones FlexPod Express, FlexPod Datacenter y FlexPod Select"]
 
 
 
@@ -81,7 +81,7 @@ Esta solución aprovecha las últimas tecnologías de NetApp, Cisco y VMware. In
 
 La siguiente figura muestra FlexPod Express con VMware vSphere 6.7U1, una arquitectura Direct Connect basada en IP.
 
-image:express-direct-attach-aff220-deploy_image3.png[""]
+image:express-direct-attach-aff220-deploy_image3.png["Un diagrama que muestra los servidores FlexPod Express, los conmutadores Nexus y el cableado de almacenamiento AFF para gestión, datos, IP, interconexión de clúster y redes homólogas vPC"]
 
 
 

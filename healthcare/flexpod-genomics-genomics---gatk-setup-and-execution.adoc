@@ -46,7 +46,7 @@ En líneas generales, la genómica se puede clasificar en los siguientes pasos. 
 
 En la siguiente figura se muestra el proceso desde el muestreo hasta la identificación de variantes, la anotación y la predicción.
 
-image:flexpod-genomics-image8.png[""]
+image:flexpod-genomics-image8.png["Un diagrama que muestra un flujo de trabajo genómico, desde la recogida de muestras hasta la secuenciación, el análisis de variantes, la integración en la historia clínica electrónica y los modelos predictivos"]
 
 El proyecto Genoma humano se completó en abril de 2003 y el proyecto hizo una simulación de muy alta calidad de la secuencia del genoma humano disponible en el dominio público. Este genoma de referencia inició una explosión en la investigación y el desarrollo de capacidades de genómica. Prácticamente cada dolencia humana tiene una firma en los genes de ese ser humano. Hasta hace poco, los médicos estaban aprovechando los genes para predecir y determinar defectos de nacimiento como la anemia drepanocítica, que es causada por un cierto patrón de herencia causado por un cambio en un solo gen. El tesoro de los datos que el proyecto del genoma humano ha puesto a su disposición llevó a la llegada del estado actual de las capacidades genómicas.
 
@@ -95,40 +95,40 @@ Para realizar la configuración de FlexPod Lab, realice los siguientes pasos:
 
 . La configuración y validación de FlexPod Lab utiliza las siguientes reservas IP4 y VLAN.
 +
-image:flexpod-genomics-image10.png[""]
+image:flexpod-genomics-image10.png["Una tabla de reservas de direcciones IP de VLAN que muestra los rangos, las máscaras de subred y los fines de gestión, VM, NFS e iSCSI"]
 
 . Configure los LUN de arranque basados en iSCSI en la SVM ONTAP.
 +
-image:flexpod-genomics-image9.png[""]
+image:flexpod-genomics-image9.png["Una captura de pantalla de ONTAP System Manager que muestra seis LUN de arranque de ESXi en la máquina virtual de almacenamiento Healthcare_SVM"]
 
 . Asigne LUN a iGroups iSCSI.
 +
-image:flexpod-genomics-image11.png[""]
+image:flexpod-genomics-image11.png["Una captura de pantalla que muestra ESXi_Boot_Lun_1 asignado al grupo de iniciadores iSCSI GenomicsESXi_1"]
 
 +
-image:flexpod-genomics-image12.png[""]
+image:flexpod-genomics-image12.png["Una captura de pantalla de ONTAP System Manager que muestra los detalles del LUN de arranque de ESXi asignado al grupo de iniciadores GenomicsESXi_2"]
 
 . Instale vSphere 7.0 con arranque iSCSI.
 . Registre hosts ESXi en vCenter.
 +
-image:flexpod-genomics-image13.png[""]
+image:flexpod-genomics-image13.png["Una captura de pantalla del inventario de vSphere Client que muestra la carpeta Genomics con los hosts ESXi y las máquinas virtuales"]
 
 . Aprovisione un almacén de datos NFS `infra_datastore_nfs` En el almacenamiento de ONTAP.
 +
-image:flexpod-genomics-image14.png[""]
+image:flexpod-genomics-image14.png["Una captura de pantalla de ONTAP System Manager que muestra el volumen NFS Healthcare_Workload_NFS_Vol en línea"]
 
 . Añada el almacén de datos a vCenter.
 +
-image:flexpod-genomics-image16.png[""]
+image:flexpod-genomics-image16.png["Una captura de pantalla del vSphere Client mostrando el resumen del almacén de datos NFS 3 infra_datastore_nfs"]
 
 . Con vCenter, añada un almacén de datos NFS a los hosts ESXi.
 +
-image:flexpod-genomics-image15.png[""]
+image:flexpod-genomics-image15.png["Una captura de pantalla de vSphere Client que muestra los hosts infra_datastore_nfs conectados con estado normal"]
 
 . Mediante el para vCenter, cree un equipo virtual Red Hat Enterprise Linux (RHEL) 8.3 para ejecutar GATK.
 . Un almacén de datos NFS se presenta a la máquina virtual y se monta en `/mnt/genomics`, Que se utiliza para almacenar ejecutables de GATK, secuencias de comandos, archivos de mapa de alineación binaria (BAM), archivos de referencia, archivos de índice, archivos de diccionario y archivos de salida para llamadas de variante.
 +
-image:flexpod-genomics-image17.png[""]
+image:flexpod-genomics-image17.png["Una captura de pantalla de un terminal de Linux en la que se ve que /dev/sdb está montado en /mnt/genomics con un 2 % de uso"]
 
 
 

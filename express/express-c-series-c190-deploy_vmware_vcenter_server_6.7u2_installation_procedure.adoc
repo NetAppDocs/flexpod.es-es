@@ -34,11 +34,11 @@ Para descargar el dispositivo de VMware vCenter Server (VCSA), siga los pasos si
 . Haga clic en instalar.
 . Haga clic en Siguiente en la página Introducción.
 +
-image:express-c-series-c190-deploy_image34.png[""]
+image:express-c-series-c190-deploy_image34.png["Una captura de pantalla de la página del vCenter Server Appliance Installer End User License Agreement con la aceptación seleccionada"]
 
 . Seleccione Embedded Platform Services Controller (controladora de servicios de plataforma integrada) como tipo de implementación.
 +
-image:express-c-series-c190-deploy_image35.png[""]
+image:express-c-series-c190-deploy_image35.png["Una captura de pantalla de la página de tipos de instalación del instalador del vCenter Server Appliance con la opción Embedded Platform Services Controller seleccionada"]
 
 +
 
@@ -46,15 +46,15 @@ NOTE: Si es necesario, también admite la puesta en marcha de la controladora de
 
 . En Appliance Deployment Target, introduzca la dirección IP de un host ESXi que haya implementado, el nombre de usuario raíz y la contraseña raíz.
 +
-image:express-c-series-c190-deploy_image36.png[""]
+image:express-c-series-c190-deploy_image36.png["Una captura de pantalla del formulario de destino de implementación del instalador de vCenter Server Appliance con las credenciales del host ESXi"]
 
 . Para establecer el equipo virtual, introduzca VCSA como nombre de equipo virtual y la contraseña raíz que desea utilizar para el VCSA.
 +
-image:express-c-series-c190-deploy_image37.png[""]
+image:express-c-series-c190-deploy_image37.png["Una captura de pantalla de la página de configuración de la máquina virtual del instalador de vCenter Server Appliance, con los campos de nombre de la máquina virtual y contraseña de root"]
 
 . Seleccione el tamaño de puesta en marcha que mejor se adapte a su entorno. Haga clic en Siguiente.
 +
-image:express-c-series-c190-deploy_image38.png[""]
+image:express-c-series-c190-deploy_image38.png["Una captura de pantalla de la página Select deployment size del instalador de vCenter Server Appliance, con Tiny seleccionado"]
 
 . Seleccione la `infra_datastore` almacén de datos. Haga clic en Siguiente.
 . Introduzca la siguiente información en la página Configure network settings y haga clic en Next.
@@ -69,11 +69,11 @@ image:express-c-series-c190-deploy_image38.png[""]
 
 . En la página Ready to Complete Stage 1, compruebe que los ajustes introducidos son correctos. Haga clic en Finalizar.
 +
-image:express-c-series-c190-deploy_image39.png[""]
+image:express-c-series-c190-deploy_image39.png["Una captura de pantalla de la página Configure network settings del instalador de vCenter Server Appliance, con MGMT-Network seleccionado"]
 
 . Revise la configuración en la etapa 1 antes de iniciar la implementación del dispositivo.
 +
-image:express-c-series-c190-deploy_image40.png[""]
+image:express-c-series-c190-deploy_image40.png["Una captura de pantalla de la página de revisión de la configuración lista para completar la etapa 1 del instalador de vCenter Server Appliance"]
 
 +
 La VCSA se instala ahora. Este proceso tarda varios minutos.
@@ -81,13 +81,13 @@ La VCSA se instala ahora. Este proceso tarda varios minutos.
 . Una vez completada la fase 1, aparece un mensaje que indica que se ha completado. Haga clic en continuar para iniciar la configuración de la fase 2.
 . En la página Introducción de fase 2, haga clic en Siguiente.
 +
-image:express-c-series-c190-deploy_image41.png[""]
+image:express-c-series-c190-deploy_image41.png["Una captura de pantalla de la página de introducción de la fase 2 del instalador del vCenter Server Appliance, con un botón Next"]
 
 . Introduzca `\<<var_ntp_id>>` Para la dirección del servidor NTP. Puede introducir varias direcciones IP de NTP.
 . Si tiene pensado utilizar la alta disponibilidad (ha) de vCenter Server, asegúrese de que el acceso SSH esté habilitado.
 . Configure el nombre de dominio, la contraseña y el nombre del sitio de SSO. Haga clic en Siguiente.
 +
-image:express-c-series-c190-deploy_image42.png[""]
+image:express-c-series-c190-deploy_image42.png["Captura de pantalla de la fase 2 de la configuración de SSO en el instalador de vCenter Server Appliance, con un nuevo dominio de SSO seleccionado"]
 
 +
 
@@ -95,12 +95,12 @@ NOTE: Registre estos valores para su referencia, especialmente si se desvía de 
 
 . Únase al programa de experiencia del cliente de VMware si lo desea. Haga clic en Siguiente.
 +
-image:express-c-series-c190-deploy_image43.png[""]
+image:express-c-series-c190-deploy_image43.png["Una captura de pantalla de la página Configure CEIP del instalador del vCenter Server Appliance, con la opción CEIP seleccionada"]
 
 . Vea el resumen de la configuración. Haga clic en Finalizar o utilice el botón Atrás para editar la configuración.
 . Aparece un mensaje que indica que no podrá detener o detener la instalación una vez iniciada. Haga clic en OK para continuar.
 +
-image:express-c-series-c190-deploy_image44.png[""]
+image:express-c-series-c190-deploy_image44.png["Una captura de pantalla del instalador de vCenter Server Appliance en la que se advierte que la instalación no se puede pausar ni detener, con los botones Cancelar y OK"]
 
 +
 La configuración del dispositivo continúa. Esto tarda varios minutos.

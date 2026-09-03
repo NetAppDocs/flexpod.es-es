@@ -31,7 +31,7 @@ La siguiente lista de organizaciones de atención médica fue dirigida por los a
 
 La diversidad de aplicaciones que constituyen una organización sanitaria es innegable y cada vez más compleja. Las oficinas de seguridad de la información se enfrentan al reto de proporcionar gobierno a la gran variedad de sistemas Y activos TECNOLÓGICOS. La figura siguiente muestra las capacidades clínicas de un sistema hospitalario típico.
 
-image:flexpod-fips-image2.png[""]
+image:flexpod-fips-image2.png["Un diagrama que muestra la integración de aplicaciones empresariales que conecta los sistemas clínicos y administrativos de un hospital"]
 
 Los datos del paciente se encuentran en el centro de esta imagen. La pérdida de datos de pacientes y el estigma asociado con condiciones médicas sensibles es muy real. Otras cuestiones sensibles incluyen el riesgo de exclusión social, chantaje, perfilado, vulnerabilidad a la comercialización dirigida, explotación y posible responsabilidad financiera hacia los pagadores sobre la información médica más allá de los privilegios del pagador.
 

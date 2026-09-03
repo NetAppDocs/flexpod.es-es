@@ -45,7 +45,7 @@ En el campo Container Name, introduzca el nombre del contenedor o el bloque del 
 . Haga clic en Save and Attach Aggregates.
 
 
-image:cloud-fabricpool_image13.png[""]
+image:cloud-fabricpool_image13.png["Una captura de pantalla del formulario «Add Cloud Tier» configurado para un proveedor de nivel en la nube de Amazon S3"]
 
 
 

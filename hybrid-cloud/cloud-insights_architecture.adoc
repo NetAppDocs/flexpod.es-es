@@ -68,7 +68,7 @@ Para que Cloud Insights recopile datos, una organización debe poner en marcha u
 
 La siguiente figura muestra la arquitectura de la solución.
 
-image:cloud-insights_image2.png[""]
+image:cloud-insights_image2.png["Un diagrama que muestra Cisco UCS, conmutadores Nexus, controladores AFF A800 de NetApp y conmutadores MDS interconectados mediante enlaces de red"]
 
 
 

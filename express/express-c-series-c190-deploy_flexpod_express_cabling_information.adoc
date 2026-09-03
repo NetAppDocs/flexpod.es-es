@@ -18,7 +18,7 @@ Esta validación de referencia se cablea como se muestra en las siguientes figur
 
 En esta figura, se muestra el cableado de validación de referencia.
 
-image:express-c-series-c190-deploy_image3.png[""]
+image:express-c-series-c190-deploy_image3.png["Un diagrama que muestra las vistas traseras de dos conmutadores Nexus, dos servidores Cisco UCS y controladores AFF C190"]
 
 En la siguiente tabla se muestra la información de cableado del switch Cisco Nexus 31108PC-V-A.
 

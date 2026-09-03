@@ -27,7 +27,7 @@ Como se muestra en la siguiente figura, la cartera de FlexPod incluye tres soluc
 * *FlexPod Select.* incorpora los mejores aspectos del centro de datos FlexPod y adapta la infraestructura a una aplicación determinada.
 
 
-image:express-c-series-aff220-design_image2.png[""]
+image:express-c-series-aff220-design_image2.png["Un diagrama que muestra FlexPod Express, Datacenter y Select, con las implementaciones objetivo y los componentes"]
 
 
 

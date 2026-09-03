@@ -34,11 +34,11 @@ Los sistemas AFF A220 de NetApp utilizan el nuevo software ONTAP 9.4. ONTAP 9.4 
 
 ONTAP 9.4 cuenta con varias funciones que resultan adecuadas para la solución FlexPod Express. Lo más importante es el compromiso de NetApp con la eficiencia del almacenamiento, que puede ser una de las funciones más importantes para implementaciones pequeñas. Las características distintivas de la eficiencia del almacenamiento de NetApp, como la deduplicación, la compresión y el thin provisioning, están disponibles en ONTAP 9.4, además de compactación. Como el sistema WAFL de NetApp siempre escribe bloques de 4 KB, la compactación combina varios bloques en un bloque de 4 KB cuando los bloques no utilizan el espacio asignado de 4 KB. La siguiente figura ilustra este proceso.
 
-image:express-c-series-aff220-design_image5.png[""]
+image:express-c-series-aff220-design_image5.png["Un diagrama que muestra varios bloques lógicos de 4 KB compactados en un único bloque físico de 4 KB"]
 
 Además, el sistema AFF A220 puede aprovechar la partición de datos raíz. Esta partición permite dividir el agregado raíz y dos agregados de datos en los discos del sistema. Por lo tanto, ambas controladoras en un clúster de AFF A220 de dos nodos pueden aprovechar el rendimiento de todos los discos del agregado. Consulte la figura siguiente.
 
-image:express-c-series-aff220-design_image6.png[""]
+image:express-c-series-aff220-design_image6.png["Un diagrama que muestra los discos divididos en las particiones root, Controller 1 y Controller 2"]
 
 Estas son solo algunas funciones clave que complementan la solución FlexPod Express. Para detalles sobre las funciones y la funcionalidad adicionales de ONTAP 9.4, consulta el https://www.netapp.com/pdf.html?item=/media/7413-ds-3231-ontap-unified-data-storage-management.pdf["Especificaciones técnicas del software de gestión de datos ONTAP 9"^]. También consulta el NetApp http://docs.netapp.com/ontap-9/index.jsp["Centro de documentación de ONTAP 9"^], que se ha actualizado para incluir ONTAP 9.4.
 
@@ -57,7 +57,7 @@ Las especificaciones de rendimiento incluyen:
 * Unidades de transmisión máxima configurables (MTU) de hasta 9216 bytes (tramas gigantes)
 
 
-image:express-c-series-aff220-design_image7.png[""]
+image:express-c-series-aff220-design_image7.png["Una captura de pantalla que muestra la vista frontal de un conmutador Cisco Nexus 3172 con puertos de red"]
 
 Para obtener más información sobre los switches Cisco Nexus 3172, consulte https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Hoja de datos de los conmutadores Cisco Nexus 3172PQ, 3172TQ, 3172TQ-32T, 3172PQ-XL y 3172TQ-XL"^].
 
@@ -78,7 +78,7 @@ Los servidores de montaje en rack Cisco UCS C-Series ofrecen las siguientes vent
 * Mayor elección para el cliente gracias a sus ventajas únicas en un paquete de rack conocido
 
 
-image:express-c-series-aff220-design_image8.png[""]
+image:express-c-series-aff220-design_image8.png["Vista frontal de un servidor en rack Cisco UCS C220 M5 con dos bahías para unidades y el logotipo de Cisco"]
 
 El servidor de montaje en rack Cisco UCS C220 M5 (en la figura anterior) se encuentra entre la infraestructura empresarial para uso general más versátil y los servidores de aplicaciones del sector. Se trata de un servidor en rack de dos sockets de alta densidad que ofrece un rendimiento y una eficiencia líderes en el sector para una amplia gama de cargas de trabajo, incluidas aplicaciones de virtualización, colaboración y con configuración básica. Los servidores en rack Cisco UCS serie C se pueden implementar como servidores independientes o como parte de Cisco UCS para aprovechar las innovaciones informáticas unificadas basadas en estándares de Cisco que ayudan a reducir el coste total de propiedad de los clientes y a aumentar la agilidad empresarial.
 
@@ -97,7 +97,7 @@ El Cisco UCS VIC 1387 (en la siguiente figura) ofrece dos puertos mejorados QSFP
 
 
 
-image:express-c-series-aff220-design_image9.png[""]
+image:express-c-series-aff220-design_image9.png["Una tarjeta adaptadora Cisco UCS VIC 1387 con dos puertos QSFP+ y un ventilador de refrigeración"]
 
 Para obtener más información acerca del adaptador Cisco UCS VIC 1387, consulte https://www.cisco.com/c/en/us/products/interfaces-modules/ucs-virtual-interface-card-1387/index.html["Tarjeta de interfaz virtual 1387 de Cisco UCS"^] hoja de datos.
 
@@ -107,7 +107,7 @@ El módulo QSA de Cisco convierte un puerto QSFP en un puerto SFP o SFP+. Con es
 
 
 
-image:express-c-series-aff220-design_image10.png[""]
+image:express-c-series-aff220-design_image10.png["Una fotografía de un módulo adaptador Cisco CVR-QSFP-SFP10G QSFP a SFP"]
 
 
 

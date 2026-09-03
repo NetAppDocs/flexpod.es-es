@@ -39,15 +39,15 @@ Para acceder a la información de Digital Advisor a través del panel de control
 
 . Haga clic en la opción colector de datos bajo el menú Admin de la izquierda.
 +
-image:cloud-insights_image13.png[""]
+image:cloud-insights_image13.png["Una captura de pantalla que muestra el menú Admin con Recopiladores de datos seleccionado en Cloud Insights"]
 
 . Filtro para el recopilador de datos específico de su entorno. En este ejemplo, vamos a filtrar por el término FlexPod.
 +
-image:cloud-insights_image23.png[""]
+image:cloud-insights_image23.png["Una captura de pantalla que muestra la página de recopiladores de datos filtrada por FlexPod Datacenter"]
 
 . Haga clic en el recopilador de datos para obtener un resumen del entorno y los dispositivos que está supervisando el recopilador.
 +
-image:cloud-insights_image24.png[""]
+image:cloud-insights_image24.png["Una captura de pantalla del resumen del recopilador de datos de FlexPod Datacenter con la cronología de eventos y el dispositivo de almacenamiento reportado"]
 
 +
 En la lista de dispositivos situada cerca de la parte inferior, haga clic en el nombre del sistema de almacenamiento de ONTAP que se va a supervisar. Esto muestra un tablero de información recopilada sobre el sistema, incluidos los siguientes detalles:
@@ -61,19 +61,19 @@ En la lista de dispositivos situada cerca de la parte inferior, haga clic en el 
 ** Latencia media
 ** Rendimiento promedio
 +
-image:cloud-insights_image25.png[""]
+image:cloud-insights_image25.png["Una captura de pantalla del panel de control de almacenamiento aa14-a800 con resumen, riesgos, datos de usuario y gráfico de latencia"]
 
 +
 Además, en esta página, en la sección de Políticas de rendimiento, puedes encontrar un enlace a NetApp Digital Advisor.
 
 +
-image:cloud-insights_image26.png[""]
+image:cloud-insights_image26.png["Una captura de pantalla en la que se muestran las políticas de rendimiento con 35 riesgos detectados por Active IQ y un icono de enlace externo"]
 
 
 
 . Para abrir una nueva pestaña del navegador y llevarte a la página de mitigación de riesgos, donde se muestra qué nodos están afectados, cuán críticos son los riesgos y cuál es la acción adecuada que debes tomar para corregir los problemas identificados, haz clic en el enlace de Digital Advisor.
 +
-image:cloud-insights_image27.png[""]
+image:cloud-insights_image27.png["Una captura de pantalla de Active IQ Digital Advisor en la que se enumeran los riesgos de estado y las medidas correctivas para un sistema de almacenamiento"]
 
 
 
@@ -90,15 +90,15 @@ Cloud Insights puede mostrar consolas en tiempo real de la información que se o
 
 Desde el panel del sistema de almacenamiento, puede ver la última vez que el recopilador de datos actualizó la información. Un ejemplo de esto se muestra en la siguiente figura.
 
-image:cloud-insights_image28.png[""]
+image:cloud-insights_image28.png["Una captura de pantalla de los detalles del recopilador de datos de Cloud Insights que muestra una adquisición exitosa hace 3 minutos, a la 1:21 p. m."]
 
 De forma predeterminada, la consola del sistema de almacenamiento muestra varios gráficos interactivos donde se muestran métricas en todo el sistema desde el sistema de almacenamiento en el que se está sondeando o desde cada nodo individual, incluidos: Latencia, IOPS y rendimiento, en la sección Expert View. En la siguiente figura se muestran ejemplos de estos gráficos predeterminados.
 
-image:cloud-insights_image29.png[""]
+image:cloud-insights_image29.png["Una captura de pantalla de Cloud Insights Expert View con gráficos de latencia, IOPS y rendimiento, así como detalles de los recursos"]
 
 De forma predeterminada, los gráficos muestran información de las últimas tres horas, pero puede establecerlos en un número de valores distintos o en un valor personalizado de la lista desplegable, situada cerca de la parte superior derecha del panel del sistema de almacenamiento. Esto se muestra en la siguiente figura.
 
-image:cloud-insights_image30.png[""]
+image:cloud-insights_image30.png["Una captura de pantalla del panel de control de almacenamiento con el menú desplegable de intervalos de tiempo que muestra desde Últimos 15 minutos hasta Personalizado"]
 
 
 
@@ -115,21 +115,21 @@ Para crear una consola personalizada para evaluar los recursos de almacenamiento
 
 . Para crear un panel personalizado, pase el ratón sobre Paneles en el menú principal de Cloud Insights y haga clic en + Nuevo panel en la lista desplegable.
 +
-image:cloud-insights_image31.png[""]
+image:cloud-insights_image31.png["Una captura de pantalla del menú «Cloud Insights Dashboards» con la opción «+ New Dashboard» resaltada"]
 
 +
 Se abrirá la ventana Nueva consola.
 
 . Asigne un nombre al panel y seleccione el tipo de widget utilizado para mostrar los datos. Puede seleccionar entre varios tipos de gráficos, incluso notas o tipos de tablas para presentar los datos recopilados.
 +
-image:cloud-insights_image32.png[""]
+image:cloud-insights_image32.png["Una captura de pantalla de los mosaicos de selección de tipos de widgets del New Dashboard, que incluyen gráficos, indicadores, notas y tablas"]
 
 . Elija variables personalizadas en el menú Agregar variable.
 +
 Esto permite que los datos presentados se centren en mostrar factores más específicos o especializados.
 
 +
-image:cloud-insights_image33.png[""]
+image:cloud-insights_image33.png["Una captura de pantalla que muestra el menú Add Variable con un campo de búsqueda y una lista de variables en un nuevo panel de control"]
 
 . Para crear una consola personalizada, seleccione el tipo de widget que desea utilizar, por ejemplo, un gráfico circular para mostrar la utilización del almacenamiento por volumen:
 +
@@ -140,13 +140,13 @@ image:cloud-insights_image33.png[""]
 .. Personalice la información que se mostrará. De forma predeterminada, esta selección muestra los volúmenes de datos ONTAP y enumera los 10 primeros.
 .. Para guardar el panel personalizado, haga clic en Guardar.
 +
-image:cloud-insights_image34.png[""]
+image:cloud-insights_image34.png["Una captura de pantalla que muestra un widget de gráfico circular de Capacidad utilizada configurado para la capacidad utilizada del volumen de almacenamiento"]
 
 +
 Después de guardar el widget personalizado, el explorador vuelve a la página New Dashboard donde se muestra el widget recién creado y permite realizar acciones interactivas, como modificar el período de sondeo de datos.
 
 +
-image:cloud-insights_image35.png[""]
+image:cloud-insights_image35.png["Una captura de pantalla que muestra un panel de control de Cloud Insights con un widget de gráfico circular de Capacidad utilizada"]
 
 
 

@@ -35,7 +35,7 @@ Complete los siguientes pasos para crear un clúster de vSphere:
 . Active la recuperación ante desastres y vSphere ha seleccionando las casillas de verificación.
 . Haga clic en Aceptar.
 +
-image:express-c-series-aff220-deploy_image49.png[""]
+image:express-c-series-aff220-deploy_image49.png["Una captura de pantalla del cuadro de diálogo Nuevo clúster con DRS y vSphere HA habilitados para el clúster Tiger3"]
 
 
 
@@ -46,7 +46,7 @@ image:express-c-series-aff220-deploy_image49.png[""]
 
 . Haga clic con el botón derecho en el clúster y seleccione Add Host.
 +
-image:express-c-series-aff220-deploy_image50.png[""]
+image:express-c-series-aff220-deploy_image50.png["Una captura de pantalla del vSphere Web Client que muestra el menú Actions del clúster FlexPod con Add Host seleccionado"]
 
 . Para añadir un host ESXi al clúster, complete los siguientes pasos:
 +

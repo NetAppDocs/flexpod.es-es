@@ -22,7 +22,7 @@ Durante la configuración de FIPS y la validación de cargas de trabajo, hemos e
 
 La siguiente figura muestra el sistema FlexPod utilizado para la configuración y validación FIPS. Aprovechamos la https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["FlexPod Datacenter con VMware vSphere 7.0 y NetApp ONTAP 9.7 Cisco Validated Design (CVD)"^] durante el proceso de configuración.
 
-image:flexpod-fips-image6.png[""]
+image:flexpod-fips-image6.png["Un diagrama que muestra FlexPod conforme con FIPS 140-2 para las conexiones de computación, redes y almacenamiento en el sector sanitario"]
 
 
 

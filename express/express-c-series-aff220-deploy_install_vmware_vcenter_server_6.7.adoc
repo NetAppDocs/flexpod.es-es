@@ -26,7 +26,7 @@ NOTE: FlexPod Express utiliza el dispositivo de VMware vCenter Server (VCSA).
 
 . Descargue el VCSA. Acceda al enlace de descarga haciendo clic en el icono Get vCenter Server cuando gestione el host ESXi.
 +
-image:express-c-series-aff220-deploy_image41.png[""]
+image:express-c-series-aff220-deploy_image41.png["Una captura de pantalla de la página Host de VMware ESXi con el botón Obtener servidor vCenter resaltado"]
 
 . Descargue el VCSA desde el sitio de VMware.
 +
@@ -40,7 +40,7 @@ NOTE: Aunque se admite la instalación de Microsoft Windows vCenter Server, VMwa
 . Acepte el acuerdo de licencia para el usuario final.
 . Seleccione Embedded Platform Services Controller (controladora de servicios de plataforma integrada) como tipo de implementación.
 +
-image:express-c-series-aff220-deploy_image42.png[""]
+image:express-c-series-aff220-deploy_image42.png["Una captura de pantalla de la selección del tipo de implementación del vCenter Server Appliance con Embedded Platform Services Controller seleccionado"]
 
 +
 
@@ -48,19 +48,19 @@ NOTE: Si es necesario, también admite la puesta en marcha de la controladora de
 
 . En Appliance Deployment Target, introduzca la dirección IP de un host ESXi implementado, así como el nombre de usuario raíz y la contraseña raíz.
 +
-image:express-c-series-aff220-deploy_image43.png[""]
+image:express-c-series-aff220-deploy_image43.png["Una captura de pantalla de la página de destino de implementación del dispositivo vCenter Server con los campos de host ESXi, puerto, usuario raíz y contraseña"]
 
 . Introduzca para establecer la máquina virtual del dispositivo `VCSA` Como el nombre del equipo virtual y la contraseña raíz que desea utilizar para el VCSA.
 +
-image:express-c-series-aff220-deploy_image44.png[""]
+image:express-c-series-aff220-deploy_image44.png["Una captura de pantalla de la página «Configurar la máquina virtual del dispositivo» con los campos de nombre de la máquina virtual y contraseña de root"]
 
 . Seleccione el tamaño de puesta en marcha que mejor se adapte a su entorno. Haga clic en Siguiente.
 +
-image:express-c-series-aff220-deploy_image45.png[""]
+image:express-c-series-aff220-deploy_image45.png["Una captura de pantalla de la página de tamaño de la implementación del servidor vCenter con las opciones de almacenamiento Tiny y Default seleccionadas"]
 
 . Seleccione el almacén de datos de infra_datastore_1. Haga clic en Siguiente.
 +
-image:express-c-series-aff220-deploy_image46.png[""]
+image:express-c-series-aff220-deploy_image46.png["Captura de pantalla de la página «Seleccionar almacén de datos» del instalador de vCenter Server con infra_datastore_1 seleccionado"]
 
 . Introduzca la siguiente información en la página Configure network settings y haga clic en Next.
 +
@@ -74,7 +74,7 @@ image:express-c-series-aff220-deploy_image46.png[""]
 
 . En la página Ready to Complete Stage 1, compruebe que los ajustes introducidos son correctos. Haga clic en Finalizar.
 +
-image:express-c-series-aff220-deploy_image47.png[""]
+image:express-c-series-aff220-deploy_image47.png["Captura de pantalla del instalador de vCenter Server Appliance configurando los parámetros de red con los campos de IPv4 estática rellenados"]
 
 +
 La VCSA se instala ahora. Este proceso tarda varios minutos.
@@ -82,7 +82,7 @@ La VCSA se instala ahora. Este proceso tarda varios minutos.
 . Una vez completada la fase 1, aparece un mensaje que indica que se ha completado. Haga clic en continuar para iniciar la configuración de la fase 2.
 . En la página Introducción de fase 2, haga clic en Siguiente.
 +
-image:express-c-series-aff220-deploy_image48.png[""]
+image:express-c-series-aff220-deploy_image48.png["Una captura de pantalla de la página de introducción de la fase 2 del vCenter Server Appliance con un botón Next"]
 
 . Introduzca `\<<var_ntp_id>>` Para la dirección del servidor NTP. Puede introducir varias direcciones IP de NTP.
 +

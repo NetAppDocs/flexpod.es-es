@@ -76,7 +76,7 @@ Como hemos visto anteriormente, el principal caso de uso de FabricPool es facili
 
 La política de organización en niveles de solo Snapshot, que se muestra en la siguiente figura, mueve datos Snapshot de volumen frío y backups de SnapCenter para vSphere de máquinas virtuales que ocupan espacio pero no comparten bloques con el sistema de archivos activo a un almacén de objetos de cloud. La política de organización en niveles solo de Snapshot mueve bloques de datos inactivos al nivel de cloud. Si hace falta una restauración, los bloques fríos en el cloud se activan y vuelven a transferirse al nivel flash de rendimiento de las instalaciones.
 
-image:cloud-fabricpool_image4.png[""]
+image:cloud-fabricpool_image4.png["Un diagrama que muestra el traslado de copias de instantáneas mediante la organización en niveles Snapshot-Only desde un clúster primario al almacenamiento en la nube"]
 
 
 
@@ -90,7 +90,7 @@ Cuando se usa la política de organización en niveles automática, los bloques 
 
 NOTE: El generador de perfiles de almacén de objetos se debe usar para probar la latencia y el rendimiento del almacén de objetos antes de adjuntarlo a un agregado de FabricPool.
 
-image:cloud-fabricpool_image5.png[""]
+image:cloud-fabricpool_image5.png["Un diagrama que muestra cómo la organización automática por niveles traslada los datos inactivos del almacenamiento del clúster principal al almacenamiento en la nube"]
 
 
 

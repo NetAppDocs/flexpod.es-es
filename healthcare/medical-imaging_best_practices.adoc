@@ -62,7 +62,7 @@ NetApp recomienda que implemente el arranque SAN para servidores Cisco UCS en la
 
 En el arranque SAN iSCSI, a cada servidor Cisco UCS se le asignan dos NIC iSCSI (una para cada estructura SAN), que proporcionan conectividad redundante hasta el almacenamiento. Los puertos de almacenamiento de este ejemplo, e2a y e2e, que están conectados a los switches Cisco Nexus, se agrupan para formar un puerto lógico llamado grupo de interfaces (ifgrp) (en este ejemplo, a0a). Las VLAN iSCSI se crean en el igroup y los LIF iSCSI se crean en grupos de puertos iSCSI (en este ejemplo, a0a-<iSCSI-A-VLAN>). El LUN de arranque iSCSI se expone a los servidores a través del LIF iSCSI mediante grupos de iniciadores. Este enfoque permite que solo el servidor autorizado tenga acceso a la LUN de arranque. Para ver el diseño de los puertos y la LIF, consulte la figura a continuación.
 
-image:medical-imaging_image8.png[""]
+image:medical-imaging_image8.png["Un diagrama que muestra los nodos AFF A300 con a0a ifgrps, VLANs y LIFs de NFS e iSCSI"]
 
 A diferencia de las interfaces de red NAS, las interfaces DE red SAN no están configuradas para realizar la conmutación al nodo de respaldo durante un fallo. En su lugar, si una interfaz de red no está disponible, el host elige una nueva ruta optimizada para una interfaz de red disponible. ALUA, un estándar compatible con NetApp, proporciona información sobre los destinos SCSI, lo que permite a un host identificar la ruta mejor al almacenamiento.
 

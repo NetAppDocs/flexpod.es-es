@@ -35,7 +35,7 @@ Para crear un clúster de vSphere, complete los siguientes pasos:
 . Active la recuperación ante desastres y vSphere ha seleccionando las casillas de verificación.
 . Haga clic en Aceptar.
 +
-image:express-c-series-c190-deploy_image45.png[""]
+image:express-c-series-c190-deploy_image45.png["Una captura de pantalla del cuadro de diálogo Nuevo clúster con DRS y vSphere HA activados y vSAN desactivado"]
 
 
 
@@ -48,7 +48,7 @@ Para añadir los hosts ESXi al clúster, complete los siguientes pasos:
 
 . Haga clic con el botón derecho en el clúster y seleccione Add Host.
 +
-image:express-c-series-c190-deploy_image46.png[""]
+image:express-c-series-c190-deploy_image46.png["Una captura de pantalla del asistente «Añadir hosts» del cliente de vSphere con un campo de entrada para el nombre de dominio completo (FQDN) del host y el botón «Siguiente»"]
 
 . Para añadir un host ESXi al clúster, complete los siguientes pasos:
 +
@@ -84,7 +84,7 @@ Para configurar coredump en hosts ESXi, complete los siguientes pasos:
 . Haga clic en Services y seleccione VMware vSphere ESXI Dump collector.
 . Inicie el servicio de recopilador DE volcado DE ESXI de VMware vSphere.
 +
-image:express-c-series-c190-deploy_image47.png[""]
+image:express-c-series-c190-deploy_image47.png["Una captura de pantalla de Appliance Management Services con VMware vSphere ESXi Dump Collector seleccionado y la opción Iniciar disponible"]
 
 . Utilice SSH, conéctese al host ESXi de IP de gestión, introduzca root para el nombre de usuario e introduzca la contraseña raíz.
 . Ejecute los siguientes comandos:
@@ -96,7 +96,7 @@ esxcli system coredump network check
 ....
 . El mensaje `Verified the configured netdump server is running` aparece después de introducir el comando final.
 +
-image:express-c-series-c190-deploy_image48.png[""]
+image:express-c-series-c190-deploy_image48.png["Una ventana de terminal en la que se muestran los comandos de configuración de coredump de ESXi y la verificación del servidor netdump"]
 
 +
 

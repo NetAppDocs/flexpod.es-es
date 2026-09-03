@@ -25,11 +25,11 @@ La configuración informática de la solución FlexPod SM-BC sigue las práctica
 
 La conectividad entre los servidores blade UCS B200 y los IOM es proporcionada por la tarjeta UCS VIC a través de las conexiones de plano posterior del chasis UCS 5108. Los extensores de estructura UCS 2204XP utilizados para la validación tienen dieciséis puertos 10 G cada uno para conectarse con los ocho servidores blade de media anchura, por ejemplo, dos para cada servidor. Para aumentar el ancho de banda de la conectividad del servidor, se puede agregar un VIC basado en mezzanine para conectar el servidor a la IOM de UCS 2408 alternativa, que proporciona cuatro conexiones de 10 G a cada servidor.
 
-image:sm-bcs-image17.png[""]
+image:sm-bcs-image17.png["Un esquema que muestra los UCS 2204XP A y B conectados a un B200 M5 VIC a través de 10GBASE-KR"]
 
 La conectividad entre el chasis UCS 5108 y UCS 6454 FIS utilizados para la validación está proporcionada por el IOM 2204XP que utiliza cuatro conexiones 10G. Los puertos FI 1 a 4 se configuran como puertos de servidor para estas conexiones. Los puertos FI 25 a 28 se configuran como puertos de enlace ascendente de red al conmutador Nexus A y B del sitio local. La siguiente figura y tabla proporcionan el diagrama de conectividad y los detalles de conexión de puertos para la conexión de la controladora FIS UCS 6454 con el fin de conectarse al chasis UCS 5108 y a los switches Nexus.
 
-image:sm-bcs-image18.png[""]
+image:sm-bcs-image18.png["Un diagrama que muestra los IOM UCS 5108 conectados a los switches FI 6454 y a los switches Nexus A y B"]
 
 |===
 | Dispositivo local | Puerto local | Dispositivo remoto | Puerto remoto 
@@ -132,7 +132,7 @@ Para la configuración de arranque SAN iSCSI, los parámetros de arranque iSCSI 
 
 El destino estático iSCSI se puede configurar en la política de inicio de las plantillas de perfil de servicio bajo el cuadro de diálogo definir parámetros de arranque iSCSI, como se muestra en la siguiente figura. La configuración recomendada del parámetro de arranque iSCSI se muestra en la tabla siguiente, que implementa la estrategia de arranque descrita anteriormente para lograr una alta disponibilidad.
 
-image:sm-bcs-image19.png[""]
+image:sm-bcs-image19.png["Una captura de pantalla que muestra el cuadro de diálogo Set iSCSI Boot Parameters de Cisco UCS Manager con dos destinos estáticos configurados"]
 
 |===
 | Estructura iSCSI | Prioridad | Destino iSCSI | LIF iSCSI 

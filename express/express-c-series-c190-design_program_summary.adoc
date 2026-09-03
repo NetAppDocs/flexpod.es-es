@@ -21,7 +21,7 @@ Como se muestra en la siguiente figura, la cartera de FlexPod incluye las siguie
 * *FlexPod Datacenter* proporciona una base multiuso óptima para diversas cargas de trabajo y aplicaciones.
 
 
-image:express-c-series-c190-design_image1.png[""]
+image:express-c-series-c190-design_image1.png["Un diagrama que compara las implementaciones departamentales de FlexPod Express con las cargas de trabajo críticas de FlexPod Datacenter"]
 
 
 
@@ -47,7 +47,7 @@ FlexPod Express está diseñado para ejecutar cargas de trabajo de virtualizaci�
 
 La siguiente figura muestra los componentes de hardware incluidos en la solución FlexPod Express.
 
-image:express-c-series-c190-design_image2.png[""]
+image:express-c-series-c190-design_image2.png["Un diagrama que muestra las opciones de hardware de almacenamiento, switch y servidor de FlexPod Express"]
 
 
 
@@ -63,6 +63,6 @@ Este documento está dirigido a usuarios que desean aprovechar una infraestructu
 
 Esta solución aprovecha las últimas tecnologías de NetApp, Cisco y VMware. Incluye el nuevo sistema AFF C190 de NetApp, que ejecuta el software ONTAP 9.6, los switches Cisco Nexus 31108 duales y los servidores de montaje en rack Cisco UCS C220 M5 que ejecutan VMware vSphere 6.7U2. Esta solución validada, como se muestra en la siguiente figura, utiliza tecnología Ethernet de 10 GB (10 GbE). También se ofrece orientación sobre cómo escalar agregando dos nodos de hipervisor a la vez para que la arquitectura FlexPod Express pueda adaptarse a las cambiantes necesidades empresariales de una organización.
 
-image:express-c-series-c190-design_image3.png[""]
+image:express-c-series-c190-design_image3.png["Un diagrama que muestra los conmutadores Express de FlexPod, los servidores C220 M5 y las conexiones de almacenamiento AFF C190"]
 
 link:express-c-series-c190-design_technology_requirements.html["Siguiente: Requisitos tecnológicos."]

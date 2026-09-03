@@ -41,7 +41,7 @@ Los siguientes pasos detallan el método para iniciar sesión en la interfaz de 
 . En el menú principal, seleccione la ficha servidor.
 . Haga clic en Iniciar la consola KVM.
 +
-image:express-c-series-c190-deploy_image17.png[""]
+image:express-c-series-c190-deploy_image17.png["Una captura de pantalla de la página de la BIOS del servidor Cisco CIMC con el enlace Launch KVM en el menú superior"]
 
 . En la consola KVM virtual, seleccione la ficha Medios virtuales.
 . Selecciona Mapa CD/DVD.
@@ -74,7 +74,7 @@ Los siguientes pasos describen cómo instalar VMware ESXi en cada host.
 . Después de leer el contrato de licencia del usuario final, acepte y continúe con la instalación pulsando F11.
 . Seleccione el LUN de NetApp que se configuró anteriormente como disco de instalación para ESXi y pulse Intro para continuar con la instalación.
 +
-image:express-c-series-c190-deploy_image18.png[""]
+image:express-c-series-c190-deploy_image18.png["Una captura de pantalla del instalador de ESXi en la que se selecciona un dispositivo de almacenamiento LUN de NETAPP C-Mode con una capacidad de 15,00 GiB"]
 
 . Seleccione la distribución de teclado adecuada y pulse Intro.
 . Introduzca y confirme la contraseña de root y pulse Intro.
@@ -100,7 +100,7 @@ Los siguientes pasos describen cómo añadir la red de gestión de cada host VMw
 . Seleccione los puertos deseados para vSwitch0. Pulse Intro.
 . Seleccione los puertos que corresponden a eth0 y eth1 en CIMC.
 +
-image:express-c-series-c190-deploy_image19.png[""]
+image:express-c-series-c190-deploy_image19.png["Una captura de pantalla de la ventana «Adaptadores de red» de ESXi con vmnic2 y vmnic4 seleccionados para la red de gestión"]
 
 . Seleccione VLAN (opcional) y presione Enter.
 . Introduzca el identificador de VLAN `\<<mgmt_vlan_id>>`. Pulse Intro.
@@ -215,7 +215,7 @@ Para configurar el arranque iSCSI, lleve a cabo los siguientes pasos:
 . Seleccione Networking a la izquierda.
 . A la derecha, seleccione la ficha Switches virtuales.
 +
-image:express-c-series-c190-deploy_image20.png[""]
+image:express-c-series-c190-deploy_image20.png["Una captura de pantalla de la página de redes de ESXi con la pestaña de conmutadores virtuales mostrando vSwitch0 y iScsiBootvSwitch"]
 
 . Haga clic en iScsiBootvSwitch.
 . Seleccione Editar configuración.
@@ -248,7 +248,7 @@ NOTE: Establezca la MTU en 9000 en iSCsiBootPG-A.
 .. Haga clic en Edit Settings on iSCSIBootPG-A > Tiering and Failover > Failover Order > vmnic3. Vmnic3 debe estar activo y vmnic5 no se debe utilizar.
 .. Haga clic en Editar configuración en iSCSIBootPG-B > equipos y failover > Orden de conmutación por error > vmnic5. Vmnic5 debe estar activo y vmnic3 no se debe utilizar.
 +
-image:express-c-series-c190-deploy_image21.png[""]
+image:express-c-series-c190-deploy_image21.png["Una captura de pantalla de la configuración de agrupación y conmutación por error de iSCSIBootPG-A con vmnic3 activo y vmnic5 sin utilizar"]
 
 
 
@@ -264,18 +264,18 @@ Para configurar la multivía iSCSI en los hosts ESXi, complete los pasos siguien
 . Seleccione Storage en el panel de navegación de la izquierda. Haga clic en Adaptadores.
 . Seleccione el adaptador de software iSCSI y haga clic en Configurar iSCSI.
 +
-image:express-c-series-c190-deploy_image22.png[""]
+image:express-c-series-c190-deploy_image22.png["Una captura de pantalla de la pestaña «Adaptadores de almacenamiento» de ESXi con el adaptador de software iSCSI vmhba64 seleccionado"]
 
 . En Destinos dinámicos, haga clic en Agregar destino dinámico.
 +
-image:express-c-series-c190-deploy_image23.png[""]
+image:express-c-series-c190-deploy_image23.png["Una captura de pantalla que muestra destinos dinámicos iSCSI con cuatro direcciones IP y el puerto 3260 configurado"]
 
 . Introduzca la dirección IP `iscsi_lif01a`.
 +
 .. Repita el proceso con las direcciones IP `iscsi_lif01b`, `iscsi_lif02a`, y. `iscsi_lif02b`.
 .. Haga clic en Save Configuration.
 +
-image:express-c-series-c190-deploy_image24.png[""]
+image:express-c-series-c190-deploy_image24.png["Una captura de pantalla de cuatro direcciones de destino dinámico iSCSI que utilizan el puerto 3260 y el botón Guardar configuración"]
 
 +
 
@@ -295,7 +295,7 @@ Para configurar el arranque ESXi, complete los pasos siguientes:
 . En el panel de navegación de la izquierda, seleccione Networking.
 . Seleccione vSwitch0.
 +
-image:express-c-series-c190-deploy_image25.png[""]
+image:express-c-series-c190-deploy_image25.png["Una captura de pantalla de la página vSwitch0 de ESXi en la que se muestra un MTU de 9000 y los adaptadores vmnic2 y vmnic4 activos"]
 
 . Seleccione Editar configuración.
 . Cambie el MTU a 9000.
@@ -316,7 +316,7 @@ Para configurar los grupos de puertos y las NIC de VMkernel, lleve a cabo los si
 . En el panel de navegación de la izquierda, seleccione Networking.
 . Haga clic con el botón derecho en la pestaña grupos de puertos.
 +
-image:express-c-series-c190-deploy_image26.png[""]
+image:express-c-series-c190-deploy_image26.png["Una captura de pantalla de la página «Redes» de ESXi con la pestaña «Grupos de puertos» seleccionada y la opción «Add port group» disponible"]
 
 . Haga clic con el botón derecho en VM Network y seleccione Edit. Cambie el ID de VLAN a. `\<<var_vm_traffic_vlan>>`.
 . Haga clic en Agregar grupo de puertos.
@@ -329,7 +329,7 @@ image:express-c-series-c190-deploy_image26.png[""]
 
 . Haga clic en la ficha NIC de VMkernel.
 +
-image:express-c-series-c190-deploy_image27.png[""]
+image:express-c-series-c190-deploy_image27.png["Una captura de pantalla de la pestaña «VMkernel NICs» de red de ESXi, en la que aparecen las interfaces vmk0 y vmk1"]
 
 . Seleccione Agregar NIC de VMkernel.
 +
@@ -357,7 +357,7 @@ image:express-c-series-c190-deploy_image27.png[""]
 .. Introduzca `\<<var_hosta_vmotion_mask>>` Para Máscara de subred.
 .. Asegúrese de que la casilla de comprobación vMotion esté seleccionada después de IPv4 Settings.
 +
-image:express-c-series-c190-deploy_image28.png[""]
+image:express-c-series-c190-deploy_image28.png["Una captura de pantalla del cuadro de diálogo Añadir tarjeta de red VMkernel con la configuración IPv4 estática y vMotion seleccionada"]
 
 +
 
@@ -376,11 +376,11 @@ Los primeros almacenes de datos que se van a montar son el `infra_datastore` Alm
 
 . Haga clic en Storage en el panel de navegación de la izquierda y después haga clic en New Datastore.
 +
-image:express-c-series-c190-deploy_image29.png[""]
+image:express-c-series-c190-deploy_image29.png["Una captura de pantalla de la página «Almacenamiento» de VMware ESXi en la que se ve el botón «Nuevo almacén de datos»"]
 
 . Seleccione Mount NFS Datastore.
 +
-image:express-c-series-c190-deploy_image30.png[""]
+image:express-c-series-c190-deploy_image30.png["Una captura de pantalla del asistente para crear un nuevo almacén de datos con la opción «Montar almacén de datos NFS» seleccionada como tipo de creación"]
 
 . Introduzca la siguiente información en la página Provide NFS Mount Details:
 +
@@ -414,7 +414,7 @@ Para configurar NTP para un host ESXi, complete los siguientes pasos:
 . Introduzca `\<<var_ntp>>` Como servidor NTP. Puede establecer varios servidores NTP.
 . Haga clic en Guardar.
 +
-image:express-c-series-c190-deploy_image31.png[""]
+image:express-c-series-c190-deploy_image31.png["Una captura de pantalla que muestra la configuración de fecha y hora de ESXi con el servicio NTP en funcionamiento y tres servidores NTP"]
 
 
 
@@ -427,11 +427,11 @@ Estos pasos proporcionan detalles para mover la ubicación del archivo de interc
 
 . Haga clic en Administrar en el panel de navegación de la izquierda. Seleccione sistema en el panel derecho y, a continuación, haga clic en intercambiar.
 +
-image:express-c-series-c190-deploy_image32.png[""]
+image:express-c-series-c190-deploy_image32.png["Una captura de pantalla de la página «Manage System Swap» de VMware ESXi, en la que se muestran los ajustes de intercambio"]
 
 . Haga clic en Editar configuración. Seleccione `infra_swap` En las opciones del Datastore.
 +
-image:express-c-series-c190-deploy_image33.png[""]
+image:express-c-series-c190-deploy_image33.png["Una captura de pantalla del cuadro de diálogo Edit swap configuration con infra_swap seleccionado como datastore y los botones Save y Cancel"]
 
 . Haga clic en Guardar.
 

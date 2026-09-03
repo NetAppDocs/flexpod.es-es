@@ -90,7 +90,7 @@ La latencia de lectura de FabricPool es una función de conectividad con el nive
 
 NOTE: Al utilizar FabricPool en entornos de bajo rendimiento, es necesario seguir cumpliendo los requisitos mínimos de rendimiento para las aplicaciones del cliente y ajustar los objetivos de tiempo de recuperación según corresponda.
 
-image:cloud-fabricpool_image6.png[""]
+image:cloud-fabricpool_image6.png["Un diagrama que muestra dos controladores AFF A300 de NetApp conectando LIFs entre clústeres a AWS S3"]
 
 
 
@@ -114,7 +114,7 @@ storage aggregate object-store profiler show
 ....
 Los niveles de cloud no ofrecen un rendimiento similar al del nivel de rendimiento (normalmente GB por segundo). Aunque los agregados FabricPool pueden ofrecer un rendimiento similar al de SATA, también pueden tolerar latencias de hasta 10 segundos y un bajo rendimiento para soluciones de organización en niveles que no requieren un rendimiento similar al de SATA.
 
-image:cloud-fabricpool_image7.png[""]
+image:cloud-fabricpool_image7.png["Una captura de pantalla de los resultados del analizador del almacén de objetos de la CLI de ONTAP, en la que se muestran la latencia y el rendimiento de las operaciones PUT y GET"]
 
 
 
