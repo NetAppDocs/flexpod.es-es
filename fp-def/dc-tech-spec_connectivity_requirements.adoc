@@ -18,13 +18,13 @@ Una configuración FlexPod tiene los siguientes requisitos de conectividad:
 
 * Se requiere una red de gestión fuera de banda de 1 Gb Ethernet independiente para todos los componentes.
 * NetApp recomienda que habilite la compatibilidad con las tramas gigantes en todo el entorno, pero no es necesario.
-* Los puertos de dispositivo Cisco UCS Fabric Interconnect independientes se recomiendan solo para conexiones iSCSI. Cuando se usan conexiones NAS con puertos de dispositivo, se requieren switches Nexus / compatibles adicionales para ciertos escenarios de fallo.
+* Se recomienda utilizar los puertos del dispositivo Cisco UCS Fabric Interconnect autónomo únicamente para conexiones iSCSI. Cuando se utilizan conexiones NAS con los puertos del dispositivo, se requieren switches ethernet Cisco Nexus o equivalentes adicionales para ciertos escenarios de fallo.
 * No se puede colocar ningún equipo adicional en línea entre los componentes principales de FlexPod.
 
 
 Conexiones de enlace ascendente:
 
-* Los puertos de los controladores de almacenamiento NetApp deben conectarse a los switches Cisco Nexus 9000 Series para habilitar la compatibilidad con los virtual port channels (vPC).
+* Los puertos de los controladores de almacenamiento NetApp deben conectarse a los switches Cisco Nexus 9000 Series.
 * Se requieren vPCs desde los conmutadores Cisco Nexus 9000 Series Switches hasta los controladores de almacenamiento NetApp.
 * Se requieren vPC desde los switches Cisco Nexus 9000 Series hasta los fabric interconnects.
 * Se requieren al menos dos conexiones para un VPC. Es posible aumentar el número de conexiones dentro de un VPC en función de los requisitos de carga de las aplicaciones y de rendimiento.
@@ -39,7 +39,7 @@ Conexiones directas:
 Arranque SAN:
 
 * Las soluciones FlexPod están diseñadas en torno a una arquitectura DE arranque SAN mediante los protocolos iSCSI, FC o FCoE. El uso de tecnologías "arranque desde SAN" proporciona la configuración más flexible de la infraestructura del centro de datos y permite disponer de las completas funciones de cada componente de la infraestructura. Aunque el arranque desde SAN es la configuración más eficiente, el arranque desde el almacenamiento de servidor local es una configuración válida y compatible.
-* No se admite el arranque SAN sobre FC-NVME.
+* No se admite el arranque de SAN a través de FC-NVMe.
 
 
 Consulta la sección link:https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_topologies.html["FlexPod Datacenter topologías"^] para conocer los requisitos de conectividad específicos de cada topología.

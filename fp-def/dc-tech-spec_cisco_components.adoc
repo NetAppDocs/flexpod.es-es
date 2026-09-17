@@ -232,7 +232,7 @@ Se requieren conmutadores redundantes Cisco Nexus 9000 Series en la arquitectura
 [[cisco-apic-options]]
 == Opciones APIC de Cisco
 
-Cisco APIC es el principal componente arquitectónico de Cisco ACI. Es el punto unificado de automatización y gestión para la estructura de Cisco ACI.
+Cisco APIC es el principal componente arquitectónico de Cisco ACI. Proporciona gestión centralizada, control de políticas y automatización para los fabrics de Cisco ACI.
 
 Para obtener más información sobre las especificaciones de los productos APIC, consulta la tabla 1 hasta la tabla 3 en https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Hoja de datos del controlador de infraestructura de políticas de aplicaciones de Cisco"^].
 
