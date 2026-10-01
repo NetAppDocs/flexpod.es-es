@@ -174,7 +174,7 @@ image:sm-bcs-image11.png["Un diagrama que muestra los controladores AFF y ASA de
 | Serie AFF | link:https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62247["Documentación de la serie AFF"^] 
 
 
-| Serie ASA | link:https://docs.netapp.com/allsan/index.jsp["Documentación de la serie ASA"^] 
+| Sistemas ASA r2 | link:https://docs.netapp.com/us-en/ontap-systems/asa-r2/index.html["Documentación de los sistemas ASA r2"^] 
 |===
 Consulte la https://www.netapp.com/data-storage/disk-shelves-storage-media/["Documentación sobre bandejas de discos y medios de almacenamiento de NetApp"^] y.. https://hwu.netapp.com/["Hardware Universe de NetApp"^] para obtener información detallada sobre las bandejas de discos y las bandejas de discos admitidas para cada modelo de controladora de almacenamiento.
 
