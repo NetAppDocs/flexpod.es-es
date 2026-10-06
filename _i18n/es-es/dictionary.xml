@@ -5204,7 +5204,6 @@
   <block id="bfdd18e32fc0e9981825376863beb7a1" category="section-title">Opciones de unidades y bandeja de discos de NetApp</block>
   <block id="4565123671fd7bba4b48587da9afe9f8" category="admonition">Para obtener todos los números de pieza de disco y bandejas de discos, consulte a su representante de ventas.</block>
   <block id="0a10ffb3d8f2b29b2aed44120c4b52ee" category="cell">NS224</block>
-  <block id="767945ca8f676ff25ce389fce1df6c41" category="summary">Cisco contribuye de manera considerable al diseño y la arquitectura de FlexPod Express; contribuye a las capas de red e informática de la solución.</block>
   <block id="db9522af2119f167ded30369ddb56248" category="doc">Componentes de Cisco</block>
   <block id="ae19f05a830d151c2615c3f564dbf6e4" category="paragraph">Cisco contribuye de manera considerable al diseño y la arquitectura de FlexPod Express; contribuye a las capas de red e informática de la solución. En esta sección se describen los componentes de Cisco UCS y Cisco Nexus disponibles para FlexPod Express.</block>
   <block id="0adca13cab777a69d4b054794aadc650" category="section-title">Opciones del servidor de montaje en rack Cisco UCS C-Series</block>
@@ -8564,4 +8563,6 @@
   <block id="22d05c38a6e8032e35e9ff8d6b826ee0" category="inline-link-macro">Documentación de los sistemas ASA r2</block>
   <block id="5a043bdfd29a9c2a632078901fc0d525" category="cell"><block ref="5a043bdfd29a9c2a632078901fc0d525" category="inline-link-macro-rx"></block></block>
   <block id="a04fde0f303f9cefcbd34e8be1810d1e" category="paragraph">Los centros médicos académicos y otras organizaciones del ámbito sanitario y de las ciencias de la vida están bien encaminados para establecer centros de excelencia (COE) en ciencia genómica. Según el Dr. Charlie Gersbach, el Dr. Greg Crawford y el Dr. Tim E Reddy de Duke University, «sabemos que los genes no se activan ni se desactivan mediante un simple interruptor binario, sino que son el resultado de múltiples interruptores reguladores genéticos que actúan conjuntamente. » También han determinado que «ninguna de estas partes del genoma funciona de forma aislada. El genoma es una red muy compleja que ha tejido la evolución» (<block ref="7e5e4c153f3bad20a8e4230a913e554e" category="inline-link-rx"></block>).</block>
+  <block id="a9100704d09dc0243e72fa3e969a3376" category="doc">Resumen de los procedimientos de implementación</block>
+  <block id="c94f9bfe6b4fcd272eb296a929c3be2f" category="summary">Cisco aporta las capas de computación y redes del diseño y la arquitectura de FlexPod Express, incluidos los servidores UCS y los switches Nexus.</block>
 </blocks>
